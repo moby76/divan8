@@ -1,0 +1,22 @@
+uuid: f2a4e55d-ccc5-4671-a05d-c539af9c139e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - divan_barrio
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: divan_barrio_powered
+theme: divan_barrio
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Сделано на Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

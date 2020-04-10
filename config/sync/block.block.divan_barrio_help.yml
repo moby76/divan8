@@ -1,0 +1,22 @@
+uuid: d842b31c-9a95-4f63-9999-7c2ba348d17c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - divan_barrio
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: divan_barrio_help
+theme: divan_barrio
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Справка
+  provider: help
+  label_display: '0'
+visibility: {  }

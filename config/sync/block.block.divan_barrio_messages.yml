@@ -1,0 +1,22 @@
+uuid: a0027ccb-5502-4218-9c65-aa92f9a6ea46
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - divan_barrio
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: divan_barrio_messages
+theme: divan_barrio
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Сообщения статуса'
+  provider: system
+  label_display: '0'
+visibility: {  }
