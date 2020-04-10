@@ -1,0 +1,11 @@
+uuid: eabadc4f-95d7-466c-a8d8-71e02d91d77e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.shops
+id: node.shops
+target_entity_type_id: node
+target_bundle: shops
+default_langcode: site_default
+language_alterable: false

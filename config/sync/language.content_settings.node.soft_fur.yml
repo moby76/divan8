@@ -1,0 +1,11 @@
+uuid: fc42c3e5-eb76-4b6a-b292-80c2f62dffaf
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.soft_fur
+id: node.soft_fur
+target_entity_type_id: node
+target_bundle: soft_fur
+default_langcode: site_default
+language_alterable: false

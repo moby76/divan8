@@ -1,0 +1,8 @@
+uuid: b6d33b36-48f6-40bc-9fdd-c5d5907099a7
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Конфигурации мягкой мебели'
+vid: soft_fur_config
+description: ''
+weight: 0

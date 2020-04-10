@@ -1,0 +1,21 @@
+uuid: f8424bd6-7c09-4bbd-9ca1-54e2e6eab629
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.soft_fur
+  module:
+    - text
+id: node.soft_fur.field_features
+field_name: field_features
+entity_type: node
+bundle: soft_fur
+label: Особенности
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

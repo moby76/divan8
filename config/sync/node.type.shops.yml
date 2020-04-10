@@ -1,0 +1,18 @@
+uuid: d6a759aa-a7aa-47ea-a155-65ce749b2bb6
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Магазины
+type: shops
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

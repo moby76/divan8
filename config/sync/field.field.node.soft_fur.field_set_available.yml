@@ -1,0 +1,23 @@
+uuid: 7b2c485d-c7a9-472c-b53f-2faa2157028c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_set_available
+    - node.type.soft_fur
+id: node.soft_fur.field_set_available
+field_name: field_set_available
+entity_type: node
+bundle: soft_fur
+label: 'Доступно для комплектации'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean

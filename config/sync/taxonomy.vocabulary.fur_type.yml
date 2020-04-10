@@ -1,0 +1,8 @@
+uuid: cdcd4685-5f2e-4b70-adfe-4a824e5642fa
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Тип мебели'
+vid: fur_type
+description: ''
+weight: 0

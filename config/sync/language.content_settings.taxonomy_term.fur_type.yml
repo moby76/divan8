@@ -1,0 +1,11 @@
+uuid: 2df2f09d-f74e-47a1-a8e7-cd3e2238d95a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.fur_type
+id: taxonomy_term.fur_type
+target_entity_type_id: taxonomy_term
+target_bundle: fur_type
+default_langcode: site_default
+language_alterable: false
