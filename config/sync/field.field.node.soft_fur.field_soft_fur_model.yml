@@ -1,0 +1,29 @@
+uuid: 860c1cf2-c505-44e6-92b4-07f9d17d6927
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_soft_fur_model
+    - node.type.soft_fur
+    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+id: node.soft_fur.field_soft_fur_model
+field_name: field_soft_fur_model
+entity_type: node
+bundle: soft_fur
+label: 'Модель мягкой мебели'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      modeli_myagkoy_mebeli: modeli_myagkoy_mebeli
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

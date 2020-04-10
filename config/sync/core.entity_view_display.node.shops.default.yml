@@ -16,16 +16,9 @@ targetEntityType: node
 bundle: shops
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_location:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
       set_marker: '1'
       title: ''
@@ -57,16 +50,17 @@ content:
     type: geolocation_map
     region: content
   field_podrobno:
-    weight: 103
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   langcode: true
