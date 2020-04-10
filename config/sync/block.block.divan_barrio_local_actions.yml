@@ -1,0 +1,20 @@
+uuid: 46ad0b1a-3a60-452f-b522-f6c641c9a20c
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - divan_barrio
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: divan_barrio_local_actions
+theme: divan_barrio
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основные действия администратора'
+  provider: core
+  label_display: '0'
+visibility: {  }
