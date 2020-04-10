@@ -5,8 +5,16 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.soft_fur.body
+    - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_new_item
+    - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_where
     - node.type.soft_fur
   module:
     - text
@@ -30,6 +38,14 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_available: true
+  field_buy_komplekt: true
+  field_features: true
   field_foto: true
+  field_new_item: true
+  field_price_base: true
+  field_set_available: true
+  field_soft_fur_config: true
   field_tip_mebeli: true
+  field_where: true
   langcode: true

@@ -1,29 +1,27 @@
-uuid: c9d51382-40e3-4b8b-9f26-9b9b603dda6e
+uuid: f46c748c-e1c7-4d08-9a33-07748988bc1e
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tip_mebeli
+    - field.storage.node.field_buy_komplekt
     - node.type.soft_fur
-    - taxonomy.vocabulary.fur_type
-id: node.soft_fur.field_tip_mebeli
-field_name: field_tip_mebeli
+id: node.soft_fur.field_buy_komplekt
+field_name: field_buy_komplekt
 entity_type: node
 bundle: soft_fur
-label: 'Тип мебели'
+label: 'Купить в комплект'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      fur_type: fur_type
+      soft_fur: soft_fur
     sort:
-      field: name
-      direction: asc
+      field: _none
     auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

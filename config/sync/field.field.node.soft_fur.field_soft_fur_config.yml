@@ -1,16 +1,16 @@
-uuid: c9d51382-40e3-4b8b-9f26-9b9b603dda6e
+uuid: 622a7d46-605d-4a0a-adef-ce6d7534d9a3
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tip_mebeli
+    - field.storage.node.field_soft_fur_config
     - node.type.soft_fur
-    - taxonomy.vocabulary.fur_type
-id: node.soft_fur.field_tip_mebeli
-field_name: field_tip_mebeli
+    - taxonomy.vocabulary.soft_fur_config
+id: node.soft_fur.field_soft_fur_config
+field_name: field_soft_fur_config
 entity_type: node
 bundle: soft_fur
-label: 'Тип мебели'
+label: 'Конфигурация мягкой мебели'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      fur_type: fur_type
+      soft_fur_config: soft_fur_config
     sort:
       field: name
       direction: asc
