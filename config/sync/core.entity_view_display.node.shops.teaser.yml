@@ -1,19 +1,19 @@
-uuid: 6a3f9897-66f9-444a-92ce-da65378777f3
+uuid: 91e490f4-58c6-4e4a-af43-c0683019d0d2
 langcode: ru
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.soft_fur.body
-    - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_tip_mebeli
-    - node.type.soft_fur
+    - field.field.node.shops.body
+    - field.field.node.shops.field_location
+    - field.field.node.shops.field_podrobno
+    - node.type.shops
   module:
     - text
     - user
-id: node.soft_fur.teaser
+id: node.shops.teaser
 targetEntityType: node
-bundle: soft_fur
+bundle: shops
 mode: teaser
 content:
   body:
@@ -30,6 +30,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_foto: true
-  field_tip_mebeli: true
+  field_location: true
+  field_podrobno: true
   langcode: true

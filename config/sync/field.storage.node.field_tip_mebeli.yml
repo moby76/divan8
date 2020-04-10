@@ -1,0 +1,20 @@
+uuid: 2b781145-bff5-43c3-a6ad-c3caafcd85a7
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_tip_mebeli
+field_name: field_tip_mebeli
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
