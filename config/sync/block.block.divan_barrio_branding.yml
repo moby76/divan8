@@ -1,0 +1,25 @@
+uuid: 94fa7835-5bbd-42df-8028-38df5da2f575
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - divan_barrio
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: divan_barrio_branding
+theme: divan_barrio
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендинг сайта'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

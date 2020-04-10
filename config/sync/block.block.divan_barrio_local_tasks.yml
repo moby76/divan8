@@ -1,0 +1,22 @@
+uuid: c4f3d959-0418-44fe-b55c-ca57e1e3026b
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - divan_barrio
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: divan_barrio_local_tasks
+theme: divan_barrio
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Вкладки
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
