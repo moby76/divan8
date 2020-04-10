@@ -1,0 +1,29 @@
+uuid: 9ec31700-f2aa-41be-92f6-1363e081d48f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.soft_fur.body
+    - node.type.soft_fur
+  module:
+    - text
+    - user
+id: node.soft_fur.default
+targetEntityType: node
+bundle: soft_fur
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

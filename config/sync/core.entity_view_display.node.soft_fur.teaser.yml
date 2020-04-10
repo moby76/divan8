@@ -1,0 +1,31 @@
+uuid: 6a3f9897-66f9-444a-92ce-da65378777f3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.soft_fur.body
+    - node.type.soft_fur
+  module:
+    - text
+    - user
+id: node.soft_fur.teaser
+targetEntityType: node
+bundle: soft_fur
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 593fc0d1-0dd7-44fa-9633-285ff80dcb6a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.soft_fur_config
+id: taxonomy_term.soft_fur_config
+target_entity_type_id: taxonomy_term
+target_bundle: soft_fur_config
+default_langcode: site_default
+language_alterable: false

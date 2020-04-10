@@ -1,0 +1,8 @@
+uuid: 1f0143cf-cadf-4a19-828d-8ee9ddb3e7af
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Модели мягкой мебели'
+vid: modeli_myagkoy_mebeli
+description: ''
+weight: 0
