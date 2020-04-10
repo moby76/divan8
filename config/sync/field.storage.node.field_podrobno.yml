@@ -1,0 +1,19 @@
+uuid: fef3ad51-7120-4f88-98bc-093f2fabde25
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_podrobno
+field_name: field_podrobno
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

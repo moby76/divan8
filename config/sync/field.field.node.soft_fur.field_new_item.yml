@@ -1,0 +1,23 @@
+uuid: 6e281a83-90ec-45fc-9ae3-4077bd42dfa2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_item
+    - node.type.soft_fur
+id: node.soft_fur.field_new_item
+field_name: field_new_item
+entity_type: node
+bundle: soft_fur
+label: 'Это новинка'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean

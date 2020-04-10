@@ -1,0 +1,11 @@
+uuid: ac0c8813-b5bc-4e6e-8f8e-4a664a6867b6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+id: taxonomy_term.modeli_myagkoy_mebeli
+target_entity_type_id: taxonomy_term
+target_bundle: modeli_myagkoy_mebeli
+default_langcode: site_default
+language_alterable: false
