@@ -1,0 +1,104 @@
+taxonomies:
+  fur_type:
+    -
+      vid: fur_type
+      tid: '1'
+      langcode: ru
+      name: 'Корпусная мебель'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 9f7c8de5-691e-4191-8d96-bedfc67d17c7
+    -
+      vid: fur_type
+      tid: '2'
+      langcode: ru
+      name: 'Мягкая мебель'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 24350927-c90f-498c-a134-30ea1832ff2a
+    -
+      vid: fur_type
+      tid: '3'
+      langcode: ru
+      name: 'Торговое оборудование'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: a65a29fc-0b01-4bf9-b8c0-01ca754095d9
+  modeli_myagkoy_mebeli:
+    -
+      vid: modeli_myagkoy_mebeli
+      tid: '9'
+      langcode: ru
+      name: Акканто
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 1210cf7f-3dde-46a0-86c3-ad628710884c
+    -
+      vid: modeli_myagkoy_mebeli
+      tid: '8'
+      langcode: ru
+      name: Еврик
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '0'
+      uuid: 858bf48a-843f-4bcc-8225-41c5dc7d4ec0
+    -
+      vid: modeli_myagkoy_mebeli
+      tid: '10'
+      langcode: ru
+      name: 'Хеннесси Арт'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '0'
+      uuid: 197e87e9-f350-4f31-bdcd-2480904970b4
+  soft_fur_config:
+    -
+      vid: soft_fur_config
+      tid: '7'
+      langcode: ru
+      name: Кресла
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 5d438c8c-90aa-4b4a-a844-fb219939395b
+    -
+      vid: soft_fur_config
+      tid: '6'
+      langcode: ru
+      name: 'Модульная мебель'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 40083c81-d8e5-4249-9ad2-01ae46672fd4
+    -
+      vid: soft_fur_config
+      tid: '4'
+      langcode: ru
+      name: 'Прямые диваны'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 18d5c07e-0fc1-4af5-8e65-579b2fb64f46
+    -
+      vid: soft_fur_config
+      tid: '5'
+      langcode: ru
+      name: 'Угловые диваны'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 77364c6a-c651-4df7-a0e6-14dd927f68c9
