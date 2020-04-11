@@ -73,16 +73,20 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: 'col-md-6 col-lg-4 mb-3'
-          default_row_class: true
+          row_class: ' m-2'
+          default_row_class: false
           type: ul
           wrapper_class: ''
-          class: 'list-unstyled row'
+          class: 'list-unstyled row mx-auto'
       row:
         type: fields
         options:
           default_field_elements: false
-          inline: {  }
+          inline:
+            title: title
+            field_foto: field_foto
+            field_price_base: field_price_base
+            view_node: view_node
           separator: ''
           hide_empty: false
       fields:
@@ -374,7 +378,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: mb-2
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -430,6 +434,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
