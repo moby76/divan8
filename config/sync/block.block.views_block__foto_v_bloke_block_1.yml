@@ -1,0 +1,39 @@
+uuid: a9994ce2-e50e-493d-9a11-bfc1288a2931
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.foto_v_bloke
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - divan_barrio
+id: views_block__foto_v_bloke_block_1
+theme: divan_barrio
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:foto_v_bloke-block_1'
+settings:
+  id: 'views_block:foto_v_bloke-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      soft_fur: soft_fur
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /soft-furniture-all
+    negate: true
+    context_mapping: {  }

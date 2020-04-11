@@ -11,7 +11,7 @@ _core:
 id: divan_barrio_page_title
 theme: divan_barrio
 region: content
-weight: -50
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
@@ -22,6 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /soft-furniture-all
+    pages: "/soft-furniture-all\r\n/node/*"
     negate: true
     context_mapping: {  }

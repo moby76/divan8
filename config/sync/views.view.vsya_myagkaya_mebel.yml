@@ -430,7 +430,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Вся мягкая мебель'
+      title: 'Мягкая мебель'
       header: {  }
       footer: {  }
       empty: {  }
