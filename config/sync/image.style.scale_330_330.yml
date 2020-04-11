@@ -1,0 +1,15 @@
+uuid: 8e63d2fe-083f-4454-a681-7e9dfbb026f7
+langcode: ru
+status: true
+dependencies: {  }
+name: scale_330_330
+label: 'scale 330*330'
+effects:
+  b3cb238f-9a3d-4875-b062-df22f0206bdb:
+    uuid: b3cb238f-9a3d-4875-b062-df22f0206bdb
+    id: image_scale
+    weight: 1
+    data:
+      width: 330
+      height: null
+      upscale: true
