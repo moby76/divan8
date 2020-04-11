@@ -9,7 +9,7 @@ _core:
 id: divan_barrio_local_tasks
 theme: divan_barrio
 region: content
-weight: -40
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

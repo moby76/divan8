@@ -27,6 +27,7 @@
         "drupal/devel": "^2.1",
         "drupal/geolocation": "^1.11",
         "drupal/structure_sync": "^1.16",
+        "drupal/views_bootstrap": "^4.2",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
