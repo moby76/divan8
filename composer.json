@@ -27,6 +27,7 @@
         "drupal/devel": "^2.1",
         "drupal/ds": "^3.5",
         "drupal/geolocation": "^1.11",
+        "drupal/imagefield_slideshow": "^1.10",
         "drupal/structure_sync": "^1.16",
         "drupal/token": "^1.6",
         "drupal/views_bootstrap": "^4.2",
