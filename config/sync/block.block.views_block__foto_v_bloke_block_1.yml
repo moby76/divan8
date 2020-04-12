@@ -1,0 +1,25 @@
+uuid: 6646eb94-cdba-4579-87f4-e88ae1d4e5e9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.foto_v_bloke
+  module:
+    - views
+  theme:
+    - divan_barrio
+id: views_block__foto_v_bloke_block_1
+theme: divan_barrio
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:foto_v_bloke-block_1'
+settings:
+  id: 'views_block:foto_v_bloke-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }
