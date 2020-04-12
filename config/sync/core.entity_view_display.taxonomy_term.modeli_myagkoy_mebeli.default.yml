@@ -1,0 +1,80 @@
+uuid: f8d9dbfe-ad58-4bda-8dd7-1c61b0c898be
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_dim
+    - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
+    - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_scheme
+    - image.style.large
+    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+  module:
+    - ds
+    - field_slideshow
+    - image
+    - text
+id: taxonomy_term.modeli_myagkoy_mebeli.default
+targetEntityType: taxonomy_term
+bundle: modeli_myagkoy_mebeli
+mode: default
+content:
+  field_dim:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_model_desc:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_scheme:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+      slideshow:
+        fx: fade
+        autoHeight: '0'
+        delay: '0'
+        loader: 'false'
+        loop: '1000'
+        speed: '500'
+        startingSlide: '0'
+        sync: '1'
+        timeout: '4000'
+        allowWrap: 0
+        hideNonActive: 0
+        pauseOnHover: 0
+        paused: 0
+        random: 0
+        reverse: 0
+        swipe: 0
+      slideshow_pager:
+        pager:
+          after: after
+          before: 0
+        pager_type: thumbnails
+        controls: 0
+      colorbox_image_style: null
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: slideshow
+    region: content
+hidden:
+  description: true
+  langcode: true

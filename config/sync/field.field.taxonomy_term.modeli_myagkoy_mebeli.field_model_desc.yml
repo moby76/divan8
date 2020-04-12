@@ -1,0 +1,21 @@
+uuid: 6cb087b2-1abd-4dd8-a79f-898c1fe55f86
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_model_desc
+    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+  module:
+    - text
+id: taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
+field_name: field_model_desc
+entity_type: taxonomy_term
+bundle: modeli_myagkoy_mebeli
+label: 'Описание модели'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
