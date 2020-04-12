@@ -438,6 +438,9 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: ''
+      use_more: false
+      use_more_always: true
+      use_more_text: more
     cache_metadata:
       max-age: -1
       contexts:

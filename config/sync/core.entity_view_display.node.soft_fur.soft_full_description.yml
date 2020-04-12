@@ -1,0 +1,177 @@
+uuid: 5fd3e8af-efa8-489e-a09e-280406b46d98
+langcode: ru
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.soft_full_description
+    - field.field.node.soft_fur.body
+    - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_features
+    - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_new_item
+    - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_soft_fur_config
+    - field.field.node.soft_fur.field_soft_fur_model
+    - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_where
+    - node.type.soft_fur
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked_fluid
+      library: ds/ds_2col_stacked_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - langcode
+        - links
+        - field_features
+      left:
+        - field_price_base
+      right:
+        - field_tip_mebeli
+        - field_soft_fur_config
+        - field_soft_fur_model
+        - field_available
+        - field_where
+        - field_new_item
+      footer:
+        - field_buy_komplekt
+        - node_links
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 12
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': ''
+          wrapper: ''
+          class: ''
+      node_links:
+        plugin_id: node_links
+        weight: 11
+        label: hidden
+        formatter: default
+id: node.soft_fur.soft_full_description
+targetEntityType: node
+bundle: soft_fur
+mode: soft_full_description
+content:
+  field_available:
+    weight: 7
+    label: inline
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: right
+  field_buy_komplekt:
+    weight: 10
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: footer
+  field_features:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: header
+  field_new_item:
+    type: boolean
+    weight: 9
+    region: right
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_price_base:
+    weight: 3
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: left
+  field_soft_fur_config:
+    weight: 5
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  field_soft_fur_model:
+    weight: 6
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  field_tip_mebeli:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  field_where:
+    weight: 8
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  langcode:
+    type: language
+    weight: 0
+    region: header
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: header
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_foto: true
+  field_set_available: true

@@ -1,0 +1,105 @@
+uuid: 9bcbbe02-afff-48a9-8ac2-5aedd16dd27d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.soft_fur.body
+    - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_features
+    - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_new_item
+    - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_soft_fur_config
+    - field.field.node.soft_fur.field_soft_fur_model
+    - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_where
+    - node.type.soft_fur
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - 'dynamic_block_field:node-foto'
+      left:
+        - field_features
+      right:
+        - field_soft_fur_config
+        - field_soft_fur_model
+        - field_where
+    fields:
+      'dynamic_block_field:node-foto':
+        plugin_id: 'dynamic_block_field:node-foto'
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.soft_fur.full
+targetEntityType: node
+bundle: soft_fur
+mode: full
+content:
+  field_features:
+    type: text_default
+    weight: 1
+    region: left
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_soft_fur_config:
+    type: entity_reference_label
+    weight: 2
+    region: right
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_soft_fur_model:
+    type: entity_reference_label
+    weight: 3
+    region: right
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_where:
+    type: entity_reference_label
+    weight: 4
+    region: right
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_available: true
+  field_buy_komplekt: true
+  field_foto: true
+  field_new_item: true
+  field_price_base: true
+  field_set_available: true
+  field_tip_mebeli: true
+  langcode: true
+  links: true

@@ -1,0 +1,10 @@
+uuid: 810f8bcd-de63-4aa7-97c8-7e22d1a72641
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.soft_full_description
+label: 'Полное описание товара'
+targetEntityType: node
+cache: true
