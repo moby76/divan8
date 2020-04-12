@@ -45,11 +45,12 @@ third_party_settings:
       header:
         - 'dynamic_block_field:node-foto'
       left:
-        - field_features
+        - field_where
       right:
         - field_soft_fur_config
         - field_soft_fur_model
-        - field_where
+      footer:
+        - field_features
     fields:
       'dynamic_block_field:node-foto':
         plugin_id: 'dynamic_block_field:node-foto'
@@ -63,8 +64,8 @@ mode: full
 content:
   field_features:
     type: text_default
-    weight: 1
-    region: left
+    weight: 4
+    region: footer
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -72,7 +73,7 @@ content:
     type: entity_reference_label
     weight: 2
     region: right
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -80,18 +81,21 @@ content:
     type: entity_reference_label
     weight: 3
     region: right
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
   field_where:
-    type: entity_reference_label
-    weight: 4
-    region: right
-    label: above
+    type: entity_reference_entity_view
+    weight: 1
+    region: left
+    label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
 hidden:
   body: true
   field_available: true

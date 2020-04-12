@@ -9,27 +9,48 @@ dependencies:
     - field.field.node.shops.field_podrobno
     - node.type.shops
   module:
-    - text
+    - geolocation
     - user
 id: node.shops.teaser
 targetEntityType: node
 bundle: shops
 mode: teaser
 content:
-  body:
+  field_location:
+    type: geolocation_map
+    weight: 0
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      set_marker: '1'
+      title: 'Посетить магазин'
+      info_text: '[geolocation_current_item:data:title]'
+      google_map_settings:
+        height: 300px
+        width: 100%
+        type: ROADMAP
+        zoom: '15'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
     third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
-  field_location: true
+  body: true
   field_podrobno: true
   langcode: true
+  links: true
