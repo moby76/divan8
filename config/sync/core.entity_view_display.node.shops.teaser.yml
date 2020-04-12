@@ -9,27 +9,93 @@ dependencies:
     - field.field.node.shops.field_podrobno
     - node.type.shops
   module:
-    - text
+    - ds
+    - geolocation
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_location
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: inline
+        formatter: default
+        settings:
+          link: true
+          wrapper: h5
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: 'Этот товар находится в магазине '
+            lb-col: false
+            classes: {  }
 id: node.shops.teaser
 targetEntityType: node
 bundle: shops
 mode: teaser
 content:
-  body:
+  field_location:
+    type: geolocation_map
+    weight: 1
+    region: ds_content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 300px
+        width: 100%
+        type: ROADMAP
+        zoom: '15'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 1
+      common_map: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
-  field_location: true
+  body: true
   field_podrobno: true
   langcode: true
+  links: true
