@@ -9,8 +9,46 @@ dependencies:
     - field.field.node.shops.field_podrobno
     - node.type.shops
   module:
+    - ds
     - geolocation
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_location
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: inline
+        formatter: default
+        settings:
+          link: true
+          wrapper: h5
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: 'Этот товар находится в магазине '
+            lb-col: false
+            classes: {  }
 id: node.shops.teaser
 targetEntityType: node
 bundle: shops
@@ -18,13 +56,13 @@ mode: teaser
 content:
   field_location:
     type: geolocation_map
-    weight: 0
-    region: content
+    weight: 1
+    region: ds_content
     label: hidden
     settings:
       set_marker: '1'
-      title: 'Посетить магазин'
-      info_text: '[geolocation_current_item:data:title]'
+      title: ''
+      info_text: ''
       google_map_settings:
         height: 300px
         width: 100%
@@ -46,9 +84,16 @@ content:
         fullscreenControl: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
-      use_overridden_map_settings: 0
+      use_overridden_map_settings: 1
       common_map: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
   body: true
   field_podrobno: true
