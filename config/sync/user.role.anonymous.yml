@@ -14,4 +14,5 @@ permissions:
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view dynamic_block_field:node-foto on node'
   - 'view media'
