@@ -46,3 +46,20 @@
     -webkit-transition: opacity 0.6s ease;
     transition: opacity 0.6s ease;
 }
+
+.field-slideshow{
+    width: 50%;
+    /* margin: auto; */
+    float: left;
+}
+
+.field-slideshow-wrapper{
+    /* background-color: bisque; */
+    overflow: hidden;
+    height: 350px;
+ }
+
+.cycle-pager-after{
+    margin-top: 250px;
+    position: relative;
+} 

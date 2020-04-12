@@ -1,0 +1,73 @@
+uuid: 19851856-c138-4310-9a62-eecd13698d2a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_dim
+    - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
+    - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_scheme
+    - image.style.thumbnail
+    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.modeli_myagkoy_mebeli.default
+targetEntityType: taxonomy_term
+bundle: modeli_myagkoy_mebeli
+mode: default
+content:
+  field_dim:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_model_desc:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_scheme:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true

@@ -1,0 +1,19 @@
+uuid: 8b8e421b-a783-4cdd-84ab-d94f7f931bbe
+langcode: ru
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+id: taxonomy_term.field_model_desc
+field_name: field_model_desc
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
