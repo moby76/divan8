@@ -1,0 +1,10 @@
+uuid: 5115f040-a568-43da-b4a7-e0d30776c2ce
+langcode: ru
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.scheem_dim
+label: 'Схема и размеры'
+targetEntityType: taxonomy_term
+cache: true
