@@ -5,11 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.soft_fur.body
+    - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_fotos
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_set_available
@@ -50,6 +50,7 @@ third_party_settings:
         - field_where
       right:
         - field_soft_fur_config
+        - field_age_kategory
         - field_features
     fields:
       'dynamic_block_field:node-foto':
@@ -62,9 +63,17 @@ targetEntityType: node
 bundle: soft_fur
 mode: full
 content:
+  field_age_kategory:
+    type: entity_reference_label
+    weight: 4
+    region: right
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_features:
     type: text_default
-    weight: 4
+    weight: 5
     region: right
     label: above
     settings: {  }
@@ -76,7 +85,14 @@ content:
     label: inline
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_soft_fur_model:
     type: entity_reference_entity_view
     weight: 1
@@ -115,7 +131,6 @@ hidden:
   field_available: true
   field_buy_komplekt: true
   field_foto: true
-  field_fotos: true
   field_new_item: true
   field_price_base: true
   field_set_available: true

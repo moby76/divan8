@@ -1,0 +1,31 @@
+uuid: 97b2b9bb-e05b-420d-b53c-8c6239c529ab
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sleep_config.field_age_kategory
+    - taxonomy.vocabulary.sleep_config
+  module:
+    - text
+id: taxonomy_term.sleep_config.default
+targetEntityType: taxonomy_term
+bundle: sleep_config
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_age_kategory:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true

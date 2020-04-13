@@ -1,0 +1,65 @@
+uuid: 0289bc82-d891-48c4-9aa9-df21e43dd08a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.scheem_dim
+    - field.field.taxonomy_term.sleep_models.field_dim
+    - field.field.taxonomy_term.sleep_models.field_model_desc
+    - field.field.taxonomy_term.sleep_models.field_scheme
+    - taxonomy.vocabulary.sleep_models
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_scheme
+      right:
+        - field_dim
+id: taxonomy_term.sleep_models.scheem_dim
+targetEntityType: taxonomy_term
+bundle: sleep_models
+mode: scheem_dim
+content:
+  field_dim:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: right
+  field_scheme:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: left
+hidden:
+  description: true
+  field_model_desc: true
+  langcode: true
