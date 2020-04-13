@@ -5,11 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.soft_full_description
     - field.field.node.soft_fur.body
+    - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_fotos
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_set_available
@@ -174,6 +174,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_age_kategory: true
   field_foto: true
-  field_fotos: true
   field_set_available: true

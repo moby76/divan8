@@ -1,0 +1,11 @@
+uuid: b9b83b17-6e5c-4b4b-bfcd-379a861d787e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ages
+id: taxonomy_term.ages
+target_entity_type_id: taxonomy_term
+target_bundle: ages
+default_langcode: site_default
+language_alterable: false

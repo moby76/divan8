@@ -3,10 +3,10 @@ langcode: ru
 status: true
 dependencies: {  }
 name: scale_330_330
-label: 'scale 330*330'
+label: 'scale 330*220'
 effects:
-  b3cb238f-9a3d-4875-b062-df22f0206bdb:
-    uuid: b3cb238f-9a3d-4875-b062-df22f0206bdb
+  184a1800-fe87-4ebd-9c2b-14aa626f983c:
+    uuid: 184a1800-fe87-4ebd-9c2b-14aa626f983c
     id: image_scale
     weight: 1
     data:

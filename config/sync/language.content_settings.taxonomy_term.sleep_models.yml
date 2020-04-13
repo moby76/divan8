@@ -1,0 +1,11 @@
+uuid: 2e68c4f8-a7f3-4baf-b1db-eaa4ff2749ee
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sleep_models
+id: taxonomy_term.sleep_models
+target_entity_type_id: taxonomy_term
+target_bundle: sleep_models
+default_langcode: site_default
+language_alterable: false

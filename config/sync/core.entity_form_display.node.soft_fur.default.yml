@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.soft_fur.body
+    - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_fotos
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_set_available
@@ -32,6 +32,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_age_kategory:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_available:
     weight: 13
     settings: {  }
@@ -156,4 +166,3 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
-  field_fotos: true

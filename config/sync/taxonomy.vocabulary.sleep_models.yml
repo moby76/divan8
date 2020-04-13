@@ -1,0 +1,8 @@
+uuid: d09a1651-970e-4cf7-b6bb-3d865e36aa84
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Модели кроватей'
+vid: sleep_models
+description: ''
+weight: 0

@@ -1,0 +1,45 @@
+uuid: afda4574-34e1-41d0-aea5-72dd8736ad10
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sleep_models.field_dim
+    - field.field.taxonomy_term.sleep_models.field_model_desc
+    - field.field.taxonomy_term.sleep_models.field_scheme
+    - taxonomy.vocabulary.sleep_models
+  module:
+    - image
+    - text
+id: taxonomy_term.sleep_models.default
+targetEntityType: taxonomy_term
+bundle: sleep_models
+mode: default
+content:
+  field_dim:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_model_desc:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_scheme:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  description: true
+  langcode: true

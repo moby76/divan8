@@ -1,0 +1,11 @@
+uuid: e11ccb42-e1a6-4848-82bf-e53044e383b7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.sleeps
+id: node.sleeps
+target_entity_type_id: node
+target_bundle: sleeps
+default_langcode: site_default
+language_alterable: false

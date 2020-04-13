@@ -1,0 +1,29 @@
+uuid: e825ca5a-78ed-46ff-8029-798d1361a42f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sleep_config
+    - node.type.sleeps
+    - taxonomy.vocabulary.sleep_config
+id: node.sleeps.field_sleep_config
+field_name: field_sleep_config
+entity_type: node
+bundle: sleeps
+label: 'Конфигурация кровати'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sleep_config: sleep_config
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

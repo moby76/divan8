@@ -1,0 +1,73 @@
+uuid: b89e1d45-2832-46ca-b2c5-d1f48727f48e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sleep_models.field_dim
+    - field.field.taxonomy_term.sleep_models.field_model_desc
+    - field.field.taxonomy_term.sleep_models.field_scheme
+    - image.style.thumbnail
+    - taxonomy.vocabulary.sleep_models
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.sleep_models.default
+targetEntityType: taxonomy_term
+bundle: sleep_models
+mode: default
+content:
+  field_dim:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_model_desc:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_scheme:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true

@@ -1,0 +1,23 @@
+uuid: d81626d9-9e46-48d0-a694-1544c3dfffa7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sleeps
+  module:
+    - text
+id: node.sleeps.body
+field_name: body
+entity_type: node
+bundle: sleeps
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,33 @@
+uuid: 83aef53f-4e99-46ae-9526-4a4332201cd4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age_kategory
+    - node.type.sleeps
+    - taxonomy.vocabulary.ages
+  content:
+    - 'taxonomy_term:ages:ad8fd6bd-6cab-4cba-856e-ac0ec1401b39'
+id: node.sleeps.field_age_kategory
+field_name: field_age_kategory
+entity_type: node
+bundle: sleeps
+label: 'Возрастная категория'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: ad8fd6bd-6cab-4cba-856e-ac0ec1401b39
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ages: ages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
