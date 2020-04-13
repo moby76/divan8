@@ -9,6 +9,8 @@ module:
   color: 0
   colorbox: 0
   colorbox_field_formatter: 0
+  colorbox_inline: 0
+  colorbox_simple_load: 0
   comment: 0
   config: 0
   config_translation: 0
@@ -18,9 +20,12 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  ds_devel: 0
   ds_switch_view_mode: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_browser: 0
+  entity_browser_example: 0
   field: 0
   field_slideshow: 0
   field_ui: 0
