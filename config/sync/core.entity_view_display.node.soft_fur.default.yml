@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.soft_fur.field_available
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
+    - field.field.node.soft_fur.field_foto
     - field.field.node.soft_fur.field_fotos
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
@@ -49,6 +50,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_foto:
+    type: entity_reference_entity_view
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   field_price_base:
     weight: 1

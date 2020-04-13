@@ -3,11 +3,11 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_fotos
+    - field.storage.node.field_foto
     - image.style.large
     - node.type.soft_fur
   module:
-    - colorbox
+    - media
     - node
     - user
     - views_bootstrap
@@ -68,7 +68,7 @@ display:
           use_caption: 1
           wrap: 1
           effect: slide
-          image: field_fotos
+          image: field_foto
           title: ''
           description: ''
       row:
@@ -79,10 +79,10 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        field_fotos:
-          id: field_fotos
-          table: node__field_fotos
-          field: field_fotos
+        field_foto:
+          id: field_foto
+          table: node__field_foto
+          field: field_foto
           relationship: none
           group_type: group
           admin_label: ''
@@ -128,16 +128,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: colorbox
+          type: media_thumbnail
           settings:
-            colorbox_node_style: large
-            colorbox_node_style_first: ''
-            colorbox_image_style: ''
-            colorbox_gallery: post
-            colorbox_gallery_custom: ''
-            colorbox_caption: none
-            colorbox_caption_custom: ''
-          group_column: ''
+            image_style: large
+            image_link: media
+          group_column: target_id
           group_columns: {  }
           group_rows: false
           delta_limit: 0
@@ -261,7 +256,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_fotos'
+        - 'config:field.storage.node.field_foto'
   block_1:
     display_plugin: block
     id: block_1
@@ -278,4 +273,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_fotos'
+        - 'config:field.storage.node.field_foto'
