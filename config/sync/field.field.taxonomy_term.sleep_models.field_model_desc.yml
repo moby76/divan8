@@ -1,0 +1,21 @@
+uuid: 9e4688af-c737-4807-a5c2-9595adb70a96
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_model_desc
+    - taxonomy.vocabulary.sleep_models
+  module:
+    - text
+id: taxonomy_term.sleep_models.field_model_desc
+field_name: field_model_desc
+entity_type: taxonomy_term
+bundle: sleep_models
+label: 'Описание модели'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,42 +1,169 @@
 taxonomies:
-  soft_fur_config:
+  ages:
     -
-      vid: soft_fur_config
-      tid: '7'
+      vid: ages
+      tid: '19'
       langcode: ru
-      name: 'Кресла для гостинной'
+      name: Взрослый
       description__value: null
       description__format: null
       weight: '0'
       parent: '0'
-      uuid: 5d438c8c-90aa-4b4a-a844-fb219939395b
+      uuid: 5dcf37f0-d0ba-4be3-be16-12ca53133f7e
     -
-      vid: soft_fur_config
-      tid: '6'
+      vid: ages
+      tid: '16'
       langcode: ru
-      name: 'Модульная мебель'
+      name: Детский
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 522ad387-8c2c-40be-a62e-c065fffc8c00
+    -
+      vid: ages
+      tid: '21'
+      langcode: ru
+      name: 'Любой возраст'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: ad8fd6bd-6cab-4cba-856e-ac0ec1401b39
+    -
+      vid: ages
+      tid: '17'
+      langcode: ru
+      name: Подростковый
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: f3265088-ab74-4dd7-b874-1f23c2ea8c6a
+    -
+      vid: ages
+      tid: '20'
+      langcode: ru
+      name: Пожилой
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: cd0a581c-6e37-4d80-8e7d-73a288fe1d0d
+    -
+      vid: ages
+      tid: '18'
+      langcode: ru
+      name: Юношеский
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c3f084b3-5cf5-4b89-839e-9a8bd05a7d8f
+  sleep_config:
+    -
+      vid: sleep_config
+      tid: '12'
+      langcode: ru
+      name: 'Двуспальные кровати >1.5'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 25ffb205-23dd-4a1a-924b-dee650ad2785
+    -
+      vid: sleep_config
+      tid: '15'
+      langcode: ru
+      name: 'Двухъярусные кровати'
       description__value: null
       description__format: null
       weight: '1'
       parent: '0'
-      uuid: 40083c81-d8e5-4249-9ad2-01ae46672fd4
+      uuid: 96a4ae96-7c71-48b1-a1c4-a3657253afb8
     -
-      vid: soft_fur_config
-      tid: '4'
+      vid: sleep_config
+      tid: '13'
       langcode: ru
-      name: 'Прямые диваны'
+      name: 'Односпальные кровати 0.8<'
       description__value: null
       description__format: null
       weight: '2'
       parent: '0'
-      uuid: 18d5c07e-0fc1-4af5-8e65-579b2fb64f46
+      uuid: 49de3b42-80f2-4c96-b487-55e9e1c11ba7
     -
-      vid: soft_fur_config
-      tid: '5'
+      vid: sleep_config
+      tid: '14'
       langcode: ru
-      name: 'Угловые диваны'
+      name: 'Полутораспальные кровати 0.8-1.5'
       description__value: null
       description__format: null
       weight: '3'
       parent: '0'
-      uuid: 77364c6a-c651-4df7-a0e6-14dd927f68c9
+      uuid: 5a1074f1-11fe-4429-abd8-c752445b0434
+  sleep_models:
+    -
+      vid: sleep_models
+      tid: '24'
+      langcode: ru
+      name: Агата
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 99ddfc6a-ad73-4b0d-ba01-2de24f549377
+      field_dim: {  }
+      field_model_desc: {  }
+      field_scheme: {  }
+    -
+      vid: sleep_models
+      tid: '25'
+      langcode: ru
+      name: Верона
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: bae5be87-74ae-4609-a81c-bfd5c6f137fd
+      field_dim: {  }
+      field_model_desc: {  }
+      field_scheme: {  }
+    -
+      vid: sleep_models
+      tid: '23'
+      langcode: ru
+      name: Лагуна
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: a06aa6a2-803c-440b-8b65-f6a1b2b9d3f2
+      field_dim: {  }
+      field_model_desc: {  }
+      field_scheme: {  }
+    -
+      vid: sleep_models
+      tid: '22'
+      langcode: ru
+      name: Лилия
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 529611fc-6c00-46fb-bfc0-b8de6f3ff553
+      field_dim: {  }
+      field_model_desc: {  }
+      field_scheme: {  }
+    -
+      vid: sleep_models
+      tid: '26'
+      langcode: ru
+      name: Твистер
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 1ab2bf21-c450-4b06-8616-5f2575400fc2
+      field_dim: {  }
+      field_model_desc: {  }
+      field_scheme: {  }

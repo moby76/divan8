@@ -1,0 +1,8 @@
+uuid: 84b96117-83b7-4f6f-91fc-7d7955d079b1
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Возрастные категории'
+vid: ages
+description: ''
+weight: 0

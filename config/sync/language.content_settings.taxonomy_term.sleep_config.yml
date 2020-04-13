@@ -1,0 +1,11 @@
+uuid: d901adda-262d-43ec-a9cc-6f5e07ea64d7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sleep_config
+id: taxonomy_term.sleep_config
+target_entity_type_id: taxonomy_term
+target_bundle: sleep_config
+default_langcode: site_default
+language_alterable: false

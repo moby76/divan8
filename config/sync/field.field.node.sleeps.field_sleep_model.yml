@@ -1,0 +1,29 @@
+uuid: a11de185-84d3-4b1b-984f-7a4f9fc9105b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sleep_model
+    - node.type.sleeps
+    - taxonomy.vocabulary.sleep_models
+id: node.sleeps.field_sleep_model
+field_name: field_sleep_model
+entity_type: node
+bundle: sleeps
+label: 'Модель кровати'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sleep_models: sleep_models
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

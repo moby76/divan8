@@ -1,0 +1,29 @@
+uuid: 80a77654-479b-4e27-a8d1-8e0be78262d9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age_kategory
+    - node.type.soft_fur
+    - taxonomy.vocabulary.ages
+id: node.soft_fur.field_age_kategory
+field_name: field_age_kategory
+entity_type: node
+bundle: soft_fur
+label: 'Возрастная категория'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ages: ages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

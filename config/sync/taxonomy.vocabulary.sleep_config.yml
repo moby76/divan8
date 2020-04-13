@@ -1,0 +1,8 @@
+uuid: 27ce626b-d858-42e0-a5c0-837c1ad10301
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Конфигурации кроватей'
+vid: sleep_config
+description: ''
+weight: 0

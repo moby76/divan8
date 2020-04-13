@@ -1,0 +1,29 @@
+uuid: 9fed2a68-57b9-4060-8468-9dd5f3ea871a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_age_kategory
+    - taxonomy.vocabulary.ages
+    - taxonomy.vocabulary.sleep_config
+id: taxonomy_term.sleep_config.field_age_kategory
+field_name: field_age_kategory
+entity_type: taxonomy_term
+bundle: sleep_config
+label: 'Возрастная категория'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ages: ages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

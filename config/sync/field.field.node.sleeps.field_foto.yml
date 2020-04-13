@@ -1,0 +1,28 @@
+uuid: e02c9a7f-2b95-4445-9430-79fe051e2d79
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto
+    - media.type.image
+    - node.type.sleeps
+id: node.sleeps.field_foto
+field_name: field_foto
+entity_type: node
+bundle: sleeps
+label: Фото
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
