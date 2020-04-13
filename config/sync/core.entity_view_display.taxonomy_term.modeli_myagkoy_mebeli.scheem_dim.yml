@@ -1,8 +1,9 @@
-uuid: f8d9dbfe-ad58-4bda-8dd7-1c61b0c898be
+uuid: b219c9ad-28a0-4f2e-9852-7efdce22b7a3
 langcode: ru
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.scheem_dim
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_dim
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_scheme
@@ -13,21 +14,40 @@ dependencies:
     - ds
     - field_slideshow
     - image
-    - text
-id: taxonomy_term.modeli_myagkoy_mebeli.default
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_scheme
+      right:
+        - field_dim
+id: taxonomy_term.modeli_myagkoy_mebeli.scheem_dim
 targetEntityType: taxonomy_term
 bundle: modeli_myagkoy_mebeli
-mode: default
+mode: scheem_dim
 content:
-  description:
-    type: text_default
-    weight: 0
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_dim:
+    type: image
     weight: 1
+    region: right
     label: hidden
     settings:
       image_style: medium
@@ -41,15 +61,6 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: image
-    region: content
-  field_model_desc:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_scheme:
     weight: 0
     label: hidden
@@ -65,7 +76,7 @@ content:
         speed: '500'
         startingSlide: '0'
         sync: '1'
-        timeout: '4000'
+        timeout: '2500'
         allowWrap: 0
         hideNonActive: 0
         pauseOnHover: 0
@@ -90,14 +101,8 @@ content:
             lb-col: false
             classes: {  }
     type: slideshow
-    region: content
-  langcode:
-    type: language
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-      native_language: false
-    third_party_settings: {  }
-hidden: {  }
+    region: left
+hidden:
+  description: true
+  field_model_desc: true
+  langcode: true
