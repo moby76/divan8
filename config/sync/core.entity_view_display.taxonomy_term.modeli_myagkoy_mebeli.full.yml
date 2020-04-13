@@ -1,8 +1,9 @@
-uuid: f8d9dbfe-ad58-4bda-8dd7-1c61b0c898be
+uuid: 4a12d2e1-650b-4ea2-a462-09f5ef9128e0
 langcode: ru
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_dim
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_scheme
@@ -14,18 +15,11 @@ dependencies:
     - field_slideshow
     - image
     - text
-id: taxonomy_term.modeli_myagkoy_mebeli.default
+id: taxonomy_term.modeli_myagkoy_mebeli.full
 targetEntityType: taxonomy_term
 bundle: modeli_myagkoy_mebeli
-mode: default
+mode: full
 content:
-  description:
-    type: text_default
-    weight: 0
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_dim:
     weight: 1
     label: hidden
@@ -91,13 +85,6 @@ content:
             classes: {  }
     type: slideshow
     region: content
-  langcode:
-    type: language
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-      native_language: false
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  description: true
+  langcode: true
