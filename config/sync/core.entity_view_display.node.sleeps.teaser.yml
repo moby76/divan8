@@ -6,10 +6,13 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.sleeps.body
     - field.field.node.sleeps.field_age_kategory
+    - field.field.node.sleeps.field_available
     - field.field.node.sleeps.field_foto
+    - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
     - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
+    - field.field.node.sleeps.field_where
     - node.type.sleeps
   module:
     - text
@@ -34,8 +37,11 @@ content:
     region: content
 hidden:
   field_age_kategory: true
+  field_available: true
   field_foto: true
+  field_new_item: true
   field_price_base: true
   field_sleep_config: true
   field_sleep_model: true
+  field_where: true
   langcode: true

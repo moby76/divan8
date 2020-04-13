@@ -1,0 +1,28 @@
+uuid: 2b8b0aaa-53d3-41b4-9802-db4e2bb45632
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_where
+    - node.type.shops
+    - node.type.sleeps
+id: node.sleeps.field_where
+field_name: field_where
+entity_type: node
+bundle: sleeps
+label: 'Где купить'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      shops: shops
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

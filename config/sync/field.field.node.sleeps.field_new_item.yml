@@ -1,0 +1,23 @@
+uuid: 0041392a-fe5a-4831-aa9d-8aef875715c1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_item
+    - node.type.sleeps
+id: node.sleeps.field_new_item
+field_name: field_new_item
+entity_type: node
+bundle: sleeps
+label: 'Это новинка'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean

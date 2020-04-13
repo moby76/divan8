@@ -1,0 +1,23 @@
+uuid: 3d75530d-17e9-487d-837f-b6191173f356
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available
+    - node.type.sleeps
+id: node.sleeps.field_available
+field_name: field_available
+entity_type: node
+bundle: sleeps
+label: 'В наличии'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean
