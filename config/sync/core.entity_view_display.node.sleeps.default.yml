@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.node.sleeps.body
     - field.field.node.sleeps.field_age_kategory
+    - field.field.node.sleeps.field_available
     - field.field.node.sleeps.field_foto
+    - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
     - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
+    - field.field.node.sleeps.field_where
     - image.style.media_library
     - node.type.sleeps
   module:
@@ -28,6 +31,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_available:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_foto:
     weight: 1
     label: above
@@ -44,6 +57,23 @@ content:
             lb-col: false
             classes: {  }
     type: media_thumbnail
+    region: content
+  field_new_item:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: boolean
     region: content
   field_price_base:
     weight: 2
@@ -69,6 +99,23 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_where:
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
     region: content
   links:
     weight: 0
