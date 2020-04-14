@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.custom_pages.body
     - node.type.custom_pages
+    - views.view.comments_recent
     - views.view.soft_new_items
   module:
     - layout_builder
@@ -41,6 +42,19 @@ third_party_settings:
               label_display: '0'
               views_label: ''
               items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+          267b2ecb-e54e-4389-a6b9-81610968ce0b:
+            uuid: 267b2ecb-e54e-4389-a6b9-81610968ce0b
+            region: content
+            configuration:
+              id: 'views_block:comments_recent-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: '5'
               context_mapping: {  }
             additional: {  }
             weight: 1
