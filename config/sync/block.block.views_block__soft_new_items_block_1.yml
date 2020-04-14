@@ -1,6 +1,6 @@
 uuid: 6dcf3b24-1579-467c-8a63-43895a3a3672
 langcode: ru
-status: true
+status: false
 dependencies:
   config:
     - views.view.soft_new_items
