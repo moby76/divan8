@@ -5,12 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_foto
     - field.storage.node.field_soft_fur_model
-    - taxonomy.vocabulary.fur_type
-  content:
-    - 'taxonomy_term:fur_type:24350927-c90f-498c-a134-30ea1832ff2a'
   module:
     - node
-    - taxonomy
     - user
 id: soft_new_items
 label: 'Новинки мягкой мебели'
@@ -255,54 +251,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        term_node_tid_depth:
-          id: term_node_tid_depth
-          table: node_field_data
-          field: term_node_tid_depth
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            2: 2
-          group: 1
-          exposed: false
-          expose:
-            operator_id: term_node_tid_depth_op
-            label: 'Имеет термины таксономии (с глубиной)'
-            description: null
-            use_operator: false
-            operator: term_node_tid_depth_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: term_node_tid_depth
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: fur_type
-          hierarchy: false
-          error_message: true
-          depth: 0
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
       sorts:
         created:
           id: created
@@ -320,7 +268,20 @@ display:
             label: ''
           granularity: second
       title: 'Новинки мягкой мебели'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Произвольный текст'
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -332,7 +293,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -351,7 +311,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
