@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.custom_pages.body
     - node.type.custom_pages
+    - views.view.soft_new_items
   module:
     - layout_builder
     - layout_discovery
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -29,6 +31,19 @@ third_party_settings:
               id: 'extra_field_block:node:custom_pages:links'
             additional: {  }
             weight: 0
+          0ad32614-1442-424e-b082-c3bbf155c99d:
+            uuid: 0ad32614-1442-424e-b082-c3bbf155c99d
+            region: content
+            configuration:
+              id: 'views_block:soft_new_items-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: node.custom_pages.default
 targetEntityType: node
