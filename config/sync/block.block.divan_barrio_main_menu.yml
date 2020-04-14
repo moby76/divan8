@@ -13,7 +13,7 @@ _core:
 id: divan_barrio_main_menu
 theme: divan_barrio
 region: primary_menu
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:
