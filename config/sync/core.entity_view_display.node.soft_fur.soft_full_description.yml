@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_fotograf
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_set_available
@@ -176,4 +177,5 @@ hidden:
   body: true
   field_age_kategory: true
   field_foto: true
+  field_fotograf: true
   field_set_available: true

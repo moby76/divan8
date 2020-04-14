@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_fotograf
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_set_available
@@ -18,6 +19,7 @@ dependencies:
     - field.field.node.soft_fur.field_where
     - node.type.soft_fur
   module:
+    - image
     - text
     - user
 id: node.soft_fur.default
@@ -67,6 +69,15 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_fotograf:
+    weight: 11
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_price_base:
     weight: 1

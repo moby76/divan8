@@ -13,11 +13,9 @@ dependencies:
     - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
     - field.field.node.sleeps.field_where
-    - image.style.media_library
     - node.type.sleeps
   module:
     - ds
-    - media
     - user
 third_party_settings:
   ds:
@@ -27,7 +25,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
+        label: ''
         wrappers:
           header: div
           left: div
@@ -37,107 +35,86 @@ third_party_settings:
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
       header:
-        - links
-        - langcode
-        - body
-        - field_foto
+        - 'dynamic_block_field:node-foto'
+        - field_sleep_model
+      left:
+        - field_where
+      right:
         - field_price_base
         - field_sleep_config
-        - field_sleep_model
-        - field_age_kategory
-        - field_new_item
-        - field_available
-        - field_where
-        - comments
+    fields:
+      'dynamic_block_field:node-foto':
+        plugin_id: 'dynamic_block_field:node-foto'
+        weight: 0
+        label: hidden
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.sleeps.full
 targetEntityType: node
 bundle: sleeps
 mode: full
 content:
-  field_age_kategory:
-    weight: 5
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_available:
-    weight: 7
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_foto:
-    weight: 1
-    label: above
-    settings:
-      image_style: media_library
-      image_link: ''
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: media_thumbnail
-    region: content
-  field_new_item:
-    weight: 6
-    label: above
-    settings:
-      format: default
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: boolean
-    region: content
   field_price_base:
-    weight: 2
-    label: above
+    weight: 3
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: number_integer
-    region: content
+    region: right
   field_sleep_config:
-    weight: 3
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_sleep_model:
     weight: 4
-    label: above
+    label: inline
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: entity_reference_label
-    region: content
-  field_where:
-    weight: 8
-    label: above
+    region: right
+  field_sleep_model:
+    weight: 1
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: scheem_dim
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: header
+  field_where:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: teaser
       link: false
     third_party_settings:
       ds:
@@ -149,12 +126,12 @@ content:
             lb-col: false
             classes: {  }
     type: entity_reference_entity_view
-    region: content
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+    region: left
 hidden:
   body: true
+  field_age_kategory: true
+  field_available: true
+  field_foto: true
+  field_new_item: true
   langcode: true
+  links: true

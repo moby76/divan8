@@ -1,0 +1,10 @@
+uuid: 680ced11-6dfa-4563-9a32-bdac3fec6dec
+langcode: ru
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.test
+label: Тест
+targetEntityType: taxonomy_term
+cache: true

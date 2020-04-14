@@ -7,9 +7,11 @@ dependencies:
     - field.field.taxonomy_term.sleep_models.field_dim
     - field.field.taxonomy_term.sleep_models.field_model_desc
     - field.field.taxonomy_term.sleep_models.field_scheme
+    - image.style.large
     - taxonomy.vocabulary.sleep_models
   module:
     - ds
+    - field_slideshow
     - image
 third_party_settings:
   ds:
@@ -43,7 +45,7 @@ mode: scheem_dim
 content:
   field_dim:
     weight: 1
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -52,12 +54,44 @@ content:
     region: right
   field_scheme:
     weight: 0
-    label: above
+    label: hidden
     settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
+      image_style: large
+      image_link: colorbox
+      colorbox_image_style: ''
+      slideshow:
+        fx: fade
+        autoHeight: '0'
+        delay: '0'
+        loader: 'false'
+        loop: '1000'
+        speed: '500'
+        startingSlide: '0'
+        sync: '1'
+        timeout: '2500'
+        allowWrap: 0
+        hideNonActive: 0
+        pauseOnHover: 0
+        paused: 0
+        random: 0
+        reverse: 0
+        swipe: 0
+      slideshow_pager:
+        pager:
+          after: after
+          before: 0
+        pager_type: thumbnails
+        controls: 0
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: slideshow
     region: left
 hidden:
   description: true

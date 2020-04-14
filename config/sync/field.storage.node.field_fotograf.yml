@@ -1,0 +1,30 @@
+uuid: 7869916d-22d7-4e98-950e-bf167fdfa537
+langcode: ru
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_fotograf
+field_name: field_fotograf
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

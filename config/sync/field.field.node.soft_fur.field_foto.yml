@@ -10,7 +10,7 @@ id: node.soft_fur.field_foto
 field_name: field_foto
 entity_type: node
 bundle: soft_fur
-label: Фото
+label: 'Фото Большое'
 description: ''
 required: false
 translatable: false
