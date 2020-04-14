@@ -59,7 +59,7 @@ content:
       colorbox_caption_custom: ''
     third_party_settings:
       ds:
-        ds_limit: ''
+        ds_limit: '0'
         ft:
           id: expert
           settings:

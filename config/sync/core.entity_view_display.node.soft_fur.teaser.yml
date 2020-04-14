@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_fotograf
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_set_available
@@ -17,39 +18,96 @@ dependencies:
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
+    - image.style.large
     - node.type.soft_fur
   module:
-    - text
+    - ds
+    - image
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_fotograf
+      right:
+        - field_price_base
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Узнать больше'
+          'link class': 'btn btn-outline-info'
+          wrapper: ''
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.soft_fur.teaser
 targetEntityType: node
 bundle: soft_fur
 mode: teaser
 content:
-  body:
+  field_fotograf:
+    type: image
+    weight: 0
+    region: left
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
+      image_style: large
+      image_link: content
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_price_base:
+    type: number_integer
+    weight: 1
+    region: right
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
 hidden:
+  body: true
   field_age_kategory: true
   field_available: true
   field_buy_komplekt: true
   field_features: true
   field_foto: true
   field_new_item: true
-  field_price_base: true
   field_set_available: true
   field_soft_fur_config: true
   field_soft_fur_model: true
   field_tip_mebeli: true
   field_where: true
   langcode: true
+  links: true

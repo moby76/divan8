@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_fotograf
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_set_available
@@ -49,9 +50,11 @@ third_party_settings:
       left:
         - field_where
       right:
+        - field_price_base
         - field_soft_fur_config
-        - field_age_kategory
         - field_features
+      footer:
+        - field_buy_komplekt
     fields:
       'dynamic_block_field:node-foto':
         plugin_id: 'dynamic_block_field:node-foto'
@@ -63,14 +66,22 @@ targetEntityType: node
 bundle: soft_fur
 mode: full
 content:
-  field_age_kategory:
-    type: entity_reference_label
-    weight: 4
-    region: right
+  field_buy_komplekt:
+    type: entity_reference_entity_view
+    weight: 6
+    region: footer
     label: above
     settings:
-      link: true
-    third_party_settings: {  }
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: 'Также рекоммендуем'
+            lb-col: false
+            classes: {  }
   field_features:
     type: text_default
     weight: 5
@@ -78,9 +89,18 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_price_base:
+    type: number_integer
+    weight: 3
+    region: right
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
   field_soft_fur_config:
     type: entity_reference_label
-    weight: 3
+    weight: 4
     region: right
     label: inline
     settings:
@@ -128,11 +148,11 @@ content:
             classes: {  }
 hidden:
   body: true
+  field_age_kategory: true
   field_available: true
-  field_buy_komplekt: true
   field_foto: true
+  field_fotograf: true
   field_new_item: true
-  field_price_base: true
   field_set_available: true
   field_tip_mebeli: true
   langcode: true

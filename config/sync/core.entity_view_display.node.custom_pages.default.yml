@@ -1,0 +1,45 @@
+uuid: d519d233-94fc-426a-8857-c153dc32f42d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.custom_pages.body
+    - node.type.custom_pages
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b1f33188-031d-49d3-9383-187438a4a392:
+            uuid: b1f33188-031d-49d3-9383-187438a4a392
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:custom_pages:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.custom_pages.default
+targetEntityType: node
+bundle: custom_pages
+mode: default
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true

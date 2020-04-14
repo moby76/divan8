@@ -1,6 +1,6 @@
 id: foto
 label: 'Фото в блоке'
-ui_limit: soft_fur|full
+ui_limit: ''
 properties:
   block: 'views_block:foto_v_bloke-block_1'
   use_block_title: true

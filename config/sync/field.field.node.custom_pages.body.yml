@@ -1,0 +1,23 @@
+uuid: 9cb91300-a7a7-4d75-bd2a-dc913f5e31a6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.custom_pages
+  module:
+    - text
+id: node.custom_pages.body
+field_name: body
+entity_type: node
+bundle: custom_pages
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,12 @@
+uuid: eae92d8e-f047-473a-a6b8-61ef5ad126e6
+langcode: ru
+status: false
+dependencies: {  }
+id: main
+label: Главная
+description: ''
+use_admin_theme: false
+path: /frontpage
+access_logic: and
+access_conditions: {  }
+parameters: {  }
