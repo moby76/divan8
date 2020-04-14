@@ -3,7 +3,6 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.sleep_config.field_age_kategory
     - taxonomy.vocabulary.sleep_config
   module:
     - path
@@ -21,16 +20,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_age_kategory:
-    weight: 101
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   langcode:
     type: language_select
     weight: 2

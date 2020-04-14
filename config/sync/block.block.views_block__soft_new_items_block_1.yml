@@ -1,0 +1,30 @@
+uuid: 6dcf3b24-1579-467c-8a63-43895a3a3672
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.soft_new_items
+  module:
+    - system
+    - views
+  theme:
+    - divan_barrio
+id: views_block__soft_new_items_block_1
+theme: divan_barrio
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:soft_new_items-block_1'
+settings:
+  id: 'views_block:soft_new_items-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
