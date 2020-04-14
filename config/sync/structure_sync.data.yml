@@ -93,6 +93,16 @@ taxonomies:
       uuid: 24350927-c90f-498c-a134-30ea1832ff2a
     -
       vid: fur_type
+      tid: '27'
+      langcode: ru
+      name: Стулья
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 28dd0d55-8614-4b1a-b029-de29f85a7346
+    -
+      vid: fur_type
       tid: '3'
       langcode: ru
       name: 'Торговое оборудование'
