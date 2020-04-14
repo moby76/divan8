@@ -255,10 +255,10 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        term_node_tid_depth:
-          id: term_node_tid_depth
-          table: node_field_data
-          field: term_node_tid_depth
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
           relationship: none
           group_type: group
           admin_label: ''
@@ -268,14 +268,14 @@ display:
           group: 1
           exposed: false
           expose:
-            operator_id: term_node_tid_depth_op
-            label: 'Имеет термины таксономии (с глубиной)'
-            description: null
+            operator_id: ''
+            label: ''
+            description: ''
             use_operator: false
-            operator: term_node_tid_depth_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: term_node_tid_depth
+            identifier: ''
             required: false
             remember: false
             multiple: false
@@ -300,9 +300,7 @@ display:
           vid: fur_type
           hierarchy: false
           error_message: true
-          depth: 0
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
+          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -320,7 +318,20 @@ display:
             label: ''
           granularity: second
       title: 'Новинки мягкой мебели'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Произвольный текст'
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
