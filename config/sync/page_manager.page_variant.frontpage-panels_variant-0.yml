@@ -1,0 +1,103 @@
+uuid: 94249bfa-a52d-46b6-a4cb-4ec97595ffcd
+langcode: ru
+status: true
+dependencies:
+  config:
+    - page_manager.page.frontpage
+    - views.view.promoushen
+    - views.view.soft_new_items
+  module:
+    - panels
+    - views
+id: frontpage-panels_variant-0
+label: Панели
+variant: panels_variant
+variant_settings:
+  blocks:
+    b61eee0f-61a9-4f08-ad4e-df7557f20a3e:
+      id: 'views_block:soft_new_items-block_1'
+      label: 'Наши новинки'
+      provider: views
+      label_display: visible
+      views_label: 'Наши новинки'
+      items_per_page: none
+      region: middle
+      weight: 1
+      context_mapping: {  }
+      uuid: b61eee0f-61a9-4f08-ad4e-df7557f20a3e
+    4c59d852-3185-42de-a18d-79ec05383880:
+      id: 'views_block:promoushen-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: 1
+      context_mapping: {  }
+      uuid: 4c59d852-3185-42de-a18d-79ec05383880
+  id: panels_variant
+  uuid: f9771be1-e881-4163-9cd0-7967df7d732b
+  label: null
+  weight: 0
+  layout: bs_2col_bricked
+  layout_settings:
+    label: ''
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      top:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      top_left:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      top_right:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      middle:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      bottom_left:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      bottom_right:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      bottom:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: frontpage-panels_variant-0
+  builder: ipe
+page: frontpage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

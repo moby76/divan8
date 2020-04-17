@@ -10,278 +10,207 @@ dependencies:
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_fotograf
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
     - node.type.soft_fur
-    - views.view.foto_v_bloke
   module:
-    - bootstrap_layouts
     - ds
     - layout_builder
-    - layout_discovery
+    - slick
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: true
-    sections:
-      -
-        layout_id: bs_1col
-        layout_settings:
-          label: ''
-          layout:
+    enabled: false
+  ds:
+    layout:
+      id: bs_2col_bricked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
             wrapper: div
             classes:
-              row: row
-            add_layout_class: 1
+              col-sm-12: col-sm-12
+            add_region_classes: 1
             attributes: ''
-          regions:
-            main:
-              wrapper: div
-              classes:
-                col-sm-12: col-sm-12
-              add_region_classes: 1
-              attributes: ''
-        components:
-          51766e1f-cd55-4648-bf36-d67c3c9bb157:
-            uuid: 51766e1f-cd55-4648-bf36-d67c3c9bb157
-            region: main
-            configuration:
-              id: 'views_block:foto_v_bloke-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          b4cf312f-d18e-42f9-ab76-1f01425e112a:
-            uuid: b4cf312f-d18e-42f9-ab76-1f01425e112a
-            region: main
-            configuration:
-              id: 'field_block:node:soft_fur:field_soft_fur_model'
-              label: 'Модель мягкой мебели'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: scheem_dim
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: default
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          c37ef783-7414-4e1c-b0d8-8d72e81a61cd:
-            uuid: c37ef783-7414-4e1c-b0d8-8d72e81a61cd
-            region: header
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:soft_fur:field_soft_fur_model'
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: scheem_dim
-                  link: false
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: default
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 0
-          164a673d-cad3-4b3d-96b9-027befa6372f:
-            uuid: 164a673d-cad3-4b3d-96b9-027befa6372f
-            region: left
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:soft_fur:field_where'
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: teaser
-                  link: false
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
-                    ft:
-                      id: default
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 0
-          eb57fa0d-b62c-4e6b-b4ad-4f707fbb8332:
-            uuid: eb57fa0d-b62c-4e6b-b4ad-4f707fbb8332
-            region: right
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:soft_fur:field_price_base'
-              formatter:
-                type: number_integer
-                label: inline
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-          950667f9-932d-4463-8b18-96fe7b05fda9:
-            uuid: 950667f9-932d-4463-8b18-96fe7b05fda9
-            region: right
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:soft_fur:field_soft_fur_config'
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: default
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 1
-          a61c97ee-a3ed-4421-8fcc-cceb2939c374:
-            uuid: a61c97ee-a3ed-4421-8fcc-cceb2939c374
-            region: right
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:soft_fur:field_features'
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 2
-          2f12bcd6-3a98-4750-a520-d34f5aaedb83:
-            uuid: 2f12bcd6-3a98-4750-a520-d34f5aaedb83
-            region: footer
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:soft_fur:field_buy_komplekt'
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: teaser
-                  link: false
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: default
-                      settings:
-                        lb: 'Также рекоммендуем'
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
+          top_left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          top_right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          middle:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom_left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom_right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - field_foto
+      top_left:
+        - field_where
+      top_right:
+        - field_price_base
+        - field_tip_mebeli
+        - field_soft_fur_config
+        - field_features
+      middle:
+        - field_soft_fur_model
+      bottom_left:
+        - field_buy_komplekt
 id: node.soft_fur.full
 targetEntityType: node
 bundle: soft_fur
 mode: full
 content:
   field_buy_komplekt:
-    type: entity_reference_entity_view
-    weight: 6
-    region: footer
+    type: entity_reference_label
+    weight: 7
+    region: bottom_left
     label: above
     settings:
-      view_mode: teaser
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: 'Также рекоммендуем'
-            lb-col: false
-            classes: {  }
+      link: true
+    third_party_settings: {  }
   field_features:
     type: text_default
     weight: 5
-    region: right
-    label: above
+    region: top_right
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-  field_price_base:
-    type: number_integer
-    weight: 3
-    region: right
-    label: inline
+  field_foto:
+    type: slick_media
+    weight: 0
+    region: top
+    label: hidden
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-  field_soft_fur_config:
-    type: entity_reference_label
-    weight: 4
-    region: right
-    label: inline
-    settings:
-      link: true
+      style: ''
+      optionset: custom
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: ''
+      box_media_style: ''
+      ratio: ''
+      box_caption: ''
+      view_mode: full
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      class: ''
+      cache: 0
+      overridables:
+        dots: dots
+        arrows: '0'
+        autoplay: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      current_view_mode: full
+      vanilla: false
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      thumbnail: ''
+      thumbnail_caption: ''
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      id: ''
+      overlay: ''
     third_party_settings:
       ds:
+        ds_limit: '1'
         ft:
           id: default
           settings:
             lb: ''
             lb-col: false
             classes: {  }
+  field_price_base:
+    type: number_unformatted
+    weight: 2
+    region: top_right
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_soft_fur_config:
+    type: entity_reference_label
+    weight: 4
+    region: top_right
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   field_soft_fur_model:
     type: entity_reference_entity_view
-    weight: 1
-    region: header
-    label: hidden
+    weight: 6
+    region: middle
+    label: above
     settings:
       view_mode: scheem_dim
       link: false
@@ -290,14 +219,22 @@ content:
         ft:
           id: default
           settings:
-            lb: ''
+            lb: 'Описание модели'
             lb-col: false
             classes: {  }
+  field_tip_mebeli:
+    type: entity_reference_label
+    weight: 3
+    region: top_right
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   field_where:
     type: entity_reference_entity_view
-    weight: 2
-    region: left
-    label: hidden
+    weight: 1
+    region: top_left
+    label: visually_hidden
     settings:
       view_mode: teaser
       link: false
@@ -314,10 +251,8 @@ hidden:
   body: true
   field_age_kategory: true
   field_available: true
-  field_foto: true
-  field_fotograf: true
   field_new_item: true
+  field_promoushen_photo: true
   field_set_available: true
-  field_tip_mebeli: true
   langcode: true
   links: true

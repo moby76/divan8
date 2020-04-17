@@ -1,0 +1,10 @@
+uuid: e96f19c0-afa7-4218-92b2-873bc7419c82
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.new_items
+label: Новинки
+targetEntityType: node
+cache: true

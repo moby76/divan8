@@ -8,10 +8,10 @@ dependencies:
     - node.type.sleeps
     - node.type.soft_fur
   module:
-    - media
     - node
+    - slick
+    - slick_views
     - user
-    - views_bootstrap
 id: foto_v_bloke
 label: 'Фото в блоке'
 module: views
@@ -57,25 +57,46 @@ display:
           items_per_page: 0
           offset: 0
       style:
-        type: views_bootstrap_carousel
+        type: slick
         options:
-          grouping: {  }
-          interval: '0'
-          keyboard: 1
-          ride: 1
-          navigation: 1
-          indicators: 1
-          pause: 1
-          use_caption: 1
-          wrap: 1
-          effect: slide
-          image: field_foto
+          vanilla: true
+          optionset: default
+          skin: ''
+          layout: ''
+          caption:
+            field_foto: '0'
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          thumbnail_position: ''
+          grid: null
+          grid_medium: null
+          grid_small: null
+          visible_items: null
+          preserve_keys: false
+          image: ''
+          thumbnail: ''
+          overlay: ''
           title: ''
-          description: ''
+          link: ''
+          class: ''
+          id: ''
+          override: false
+          overridables:
+            arrows: '0'
+            autoplay: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          cache: 0
+          current_view_mode: block_1
+          thumbnail_effect: ''
       row:
         type: fields
         options:
-          default_field_elements: false
+          default_field_elements: true
           inline: {  }
           separator: ''
           hide_empty: false
@@ -129,10 +150,50 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: media_thumbnail
+          type: slick_media
           settings:
+            vanilla: true
+            optionset: default
+            style: ''
+            skin: ''
+            background: false
+            layout: ''
+            caption:
+              field_media_document: '0'
+            view_mode: default
+            optionset_thumbnail: ''
+            skin_thumbnail: ''
+            thumbnail_position: ''
             image_style: large
-            image_link: ''
+            thumbnail_style: ''
+            thumbnail_effect: ''
+            media_switch: ''
+            ratio: ''
+            box_style: ''
+            box_media_style: ''
+            box_caption: ''
+            box_caption_custom: ''
+            grid: null
+            grid_medium: null
+            grid_small: null
+            visible_items: null
+            preserve_keys: false
+            image: ''
+            title: ''
+            link: ''
+            class: ''
+            override: false
+            overridables:
+              arrows: '0'
+              autoplay: '0'
+              dots: '0'
+              draggable: '0'
+              infinite: '0'
+              mouseWheel: '0'
+              randomize: '0'
+              variableWidth: '0'
+            cache: 0
+            current_view_mode: _custom
           group_column: target_id
           group_columns: {  }
           group_rows: false

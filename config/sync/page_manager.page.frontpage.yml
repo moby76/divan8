@@ -1,8 +1,8 @@
-uuid: eae92d8e-f047-473a-a6b8-61ef5ad126e6
+uuid: 3fd7012a-f875-4409-9cf1-e76379362c46
 langcode: ru
-status: false
+status: true
 dependencies: {  }
-id: main
+id: frontpage
 label: Главная
 description: ''
 use_admin_theme: false
