@@ -1,17 +1,17 @@
-uuid: 96cd850b-cec3-479a-914f-a44fc815b43c
+uuid: 298836b0-edc6-4219-8e0f-b4cb58a4824c
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_fotograf
+    - field.storage.node.field_promoushen_photo
     - node.type.soft_fur
   module:
     - image
-id: node.soft_fur.field_fotograf
-field_name: field_fotograf
+id: node.soft_fur.field_promoushen_photo
+field_name: field_promoushen_photo
 entity_type: node
 bundle: soft_fur
-label: Фотографии
+label: 'Фото на промоушен'
 description: ''
 required: false
 translatable: false

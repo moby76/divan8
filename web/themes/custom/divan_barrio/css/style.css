@@ -67,3 +67,49 @@
 .card-footer{
    background-color:rgba(0, 0, 0, 0.02);
 }
+
+.dialog{
+    position: fixed;
+    height: 419px;
+    width: 385px;
+    top: 79px;
+    left: 1203px;
+}
+
+.slick-initialized .slick-slide{
+    margin: 0 50px;
+}
+
+.slide__link{
+    margin: 275px 0;
+    }
+
+.slide__content, .grid__content {
+        position: relative;
+        min-height: 411px;
+}     
+
+.slick--skin--classic .slide__caption{
+    background-color: #000;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    left: auto;
+    right: 0;
+    margin: 0;
+    min-height: 80px;
+    padding: 15px;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0.2s;
+    transition: transform 1s ease-in-out 0.2s;
+    /* width: 100%; */
+}    
+
+.row .bs-2col-bricked{
+    margin-top: 35px;
+}
+
+.block-region-middle{
+    border-top: #4c50522e 1px solid;
+    padding-top: 10px;
+    margin-top: 15px;
+}

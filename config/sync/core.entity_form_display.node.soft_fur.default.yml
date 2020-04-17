@@ -9,9 +9,9 @@ dependencies:
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_fotograf
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
@@ -72,14 +72,6 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
-  field_fotograf:
-    weight: 2
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_new_item:
     weight: 18
     settings: {  }
@@ -92,6 +84,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_promoushen_photo:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_set_available:
     weight: 17

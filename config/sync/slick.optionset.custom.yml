@@ -1,0 +1,24 @@
+uuid: fd038e38-fa27-46ba-afd7-edbd16d452de
+langcode: ru
+status: true
+dependencies: {  }
+id: custom
+name: custom
+label: Custom
+weight: 0
+group: ''
+skin: default
+breakpoints: 0
+optimized: true
+options:
+  options__active_tab: edit-options-settings
+  settings:
+    prevArrow: ''
+    nextArrow: ''
+    centerMode: true
+    dots: true
+    lazyLoad: ondemand
+    mouseWheel: true
+    slidesToShow: 1
+    speed: 900
+    easing: swing
