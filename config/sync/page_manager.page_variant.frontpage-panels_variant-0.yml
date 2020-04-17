@@ -25,17 +25,17 @@ variant_settings:
       weight: 1
       context_mapping: {  }
       uuid: b61eee0f-61a9-4f08-ad4e-df7557f20a3e
-    4c59d852-3185-42de-a18d-79ec05383880:
+    c316ae54-6576-4d45-ba59-94fc99ba8c8f:
       id: 'views_block:promoushen-block_1'
       label: ''
       provider: views
-      label_display: '0'
+      label_display: visible
       views_label: ''
       items_per_page: none
-      region: top
-      weight: 1
       context_mapping: {  }
-      uuid: 4c59d852-3185-42de-a18d-79ec05383880
+      region: top
+      uuid: c316ae54-6576-4d45-ba59-94fc99ba8c8f
+      weight: 1
   id: panels_variant
   uuid: f9771be1-e881-4163-9cd0-7967df7d732b
   label: null
