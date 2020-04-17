@@ -1,4 +1,4 @@
-uuid: 7869916d-22d7-4e98-950e-bf167fdfa537
+uuid: fecbe44e-df5c-4658-b0c2-004f40efb122
 langcode: ru
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - node
-id: node.field_fotograf
-field_name: field_fotograf
+id: node.field_promoushen_photo
+field_name: field_promoushen_photo
 entity_type: node
 type: image
 settings:
@@ -23,7 +23,7 @@ settings:
   display_default: false
 module: image
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

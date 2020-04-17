@@ -1,0 +1,236 @@
+uuid: 34f7b376-4c2e-4a08-972b-4c8b9010e0d1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.new_items
+    - field.field.node.soft_fur.body
+    - field.field.node.soft_fur.field_age_kategory
+    - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_features
+    - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_new_item
+    - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_promoushen_photo
+    - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_soft_fur_config
+    - field.field.node.soft_fur.field_soft_fur_model
+    - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_where
+    - node.type.soft_fur
+  module:
+    - bootstrap_layouts
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-sm-4: col-sm-4
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-sm-8: col-sm-8
+              add_region_classes: 1
+              attributes: ''
+        components:
+          1c2ddd11-ac1b-4f6a-9091-be9ae4253a68:
+            uuid: 1c2ddd11-ac1b-4f6a-9091-be9ae4253a68
+            region: right
+            configuration:
+              id: 'field_block:node:soft_fur:field_price_base'
+              label: Цена
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          1839f3c6-6e7d-4868-a95b-2e2e74f7fd13:
+            uuid: 1839f3c6-6e7d-4868-a95b-2e2e74f7fd13
+            region: right
+            configuration:
+              id: 'field_block:node:soft_fur:field_soft_fur_model'
+              label: 'Модель мягкой мебели'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          aec35db3-babd-42b6-89f3-fcddad67d286:
+            uuid: aec35db3-babd-42b6-89f3-fcddad67d286
+            region: right
+            configuration:
+              id: 'field_block:node:soft_fur:field_where'
+              label: 'Где купить'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+id: node.soft_fur.new_items
+targetEntityType: node
+bundle: soft_fur
+mode: new_items
+content:
+  field_age_kategory:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_available:
+    weight: 6
+    label: inline
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_buy_komplekt:
+    weight: 5
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_features:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_foto:
+    type: entity_reference_entity_view
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_price_base:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_soft_fur_config:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_soft_fur_model:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tip_mebeli:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_where:
+    weight: 7
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_new_item: true
+  field_promoushen_photo: true
+  field_set_available: true
+  langcode: true

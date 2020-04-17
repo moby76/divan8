@@ -10,19 +10,17 @@ dependencies:
     - field.field.node.soft_fur.field_buy_komplekt
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_fotograf
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
-    - image.style.large
     - node.type.soft_fur
   module:
     - ds
-    - image
     - user
 third_party_settings:
   ds:
@@ -70,23 +68,6 @@ targetEntityType: node
 bundle: soft_fur
 mode: teaser
 content:
-  field_fotograf:
-    type: image
-    weight: 0
-    region: left
-    label: hidden
-    settings:
-      image_style: large
-      image_link: content
-    third_party_settings:
-      ds:
-        ds_limit: '1'
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
   field_price_base:
     type: number_integer
     weight: 1
@@ -104,6 +85,7 @@ hidden:
   field_features: true
   field_foto: true
   field_new_item: true
+  field_promoushen_photo: true
   field_set_available: true
   field_soft_fur_config: true
   field_soft_fur_model: true

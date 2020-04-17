@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.custom_pages.body
     - node.type.custom_pages
-    - views.view.comments_recent
     - views.view.soft_new_items
   module:
     - layout_builder
@@ -22,42 +21,19 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          b1f33188-031d-49d3-9383-187438a4a392:
-            uuid: b1f33188-031d-49d3-9383-187438a4a392
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:custom_pages:links'
-            additional: {  }
-            weight: 0
-          0ad32614-1442-424e-b082-c3bbf155c99d:
-            uuid: 0ad32614-1442-424e-b082-c3bbf155c99d
+          41cdfbe1-3766-4056-8a4e-465c29cf27d3:
+            uuid: 41cdfbe1-3766-4056-8a4e-465c29cf27d3
             region: content
             configuration:
               id: 'views_block:soft_new_items-block_1'
               label: ''
               provider: views
-              label_display: '0'
+              label_display: visible
               views_label: ''
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 2
-          267b2ecb-e54e-4389-a6b9-81610968ce0b:
-            uuid: 267b2ecb-e54e-4389-a6b9-81610968ce0b
-            region: content
-            configuration:
-              id: 'views_block:comments_recent-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: '5'
-              context_mapping: {  }
-            additional: {  }
-            weight: 1
+            weight: 0
         third_party_settings: {  }
 id: node.custom_pages.default
 targetEntityType: node
