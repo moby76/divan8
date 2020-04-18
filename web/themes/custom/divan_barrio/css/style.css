@@ -65,7 +65,7 @@
 } 
 
 .card-footer{
-   background-color:rgba(0, 0, 0, 0.02);
+   /* background-color:rgba(0, 0, 0, 0.02); */
 }
 
 .dialog{
@@ -214,4 +214,10 @@
 
 #page, #main-wrapper, .region-primary-menu .menu-item a.is-active, .region-primary-menu .menu-item--active-trail a{
     background: #fbfbfb;
+}
+
+.btn{
+    /* position: absolute;
+    bottom: 1rem; */
+    /* align-self: flex-end; */
 }
