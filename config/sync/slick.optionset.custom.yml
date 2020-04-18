@@ -18,7 +18,6 @@ options:
     centerMode: true
     dots: true
     lazyLoad: ondemand
-    mouseWheel: true
     slidesToShow: 1
     speed: 900
     easing: swing
