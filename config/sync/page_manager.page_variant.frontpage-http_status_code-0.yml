@@ -1,4 +1,4 @@
-uuid: 94249bfa-a52d-46b6-a4cb-4ec97595ffcd
+uuid: 9229e01b-1722-4f0c-8512-65105f13eb67
 langcode: ru
 status: true
 dependencies:
@@ -9,37 +9,39 @@ dependencies:
   module:
     - panels
     - views
-id: frontpage-panels_variant-0
-label: Панели
+id: frontpage-http_status_code-0
+label: 'Вариант 1'
 variant: panels_variant
 variant_settings:
   blocks:
-    b61eee0f-61a9-4f08-ad4e-df7557f20a3e:
+    fb7a1c68-f074-478b-902b-63493fb107d3:
       id: 'views_block:soft_new_items-block_1'
-      label: 'Наши новинки'
-      provider: views
-      label_display: visible
-      views_label: 'Наши новинки'
-      items_per_page: none
-      region: middle
-      weight: 1
-      context_mapping: {  }
-      uuid: b61eee0f-61a9-4f08-ad4e-df7557f20a3e
-    c316ae54-6576-4d45-ba59-94fc99ba8c8f:
-      id: 'views_block:promoushen-block_1'
       label: ''
       provider: views
       label_display: visible
       views_label: ''
       items_per_page: none
+      region: middle
+      weight: 1
+      uuid: fb7a1c68-f074-478b-902b-63493fb107d3
+      context_mapping: {  }
+    4ac822c2-7e42-412d-a017-44949c6ad4e7:
+      id: 'views_block:promoushen-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
       context_mapping: {  }
       region: top
-      uuid: c316ae54-6576-4d45-ba59-94fc99ba8c8f
+      uuid: 4ac822c2-7e42-412d-a017-44949c6ad4e7
       weight: 1
   id: panels_variant
-  uuid: f9771be1-e881-4163-9cd0-7967df7d732b
   label: null
+  uuid: dff7dc5e-97a8-496e-a909-41a7f477f5a3
   weight: 0
+  status_code: '404'
+  redirect_location: ''
   layout: bs_2col_bricked
   layout_settings:
     label: ''
@@ -92,9 +94,9 @@ variant_settings:
           col-sm-12: col-sm-12
         add_region_classes: 1
         attributes: ''
-  page_title: ''
+  page_title: null
   storage_type: page_manager
-  storage_id: frontpage-panels_variant-0
+  storage_id: frontpage-http_status_code-0
   builder: ipe
 page: frontpage
 weight: 0

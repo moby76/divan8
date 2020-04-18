@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c629e83760f13f37cb38c1c6a05a3ba",
+    "content-hash": "156806daf82add4ef2d20136cc361881",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3708,6 +3708,77 @@
             }
         },
         {
+            "name": "drupal/jcarousel",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jcarousel.git",
+                "reference": "8.x-4.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jcarousel-8.x-4.0.zip",
+                "reference": "8.x-4.0",
+                "shasum": "62b91427f95d4a482fa1f9b32ec6a422eea046ee"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0",
+                    "datestamp": "1492072743",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "mangy.fox",
+                    "homepage": "https://www.drupal.org/user/2513442"
+                },
+                {
+                    "name": "markpavlitski",
+                    "homepage": "https://www.drupal.org/user/2438878"
+                },
+                {
+                    "name": "mfer",
+                    "homepage": "https://www.drupal.org/user/25701"
+                },
+                {
+                    "name": "niko-",
+                    "homepage": "https://www.drupal.org/user/1409266"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                },
+                {
+                    "name": "voleger",
+                    "homepage": "https://www.drupal.org/user/3260314"
+                }
+            ],
+            "description": "Create jQuery-based carousel rotators.",
+            "homepage": "https://www.drupal.org/project/jcarousel",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jcarousel"
+            }
+        },
+        {
             "name": "drupal/jquery_migrate",
             "version": "1.0.0",
             "source": {
@@ -4895,6 +4966,60 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views_slideshow_jcarousel",
                 "issues": "https://www.drupal.org/project/issues/views_slideshow_jcarousel"
+            }
+        },
+        {
+            "name": "drupal/views_slideshow_xtra",
+            "version": "4.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_slideshow_xtra.git",
+                "reference": "8.x-4.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_slideshow_xtra-8.x-4.0-alpha2.zip",
+                "reference": "8.x-4.0-alpha2",
+                "shasum": "a1ae96573fae6d874c154ccbb646efceb6bab57a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/views_slideshow": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0-alpha2",
+                    "datestamp": "1464096239",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "captaindav",
+                    "homepage": "https://www.drupal.org/user/275956"
+                },
+                {
+                    "name": "redndahead",
+                    "homepage": "https://www.drupal.org/user/160320"
+                }
+            ],
+            "description": "Placeholder module, should not be enabled.",
+            "homepage": "https://www.drupal.org/project/views_slideshow_xtra",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_slideshow_xtra"
             }
         },
         {
@@ -11738,7 +11863,8 @@
         "drupal/field_slideshow": 10,
         "drupal/libraries": 15,
         "drupal/page_manager": 10,
-        "drupal/views_slideshow_jcarousel": 15
+        "drupal/views_slideshow_jcarousel": 15,
+        "drupal/views_slideshow_xtra": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,

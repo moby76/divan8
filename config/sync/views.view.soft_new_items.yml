@@ -286,7 +286,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      title: ''
+      title: 'Наши новинки'
       defaults:
         title: false
         fields: false
@@ -928,7 +928,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card mb-3 col-sm-12 border-primary\" >\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <div class=\"card-img p-3\">{{ field_foto }}</div>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title text-warning\">{{ field_price_base }} </h5>\r\n        <p class=\"card-text\">Относится к типу мягкой мебели {{ field_soft_fur_config }} </p>\r\n        <p class=\"card-text\">Является моделью {{ field_soft_fur_model }} </p>\r\n        <p class=\"card-text\">Данный товар можно приобрести в нашем отделении в магазине {{ field_where }}</p>\r\n        <a href=\"{{ view_node }} \" class=\"btn btn-primary\">ПОДРОБНЕЕ...</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+            text: "<div class=\"card mb-3 col-sm-12 \" >\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <div class=\"card-img p-3\">{{ field_foto }}</div>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title text-warning\">{{ field_price_base }} </h5>\r\n        <p class=\"card-text\">Относится к типу мягкой мебели {{ field_soft_fur_config }} </p>\r\n        <p class=\"card-text\">Является моделью {{ field_soft_fur_model }} </p>\r\n        <p class=\"card-text\">Данный товар можно приобрести в нашем отделении в магазине {{ field_where }}</p>\r\n        <a href=\"{{ view_node }} \" class=\"btn btn-primary\">ПОДРОБНЕЕ...</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

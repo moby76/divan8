@@ -22,7 +22,6 @@ dependencies:
   module:
     - ds
     - layout_builder
-    - slick
     - text
     - user
 third_party_settings:
@@ -88,7 +87,7 @@ third_party_settings:
             attributes: ''
     regions:
       top:
-        - field_foto
+        - 'dynamic_block_field:node-foto'
       top_left:
         - field_where
       top_right:
@@ -100,6 +99,18 @@ third_party_settings:
         - field_soft_fur_model
       bottom_left:
         - field_buy_komplekt
+    fields:
+      'dynamic_block_field:node-foto':
+        plugin_id: 'dynamic_block_field:node-foto'
+        weight: 0
+        label: hidden
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.soft_fur.full
 targetEntityType: node
 bundle: soft_fur
@@ -120,77 +131,6 @@ content:
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-  field_foto:
-    type: slick_media
-    weight: 0
-    region: top
-    label: hidden
-    settings:
-      style: ''
-      optionset: custom
-      optionset_thumbnail: ''
-      skin: classic
-      skin_thumbnail: ''
-      image_style: ''
-      thumbnail_effect: ''
-      thumbnail_position: ''
-      media_switch: colorbox
-      box_style: ''
-      thumbnail_style: ''
-      box_media_style: ''
-      ratio: ''
-      box_caption: ''
-      view_mode: full
-      box_caption_custom: ''
-      grid: null
-      grid_medium: null
-      grid_small: null
-      visible_items: null
-      image: ''
-      title: ''
-      link: ''
-      layout: ''
-      class: ''
-      cache: 0
-      overridables:
-        dots: dots
-        arrows: '0'
-        autoplay: '0'
-        draggable: '0'
-        infinite: '0'
-        mouseWheel: '0'
-        randomize: '0'
-        variableWidth: '0'
-      current_view_mode: full
-      vanilla: false
-      background: false
-      caption:
-        title: '0'
-        alt: '0'
-      preserve_keys: false
-      override: false
-      thumbnail: ''
-      thumbnail_caption: ''
-      skin_arrows: ''
-      skin_dots: ''
-      fx: ''
-      icon: ''
-      responsive_image_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
-      id: ''
-      overlay: ''
-    third_party_settings:
-      ds:
-        ds_limit: '1'
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
   field_price_base:
     type: number_unformatted
     weight: 2
@@ -251,6 +191,7 @@ hidden:
   body: true
   field_age_kategory: true
   field_available: true
+  field_foto: true
   field_new_item: true
   field_promoushen_photo: true
   field_set_available: true
