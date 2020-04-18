@@ -13,7 +13,7 @@ dependencies:
   module:
     - colorbox
     - ds
-    - field_slideshow
+    - slick
 third_party_settings:
   ds:
     layout:
@@ -91,32 +91,54 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: large
-      image_link: colorbox
-      colorbox_image_style: ''
-      slideshow:
-        fx: fade
-        autoHeight: '0'
-        delay: '0'
-        loader: 'false'
-        loop: '1000'
-        speed: '500'
-        startingSlide: '0'
-        sync: '1'
-        timeout: '2500'
-        allowWrap: 0
-        hideNonActive: 0
-        pauseOnHover: 0
-        paused: 0
-        random: 0
-        reverse: 0
-        swipe: 0
-      slideshow_pager:
-        pager:
-          after: after
-          before: 0
-        pager_type: thumbnails
-        controls: 0
+      style: ''
+      optionset: custom
+      optionset_thumbnail: ''
+      skin: default
+      skin_thumbnail: ''
+      image_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: ''
+      ratio: ''
+      box_caption: ''
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      current_view_mode: scheem_dim
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      view_mode: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
     third_party_settings:
       ds:
         ds_limit: ''
@@ -126,7 +148,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: slideshow
+    type: slick_image
     region: left
 hidden:
   description: true
