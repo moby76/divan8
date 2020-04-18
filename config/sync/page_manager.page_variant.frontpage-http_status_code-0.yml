@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - page_manager.page.frontpage
+    - views.view.actions
     - views.view.promoushen
     - views.view.soft_new_items
   module:
@@ -35,6 +36,17 @@ variant_settings:
       context_mapping: {  }
       region: top
       uuid: 4ac822c2-7e42-412d-a017-44949c6ad4e7
+      weight: 1
+    128edeea-13e7-415a-862c-f94ce3b728ee:
+      id: 'views_block:actions-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: bottom
+      uuid: 128edeea-13e7-415a-862c-f94ce3b728ee
       weight: 1
   id: panels_variant
   label: null

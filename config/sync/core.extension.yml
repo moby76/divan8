@@ -28,6 +28,7 @@ module:
   ds_switch_view_mode: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
   entity_browser: 0
   entity_browser_example: 0
   field: 0
