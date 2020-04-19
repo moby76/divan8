@@ -1,0 +1,68 @@
+uuid: 586ab965-919f-442d-8760-a67f2e442e52
+langcode: ru
+status: true
+dependencies: {  }
+id: opisanie_modeli
+label: 'Описание модели'
+renderer: bootstrap_tabs
+options:
+  bootstrap_tabs:
+    tabstyle: tabs
+    tabposition: basic
+    tabeffects:
+      fade: fade
+  accordion_tabs:
+    jquery_ui:
+      collapsible: 0
+      heightStyle: auto
+  quick_tabs:
+    ajax: '0'
+hide_empty_tabs: 0
+default_tab: '0'
+configuration_data:
+  -
+    title: текст
+    weight: '0'
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: 'views_block:opisanie_modeli-block_1'
+          block_title: ''
+          display_title: '1'
+      view_content:
+        options:
+          vid: actions
+          display: default
+          args: ''
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: схема
+    weight: '0'
+    type: block_content
+    content:
+      block_content:
+        options:
+          bid: 'views_block:opisanie_modeli-block_2'
+          block_title: ''
+          display_title: '1'
+      view_content:
+        options:
+          vid: actions
+          display: default
+          args: ''
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      qtabs_content:
+        options:
+          machine_name: ''

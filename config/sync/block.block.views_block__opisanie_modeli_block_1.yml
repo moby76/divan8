@@ -1,0 +1,25 @@
+uuid: 13301f4f-bb02-47f7-9d96-d65acc2c04d5
+langcode: ru
+status: false
+dependencies:
+  config:
+    - views.view.opisanie_modeli
+  module:
+    - views
+  theme:
+    - divan_barrio
+id: views_block__opisanie_modeli_block_1
+theme: divan_barrio
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:opisanie_modeli-block_1'
+settings:
+  id: 'views_block:opisanie_modeli-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }
