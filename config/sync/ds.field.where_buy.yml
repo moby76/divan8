@@ -1,0 +1,11 @@
+id: where_buy
+label: 'В каком магазине находится товар'
+ui_limit: ''
+properties:
+  block: 'views_block:where_buy-block_1'
+  use_block_title: true
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  node: node

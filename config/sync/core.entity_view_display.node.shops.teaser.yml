@@ -31,24 +31,7 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_title
         - field_location
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: inline
-        formatter: default
-        settings:
-          link: true
-          wrapper: h5
-          class: ''
-        ft:
-          id: default
-          settings:
-            lb: 'Этот товар находится в магазине '
-            lb-col: false
-            classes: {  }
 id: node.shops.teaser
 targetEntityType: node
 bundle: shops
@@ -56,7 +39,7 @@ mode: teaser
 content:
   field_location:
     type: geolocation_map
-    weight: 1
+    weight: 0
     region: ds_content
     label: hidden
     settings:
@@ -64,8 +47,8 @@ content:
       title: ''
       info_text: ''
       google_map_settings:
-        height: 300px
-        width: 100%
+        height: 200px
+        width: 200px
         type: ROADMAP
         zoom: '15'
         maxZoom: 18
