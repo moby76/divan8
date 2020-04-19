@@ -350,7 +350,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "    <div class=\"card h-100 shadow\">\r\n        <div class=\"card-header bg-transparent\">\r\n            <h4 class=\"card-title text-warning text-right \">{{ field_price_base }}</h4>\r\n          </div>\r\n        <div class=\"card-img-top image-wrapper\" width=\"100%\">{{ field_foto }}</div>\r\n          <div class=\"card-body\">\r\n          </div>\r\n          <div class=\"card-footer text-muted \">\r\n            <a href=\"{{ view_node }}\" class=\"btn btn-outline-warning\">ПОДРОБНЕЕ...</a>\r\n          </div>\r\n    </div>"
+            text: "    <div class=\"card h-100 shadow\">\r\n        <div class=\"card-header bg-transparent\">\r\n            <h4 class=\"card-title text-warning text-right \">{{ field_price_base }}</h4>\r\n          </div>\r\n        <div class=\"card-img-top image-wrapper\" width=\"100%\">{{ field_foto }}</div>\r\n          <div class=\"card-body\">\r\n          </div>\r\n          <div class=\"card-footer text-muted bg-white\">\r\n            <a href=\"{{ view_node }}\" class=\"btn btn-outline-warning\">ПОДРОБНЕЕ...</a>\r\n          </div>\r\n    </div>"
             make_link: false
             path: ''
             absolute: false

@@ -142,7 +142,7 @@
 
 .views-slideshow-controls-bottom .views-slideshow-pager-bullets li {
     background: #929292;
-    box-shadow: grey 0 0 6px 1px;
+    box-shadow: #1d1d1d 0 0 3px 1px;
 }
 .views-slideshow-controls-bottom .views-slideshow-pager-bullets li.active{
     background: orange;
@@ -167,8 +167,8 @@
     /* line-height: 29px; */
     height: 45px;
     width: 45px;
-    box-shadow: grey 0 0 6px 2px;
-    border: #d0ff048c solid 1px;
+    box-shadow: #000000 0px 0px 5px 1px;
+    /* border: #d0ff048c solid 1px; */
     position: absolute;
     right: -2%;
     bottom: 40%;
@@ -185,8 +185,8 @@
     /* line-height: 29px; */
     height: 45px;
     width: 45px;
-    box-shadow: grey 0 0 6px 2px;
-    border: #d0ff048c solid 1px;
+    box-shadow: #000000 0px 0px 5px 1px;
+    /* border: #d0ff048c solid 1px; */
     position: absolute;
     left: -2%;
     bottom: 40%;
@@ -220,4 +220,31 @@
     /* position: absolute;
     bottom: 1rem; */
     /* align-self: flex-end; */
+}
+#header{
+    margin: 0 0 30px 0;
+    box-shadow: #4e4e4e 0 0 9px;
+}
+#navbar-main{
+    background-color: inherit;
+}
+
+.navbar-nav{
+    margin-right: 1em ;
+}
+.nav-item{
+    /* border: 1px solid #26a0e6; */
+    margin: 0 1em;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #3c3c3c;
+    padding: 1em;
+    background-color: inherit;
+    font-size: large;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    padding: 1em;
+    background-color: #26a0e6;
+    color: white;
 }

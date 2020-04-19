@@ -85,24 +85,44 @@ third_party_settings:
               col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
+          ds_hidden:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
     regions:
       top:
         - 'dynamic_block_field:node-foto'
       top_left:
-        - field_where
+        - 'dynamic_block_field:node-opisanie'
       top_right:
         - field_price_base
         - field_tip_mebeli
         - field_soft_fur_config
+        - 'dynamic_block_field:node-where_buy'
         - field_features
-      middle:
-        - field_soft_fur_model
       bottom_left:
         - field_buy_komplekt
     fields:
       'dynamic_block_field:node-foto':
         plugin_id: 'dynamic_block_field:node-foto'
         weight: 0
+        label: hidden
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      'dynamic_block_field:node-opisanie':
+        plugin_id: 'dynamic_block_field:node-opisanie'
+        weight: 1
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-where_buy':
+        plugin_id: 'dynamic_block_field:node-where_buy'
+        weight: 5
         label: hidden
         formatter: default
         ft:
@@ -126,7 +146,7 @@ content:
     third_party_settings: {  }
   field_features:
     type: text_default
-    weight: 5
+    weight: 6
     region: top_right
     label: visually_hidden
     settings: {  }
@@ -146,22 +166,6 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  field_soft_fur_model:
-    type: entity_reference_entity_view
-    weight: 6
-    region: middle
-    label: above
-    settings:
-      view_mode: scheem_dim
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: 'Описание модели'
-            lb-col: false
-            classes: {  }
   field_tip_mebeli:
     type: entity_reference_label
     weight: 3
@@ -170,23 +174,6 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  field_where:
-    type: entity_reference_entity_view
-    weight: 1
-    region: top_left
-    label: visually_hidden
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 hidden:
   body: true
   field_age_kategory: true
@@ -195,5 +182,7 @@ hidden:
   field_new_item: true
   field_promoushen_photo: true
   field_set_available: true
+  field_soft_fur_model: true
+  field_where: true
   langcode: true
   links: true
