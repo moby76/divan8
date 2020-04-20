@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.shops.body
+    - field.field.node.shops.field_hours
     - field.field.node.shops.field_location
+    - field.field.node.shops.field_phone
     - field.field.node.shops.field_podrobno
     - node.type.shops
   module:
@@ -79,6 +81,8 @@ content:
             classes: {  }
 hidden:
   body: true
+  field_hours: true
+  field_phone: true
   field_podrobno: true
   langcode: true
   links: true

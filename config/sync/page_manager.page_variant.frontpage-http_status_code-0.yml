@@ -6,6 +6,7 @@ dependencies:
     - page_manager.page.frontpage
     - views.view.actions
     - views.view.promoushen
+    - views.view.shops_mainpage
     - views.view.soft_new_items
   module:
     - panels
@@ -33,21 +34,32 @@ variant_settings:
       label_display: '0'
       views_label: ''
       items_per_page: none
-      context_mapping: {  }
       region: top
-      uuid: 4ac822c2-7e42-412d-a017-44949c6ad4e7
       weight: 1
+      context_mapping: {  }
+      uuid: 4ac822c2-7e42-412d-a017-44949c6ad4e7
     128edeea-13e7-415a-862c-f94ce3b728ee:
       id: 'views_block:actions-block_1'
-      label: ''
+      label: 'Что нового'
       provider: views
       label_display: visible
-      views_label: ''
+      views_label: 'Что нового'
       items_per_page: none
-      context_mapping: {  }
       region: bottom
-      uuid: 128edeea-13e7-415a-862c-f94ce3b728ee
       weight: 1
+      context_mapping: {  }
+      uuid: 128edeea-13e7-415a-862c-f94ce3b728ee
+    3cf3ae16-8a8e-4d63-adb3-282a1d0f20e6:
+      id: 'views_block:shops_mainpage-block_1'
+      label: 'Наши магазины'
+      provider: views
+      label_display: visible
+      views_label: 'Наши магазины'
+      items_per_page: none
+      region: bottom
+      weight: 2
+      context_mapping: {  }
+      uuid: 3cf3ae16-8a8e-4d63-adb3-282a1d0f20e6
   id: panels_variant
   label: null
   uuid: dff7dc5e-97a8-496e-a909-41a7f477f5a3
@@ -67,7 +79,12 @@ variant_settings:
       top:
         wrapper: div
         classes:
+          col-xs-12: col-xs-12
           col-sm-12: col-sm-12
+          col-md-12: col-md-12
+          col-lg-12: col-lg-12
+          hidden-xs: hidden-xs
+          hidden-sm: hidden-sm
         add_region_classes: 1
         attributes: ''
       top_left:
@@ -106,7 +123,12 @@ variant_settings:
           col-sm-12: col-sm-12
         add_region_classes: 1
         attributes: ''
-  page_title: null
+      ds_hidden:
+        wrapper: div
+        classes: {  }
+        add_region_classes: 1
+        attributes: ''
+  page_title: ''
   storage_type: page_manager
   storage_id: frontpage-http_status_code-0
   builder: ipe
