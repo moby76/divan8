@@ -248,3 +248,11 @@
     background-color: #26a0e6;
     color: white;
 }
+
+.container-fluid, 
+.container-sm, 
+.container-md, 
+.container-lg, 
+.container-xl{
+    padding: 0;
+}

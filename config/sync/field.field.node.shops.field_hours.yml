@@ -1,0 +1,21 @@
+uuid: 18f76bb4-c189-46e6-9629-4d7b4f2b8d40
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hours
+    - node.type.shops
+  module:
+    - office_hours
+id: node.shops.field_hours
+field_name: field_hours
+entity_type: node
+bundle: shops
+label: 'Часы работы'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: office_hours
