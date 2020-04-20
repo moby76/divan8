@@ -1,17 +1,21 @@
-uuid: 693c1624-5779-4030-ba2d-be6d9dfcec16
+uuid: 9f7df555-8b9e-41bb-b692-3866a90ae6f7
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.actions
-    - system.menu.main
+    - field.storage.node.field_hours
+    - field.storage.node.field_location
+    - field.storage.node.field_phone
+    - field.storage.node.field_podrobno
+    - node.type.shops
   module:
+    - geolocation
     - node
+    - office_hours
     - text
     - user
-id: actions
-label: Акции
+id: shops_mainpage
+label: 'Магазины на главной'
 module: views
 description: ''
 tag: ''
@@ -50,260 +54,27 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 3
+          items_per_page: 0
           offset: 0
       style:
         type: html_list
         options:
+          grouping: {  }
           row_class: ''
-          default_row_class: true
-          uses_fields: false
+          default_row_class: false
           type: ul
-          wrapper_class: item-list
-          class: ''
+          wrapper_class: 'container-fluid p-0'
+          class: 'list-unstyled mx-auto'
       row:
         type: fields
         options:
-          default_field_elements: true
+          default_field_elements: false
           inline: {  }
           separator: ''
           hide_empty: false
       fields:
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: Ещё
-          output_url_as_text: true
-          absolute: true
-          entity_type: node
-          plugin_id: entity_link
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: '{{ view_node }} '
-            absolute: true
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 500
-            word_boundary: true
-            ellipsis: true
-            more_link: true
-            more_link_text: ещё
-            more_link_path: '{{ view_node }} '
-            strip_tags: false
-            trim: true
-            preserve_tags: ''
-            html: true
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            actions: actions
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 2
-    display_options:
-      display_extenders: {  }
-      fields:
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: Ещё
-          output_url_as_text: true
-          absolute: true
-          entity_type: node
-          plugin_id: entity_link
         title:
           id: title
           table: node_field_data
@@ -366,13 +137,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
           plugin_id: field
-        body:
-          id: body
-          table: node__body
-          field: body
+        field_phone:
+          id: field_phone
+          table: node__field_phone
+          field: field_phone
           relationship: none
           group_type: group
           admin_label: ''
@@ -382,8 +151,8 @@ display:
             alter_text: false
             text: ''
             make_link: false
-            path: '{{ view_node }} '
-            absolute: true
+            path: ''
+            absolute: false
             external: false
             replace_spaces: false
             path_case: none
@@ -395,16 +164,16 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 500
+            max_length: 0
             word_boundary: true
             ellipsis: true
-            more_link: true
-            more_link_text: ещё
-            more_link_path: '{{ view_node }} '
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
             strip_tags: false
             trim: false
             preserve_tags: ''
-            html: true
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -418,9 +187,242 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: string
           settings:
-            trim_length: 100
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_hours:
+          id: field_hours
+          table: node__field_hours
+          field: field_hours
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: day
+          type: office_hours
+          settings:
+            show_closed: all
+            office_hours_first_day: '1'
+            day_format: two_letter
+            time_format: G
+            compress: false
+            grouped: true
+            closed_format: Closed
+            separator:
+              days: '<br />'
+              grouped_days: ' - '
+              day_hours: ': '
+              hours_hours: '-'
+              more_hours: ', '
+            current_status:
+              position: ''
+              open_text: 'Currently open!'
+              closed_text: 'Currently closed'
+            schema:
+              enabled: 0
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_location:
+          id: field_location
+          table: node__field_location
+          field: field_location
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: ''
+          type: geolocation_map
+          settings:
+            set_marker: '1'
+            title: ''
+            info_text: ''
+            replacement_patterns:
+              token_geolocation:
+                token_items: ''
+            google_map_settings:
+              height: '300'
+              width: 100%
+              type: ROADMAP
+              zoom: '16'
+              maxZoom: 18
+              minZoom: 0
+              mapTypeControl: 1
+              streetViewControl: 1
+              zoomControl: 1
+              rotateControl: 1
+              fullscreenControl: 1
+              scrollwheel: 0
+              gestureHandling: greedy
+              draggable: 1
+              preferScrollingToZooming: 1
+              disableDoubleClickZoom: 0
+              style: ''
+              info_auto_display: 0
+              marker_icon_path: ''
+              disableAutoPan: 0
+            use_overridden_map_settings: 0
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: geolocation_field
+        field_podrobno:
+          id: field_podrobno
+          table: node__field_podrobno
+          field: field_podrobno
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -443,7 +445,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "    <div class=\"card h-100 shadow\">\r\n      <div class=\"card-body\">\r\n        <h5 class=\"card-title\">{{ title }}</h5>\r\n        <p class=\"card-text\">{{ body }}</p>\r\n      </div>\r\n        <div class=\"card-footer bg-transparent\">\r\n                 <a href=\"{{ view_node }} \" class=\"btn btn-primary\">Узнай больше</a>\r\n        </div>      \r\n    </div>"
+            text: "<div class=\"card mb-3 col-12 shadow\" >\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 pb-3 pt-3 d-sm-none d-md-block\">\r\n          {{ field_location }}\r\n      </div>         \r\n      <div class=\"col-md-6\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title text-warning\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ field_phone }}</p>\r\n          <p class=\"card-text\">{{ field_hours }} </p>\r\n          <p class=\"card-text\">{{ field_podrobno }}</p>\r\n          <a href=\"{{ view_node }} \" class=\"btn btn-primary\">ПОДРОБНЕЕ...</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n"
             make_link: false
             path: ''
             absolute: false
@@ -481,26 +483,55 @@ display:
           empty_zero: false
           hide_alter_empty: false
           plugin_id: custom
-      defaults:
-        fields: false
-        style: false
-        row: false
-      style:
-        type: html_list
-        options:
-          grouping: {  }
-          row_class: 'col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3'
-          default_row_class: false
-          type: ul
-          wrapper_class: 'container-fluid p-0'
-          class: 'list-unstyled row'
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            shops: shops
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Магазины на главной'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -509,143 +540,17 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
+        - 'config:field.storage.node.field_hours'
+        - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_phone'
+        - 'config:field.storage.node.field_podrobno'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
     position: 1
     display_options:
       display_extenders: {  }
-      path: actions
-      menu:
-        type: normal
-        title: Акции
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
-      fields:
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: Ещё
-          output_url_as_text: true
-          absolute: true
-          entity_type: node
-          plugin_id: entity_link
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: '{{ view_node }} '
-            absolute: true
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 1000
-            word_boundary: true
-            ellipsis: true
-            more_link: true
-            more_link_text: ещё
-            more_link_path: '{{ view_node }} '
-            strip_tags: false
-            trim: true
-            preserve_tags: ''
-            html: true
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-      defaults:
-        fields: false
-      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -654,4 +559,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_hours'
+        - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_phone'
+        - 'config:field.storage.node.field_podrobno'
