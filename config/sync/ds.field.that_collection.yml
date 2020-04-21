@@ -1,0 +1,11 @@
+id: that_collection
+label: 'Из той-же коллекции'
+ui_limit: ''
+properties:
+  block: 'views_block:that_collection-block_1'
+  use_block_title: true
+  add_block_wrappers: true
+type: block
+type_label: 'Block field'
+entities:
+  node: node
