@@ -1,0 +1,9 @@
+id: bottom_leftfield
+label: 'bottom leftfield'
+ui_limit: ''
+properties:
+  content: "  {{ content.myregion1 }}\r\n"
+type: twig
+type_label: 'Twig field'
+entities:
+  node: node
