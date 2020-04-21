@@ -256,3 +256,7 @@
 .container-xl{
     padding: 0;
 }
+
+.description-tabs .tab-content {
+    min-height: 400px;
+}
