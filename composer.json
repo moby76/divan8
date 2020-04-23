@@ -27,6 +27,7 @@
         "drupal/colorbox_field_formatter": "^1.1",
         "drupal/colorbox_inline": "^1.1",
         "drupal/colorbox_simple_load": "^1.0",
+        "drupal/config_installer": "^1.8",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
