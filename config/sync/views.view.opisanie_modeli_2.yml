@@ -79,7 +79,7 @@ display:
           default_row_class: true
           type: ul
           wrapper_class: ''
-          class: 'list-unstyled row'
+          class: 'list-unstyled row mx-auto'
       row:
         type: fields
         options:
