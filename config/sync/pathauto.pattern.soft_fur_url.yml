@@ -1,0 +1,22 @@
+uuid: 911a5ddd-acd4-4b88-95ba-778df1d873da
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: soft_fur_url
+label: 'Шаблон для url мягкой мебели'
+type: 'canonical_entities:node'
+pattern: '[node:field_tip_mebeli]/[node:field_soft_fur_config]/[node:field_soft_fur_model]/[node:nid]'
+selection_criteria:
+  a8243fa1-7cf5-4ecc-96df-1745aec3f32c:
+    id: node_type
+    bundles:
+      soft_fur: soft_fur
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a8243fa1-7cf5-4ecc-96df-1745aec3f32c
+selection_logic: and
+weight: -5
+relationships: {  }
