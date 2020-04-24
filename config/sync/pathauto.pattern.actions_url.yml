@@ -1,0 +1,22 @@
+uuid: 9b9a80bb-8138-405e-bd68-22129b95f8ad
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: actions_url
+label: 'Шаблон для url Акции'
+type: 'canonical_entities:node'
+pattern: 'акции/[node:nid]'
+selection_criteria:
+  6dce1e0a-c2ea-47ee-a79a-99d0d5fc44da:
+    id: node_type
+    bundles:
+      actions: actions
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6dce1e0a-c2ea-47ee-a79a-99d0d5fc44da
+selection_logic: and
+weight: -5
+relationships: {  }
