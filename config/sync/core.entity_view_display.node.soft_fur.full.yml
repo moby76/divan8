@@ -106,10 +106,10 @@ third_party_settings:
         - 'dynamic_block_field:node-where_buy'
         - field_features
         - field_buy_komplekt
-      bottom_left:
-        - body
       bottom:
         - 'dynamic_block_field:node-that_collection'
+      ds_hidden:
+        - body
     fields:
       'dynamic_block_field:node-foto':
         plugin_id: 'dynamic_block_field:node-foto'
@@ -129,7 +129,7 @@ third_party_settings:
         formatter: default
       'dynamic_block_field:node-that_collection':
         plugin_id: 'dynamic_block_field:node-that_collection'
-        weight: 10
+        weight: 9
         label: hidden
         formatter: default
         ft:
@@ -156,8 +156,8 @@ mode: full
 content:
   body:
     type: text_trimmed
-    weight: 9
-    region: bottom_left
+    weight: 10
+    region: ds_hidden
     label: above
     settings:
       trim_length: 600
