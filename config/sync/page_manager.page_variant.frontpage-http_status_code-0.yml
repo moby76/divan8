@@ -24,7 +24,7 @@ variant_settings:
       views_label: ''
       items_per_page: none
       region: middle
-      weight: 1
+      weight: 2
       uuid: fb7a1c68-f074-478b-902b-63493fb107d3
       context_mapping: {  }
     4ac822c2-7e42-412d-a017-44949c6ad4e7:
@@ -42,10 +42,10 @@ variant_settings:
       id: 'views_block:actions-block_1'
       label: 'Что нового'
       provider: views
-      label_display: visible
+      label_display: '0'
       views_label: 'Что нового'
       items_per_page: none
-      region: bottom
+      region: middle
       weight: 1
       context_mapping: {  }
       uuid: 128edeea-13e7-415a-862c-f94ce3b728ee
@@ -57,7 +57,7 @@ variant_settings:
       views_label: 'Наши магазины'
       items_per_page: none
       region: bottom
-      weight: 2
+      weight: 1
       context_mapping: {  }
       uuid: 3cf3ae16-8a8e-4d63-adb3-282a1d0f20e6
   id: panels_variant
