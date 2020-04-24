@@ -270,3 +270,13 @@
 .form-actions{
     padding: 0 15px;
 }
+
+.ui-widget-overlay {
+    /* background: none; */
+    /* opacity: 0; */
+    /* position: inherit; */
+}
+
+.ui-dialog{
+    z-index: 200;
+}
