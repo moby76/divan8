@@ -7,7 +7,6 @@ dependencies:
     - node.type.actions
     - system.menu.main
   module:
-    - colorbox_field_formatter
     - node
     - text
     - user
@@ -354,18 +353,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: colorbox_field_formatter
+          type: string
           settings:
-            style: default
-            link_type: content
-            link: ''
-            inline_selector: .field--name-body
-            width: '500'
-            height: '500'
-            iframe: 1
-            anchor: ''
-            class: ''
-            rel: .field--name-body
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
