@@ -434,6 +434,59 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: представление
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
         nothing:
           id: nothing
           table: views
@@ -445,7 +498,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card mb-3 col-12 shadow\" >\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 pb-3 pt-3 d-sm-none d-md-block\">\r\n          {{ field_location }}\r\n      </div>         \r\n      <div class=\"col-md-6\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title text-warning\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ field_phone }}</p>\r\n          <p class=\"card-text\">{{ field_hours }} </p>\r\n          <p class=\"card-text\">{{ field_podrobno }}</p>\r\n          <a href=\"{{ view_node }} \" class=\"btn btn-primary\">ПОДРОБНЕЕ...</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n"
+            text: "<div class=\"card mb-3 col-12 shadow\" >\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 pb-3 pt-3 d-sm-none d-md-block\">\r\n          {{ field_location }}\r\n      </div>         \r\n      <div class=\"col-md-6\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title text-warning\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ field_phone }}</p>\r\n          <p class=\"card-text\">{{ field_hours }} </p>\r\n          <p class=\"card-text\">{{ field_podrobno }}</p>\r\n          <a href=\"{{ view_node }} \" class=\"btn btn-primary\">Посетить магазин...</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n"
             make_link: false
             path: ''
             absolute: false
