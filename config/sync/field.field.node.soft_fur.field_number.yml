@@ -1,0 +1,23 @@
+uuid: 3dab8daf-7c65-455a-85db-21972a03e775
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.soft_fur
+  module:
+    - serial
+id: node.soft_fur.field_number
+field_name: field_number
+entity_type: node
+bundle: soft_fur
+label: 'Номер материала'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: serial

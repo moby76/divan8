@@ -22,6 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/soft-furniture-all\r\n/all-beds\r\n/node/*\r\n<front> "
+    pages: "/all-beds\r\n\r\n<front> "
     negate: true
     context_mapping: {  }

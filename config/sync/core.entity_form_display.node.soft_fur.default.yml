@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
     - field.field.node.soft_fur.field_new_item
+    - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
@@ -23,6 +24,7 @@ dependencies:
     - image
     - media_library
     - path
+    - serial
     - text
 id: node.soft_fur.default
 targetEntityType: node
@@ -77,6 +79,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_number:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: serial_default_widget
     region: content
   field_price_base:
     weight: 16
@@ -175,5 +183,10 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   body: true
