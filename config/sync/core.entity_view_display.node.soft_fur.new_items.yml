@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
     - field.field.node.soft_fur.field_new_item
+    - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
@@ -52,6 +53,11 @@ third_party_settings:
                 col-sm-8: col-sm-8
               add_region_classes: 1
               attributes: ''
+            ds_hidden:
+              wrapper: div
+              classes: {  }
+              attributes: ''
+              add_region_classes: true
         components:
           1c2ddd11-ac1b-4f6a-9091-be9ae4253a68:
             uuid: 1c2ddd11-ac1b-4f6a-9091-be9ae4253a68
@@ -231,6 +237,7 @@ content:
 hidden:
   body: true
   field_new_item: true
+  field_number: true
   field_promoushen_photo: true
   field_set_available: true
   langcode: true

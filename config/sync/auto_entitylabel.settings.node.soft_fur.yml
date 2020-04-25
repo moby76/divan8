@@ -1,0 +1,6 @@
+status: 1
+pattern: '[node:field_soft_fur_model] - [node:nid]'
+escape: false
+dependencies:
+  config:
+    - node.type.soft_fur

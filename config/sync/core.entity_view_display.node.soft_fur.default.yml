@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
     - field.field.node.soft_fur.field_new_item
+    - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
@@ -19,6 +20,7 @@ dependencies:
     - field.field.node.soft_fur.field_where
     - node.type.soft_fur
   module:
+    - serial
     - text
     - user
 id: node.soft_fur.default
@@ -68,6 +70,13 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_number:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: serial_default_formatter
     region: content
   field_price_base:
     weight: 1
