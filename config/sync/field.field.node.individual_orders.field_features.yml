@@ -1,0 +1,21 @@
+uuid: 27795cb2-9088-4807-932a-2cd602701015
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.individual_orders
+  module:
+    - text
+id: node.individual_orders.field_features
+field_name: field_features
+entity_type: node
+bundle: individual_orders
+label: Особенности
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

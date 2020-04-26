@@ -1,0 +1,23 @@
+uuid: ea76f4c5-e59c-4aa2-9f43-905af599e52c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.individual_orders
+  module:
+    - text
+id: node.individual_orders.body
+field_name: body
+entity_type: node
+bundle: individual_orders
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
