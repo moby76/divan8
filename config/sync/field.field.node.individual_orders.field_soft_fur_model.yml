@@ -1,0 +1,29 @@
+uuid: a9caad15-d829-43aa-83c6-646bca767244
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_soft_fur_model
+    - node.type.individual_orders
+    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+id: node.individual_orders.field_soft_fur_model
+field_name: field_soft_fur_model
+entity_type: node
+bundle: individual_orders
+label: 'На базе модели'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      modeli_myagkoy_mebeli: modeli_myagkoy_mebeli
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

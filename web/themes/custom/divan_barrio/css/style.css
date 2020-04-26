@@ -280,3 +280,7 @@
 .ui-dialog{
     z-index: 200;
 }
+
+.slick-list{
+    display: list-item;
+}

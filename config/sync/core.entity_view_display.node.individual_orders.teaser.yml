@@ -1,0 +1,39 @@
+uuid: 07f42d06-fdc9-4e1a-bf05-07ea8947d138
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.individual_orders.body
+    - field.field.node.individual_orders.field_features
+    - field.field.node.individual_orders.field_foto
+    - field.field.node.individual_orders.field_number
+    - field.field.node.individual_orders.field_soft_fur_model
+    - node.type.individual_orders
+  module:
+    - text
+    - user
+id: node.individual_orders.teaser
+targetEntityType: node
+bundle: individual_orders
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_features: true
+  field_foto: true
+  field_number: true
+  field_soft_fur_model: true
+  langcode: true
