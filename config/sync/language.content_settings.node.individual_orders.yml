@@ -1,0 +1,11 @@
+uuid: 8c62f24e-c6b3-417b-b65b-94f7e0419173
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.individual_orders
+id: node.individual_orders
+target_entity_type_id: node
+target_bundle: individual_orders
+default_langcode: site_default
+language_alterable: false

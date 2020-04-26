@@ -1,0 +1,23 @@
+uuid: 6b9a3e69-c31d-4be9-b52e-9ab2fad2e34f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.individual_orders
+  module:
+    - serial
+id: node.individual_orders.field_number
+field_name: field_number
+entity_type: node
+bundle: individual_orders
+label: 'Номер материала'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: serial

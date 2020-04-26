@@ -1,0 +1,64 @@
+uuid: 21d34f94-fffd-4090-9968-2f46dba4f01a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.individual_orders.body
+    - field.field.node.individual_orders.field_features
+    - field.field.node.individual_orders.field_foto
+    - field.field.node.individual_orders.field_number
+    - field.field.node.individual_orders.field_soft_fur_model
+    - node.type.individual_orders
+  module:
+    - serial
+    - text
+    - user
+id: node.individual_orders.default
+targetEntityType: node
+bundle: individual_orders
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_features:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_foto:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_number:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: serial_default_formatter
+    region: content
+  field_soft_fur_model:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
