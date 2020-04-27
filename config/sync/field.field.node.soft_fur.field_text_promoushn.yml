@@ -1,0 +1,21 @@
+uuid: 527f4cd1-d881-4545-8c49-447628f92d10
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_promoushn
+    - node.type.soft_fur
+  module:
+    - text
+id: node.soft_fur.field_text_promoushn
+field_name: field_text_promoushn
+entity_type: node
+bundle: soft_fur
+label: 'Текст на промоушн'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
