@@ -141,7 +141,7 @@ display:
             - fieldset_3
           wrapper: div
           legend: ''
-          classes: 'card  mb-3   col-12  shadow'
+          classes: 'card  mb-3  col-12  shadow'
           collapsible: 0
           collapsed: 0
           plugin_id: fieldset
