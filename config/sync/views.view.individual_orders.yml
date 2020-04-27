@@ -76,10 +76,10 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: ''
+          row_class: col-12
           default_row_class: false
           type: ul
-          wrapper_class: item-list
+          wrapper_class: ''
           class: 'list-unstyled row'
       row:
         type: fields
