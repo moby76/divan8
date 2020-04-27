@@ -829,7 +829,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       group_by: false
-      css_class: 'col-xs-12 col-sm-12 col-md-12 col-lg-12  col-xl-12'
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
