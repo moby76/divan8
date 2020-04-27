@@ -37,6 +37,7 @@
         "drupal/ds": "^3.5",
         "drupal/entity_browser": "^2.4",
         "drupal/field_formatter": "^1.2",
+        "drupal/field_group": "^3.0",
         "drupal/field_slideshow": "^3.0@beta",
         "drupal/geolocation": "^1.11",
         "drupal/imagefield_slideshow": "^1.10",

@@ -6,7 +6,7 @@
  .image-wrapper{
      margin: 10px;
  }
-
+/* --------------------------------------------------------------------- Карусель Bootstrap ----------------------------------------- */
  .carousel{
      width: 100%;
      text-align: center;
@@ -53,6 +53,41 @@
     transition: opacity 0.6s ease;
 }
 
+.carousel-inner{
+    /* margin-bottom: 50px; */
+}
+
+.carousel-item{
+    margin-bottom: 50px;
+}
+
+.carousel-caption{
+    background: #1d193c8a;
+    padding: 1em 2em 0;
+    bottom: 0;
+}
+
+.carousel-caption .text-block-promo{
+    color: white;
+}
+
+.carousel-caption a{
+    color: yellow;
+    text-decoration-line: underline;
+}
+
+.carousel-caption a:hover{
+    color: #ffd000;
+    text-decoration-line: underline;
+}
+
+.carousel-caption .price-block-promo{
+    border: 2px solid white;
+    padding: 0.2em;
+    border-radius: 5px;
+    color: white;
+}
+/* ============================================================================================================================================ */
 .field-slideshow{
     /* width: 50%; */
     /* margin: auto; */
@@ -69,6 +104,8 @@
     margin-top: 250px;
     position: relative;
 } 
+
+/* ================================================================================================================================================= */
 
 .card-footer{
    /* background-color:rgba(0, 0, 0, 0.02); */

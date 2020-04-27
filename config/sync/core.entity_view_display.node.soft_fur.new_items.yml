@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
+    - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
     - node.type.soft_fur
@@ -240,4 +241,5 @@ hidden:
   field_number: true
   field_promoushen_photo: true
   field_set_available: true
+  field_text_promoushn: true
   langcode: true

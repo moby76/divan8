@@ -16,16 +16,61 @@ dependencies:
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
+    - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
     - image.style.thumbnail
     - node.type.soft_fur
   module:
+    - field_group
     - image
     - media_library
     - path
     - serial
     - text
+third_party_settings:
+  field_group:
+    group_promoushn:
+      children:
+        - group_tekst_na_promoushn
+        - group_foto_na_promoushen
+      parent_name: ''
+      weight: 22
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Промоушн
+    group_tekst_na_promoushn:
+      children:
+        - field_text_promoushn
+      parent_name: group_promoushn
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Текст на промоушн'
+    group_foto_na_promoushen:
+      children:
+        - field_promoushen_photo
+      parent_name: group_promoushn
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Фото на промоушен'
 id: node.soft_fur.default
 targetEntityType: node
 bundle: soft_fur
@@ -33,12 +78,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_age_kategory:
-    weight: 20
+    weight: 19
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -48,19 +93,19 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_available:
-    weight: 14
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_buy_komplekt:
-    weight: 13
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_features:
-    weight: 19
+    weight: 18
     settings:
       rows: 5
       placeholder: ''
@@ -75,26 +120,26 @@ content:
     third_party_settings: {  }
     region: content
   field_new_item:
-    weight: 18
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_number:
-    weight: 51
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: serial_default_widget
     region: content
   field_price_base:
-    weight: 16
+    weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_promoushen_photo:
-    weight: 26
+    weight: 22
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -102,45 +147,53 @@ content:
     type: image_image
     region: content
   field_set_available:
-    weight: 17
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_soft_fur_config:
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_soft_fur_model:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_tip_mebeli:
     weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_soft_fur_model:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_promoushn:
+    weight: 22
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_tip_mebeli:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_where:
-    weight: 15
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   langcode:
     type: language_select
-    weight: 3
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -148,21 +201,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -175,7 +228,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -184,9 +237,9 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   body: true
