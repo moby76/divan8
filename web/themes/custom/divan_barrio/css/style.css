@@ -269,6 +269,7 @@
 .view-content,
 .form-actions{
     padding: 0 15px;
+    display: block;
 }
 
 .ui-widget-overlay {
@@ -283,9 +284,4 @@
 
 .slick-list{
     display: list-item;
-}
-
-.view-content, 
-.form-actions{
-    display: block;
 }
