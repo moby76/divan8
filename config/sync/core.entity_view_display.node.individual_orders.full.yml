@@ -7,14 +7,15 @@ dependencies:
     - field.field.node.individual_orders.body
     - field.field.node.individual_orders.field_features
     - field.field.node.individual_orders.field_foto
+    - field.field.node.individual_orders.field_image
     - field.field.node.individual_orders.field_number
     - field.field.node.individual_orders.field_soft_fur_model
-    - image.style.scale_330_330
+    - image.style.large
     - node.type.individual_orders
   module:
     - ds
+    - image
     - layout_builder
-    - slick
     - text
     - user
 third_party_settings:
@@ -69,7 +70,7 @@ third_party_settings:
       top:
         - node_title
       left:
-        - field_foto
+        - field_image
       right:
         - field_features
         - field_soft_fur_model
@@ -91,66 +92,14 @@ content:
     third_party_settings: {  }
     type: text_default
     region: right
-  field_foto:
+  field_image:
+    type: image
     weight: 1
+    region: left
     label: above
     settings:
-      style: ''
-      optionset: custom
-      optionset_thumbnail: ''
-      skin: default
-      skin_thumbnail: ''
-      image_style: scale_330_330
-      thumbnail_effect: ''
-      thumbnail_position: ''
-      media_switch: colorbox
-      box_style: ''
-      thumbnail_style: ''
-      box_media_style: ''
-      ratio: ''
-      box_caption: ''
-      view_mode: default
-      box_caption_custom: ''
-      grid: null
-      grid_medium: null
-      grid_small: null
-      visible_items: null
-      image: ''
-      title: ''
-      link: ''
-      layout: ''
-      class: ''
-      cache: 0
-      current_view_mode: full
-      vanilla: false
-      background: false
-      caption:
-        title: '0'
-        alt: '0'
-      preserve_keys: false
-      override: false
-      overridables:
-        arrows: '0'
-        autoplay: '0'
-        dots: '0'
-        draggable: '0'
-        infinite: '0'
-        mouseWheel: '0'
-        randomize: '0'
-        variableWidth: '0'
-      thumbnail: ''
-      thumbnail_caption: ''
-      skin_arrows: ''
-      skin_dots: ''
-      fx: ''
-      icon: ''
-      responsive_image_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
-      id: ''
-      overlay: ''
+      image_style: large
+      image_link: ''
     third_party_settings:
       ds:
         ds_limit: ''
@@ -160,11 +109,9 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: slick_media
-    region: left
   field_soft_fur_model:
     weight: 3
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -172,6 +119,7 @@ content:
     region: right
 hidden:
   body: true
+  field_foto: true
   field_number: true
   langcode: true
   links: true

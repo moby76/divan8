@@ -7,33 +7,161 @@ dependencies:
     - field.field.node.individual_orders.body
     - field.field.node.individual_orders.field_features
     - field.field.node.individual_orders.field_foto
+    - field.field.node.individual_orders.field_image
     - field.field.node.individual_orders.field_number
     - field.field.node.individual_orders.field_soft_fur_model
+    - image.style.scale_330_330
     - node.type.individual_orders
   module:
+    - ds
+    - slick
+    - taxonomy
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          ds_hidden:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_foto
+      right:
+        - field_features
+        - field_soft_fur_model
 id: node.individual_orders.teaser
 targetEntityType: node
 bundle: individual_orders
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
+  field_features:
+    type: text_default
+    weight: 1
+    region: right
+    label: above
     settings: {  }
     third_party_settings: {  }
-    region: content
+  field_foto:
+    type: slick_media
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      style: ''
+      optionset: custom
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: scale_330_330
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: ''
+      box_media_style: ''
+      ratio: ''
+      box_caption: ''
+      view_mode: default
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      class: ''
+      cache: 0
+      overridables:
+        arrows: arrows
+        dots: dots
+        autoplay: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      current_view_mode: teaser
+      vanilla: false
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      thumbnail: ''
+      thumbnail_caption: ''
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      id: ''
+      overlay: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_soft_fur_model:
+    type: entity_reference_rss_category
+    weight: 2
+    region: right
+    label: above
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  field_features: true
-  field_foto: true
+  body: true
+  field_image: true
   field_number: true
-  field_soft_fur_model: true
   langcode: true
+  links: true
