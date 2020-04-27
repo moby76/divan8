@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.individual_orders.body
     - field.field.node.individual_orders.field_features
     - field.field.node.individual_orders.field_foto
+    - field.field.node.individual_orders.field_image
     - field.field.node.individual_orders.field_number
     - field.field.node.individual_orders.field_soft_fur_model
     - node.type.individual_orders
   module:
+    - image
     - serial
     - text
     - user
@@ -39,6 +41,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_image:
+    weight: 106
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_number:
     weight: 105
