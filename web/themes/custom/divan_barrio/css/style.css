@@ -53,6 +53,9 @@
     transition: opacity 0.6s ease;
 }
 
+.carousel-inner{
+    margin-bottom: 50px;
+}
 .field-slideshow{
     /* width: 50%; */
     /* margin: auto; */
