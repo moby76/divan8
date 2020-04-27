@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
+    - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
     - node.type.soft_fur
@@ -102,6 +103,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_text_promoushn:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_tip_mebeli:
     weight: 2

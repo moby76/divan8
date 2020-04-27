@@ -3,9 +3,9 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_features
     - field.storage.node.field_price_base
     - field.storage.node.field_promoushen_photo
+    - field.storage.node.field_text_promoushn
     - node.type.soft_fur
   module:
     - image
@@ -13,7 +13,6 @@ dependencies:
     - text
     - user
     - views_bootstrap
-    - views_fieldsets
     - views_slideshow
 id: promoushen
 label: Промоушен
@@ -680,64 +679,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        fieldset:
-          id: fieldset
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - title
-            - field_features
-            - field_price_base
-          wrapper: fieldset
-          legend: ''
-          classes: col-md-6
-          collapsible: 1
-          collapsed: 0
-          plugin_id: fieldset
         title:
           id: title
           table: node_field_data
@@ -803,15 +744,15 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_features:
-          id: field_features
-          table: node__field_features
-          field: field_features
+        field_text_promoushn:
+          id: field_text_promoushn
+          table: node__field_text_promoushn
+          field: field_text_promoushn
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -829,14 +770,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 0
+            max_length: 150
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: false
+            trim: true
             preserve_tags: ''
             html: false
           element_type: ''
@@ -873,7 +814,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -902,13 +843,13 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: 'promotion-price col-sm-6 col-md-4 col-lg-4 col-xl-3 pt-4 pb-4 pl-4'
+          element_class: promotion-price
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: 'row justify-content-end mt-1'
-          element_default_classes: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -940,7 +881,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ title }} \r\n{{ field_features }} \r\n{{ field_price_base }} \r\n\r\n"
+            text: "<h6 class=\"text-block-promo\">{{ field_text_promoushn }}</h4>\r\n<h3 class=\"price-block-promo\">{{ field_price_base }}</h3>\r\n\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -987,9 +928,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_features'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_promoushen_photo'
+        - 'config:field.storage.node.field_text_promoushn'
   embed_1:
     display_plugin: embed
     id: embed_1
