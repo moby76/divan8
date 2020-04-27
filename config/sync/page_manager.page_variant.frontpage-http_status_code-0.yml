@@ -5,6 +5,7 @@ dependencies:
   config:
     - page_manager.page.frontpage
     - views.view.actions
+    - views.view.promoushen
     - views.view.shops_mainpage
     - views.view.soft_new_items
   module:
@@ -48,6 +49,17 @@ variant_settings:
       weight: 1
       context_mapping: {  }
       uuid: 3cf3ae16-8a8e-4d63-adb3-282a1d0f20e6
+    3edd0a05-12fc-47dd-83a7-aa47876c8597:
+      id: 'views_block:promoushen-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: 3edd0a05-12fc-47dd-83a7-aa47876c8597
+      weight: 1
   id: panels_variant
   label: null
   uuid: dff7dc5e-97a8-496e-a909-41a7f477f5a3
