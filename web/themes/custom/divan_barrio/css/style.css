@@ -284,3 +284,8 @@
 .slick-list{
     display: list-item;
 }
+
+.view-content, 
+.form-actions{
+    display: block;
+}
