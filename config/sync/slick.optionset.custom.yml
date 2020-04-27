@@ -5,7 +5,7 @@ dependencies: {  }
 id: custom
 name: custom
 label: Custom
-weight: 0
+weight: -8
 group: ''
 skin: default
 breakpoints: 0

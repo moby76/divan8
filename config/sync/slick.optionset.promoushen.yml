@@ -10,7 +10,7 @@ _core:
 id: promoushen
 name: promoushen
 label: Промоушен
-weight: -10
+weight: -9
 group: ''
 skin: default
 breakpoints: 0

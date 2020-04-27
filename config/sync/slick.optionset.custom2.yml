@@ -1,0 +1,24 @@
+uuid: 75e870ed-2333-4558-85b7-bdd67f51bff2
+langcode: ru
+status: false
+dependencies:
+  enforced:
+    module:
+      - slick
+_core:
+  default_config_hash: R44sHtkxxZrBiHA2kQiOrgfOwXDce6s8fpQCTUoDhf0
+id: custom2
+name: custom2
+label: Custom2
+weight: -7
+group: ''
+skin: default
+breakpoints: 0
+optimized: true
+options:
+  options__active_tab: edit-options-settings
+  settings:
+    prevArrow: ''
+    nextArrow: ''
+    lazyLoad: ondemand
+    slidesToShow: 1
