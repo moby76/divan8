@@ -3,15 +3,17 @@ langcode: ru
 status: true
 dependencies:
   config:
+    - field.storage.node.field_features
     - field.storage.node.field_price_base
     - field.storage.node.field_promoushen_photo
     - node.type.soft_fur
   module:
-    - colorbox
     - image
     - node
-    - slick_views
+    - text
     - user
+    - views_bootstrap
+    - views_fieldsets
     - views_slideshow
 id: promoushen
 label: Промоушен
@@ -586,45 +588,21 @@ display:
     display_options:
       display_extenders: {  }
       style:
-        type: slick
+        type: views_bootstrap_carousel
         options:
-          vanilla: false
-          optionset: custom
-          skin: classic
-          layout: ''
-          caption:
-            title: '0'
-            field_price_base: '0'
-            field_promoushen_photo: '0'
-          optionset_thumbnail: ''
-          skin_thumbnail: ''
-          thumbnail_position: ''
-          thumbnail_caption: ''
-          grid: null
-          grid_medium: null
-          grid_small: null
-          visible_items: null
-          preserve_keys: false
-          image: ''
-          thumbnail: ''
-          overlay: ''
+          grouping: {  }
+          interval: '0'
+          keyboard: 1
+          ride: 0
+          navigation: 1
+          indicators: 1
+          pause: 1
+          use_caption: 1
+          wrap: 1
+          effect: slide
+          image: field_promoushen_photo
           title: ''
-          link: ''
-          class: ''
-          id: ''
-          override: false
-          overridables:
-            arrows: '0'
-            autoplay: '0'
-            dots: '0'
-            draggable: '0'
-            infinite: '0'
-            mouseWheel: '0'
-            randomize: '0'
-            variableWidth: '0'
-          cache: 0
-          current_view_mode: block_1
-          thumbnail_effect: ''
+          description: nothing
       defaults:
         style: false
         row: false
@@ -638,6 +616,128 @@ display:
           separator: ''
           hide_empty: false
       fields:
+        field_promoushen_photo:
+          id: field_promoushen_photo
+          table: node__field_promoushen_photo
+          field: field_promoushen_photo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: ''
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        fieldset:
+          id: fieldset
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - title
+            - field_features
+            - field_price_base
+          wrapper: fieldset
+          legend: ''
+          classes: col-md-6
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
         title:
           id: title
           table: node_field_data
@@ -703,6 +803,68 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        field_features:
+          id: field_features
+          table: node__field_features
+          field: field_features
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_price_base:
           id: field_price_base
           table: node__field_price_base
@@ -767,18 +929,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_promoushen_photo:
-          id: field_promoushen_photo
-          table: node__field_promoushen_photo
-          field: field_promoushen_photo
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{{ title }} \r\n{{ field_features }} \r\n{{ field_price_base }} \r\n\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -803,39 +965,19 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: promotion-image
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: 'row '
-          element_default_classes: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
           empty: ''
-          hide_empty: true
-          empty_zero: true
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: colorbox
-          settings:
-            colorbox_node_style: ''
-            colorbox_node_style_first: ''
-            colorbox_image_style: ''
-            colorbox_gallery: post
-            colorbox_gallery_custom: ''
-            colorbox_caption: auto
-            colorbox_caption_custom: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
       header: {  }
     cache_metadata:
       max-age: -1
@@ -845,6 +987,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_features'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_promoushen_photo'
   embed_1:
