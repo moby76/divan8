@@ -455,11 +455,11 @@ display:
       path: all-beds
       menu:
         type: normal
-        title: 'Все кровати'
+        title: Кровати
         description: ''
         expanded: false
-        parent: ''
-        weight: 0
+        parent: 'menu_link_content:81caabd6-4156-4039-8df8-ad0210a0e748'
+        weight: -50
         context: '0'
         menu_name: main
     cache_metadata:
