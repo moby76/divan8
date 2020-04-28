@@ -394,3 +394,28 @@ blocks:
         value: "<div class=\"social-buttons\">\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-facebook\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-facebook-f\"></i></a>\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-twitter\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-twitter\"></i></a>\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-odnoklassniki\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-odnoklassniki\"></i></a>\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-instagram\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-instagram\"></i></a>\r\n<a href=\"https://vk.com/pavel_alyamovski\" class=\"btn btn-block btn-social btn-vk\" type=\"button\" role=\"button\"><i class=\"fab mr-2 fa-2x fa-vk\"></i></a>\r\n</div>"
         summary: ''
         format: full_html
+menus:
+  -
+    menu_name: main
+    title: 'Наше производство'
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '0'
+    langcode: ru
+    uuid: 946fd309-89f8-4e89-b851-008a1dc08537
+  -
+    menu_name: main
+    title: 'Товары наших партнёров'
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '0'
+    langcode: ru
+    uuid: 81caabd6-4156-4039-8df8-ad0210a0e748
