@@ -1,0 +1,25 @@
+uuid: 76133c58-c1ee-4310-9561-bcfd6c8993e3
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7e5a798d-9b21-495e-848a-6e6d325fdb46'
+  module:
+    - block_content
+  theme:
+    - divan_barrio
+id: socialnyessylki2_2
+theme: divan_barrio
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:7e5a798d-9b21-495e-848a-6e6d325fdb46'
+settings:
+  id: 'block_content:7e5a798d-9b21-495e-848a-6e6d325fdb46'
+  label: 'Социальные ссылки 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

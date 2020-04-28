@@ -328,3 +328,20 @@
 .slick-list{
     display: list-item;
 }
+
+/* ------------------------------------------------------------- Социальные иконки ----------------------------------------------- */
+
+.social-buttons{
+    position: fixed;
+    top: 250px;
+    left: 10px;
+    padding: 10px;
+}
+
+.social-buttons .btn{
+    color:#007cf9;
+}
+
+.social-buttons .btn:hover{
+    color:#5badff;
+}
