@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67c1da6bf673308df2ec452de2e6edeb",
+    "content-hash": "3329ca681cea22a2a044088188f70226",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5386,6 +5386,52 @@
                 "source": "http://cgit.drupalcode.org/slick_views",
                 "issues": "https://drupal.org/project/issues/slick_views"
             }
+        },
+        {
+            "name": "drupal/socbutt",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/socbutt.git",
+                "reference": "d082f516566d32736b3661af838aa9c1df7a8376"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1470902727",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "alex dyakonov",
+                    "homepage": "https://www.drupal.org/user/3467473"
+                },
+                {
+                    "name": "jeff h",
+                    "homepage": "https://www.drupal.org/user/37837"
+                }
+            ],
+            "description": "Simple social sharing buttons.",
+            "homepage": "https://www.drupal.org/project/socbutt",
+            "support": {
+                "source": "https://git.drupalcode.org/project/socbutt"
+            },
+            "time": "2016-08-11T07:27:11+00:00"
         },
         {
             "name": "drupal/structure_sync",
@@ -12715,6 +12761,7 @@
         "drupal/page_manager": 10,
         "drupal/quicktabs": 15,
         "drupal/serial": 15,
+        "drupal/socbutt": 20,
         "drupal/views_slideshow_jcarousel": 15,
         "drupal/views_slideshow_xtra": 15
     },
