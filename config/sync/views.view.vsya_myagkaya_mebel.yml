@@ -463,13 +463,14 @@ display:
       path: soft-furniture-all
       menu:
         type: normal
-        title: 'Вся мягкая мебель'
+        title: 'Серийное производство'
         description: ''
-        expanded: false
-        parent: ''
-        weight: 0
+        expanded: true
+        parent: 'menu_link_content:946fd309-89f8-4e89-b851-008a1dc08537'
+        weight: -50
         context: '0'
         menu_name: main
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
