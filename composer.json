@@ -56,6 +56,7 @@
         "drupal/slick": "^2.1",
         "drupal/slick_entityreference": "^2.0",
         "drupal/slick_views": "^2.2",
+        "drupal/socbutt": "1.x-dev",
         "drupal/structure_sync": "^1.16",
         "drupal/token": "^1.6",
         "drupal/transliterate_filenames": "^1.3",
