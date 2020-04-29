@@ -7,19 +7,26 @@ dependencies:
     - field.field.node.soft_fur.body
     - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_basis_type
     - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_depth
+    - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_height
+    - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
+    - field.field.node.soft_fur.field_width
     - node.type.soft_fur
   module:
     - bootstrap_layouts
@@ -54,11 +61,6 @@ third_party_settings:
                 col-sm-8: col-sm-8
               add_region_classes: 1
               attributes: ''
-            ds_hidden:
-              wrapper: div
-              classes: {  }
-              attributes: ''
-              add_region_classes: true
         components:
           1c2ddd11-ac1b-4f6a-9091-be9ae4253a68:
             uuid: 1c2ddd11-ac1b-4f6a-9091-be9ae4253a68
@@ -237,9 +239,16 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_basis_type: true
+  field_depth: true
+  field_depth_full: true
+  field_height: true
+  field_mekhanizm: true
   field_new_item: true
   field_number: true
   field_promoushen_photo: true
   field_set_available: true
+  field_sleep_dim: true
   field_text_promoushn: true
+  field_width: true
   langcode: true

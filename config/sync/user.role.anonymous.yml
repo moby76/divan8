@@ -30,6 +30,7 @@ permissions:
   - 'view comment_user_signature on comment'
   - 'view dynamic_block_field:node-foto on node'
   - 'view dynamic_block_field:node-opisanie on node'
+  - 'view dynamic_block_field:node-opisanie_modeli on node'
   - 'view dynamic_block_field:node-that_collection on node'
   - 'view dynamic_block_field:node-where_buy on node'
   - 'view media'
