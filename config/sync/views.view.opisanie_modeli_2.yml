@@ -7,6 +7,7 @@ dependencies:
     - field.storage.taxonomy_term.field_model_desc
     - field.storage.taxonomy_term.field_scheme
     - image.style.media_library
+    - image.style.medium
     - node.type.soft_fur
   module:
     - colorbox
@@ -201,12 +202,12 @@ display:
           click_sort_column: target_id
           type: colorbox
           settings:
-            colorbox_node_style: media_library
+            colorbox_node_style: medium
             colorbox_node_style_first: ''
             colorbox_image_style: ''
-            colorbox_gallery: field_page
+            colorbox_gallery: post
             colorbox_gallery_custom: ''
-            colorbox_caption: none
+            colorbox_caption: auto
             colorbox_caption_custom: ''
           group_column: entity_id
           group_columns: {  }

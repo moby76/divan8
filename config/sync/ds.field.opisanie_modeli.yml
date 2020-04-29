@@ -1,8 +1,8 @@
-id: opisanie
-label: 'Описание модели 2'
+id: opisanie_modeli
+label: 'Описание модели'
 ui_limit: ''
 properties:
-  block: 'views_block:opisanie_modeli_2-block_1'
+  block: 'views_block:opisanie_modeli-block_1'
   use_block_title: false
   add_block_wrappers: false
 type: block
