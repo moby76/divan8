@@ -98,31 +98,12 @@ third_party_settings:
     regions:
       top:
         - 'dynamic_block_field:node-foto'
-      top_left:
-        - node_title
-      top_right:
-        - field_price_base
       middle:
         - 'dynamic_block_field:node-opisanie_modeli'
       bottom:
         - field_buy_komplekt
         - 'dynamic_block_field:node-that_collection'
     fields:
-      node_title:
-        plugin_id: node_title
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          wrapper: h2
-          class: ''
-          link: false
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
       'dynamic_block_field:node-foto':
         plugin_id: 'dynamic_block_field:node-foto'
         weight: 0
@@ -136,12 +117,12 @@ third_party_settings:
             classes: {  }
       'dynamic_block_field:node-opisanie_modeli':
         plugin_id: 'dynamic_block_field:node-opisanie_modeli'
-        weight: 3
+        weight: 1
         label: hidden
         formatter: default
       'dynamic_block_field:node-that_collection':
         plugin_id: 'dynamic_block_field:node-that_collection'
-        weight: 5
+        weight: 3
         label: hidden
         formatter: default
         ft:
@@ -157,7 +138,7 @@ mode: full
 content:
   field_buy_komplekt:
     type: entity_reference_entity_view
-    weight: 4
+    weight: 2
     region: bottom
     label: above
     settings:
@@ -172,13 +153,6 @@ content:
             lb: 'К этому товару подойдёт'
             lb-col: true
             classes: {  }
-  field_price_base:
-    type: number_unformatted
-    weight: 2
-    region: top_right
-    label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   body: true
   field_age_kategory: true
@@ -192,6 +166,7 @@ hidden:
   field_mekhanizm: true
   field_new_item: true
   field_number: true
+  field_price_base: true
   field_promoushen_photo: true
   field_set_available: true
   field_sleep_dim: true
