@@ -1,0 +1,21 @@
+uuid: e1fd7551-5ac4-44c0-8efa-d5b5afe8fcdd
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mekhanizm
+    - node.type.soft_fur
+  module:
+    - options
+id: node.soft_fur.field_mekhanizm
+field_name: field_mekhanizm
+entity_type: node
+bundle: soft_fur
+label: Механизм
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

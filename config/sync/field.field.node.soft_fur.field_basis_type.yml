@@ -1,0 +1,21 @@
+uuid: a509a600-2ab9-4ded-a933-06c0d0d609f5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basis_type
+    - node.type.soft_fur
+  module:
+    - options
+id: node.soft_fur.field_basis_type
+field_name: field_basis_type
+entity_type: node
+bundle: soft_fur
+label: 'Тип основания'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

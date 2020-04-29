@@ -1,0 +1,33 @@
+uuid: 955d6f24-4142-43c8-a36b-988d08c19327
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_mekhanizm
+field_name: field_mekhanizm
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Отсутствует
+    -
+      value: '1'
+      label: Пума
+    -
+      value: '2'
+      label: Тик-так
+    -
+      value: '3'
+      label: Клик-Кляк
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

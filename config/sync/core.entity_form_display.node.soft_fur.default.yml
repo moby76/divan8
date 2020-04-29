@@ -6,19 +6,26 @@ dependencies:
     - field.field.node.soft_fur.body
     - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_basis_type
     - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_depth
+    - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_height
+    - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
+    - field.field.node.soft_fur.field_width
     - image.style.thumbnail
     - node.type.soft_fur
   module:
@@ -71,6 +78,37 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Фото на промоушен'
+    group_product_size:
+      children:
+        - field_width
+        - field_depth
+        - field_depth_full
+        - field_height
+        - field_sleep_dim
+      parent_name: ''
+      weight: 23
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Размеры
+    group_basic_mech:
+      children:
+        - field_basis_type
+        - field_mekhanizm
+      parent_name: ''
+      weight: 24
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Основание и механизм'
 id: node.soft_fur.default
 targetEntityType: node
 bundle: soft_fur
@@ -98,8 +136,26 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_basis_type:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_buy_komplekt:
     weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_depth:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_depth_full:
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -118,6 +174,18 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_height:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mekhanizm:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_new_item:
     weight: 17
@@ -152,6 +220,14 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_sleep_dim:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_soft_fur_config:
     weight: 10
     settings: {  }
@@ -180,6 +256,12 @@ content:
     region: content
   field_where:
     weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_width:
+    weight: 24
     settings: {  }
     third_party_settings: {  }
     type: options_select

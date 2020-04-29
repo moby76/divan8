@@ -1,0 +1,21 @@
+uuid: a6f59ea3-4640-4523-b225-7eda0cb3d56d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_depth_full
+    - node.type.soft_fur
+  module:
+    - options
+id: node.soft_fur.field_depth_full
+field_name: field_depth_full
+entity_type: node
+bundle: soft_fur
+label: Глубина(разлож.)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

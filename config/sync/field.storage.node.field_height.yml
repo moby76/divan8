@@ -1,0 +1,36 @@
+uuid: c22e305d-1ee2-4edb-821b-ce1b00b317c5
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_height
+field_name: field_height
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: '500 мм'
+    -
+      value: '1'
+      label: '800 мм'
+    -
+      value: '2'
+      label: 1000мм
+    -
+      value: '3'
+      label: '1500 мм'
+    -
+      value: '4'
+      label: '2000 мм'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

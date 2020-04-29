@@ -6,21 +6,29 @@ dependencies:
     - field.field.node.soft_fur.body
     - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_basis_type
     - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_depth
+    - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_height
+    - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
+    - field.field.node.soft_fur.field_width
     - node.type.soft_fur
   module:
+    - options
     - serial
     - text
     - user
@@ -47,6 +55,13 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_basis_type:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_buy_komplekt:
     weight: 5
     label: above
@@ -55,6 +70,20 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_depth:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_depth_full:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_features:
     weight: 8
@@ -72,6 +101,20 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_height:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_mekhanizm:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_number:
     weight: 11
     label: above
@@ -87,6 +130,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_sleep_dim:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_soft_fur_config:
     weight: 3
@@ -126,6 +177,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_width:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 0
