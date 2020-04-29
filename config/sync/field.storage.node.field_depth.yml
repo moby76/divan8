@@ -1,0 +1,39 @@
+uuid: 5578c228-2754-49aa-a586-d1b6e4658569
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_depth
+field_name: field_depth
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: '500 мм'
+    -
+      value: '1'
+      label: '1000 мм'
+    -
+      value: '2'
+      label: 1500мм
+    -
+      value: '3'
+      label: '2000 мм'
+    -
+      value: '4'
+      label: '2500 мм'
+    -
+      value: '5'
+      label: '3000 мм'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

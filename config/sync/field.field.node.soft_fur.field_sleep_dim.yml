@@ -1,0 +1,19 @@
+uuid: da8335b3-a425-4727-ab1a-6fd5db28ed12
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sleep_dim
+    - node.type.soft_fur
+id: node.soft_fur.field_sleep_dim
+field_name: field_sleep_dim
+entity_type: node
+bundle: soft_fur
+label: 'Спальное место'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

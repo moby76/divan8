@@ -7,24 +7,30 @@ dependencies:
     - field.field.node.soft_fur.body
     - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
+    - field.field.node.soft_fur.field_basis_type
     - field.field.node.soft_fur.field_buy_komplekt
+    - field.field.node.soft_fur.field_depth
+    - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_height
+    - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
+    - field.field.node.soft_fur.field_width
     - node.type.soft_fur
   module:
     - ds
     - layout_builder
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -96,11 +102,6 @@ third_party_settings:
         - node_title
       top_right:
         - field_price_base
-        - field_tip_mebeli
-        - field_soft_fur_config
-        - field_soft_fur_model
-        - 'dynamic_block_field:node-where_buy'
-        - field_features
       middle:
         - 'dynamic_block_field:node-opisanie_modeli'
       bottom:
@@ -135,12 +136,12 @@ third_party_settings:
             classes: {  }
       'dynamic_block_field:node-opisanie_modeli':
         plugin_id: 'dynamic_block_field:node-opisanie_modeli'
-        weight: 8
+        weight: 3
         label: hidden
         formatter: default
       'dynamic_block_field:node-that_collection':
         plugin_id: 'dynamic_block_field:node-that_collection'
-        weight: 10
+        weight: 5
         label: hidden
         formatter: default
         ft:
@@ -149,17 +150,6 @@ third_party_settings:
             lb: 'Другие товары из той-же коллекции'
             lb-col: true
             classes: {  }
-      'dynamic_block_field:node-where_buy':
-        plugin_id: 'dynamic_block_field:node-where_buy'
-        weight: 6
-        label: above
-        formatter: default
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 id: node.soft_fur.full
 targetEntityType: node
 bundle: soft_fur
@@ -167,7 +157,7 @@ mode: full
 content:
   field_buy_komplekt:
     type: entity_reference_entity_view
-    weight: 9
+    weight: 4
     region: bottom
     label: above
     settings:
@@ -182,13 +172,6 @@ content:
             lb: 'К этому товару подойдёт'
             lb-col: true
             classes: {  }
-  field_features:
-    type: text_default
-    weight: 7
-    region: top_right
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_price_base:
     type: number_unformatted
     weight: 2
@@ -196,47 +179,27 @@ content:
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-  field_soft_fur_config:
-    type: entity_reference_label
-    weight: 4
-    region: top_right
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_soft_fur_model:
-    type: entity_reference_label
-    weight: 5
-    region: top_right
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_tip_mebeli:
-    type: entity_reference_label
-    weight: 3
-    region: top_right
-    label: inline
-    settings:
-      link: true
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: true
-            classes: {  }
 hidden:
   body: true
   field_age_kategory: true
   field_available: true
+  field_basis_type: true
+  field_depth: true
+  field_depth_full: true
+  field_features: true
   field_foto: true
+  field_height: true
+  field_mekhanizm: true
   field_new_item: true
   field_number: true
   field_promoushen_photo: true
   field_set_available: true
+  field_sleep_dim: true
+  field_soft_fur_config: true
+  field_soft_fur_model: true
   field_text_promoushn: true
+  field_tip_mebeli: true
   field_where: true
+  field_width: true
   langcode: true
   links: true
