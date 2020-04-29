@@ -379,3 +379,28 @@ ul.dropdown-menu li a:hover{
 .social-buttons .btn:hover{
     color:#5badff;
 }
+/* ----------------------------------------------------------------- Темизация views Опи сание товара на странице материала ---------------------------------- */
+
+
+.view-opisanie-modeli{
+    margin: 30px 0 0 0;
+}
+
+.tab-content{
+    min-height: 400px;
+    overflow: auto;
+}
+
+
+.tab-content .field__item{
+    margin: 10px 0;
+    padding: 0 5px;
+}
+
+.field--name-field-scheme .field__item{
+    float: left;
+}
+
+.tab-content>.tab-pane .field__label{
+    display: none;
+}
