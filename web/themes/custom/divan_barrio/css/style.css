@@ -404,3 +404,7 @@ ul.dropdown-menu li a:hover{
 .tab-content>.tab-pane .field__label{
     display: none;
 }
+
+.price-base{
+    opacity: 0.7;
+}

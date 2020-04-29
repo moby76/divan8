@@ -9,7 +9,9 @@ dependencies:
     - field.storage.node.field_features
     - field.storage.node.field_height
     - field.storage.node.field_mekhanizm
+    - field.storage.node.field_price_base
     - field.storage.node.field_sleep_dim
+    - field.storage.node.field_soft_fur_model
     - field.storage.node.field_where
     - field.storage.node.field_width
     - field.storage.taxonomy_term.field_dim
@@ -742,6 +744,69 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_soft_fur_model:
+          id: field_soft_fur_model
+          table: node__field_soft_fur_model
+          field: field_soft_fur_model
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_features:
           id: field_features
           table: node__field_features
@@ -910,6 +975,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
+            - fieldset_5
             - nothing
           wrapper: div
           legend: ''
@@ -917,6 +983,192 @@ display:
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
+        fieldset_5:
+          id: fieldset_5
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: 'row p-1 mb-3 bg-secondary'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - title
+            - field_price_base
+          wrapper: div
+          legend: ''
+          classes: 'row  pt-2  pb-2  mb-2'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-sm-6\">  \r\n        <h1><span class=\"badge pr-5 pl-5 pt-4 pb-4 badge-secondary\">{{ title }} </span></h1>\r\n</div>\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        field_price_base:
+          id: field_price_base
+          table: node__field_price_base
+          field: field_price_base
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-sm-6\">\r\n    <div class=\"row float-right mr-3\">\r\n  <h1><span class=\"price-base badge pr-5 pl-5 pt-4 pb-4 mr-3 badge-danger\">{{ field_price_base }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -928,7 +1180,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "   <ul class=\"nav nav-pills\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link active\" data-toggle=\"tab\" href=\"#description\">Характеристики</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" data-toggle=\"tab\" href=\"#scheme\">Схема</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" data-toggle=\"tab\" href=\"#dim\">Размеры</a>\r\n    </li>\r\n        <li class=\"nav-item\">\r\n      <a class=\"nav-link\" data-toggle=\"tab\" href=\"#where\">Наличие</a>\r\n    </li>\r\n  </ul>\r\n"
+            text: "<div class=\"row\">\r\n    <ul class=\"nav nav-pills\">\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link active\" data-toggle=\"tab\" href=\"#description\">Характеристики</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link\" data-toggle=\"tab\" href=\"#scheme\">Схема</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link\" data-toggle=\"tab\" href=\"#where\">Наличие</a>\r\n        </li>\r\n    </ul>\r\n</div>   "
             make_link: false
             path: ''
             absolute: false
@@ -1036,7 +1288,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "    <div class=\"tab-pane fade show active\" id=\"description\">\r\n        <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n                <div class=\"card card-body\">\r\n                    <h5 class=\"card-title\">Описание модели</h5>\r\n                    <p class=\"card-text\">\r\n                        {{ field_model_desc }}\r\n                    </p>    \r\n                </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">                \r\n                    <h5 class=\"card-title\">Особенности товара</h5>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-4\"> \r\n                            <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\r\n                                <a class=\"nav-link \" id=\"v-pills-features-tab\" data-toggle=\"pill\" href=\"#v-pills-features\" role=\"tab\" aria-controls=\"v-pills-features\" aria-selected=\"false\">Особенности</a>\r\n                                <a class=\"nav-link active\" id=\"v-pills-dims-tab\" data-toggle=\"pill\" href=\"#v-pills-dims\" role=\"tab\" aria-controls=\"v-pills-dims\" aria-selected=\"false\">Размеры</a>\r\n                                <a class=\"nav-link\" id=\"v-pills-basis-tab\" data-toggle=\"pill\" href=\"#v-pills-basis\" role=\"tab\" aria-controls=\"v-pills-basis\" aria-selected=\"false\">Основание</a>\r\n                                <a class=\"nav-link\" id=\"v-pills-mech-tab\" data-toggle=\"pill\" href=\"#v-pills-mech\" role=\"tab\" aria-controls=\"v-pills-mech\" aria-selected=\"false\">Механизм</a>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"col-8\">\r\n                            <div class=\"tab-content\" id=\"v-pills-tabContent\">\r\n                                <div class=\"tab-pane fade \" id=\"v-pills-features\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">{{ field_features }}</div>\r\n                                <div class=\"tab-pane fade show active\" id=\"v-pills-dims\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\r\n                                    <ul class=\"list-group\">\r\n                                        <li class=\"list-group-item\">Ширина - {{ field_width }}</li>\r\n                                        <li class=\"list-group-item\">Высота - {{ field_height }}</li>\r\n                                        <li class=\"list-group-item\">Глубина(слож.) - {{ field_depth }}</li>\r\n                                        <li class=\"list-group-item\">Глубина(разлож.) - {{ field_depth_full }}</li>\r\n                                        <li class=\"list-group-item\">Спальное место - {{ field_sleep_dim }} </li>\r\n                                    </ul>\r\n                                </div>\r\n                                <div class=\"tab-pane fade\" id=\"v-pills-basis\" role=\"tabpanel\" aria-labelledby=\"v-pills-basis-tab\">{{ field_basis_type }}</div>\r\n                                <div class=\"tab-pane fade\" id=\"v-pills-mech\" role=\"tabpanel\" aria-labelledby=\"v-pills-mech-tab\">{{ field_mekhanizm }}</div>\r\n                            </div>\r\n                        </div>\r\n                    </div>                    \r\n            </div>            \r\n        </div>    \r\n    </div>\r\n"
+            text: "    <div class=\"tab-pane fade show active\" id=\"description\">\r\n        <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n                <div class=\"card card-body\">\r\n                    <h5 class=\"card-title\">Описание модели {{ field_soft_fur_model }}</h5>\r\n                    <p class=\"card-text\">\r\n                        {{ field_model_desc }}\r\n                    </p>    \r\n                </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">                \r\n                    <h5 class=\"card-title\">Особенности товара</h5>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-4\"> \r\n                            <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\r\n                                <a class=\"nav-link \" id=\"v-pills-features-tab\" data-toggle=\"pill\" href=\"#v-pills-features\" role=\"tab\" aria-controls=\"v-pills-features\" aria-selected=\"false\">Особенности</a>\r\n                                <a class=\"nav-link active\" id=\"v-pills-dims-tab\" data-toggle=\"pill\" href=\"#v-pills-dims\" role=\"tab\" aria-controls=\"v-pills-dims\" aria-selected=\"false\">Размеры</a>\r\n                                <a class=\"nav-link\" id=\"v-pills-basis-tab\" data-toggle=\"pill\" href=\"#v-pills-basis\" role=\"tab\" aria-controls=\"v-pills-basis\" aria-selected=\"false\">Основание</a>\r\n                                <a class=\"nav-link\" id=\"v-pills-mech-tab\" data-toggle=\"pill\" href=\"#v-pills-mech\" role=\"tab\" aria-controls=\"v-pills-mech\" aria-selected=\"false\">Механизм</a>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"col-8\">\r\n                            <div class=\"tab-content\" id=\"v-pills-tabContent\">\r\n                                <div class=\"tab-pane fade \" id=\"v-pills-features\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">{{ field_features }}</div>\r\n                                <div class=\"tab-pane fade show active\" id=\"v-pills-dims\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\r\n                                    <ul class=\"list-group\">\r\n                                        <li class=\"list-group-item\">Ширина - {{ field_width }}</li>\r\n                                        <li class=\"list-group-item\">Высота - {{ field_height }}</li>\r\n                                        <li class=\"list-group-item\">Глубина(слож.) - {{ field_depth }}</li>\r\n                                        <li class=\"list-group-item\">Глубина(разлож.) - {{ field_depth_full }}</li>\r\n                                        <li class=\"list-group-item\">Спальное место - {{ field_sleep_dim }} </li>\r\n                                    </ul>\r\n                                </div>\r\n                                <div class=\"tab-pane fade\" id=\"v-pills-basis\" role=\"tabpanel\" aria-labelledby=\"v-pills-basis-tab\">{{ field_basis_type }}</div>\r\n                                <div class=\"tab-pane fade\" id=\"v-pills-mech\" role=\"tabpanel\" aria-labelledby=\"v-pills-mech-tab\">{{ field_mekhanizm }}</div>\r\n                            </div>\r\n                        </div>\r\n                    </div>                    \r\n            </div>            \r\n        </div>    \r\n    </div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -1344,173 +1596,6 @@ display:
           empty_zero: false
           hide_alter_empty: false
           plugin_id: custom
-        fieldset_5:
-          id: fieldset_5
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: row
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - fieldset_4
-            - fieldset_3
-          wrapper: div
-          legend: ''
-          classes: row
-          collapsible: 1
-          collapsed: 0
-          plugin_id: fieldset
-        fieldset_4:
-          id: fieldset_4
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: col-sm-6
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields: {  }
-          wrapper: div
-          legend: ''
-          classes: col-sm-6
-          collapsible: 1
-          collapsed: 0
-          plugin_id: fieldset
-        fieldset_3:
-          id: fieldset_3
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: col-sm-6
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields: {  }
-          wrapper: div
-          legend: ''
-          classes: col-sm-6
-          collapsible: 1
-          collapsed: 0
-          plugin_id: fieldset
     cache_metadata:
       max-age: -1
       contexts:
@@ -1527,7 +1612,9 @@ display:
         - 'config:field.storage.node.field_features'
         - 'config:field.storage.node.field_height'
         - 'config:field.storage.node.field_mekhanizm'
+        - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_sleep_dim'
+        - 'config:field.storage.node.field_soft_fur_model'
         - 'config:field.storage.node.field_where'
         - 'config:field.storage.node.field_width'
         - 'config:field.storage.taxonomy_term.field_dim'
