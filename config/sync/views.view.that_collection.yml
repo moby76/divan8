@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_price_base
     - field.storage.node.field_soft_fur_model
     - field.storage.node.field_where
-    - image.style.medium
+    - image.style.scale_330_330
     - taxonomy.vocabulary.fur_type
     - taxonomy.vocabulary.modeli_myagkoy_mebeli
   content:
@@ -147,7 +147,7 @@ display:
           type: number_integer
           settings:
             thousand_separator: ''
-            prefix_suffix: true
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -336,7 +336,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: medium
+            image_style: scale_330_330
             image_link: ''
           group_column: target_id
           group_columns: {  }
@@ -413,7 +413,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card h-100 shadow\">\r\n        <div class=\"card-header bg-transparent\">\r\n            <h4 class=\"card-title text-primary text-right \">{{ field_price_base_1 }}</h4>\r\n          </div>\r\n        <div class=\"card-img-top image-wrapper\" width=\"100%\">{{ field_foto }}</div>\r\n          <div class=\"card-body\">\r\n          <p>Данный товар можно приобрести в магазине : {{ field_where }}</p>\r\n          </div>\r\n          <div class=\"card-footer text-muted bg-white\">\r\n            <a href=\"{{ view_node }}\" class=\"btn btn-outline-primary\">ПОДРОБНЕЕ...</a>\r\n          </div>\r\n    </div>"
+            text: "    <div class=\"card h-100 shadow\">\r\n        <div class=\"card-header bg-transparent\">\r\n            <!-- ----------------------------------------------- -->\r\n            <div class=\"row float-right mr-2\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base_1 }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n            </div>\r\n            <!-- ----------------------------------------------------- -->\r\n            <!-- <h4 class=\"card-title text-info text-right \">{{ field_price_base }}</h4> -->\r\n          </div>\r\n        <div class=\"card-img-top image-wrapper\" width=\"100%\">{{ field_foto }}</div>\r\n          <div class=\"card-body\">\r\n          </div>\r\n          <div class=\"card-footer text-muted bg-white\">\r\n            <a href=\"{{ view_node }}\" class=\"btn btn-outline-info\">ПОДРОБНЕЕ...</a>\r\n          </div>\r\n    </div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -634,6 +634,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
