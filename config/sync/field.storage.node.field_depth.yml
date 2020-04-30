@@ -13,34 +13,34 @@ settings:
   allowed_values:
     -
       value: '0'
-      label: '3500 мм'
+      label: '400 мм'
     -
       value: '1'
-      label: '3600 мм'
+      label: '500 мм'
     -
       value: '2'
-      label: '3700 мм'
+      label: '600 мм'
     -
       value: '3'
-      label: '3800 мм'
+      label: '700 мм'
     -
       value: '4'
-      label: '4000 мм'
+      label: '800 мм'
     -
       value: '5'
-      label: '1000 мм'
+      label: '900 мм'
     -
       value: '6'
-      label: '1100 мм'
+      label: '1000 мм'
     -
       value: '7'
-      label: '1200 мм'
+      label: '1100 мм'
     -
       value: '8'
-      label: '1300 мм'
+      label: '1200 мм'
     -
       value: '9'
-      label: '1350 мм'
+      label: '1300 мм'
     -
       value: '10'
       label: '1400 мм'
