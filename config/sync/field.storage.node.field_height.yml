@@ -16,15 +16,48 @@ settings:
       label: '500 мм'
     -
       value: '1'
-      label: '800 мм'
+      label: '600 мм'
     -
       value: '2'
-      label: 1000мм
+      label: '700 мм'
     -
       value: '3'
-      label: '1500 мм'
+      label: '800 мм'
     -
       value: '4'
+      label: '900 мм'
+    -
+      value: '5'
+      label: '1000 мм'
+    -
+      value: '6'
+      label: '1100 мм'
+    -
+      value: '7'
+      label: 1200мм
+    -
+      value: '8'
+      label: '1300 мм'
+    -
+      value: '9'
+      label: '1400 мм'
+    -
+      value: '10'
+      label: '1500 мм'
+    -
+      value: '11'
+      label: '1600 мм'
+    -
+      value: '12'
+      label: 1700мм
+    -
+      value: '13'
+      label: '1800 мм'
+    -
+      value: '14'
+      label: '1900 мм'
+    -
+      value: '15'
       label: '2000 мм'
   allowed_values_function: ''
 module: options
