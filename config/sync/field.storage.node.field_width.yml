@@ -122,6 +122,21 @@ settings:
     -
       value: '36'
       label: '4000 мм'
+    -
+      value: '37'
+      label: '4100 мм'
+    -
+      value: '38'
+      label: '4200 мм'
+    -
+      value: '39'
+      label: '4300 мм'
+    -
+      value: '40'
+      label: '4400 мм'
+    -
+      value: '41'
+      label: '4500 мм'
   allowed_values_function: ''
 module: options
 locked: false
