@@ -981,11 +981,67 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - title
-            - field_price_base_1
+            - fieldset_7
+            - fieldset_8
           wrapper: div
           legend: ''
           classes: 'col-12  row'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_7:
+          id: fieldset_7
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: col-8
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - title
+          wrapper: div
+          legend: ''
+          classes: 'col-8  pl-0'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -1030,8 +1086,8 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: 'col-6 pl-0'
+          element_wrapper_type: ''
+          element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -1054,18 +1110,18 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_price_base_1:
-          id: field_price_base_1
-          table: node__field_price_base
-          field: field_price_base
+        fieldset_8:
+          id: fieldset_8
+          table: views
+          field: fieldset
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: col-4
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '{{ field_price_base_1 }} <span style="font-size: 0.5em;">руб.</span>'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1090,13 +1146,69 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
-          element_class: 'card-title text-warning '
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - field_price_base_1
+          wrapper: div
+          legend: ''
+          classes: col-4
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        field_price_base_1:
+          id: field_price_base_1
+          table: node__field_price_base
+          field: field_price_base
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "            <div class=\"row float-right mr-2\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base_1 }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n            </div"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: 'col-6 text-right pr-0'
+          element_wrapper_type: ''
+          element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -1318,7 +1430,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<br>\r\n<a href=\"{{ view_node }} \" class=\"btn btn-primary\">Узнай больше...</a>"
+            text: "<br>\r\n<a href=\"{{ view_node }} \" class=\"btn btn-info\">Узнай больше...</a>"
             make_link: false
             path: ''
             absolute: false
