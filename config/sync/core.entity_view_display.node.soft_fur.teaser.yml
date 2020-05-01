@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_price_from
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_sleep_dim
@@ -130,6 +131,7 @@ hidden:
   field_new_item: true
   field_number: true
   field_price_base: true
+  field_price_from: true
   field_promoushen_photo: true
   field_set_available: true
   field_sleep_dim: true
