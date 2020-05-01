@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_price_from
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_sleep_dim
@@ -109,6 +110,22 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Основание и механизм'
+    group_cenoobrazovanie:
+      children:
+        - field_price_base
+        - field_price_from
+      parent_name: ''
+      weight: 14
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        weight: 0
+      label: Ценообразование
 id: node.soft_fur.default
 targetEntityType: node
 bundle: soft_fur
@@ -149,13 +166,13 @@ content:
     type: options_select
     region: content
   field_depth:
-    weight: 26
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_depth_full:
-    weight: 27
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -176,7 +193,7 @@ content:
     third_party_settings: {  }
     region: content
   field_height:
-    weight: 25
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -200,12 +217,19 @@ content:
     type: serial_default_widget
     region: content
   field_price_base:
-    weight: 15
+    type: number
+    weight: 0
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_price_from:
     type: number
+    weight: 0
     region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_promoushen_photo:
     weight: 22
     settings:
@@ -221,7 +245,7 @@ content:
     type: options_buttons
     region: content
   field_sleep_dim:
-    weight: 28
+    weight: 29
     settings:
       size: 60
       placeholder: ''
@@ -255,7 +279,7 @@ content:
     type: options_select
     region: content
   field_where:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
