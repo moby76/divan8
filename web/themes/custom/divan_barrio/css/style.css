@@ -410,8 +410,12 @@ ul.dropdown-menu li a:hover{
 }
 
 .card-model-desc{
-    background: #3c3c3c;
-    color: #ececec;
+    /* background: #3c3c3c;
+    color: #ececec; */
+}
+
+.card-model-desc .card-title{
+    color: #040404;
 }
 
 .card-model-desc a{
@@ -421,7 +425,7 @@ ul.dropdown-menu li a:hover{
                             /* ----------------------------------- Стили для создания "read more" ----------------------- */
 
 #summary {
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1.5;
 }
 

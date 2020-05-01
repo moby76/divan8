@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
     - field.field.node.soft_fur.field_price_base
+    - field.field.node.soft_fur.field_price_from
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_sleep_dim
@@ -125,6 +126,15 @@ content:
   field_price_base:
     weight: 1
     label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_price_from:
+    weight: 20
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true

@@ -1,0 +1,23 @@
+uuid: e7bba7a4-7933-4a55-a120-0d5c37147992
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price_from
+    - node.type.soft_fur
+id: node.soft_fur.field_price_from
+field_name: field_price_from
+entity_type: node
+bundle: soft_fur
+label: 'Цена от'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
