@@ -458,8 +458,8 @@ display:
         title: Кровати
         description: ''
         expanded: false
-        parent: 'menu_link_content:81caabd6-4156-4039-8df8-ad0210a0e748'
-        weight: -50
+        parent: 'menu_link_content:946fd309-89f8-4e89-b851-008a1dc08537'
+        weight: -48
         context: '0'
         menu_name: main
     cache_metadata:
