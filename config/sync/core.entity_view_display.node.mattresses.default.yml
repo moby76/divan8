@@ -1,0 +1,29 @@
+uuid: fff3ecfe-e2e1-42b8-a2d5-82c81eb07256
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.mattresses.body
+    - node.type.mattresses
+  module:
+    - text
+    - user
+id: node.mattresses.default
+targetEntityType: node
+bundle: mattresses
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

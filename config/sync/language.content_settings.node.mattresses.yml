@@ -1,0 +1,11 @@
+uuid: d54fc874-f30c-43f6-8580-b5ac97e8f5b0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.mattresses
+id: node.mattresses
+target_entity_type_id: node
+target_bundle: mattresses
+default_langcode: site_default
+language_alterable: false

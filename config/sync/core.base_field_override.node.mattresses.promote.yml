@@ -1,0 +1,22 @@
+uuid: 7966084b-aaea-4742-8dd9-f78a4c6f4d85
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.mattresses
+id: node.mattresses.promote
+field_name: promote
+entity_type: node
+bundle: mattresses
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
