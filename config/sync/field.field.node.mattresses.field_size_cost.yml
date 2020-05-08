@@ -1,0 +1,81 @@
+uuid: 8c7f478f-bfe2-4b53-8adf-7913da0b2958
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_size_cost
+    - node.type.mattresses
+  module:
+    - double_field
+id: node.mattresses.field_size_cost
+field_name: field_size_cost
+entity_type: node
+bundle: mattresses
+label: Размер/стоимость
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  first:
+    label: ''
+    required: true
+    list: true
+    allowed_values:
+      -
+        value: '0'
+        label: '70x200 см'
+      -
+        value: '1'
+        label: '80x200 см'
+      -
+        value: '2'
+        label: '90x200 см'
+      -
+        value: '3'
+        label: '100x200 см'
+      -
+        value: '4'
+        label: '110x200 см'
+      -
+        value: '5'
+        label: '120x200 см'
+      -
+        value: '6'
+        label: '130x200 см'
+      -
+        value: '7'
+        label: '140x200 см'
+      -
+        value: '8'
+        label: '150x200 см'
+      -
+        value: '9'
+        label: '160x200 см'
+      -
+        value: '10'
+        label: '170x200 см'
+      -
+        value: '11'
+        label: '180x200 см'
+      -
+        value: '12'
+        label: '190x200 см'
+      -
+        value: '13'
+        label: '200x200 см'
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    label: ''
+    required: true
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field

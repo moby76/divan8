@@ -1,0 +1,81 @@
+uuid: 233e1def-b10d-4d60-a2ed-89e7dcfe22e8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_structure
+    - node.type.mattresses
+  module:
+    - double_field
+id: node.mattresses.field_structure
+field_name: field_structure
+entity_type: node
+bundle: mattresses
+label: Состав
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  first:
+    label: ''
+    required: true
+    list: true
+    allowed_values:
+      -
+        value: '0'
+        label: 'Пена Space Foam'
+      -
+        value: '1'
+        label: 'Кокосовая койра'
+      -
+        value: '2'
+        label: Войлок
+      -
+        value: '3'
+        label: 'Блок независимых пружин'
+      -
+        value: '4'
+        label: 'Искусственный латекс'
+      -
+        value: '5'
+        label: Термовойлок
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    label: ''
+    required: true
+    list: true
+    allowed_values:
+      -
+        value: '0'
+        label: '0,5 см'
+      -
+        value: '1'
+        label: '1 см'
+      -
+        value: '3'
+        label: '2 см'
+      -
+        value: '4'
+        label: '2,5 см'
+      -
+        value: '5'
+        label: '3 см'
+      -
+        value: '10'
+        label: TFK
+      -
+        value: '11'
+        label: 'Vernestet S300'
+      -
+        value: '12'
+        label: 'Multipocket S1000'
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field

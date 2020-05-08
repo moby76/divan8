@@ -1,0 +1,96 @@
+uuid: ce8225af-64c4-44d8-bf6d-ed8c63797776
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_variative_height
+    - node.type.mattresses
+  module:
+    - double_field
+id: node.mattresses.field_variative_height
+field_name: field_variative_height
+entity_type: node
+bundle: mattresses
+label: Чехол/высота
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  first:
+    label: Чехол
+    required: true
+    list: true
+    allowed_values:
+      -
+        value: '0'
+        label: 'Из описания'
+      -
+        value: '1'
+        label: Полиэстер
+      -
+        value: '2'
+        label: 'Жаккард искусственный'
+      -
+        value: '3'
+        label: 'Жаккард хлопковый'
+      -
+        value: '4'
+        label: 'Трикотаж с объёмной стёжкой B&W'
+      -
+        value: '5'
+        label: 'Лён с объёмной стёжкой'
+      -
+        value: '6'
+        label: 'Суперлён с объёмной стёжкой'
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    label: Высота(см)
+    required: true
+    list: true
+    allowed_values:
+      -
+        value: '0'
+        label: '10 см'
+      -
+        value: '1'
+        label: '12 см'
+      -
+        value: '2'
+        label: '14 см'
+      -
+        value: '3'
+        label: '15 см'
+      -
+        value: '4'
+        label: '16 см'
+      -
+        value: '5'
+        label: '18 см'
+      -
+        value: '6'
+        label: '20 см'
+      -
+        value: '7'
+        label: '22 см'
+      -
+        value: '8'
+        label: '25 см'
+      -
+        value: '9'
+        label: '26 см'
+      -
+        value: '10'
+        label: '28 см'
+      -
+        value: '11'
+        label: '30 см'
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field
