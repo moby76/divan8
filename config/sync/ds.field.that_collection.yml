@@ -1,6 +1,6 @@
 id: that_collection
 label: 'Из той-же коллекции'
-ui_limit: ''
+ui_limit: soft_fur|full
 properties:
   block: 'views_block:that_collection-block_1'
   use_block_title: true

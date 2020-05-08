@@ -1,0 +1,21 @@
+uuid: 0912b331-89f0-44ff-b48b-9f7de307f6eb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prod_time
+    - node.type.mattresses
+  module:
+    - options
+id: node.mattresses.field_prod_time
+field_name: field_prod_time
+entity_type: node
+bundle: mattresses
+label: 'Срок изготовления'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -5,15 +5,17 @@ dependencies:
   config:
     - field.field.node.mattresses.body
     - field.field.node.mattresses.field_foto
+    - field.field.node.mattresses.field_prod_time
     - field.field.node.mattresses.field_size_cost
     - field.field.node.mattresses.field_structure
     - field.field.node.mattresses.field_variative_height
-    - image.style.large
+    - image.style.slick_media
     - node.type.mattresses
   module:
+    - blazy
     - double_field
     - ds
-    - media
+    - options
     - text
     - user
 id: node.mattresses.default
@@ -32,8 +34,41 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: large
-      image_link: ''
+      style: ''
+      image_style: slick_media
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: ''
+      box_media_style: ''
+      ratio: ''
+      box_caption: ''
+      view_mode: default
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      icon: ''
+      layout: ''
+      cache: 0
+      skin: ''
+      fx: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
     third_party_settings:
       ds:
         ds_limit: ''
@@ -43,7 +78,14 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: media_thumbnail
+    type: blazy_media
+    region: content
+  field_prod_time:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_size_cost:
     weight: 4
