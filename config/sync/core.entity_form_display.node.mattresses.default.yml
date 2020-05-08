@@ -1,0 +1,227 @@
+uuid: ad969ad3-de21-4d48-a520-6e4e3d3cbe3a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.mattresses.body
+    - field.field.node.mattresses.field_foto
+    - field.field.node.mattresses.field_size_cost
+    - field.field.node.mattresses.field_structure
+    - field.field.node.mattresses.field_variative_height
+    - node.type.mattresses
+  module:
+    - double_field
+    - field_group
+    - media_library
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_parametry:
+      children:
+        - group_sostav
+        - group_vysota
+      parent_name: ''
+      weight: 11
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Параметры
+    group_sostav:
+      children:
+        - field_structure
+      parent_name: group_parametry
+      weight: 11
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Состав
+    group_vysota:
+      children:
+        - field_variative_height
+      parent_name: group_parametry
+      weight: 13
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Высота
+id: node.mattresses.default
+targetEntityType: node
+bundle: mattresses
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 10
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_foto:
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_size_cost:
+    weight: 12
+    settings:
+      inline: true
+      first:
+        type: select
+        label_display: block
+        size: 10
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+      second:
+        type: textfield
+        label_display: block
+        size: 10
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+    third_party_settings: {  }
+    type: double_field
+    region: content
+  field_structure:
+    weight: 12
+    settings:
+      inline: true
+      first:
+        type: select
+        label_display: block
+        size: 10
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+      second:
+        type: select
+        label_display: block
+        size: 10
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+    third_party_settings: {  }
+    type: double_field
+    region: content
+  field_variative_height:
+    weight: 12
+    settings:
+      inline: true
+      first:
+        type: select
+        label_display: block
+        size: 10
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+      second:
+        type: select
+        label_display: block
+        size: 10
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+    third_party_settings: {  }
+    type: double_field
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

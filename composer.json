@@ -34,6 +34,7 @@
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/devel": "^2.1",
+        "drupal/double_field": "^3.4",
         "drupal/ds": "^3.5",
         "drupal/entity_browser": "^2.4",
         "drupal/field_formatter": "^1.2",

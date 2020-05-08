@@ -1,0 +1,140 @@
+uuid: fff3ecfe-e2e1-42b8-a2d5-82c81eb07256
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.mattresses.body
+    - field.field.node.mattresses.field_foto
+    - field.field.node.mattresses.field_size_cost
+    - field.field.node.mattresses.field_structure
+    - field.field.node.mattresses.field_variative_height
+    - image.style.large
+    - node.type.mattresses
+  module:
+    - double_field
+    - ds
+    - media
+    - text
+    - user
+id: node.mattresses.default
+targetEntityType: node
+bundle: mattresses
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_foto:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: media_thumbnail
+    region: content
+  field_size_cost:
+    weight: 4
+    label: above
+    settings:
+      first:
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        hidden: false
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      second:
+        prefix: 'от '
+        suffix: ' руб.'
+        link: false
+        format_type: medium
+        hidden: false
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      inline: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: double_field_unformatted_list
+    region: content
+  field_structure:
+    weight: 3
+    label: above
+    settings:
+      inline: true
+      first:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      second:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+    third_party_settings: {  }
+    type: double_field_unformatted_list
+    region: content
+  field_variative_height:
+    weight: 5
+    label: above
+    settings:
+      inline: true
+      first:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      second:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+    third_party_settings: {  }
+    type: double_field_unformatted_list
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
