@@ -1,0 +1,255 @@
+uuid: 5a22d48b-fad4-4855-85be-6bc5817c1f35
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.mattresses.body
+    - field.field.node.mattresses.field_foto
+    - field.field.node.mattresses.field_prod_time
+    - field.field.node.mattresses.field_size_cost
+    - field.field.node.mattresses.field_structure
+    - field.field.node.mattresses.field_variative_height
+    - image.style.slick_media
+    - node.type.mattresses
+  module:
+    - double_field
+    - ds
+    - layout_builder
+    - options
+    - slick
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: bs_2col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_foto
+      right:
+        - body
+      bottom:
+        - field_structure
+        - field_variative_height
+        - field_size_cost
+        - field_prod_time
+id: node.mattresses.full
+targetEntityType: node
+bundle: mattresses
+mode: full
+content:
+  body:
+    type: text_default
+    weight: 1
+    region: right
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_foto:
+    type: slick_media
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      style: ''
+      optionset: default
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: slick_media
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: ''
+      box_media_style: ''
+      ratio: ''
+      box_caption: ''
+      view_mode: default
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      class: ''
+      cache: 0
+      current_view_mode: full
+      vanilla: false
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      thumbnail_caption: ''
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      id: ''
+      overlay: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_prod_time:
+    type: list_default
+    weight: 5
+    region: bottom
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_size_cost:
+    type: double_field_table
+    weight: 4
+    region: bottom
+    label: above
+    settings:
+      first:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      second:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      number_column: false
+      number_column_label: №
+      first_column_label: ''
+      second_column_label: ''
+    third_party_settings: {  }
+  field_structure:
+    type: double_field_table
+    weight: 2
+    region: bottom
+    label: above
+    settings:
+      first:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      second:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      number_column: false
+      number_column_label: №
+      first_column_label: ''
+      second_column_label: ''
+    third_party_settings: {  }
+  field_variative_height:
+    type: double_field_table
+    weight: 3
+    region: bottom
+    label: above
+    settings:
+      first:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      second:
+        hidden: false
+        prefix: ''
+        suffix: ''
+        link: false
+        format_type: medium
+        thousand_separator: ''
+        decimal_separator: .
+        scale: 2
+      number_column: false
+      number_column_label: №
+      first_column_label: ''
+      second_column_label: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

@@ -1,6 +1,6 @@
 id: where_buy
 label: 'В каком магазине находится товар'
-ui_limit: ''
+ui_limit: soft_fur|full
 properties:
   block: 'views_block:where_buy-block_1'
   use_block_title: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.mattresses.body
     - field.field.node.mattresses.field_foto
+    - field.field.node.mattresses.field_prod_time
     - field.field.node.mattresses.field_size_cost
     - field.field.node.mattresses.field_structure
     - field.field.node.mattresses.field_variative_height
@@ -85,6 +86,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_prod_time:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_size_cost:
     weight: 12

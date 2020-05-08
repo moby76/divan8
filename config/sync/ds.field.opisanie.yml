@@ -1,6 +1,6 @@
 id: opisanie
 label: 'Описание модели 2'
-ui_limit: ''
+ui_limit: soft_fur|full
 properties:
   block: 'views_block:opisanie_modeli_2-block_1'
   use_block_title: false
