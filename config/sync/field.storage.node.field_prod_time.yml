@@ -1,0 +1,39 @@
+uuid: dbab7935-4f0e-4254-891b-32e0ccc9b1ec
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_prod_time
+field_name: field_prod_time
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'до 7 дней'
+    -
+      value: '1'
+      label: 'до 10 дней'
+    -
+      value: '2'
+      label: 'до 14 дней'
+    -
+      value: '3'
+      label: 'до 20 дней'
+    -
+      value: '4'
+      label: 'до 25 дней'
+    -
+      value: '10'
+      label: '28 рабочих дня'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
