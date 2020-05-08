@@ -1,0 +1,11 @@
+id: brief_description_of_mattres
+label: 'Краткое описание матраса'
+ui_limit: mattresses|full
+properties:
+  block: 'views_block:matrasses-block_1'
+  use_block_title: false
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  node: node

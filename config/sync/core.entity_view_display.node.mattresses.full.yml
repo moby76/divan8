@@ -13,12 +13,9 @@ dependencies:
     - image.style.slick_media
     - node.type.mattresses
   module:
-    - double_field
     - ds
     - layout_builder
-    - options
     - slick
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -67,24 +64,25 @@ third_party_settings:
       left:
         - field_foto
       right:
-        - body
+        - 'dynamic_block_field:node-brief_description_of_mattres'
       bottom:
-        - field_structure
-        - field_variative_height
-        - field_size_cost
-        - field_prod_time
+        - 'dynamic_block_field:node-characteristics_of_mattresses'
+    fields:
+      'dynamic_block_field:node-brief_description_of_mattres':
+        plugin_id: 'dynamic_block_field:node-brief_description_of_mattres'
+        weight: 1
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-characteristics_of_mattresses':
+        plugin_id: 'dynamic_block_field:node-characteristics_of_mattresses'
+        weight: 2
+        label: hidden
+        formatter: default
 id: node.mattresses.full
 targetEntityType: node
 bundle: mattresses
 mode: full
 content:
-  body:
-    type: text_default
-    weight: 1
-    region: right
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_foto:
     type: slick_media
     weight: 0
@@ -156,100 +154,11 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  field_prod_time:
-    type: list_default
-    weight: 5
-    region: bottom
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_size_cost:
-    type: double_field_table
-    weight: 4
-    region: bottom
-    label: above
-    settings:
-      first:
-        hidden: false
-        prefix: ''
-        suffix: ''
-        link: false
-        format_type: medium
-        thousand_separator: ''
-        decimal_separator: .
-        scale: 2
-      second:
-        hidden: false
-        prefix: ''
-        suffix: ''
-        link: false
-        format_type: medium
-        thousand_separator: ''
-        decimal_separator: .
-        scale: 2
-      number_column: false
-      number_column_label: №
-      first_column_label: ''
-      second_column_label: ''
-    third_party_settings: {  }
-  field_structure:
-    type: double_field_table
-    weight: 2
-    region: bottom
-    label: above
-    settings:
-      first:
-        hidden: false
-        prefix: ''
-        suffix: ''
-        link: false
-        format_type: medium
-        thousand_separator: ''
-        decimal_separator: .
-        scale: 2
-      second:
-        hidden: false
-        prefix: ''
-        suffix: ''
-        link: false
-        format_type: medium
-        thousand_separator: ''
-        decimal_separator: .
-        scale: 2
-      number_column: false
-      number_column_label: №
-      first_column_label: ''
-      second_column_label: ''
-    third_party_settings: {  }
-  field_variative_height:
-    type: double_field_table
-    weight: 3
-    region: bottom
-    label: above
-    settings:
-      first:
-        hidden: false
-        prefix: ''
-        suffix: ''
-        link: false
-        format_type: medium
-        thousand_separator: ''
-        decimal_separator: .
-        scale: 2
-      second:
-        hidden: false
-        prefix: ''
-        suffix: ''
-        link: false
-        format_type: medium
-        thousand_separator: ''
-        decimal_separator: .
-        scale: 2
-      number_column: false
-      number_column_label: №
-      first_column_label: ''
-      second_column_label: ''
-    third_party_settings: {  }
 hidden:
+  body: true
+  field_prod_time: true
+  field_size_cost: true
+  field_structure: true
+  field_variative_height: true
   langcode: true
   links: true
