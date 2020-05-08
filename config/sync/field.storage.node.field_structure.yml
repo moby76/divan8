@@ -1,0 +1,32 @@
+uuid: a6b68dec-d0bb-4fcc-84ea-f0517f1cc44f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - double_field
+    - node
+id: node.field_structure
+field_name: field_structure
+entity_type: node
+type: double_field
+settings:
+  storage:
+    first:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+    second:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+module: double_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: 1f4abc8d-e2b5-4b7d-8d1a-0f449f32eb98
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto
+    - media.type.image
+    - node.type.mattresses
+id: node.mattresses.field_foto
+field_name: field_foto
+entity_type: node
+bundle: mattresses
+label: Фото
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

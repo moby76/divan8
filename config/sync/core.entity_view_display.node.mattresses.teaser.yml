@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.mattresses.body
+    - field.field.node.mattresses.field_foto
+    - field.field.node.mattresses.field_size_cost
+    - field.field.node.mattresses.field_structure
+    - field.field.node.mattresses.field_variative_height
     - node.type.mattresses
   module:
     - text
@@ -28,4 +32,8 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_foto: true
+  field_size_cost: true
+  field_structure: true
+  field_variative_height: true
   langcode: true
