@@ -76,18 +76,21 @@ settings:
         label: '20 см'
       -
         value: '7'
-        label: '22 см'
+        label: '21 см'
       -
         value: '8'
-        label: '25 см'
+        label: '22 см'
       -
         value: '9'
-        label: '26 см'
+        label: '25 см'
       -
         value: '10'
-        label: '28 см'
+        label: '26 см'
       -
         value: '11'
+        label: '28 см'
+      -
+        value: '12'
         label: '30 см'
     max: null
     min: null
