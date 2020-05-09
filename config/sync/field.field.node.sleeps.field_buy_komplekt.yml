@@ -1,0 +1,31 @@
+uuid: 51105d30-75be-49c2-8da4-f267f53a543a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_buy_komplekt
+    - node.type.mattresses
+    - node.type.sleeps
+    - node.type.soft_fur
+id: node.sleeps.field_buy_komplekt
+field_name: field_buy_komplekt
+entity_type: node
+bundle: sleeps
+label: 'Купить в комплект'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sleeps: sleeps
+      mattresses: mattresses
+      soft_fur: soft_fur
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: sleeps
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: fc9df5cf-3026-44eb-ba01-3e5da0af56a2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.sleeps
+  module:
+    - text
+id: node.sleeps.field_features
+field_name: field_features
+entity_type: node
+bundle: sleeps
+label: Особенности
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

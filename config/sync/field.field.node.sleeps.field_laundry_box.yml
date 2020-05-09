@@ -1,0 +1,23 @@
+uuid: a80a2c1d-020e-47a7-8288-ea4c4b229a8a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_laundry_box
+    - node.type.sleeps
+id: node.sleeps.field_laundry_box
+field_name: field_laundry_box
+entity_type: node
+bundle: sleeps
+label: 'Место для белья'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Есть
+  off_label: Отсутствует
+field_type: boolean

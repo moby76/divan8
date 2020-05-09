@@ -6,17 +6,32 @@ dependencies:
     - field.field.node.sleeps.body
     - field.field.node.sleeps.field_age_kategory
     - field.field.node.sleeps.field_available
+    - field.field.node.sleeps.field_bed_base
+    - field.field.node.sleeps.field_buy_komplekt
+    - field.field.node.sleeps.field_depth
+    - field.field.node.sleeps.field_features
     - field.field.node.sleeps.field_foto
+    - field.field.node.sleeps.field_laundry_box
     - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
+    - field.field.node.sleeps.field_promoushen_photo
+    - field.field.node.sleeps.field_razmer_matrasa
+    - field.field.node.sleeps.field_razmer_matrasa_2
+    - field.field.node.sleeps.field_set_available
     - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
+    - field.field.node.sleeps.field_text_promoushn
+    - field.field.node.sleeps.field_tip_mebeli
     - field.field.node.sleeps.field_where
+    - field.field.node.sleeps.field_width
     - image.style.media_library
     - node.type.sleeps
   module:
     - ds
+    - image
     - media
+    - options
+    - text
     - user
 id: node.sleeps.default
 targetEntityType: node
@@ -41,6 +56,35 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_bed_base:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_buy_komplekt:
+    weight: 20
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_depth:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_features:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_foto:
     weight: 1
     label: above
@@ -57,6 +101,16 @@ content:
             lb-col: false
             classes: {  }
     type: media_thumbnail
+    region: content
+  field_laundry_box:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_new_item:
     weight: 6
@@ -84,16 +138,65 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_promoushen_photo:
+    weight: 17
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_razmer_matrasa:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_razmer_matrasa_2:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_set_available:
+    weight: 19
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_sleep_config:
-    weight: 3
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sleep_model:
+    weight: 4
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_sleep_model:
-    weight: 4
+  field_text_promoushn:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tip_mebeli:
+    weight: 21
     label: above
     settings:
       link: true
@@ -116,6 +219,13 @@ content:
             lb-col: false
             classes: {  }
     type: entity_reference_entity_view
+    region: content
+  field_width:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 0

@@ -1,20 +1,20 @@
-uuid: df19d17b-cfec-493c-95d7-0c30c606d746
+uuid: f586a6b2-eba5-4c9a-9c5e-89803960a8fa
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sleep_config
+    - field.storage.node.field_depth
     - node.type.sleeps
   module:
     - options
-id: node.sleeps.field_sleep_config
-field_name: field_sleep_config
+id: node.sleeps.field_depth
+field_name: field_depth
 entity_type: node
 bundle: sleeps
-label: 'Конфигурация кровати'
+label: 'Глубина общая'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
