@@ -44,6 +44,9 @@ settings:
       -
         value: '6'
         label: Струттофайбер
+      -
+        value: '7'
+        label: Пенополиуретан
     max: null
     min: null
     on_label: 'On'
