@@ -1,17 +1,39 @@
-uuid: a4a8864b-beac-46f1-81f1-2cf99cd31401
+uuid: 17612d7a-6e2f-4f37-ab33-cbb9941b40f9
 langcode: ru
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
+    - options
 id: node.field_sleep_config
 field_name: field_sleep_config
 entity_type: node
-type: entity_reference
+type: list_string
 settings:
-  target_type: taxonomy_term
-module: core
+  allowed_values:
+    -
+      value: '0'
+      label: 'Односпальные кровати (до 80 см)'
+    -
+      value: '1'
+      label: 'Полутораспальные кровати (80-150 см)'
+    -
+      value: '2'
+      label: 'Двуспальные кровати (от 150 см)'
+    -
+      value: '3'
+      label: 'Двухъярусные кровати'
+    -
+      value: '4'
+      label: Кровать-чердак
+    -
+      value: '5'
+      label: Кровать-диван
+    -
+      value: '6'
+      label: 'Комбинированные кровати'
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true

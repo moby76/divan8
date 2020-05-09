@@ -9,7 +9,7 @@ _core:
   default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
 name: 'Full HTML'
 format: full_html
-weight: -10
+weight: -9
 filters:
   filter_align:
     id: filter_align
@@ -45,10 +45,10 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types:
-        image: image
       allowed_view_modes:
         default: default
+      allowed_media_types:
+        image: image
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
