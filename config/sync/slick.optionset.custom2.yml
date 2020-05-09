@@ -35,7 +35,7 @@ options:
     downArrowOffset: 0
     centerMode: false
     centerPadding: 50px
-    dots: false
+    dots: true
     dotsClass: slick-dots
     appendDots: $(element)
     draggable: true
@@ -53,7 +53,7 @@ options:
     slide: ''
     slidesToShow: 1
     slidesToScroll: 1
-    speed: 500
+    speed: 900
     swipe: true
     swipeToSlide: false
     edgeFriction: 0.35

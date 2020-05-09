@@ -7,11 +7,12 @@ dependencies:
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
     - image.style.scale_330_330
+    - image.style.slick_media
     - node.type.soft_fur
     - system.menu.main
   module:
-    - media
     - node
+    - slick
     - user
     - views_fieldsets
 id: vsya_myagkaya_mebel
@@ -159,71 +160,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: false
-            ellipsis: false
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         fieldset:
           id: fieldset
           table: views
@@ -332,13 +268,135 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - field_price_base
+            - fieldset_5
           wrapper: div
           legend: ''
           classes: 'card-header  bg-transparent'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
+        fieldset_5:
+          id: fieldset_5
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: row
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - title
+            - field_price_base
+          wrapper: div
+          legend: ''
+          classes: row
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-7 pl-0\">  \r\n        <h4><span class=\"badge pr-2 pl-2 pt-2 pb-2 badge-secondary\">{{ title }} </span></h4>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         field_price_base:
           id: field_price_base
           table: node__field_price_base
@@ -350,7 +408,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"row float-right mr-2\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n</div> "
+            text: "<div class=\"col-5\">\r\n       <div class=\"row float-right\">\r\n                <h4><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h4><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
             make_link: false
             path: ''
             absolute: false
@@ -383,7 +441,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"row float-right mr-2\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n            </div>"
+          empty: "<div class=\"col-5\">\r\n       <div class=\"row float-right\">\r\n                <h4><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h4><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -409,7 +467,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card-img-top image-wrapper'
+          admin_label: 'card-img-top  image-wrapper'
           label: ''
           exclude: false
           alter:
@@ -508,10 +566,50 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: media_thumbnail
+          type: slick_media
           settings:
+            vanilla: false
+            optionset: custom2
+            style: ''
+            skin: classic
+            background: false
+            layout: ''
+            caption:
+              field_media_document: '0'
+            view_mode: slick
+            optionset_thumbnail: ''
+            skin_thumbnail: ''
+            thumbnail_position: ''
             image_style: scale_330_330
-            image_link: ''
+            thumbnail_style: slick_media
+            thumbnail_effect: ''
+            media_switch: colorbox
+            ratio: ''
+            box_style: ''
+            box_media_style: ''
+            box_caption: ''
+            box_caption_custom: ''
+            grid: null
+            grid_medium: null
+            grid_small: null
+            visible_items: null
+            preserve_keys: false
+            image: ''
+            title: ''
+            link: ''
+            class: ''
+            override: false
+            overridables:
+              arrows: '0'
+              autoplay: '0'
+              dots: '0'
+              draggable: '0'
+              infinite: '0'
+              mouseWheel: '0'
+              randomize: '0'
+              variableWidth: '0'
+            cache: 0
+            current_view_mode: _custom
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -521,7 +619,7 @@ display:
           delta_first_last: false
           multi_type: separator
           separator: ', '
-          field_api_classes: false
+          field_api_classes: true
           plugin_id: field
         fieldset_3:
           id: fieldset_3
