@@ -1,0 +1,21 @@
+uuid: 1cc2664c-ec13-4ce6-9555-5006f8606037
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_promoushn
+    - node.type.sleeps
+  module:
+    - text
+id: node.sleeps.field_text_promoushn
+field_name: field_text_promoushn
+entity_type: node
+bundle: sleeps
+label: 'Текст на промоушн'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

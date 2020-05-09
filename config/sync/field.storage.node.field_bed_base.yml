@@ -1,0 +1,33 @@
+uuid: 29c22ee3-cbd8-4635-9cd9-6dcbef1c3009
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_bed_base
+field_name: field_bed_base
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Подъёмное
+    -
+      value: '1'
+      label: Стационарное
+    -
+      value: '2'
+      label: Складное
+    -
+      value: '3'
+      label: Сдвижное
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

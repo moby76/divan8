@@ -1,17 +1,17 @@
-uuid: df19d17b-cfec-493c-95d7-0c30c606d746
+uuid: 503c06c8-b95f-46cd-836f-97f396ec1f01
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sleep_config
+    - field.storage.node.field_bed_base
     - node.type.sleeps
   module:
     - options
-id: node.sleeps.field_sleep_config
-field_name: field_sleep_config
+id: node.sleeps.field_bed_base
+field_name: field_bed_base
 entity_type: node
 bundle: sleeps
-label: 'Конфигурация кровати'
+label: 'Основание кровати'
 description: ''
 required: false
 translatable: false

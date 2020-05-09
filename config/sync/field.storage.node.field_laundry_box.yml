@@ -1,0 +1,18 @@
+uuid: 94fdd710-ba1f-45be-b59c-9b726cb5df9c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_laundry_box
+field_name: field_laundry_box
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
