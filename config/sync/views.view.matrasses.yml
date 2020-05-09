@@ -9,15 +9,16 @@ dependencies:
     - field.storage.node.field_size_cost
     - field.storage.node.field_structure
     - field.storage.node.field_variative_height
-    - image.style.medium
+    - image.style.slick_media
     - node.type.mattresses
   module:
     - double_field
-    - media
     - node
     - options
+    - slick
     - text
     - user
+    - views_fieldsets
 id: matrasses
 label: 'Матрасы (страница, блоки)'
 module: views
@@ -256,7 +257,7 @@ display:
           entity_field: nid
           plugin_id: node_nid
       display_extenders: {  }
-      title: 'Вывод на страницу в виде карточек'
+      title: Матрасы
     cache_metadata:
       max-age: -1
       contexts:
@@ -457,6 +458,8 @@ display:
         fields: false
         title: false
         arguments: false
+        style: false
+        row: false
       title: 'Краткое описание матрасов (title + body)'
       arguments:
         nid:
@@ -500,6 +503,22 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: col-12
+          default_row_class: true
+          type: ul
+          wrapper_class: ''
+          class: 'list-unstyled row'
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -935,6 +954,8 @@ display:
         fields: false
         title: false
         arguments: false
+        style: false
+        row: false
       title: 'Характеристики матраса + цена + срок изготовления'
       arguments:
         nid:
@@ -978,6 +999,22 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: col-12
+          default_row_class: true
+          type: ul
+          wrapper_class: ''
+          class: 'list-unstyled row'
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -1001,31 +1038,42 @@ display:
       display_extenders: {  }
       path: матрасы
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
+        fieldset:
+          id: fieldset
+          table: views
+          field: fieldset
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'card  h-100  shadow'
+          label: ''
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -1035,9 +1083,185 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - fieldset_1
+            - fieldset_2
+            - fieldset_3
+            - fieldset_4
+          wrapper: div
+          legend: ''
+          classes: 'card  h-100  shadow'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_1:
+          id: fieldset_1
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: 'card-header  bg-transparent'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - fieldset_5
+          wrapper: div
+          legend: ''
+          classes: 'card-header  bg-transparent'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_5:
+          id: fieldset_5
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: row
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - title
+            - field_size_cost
+          wrapper: div
+          legend: ''
+          classes: row
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-7 pl-0\">  \r\n        <h4><span class=\"badge pr-2 pl-2 pt-2 pb-2 badge-secondary\">{{ title }} </span></h4>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1048,6 +1272,146 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        field_size_cost:
+          id: field_size_cost
+          table: node__field_size_cost
+          field: field_size_cost
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-5\">\r\n       <div class=\"row float-right\">\r\n                <h4><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_size_cost__second }}</span></h4><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: first
+          type: double_field_unformatted_list
+          settings:
+            first:
+              link: false
+              format_type: medium
+              hidden: true
+              prefix: ''
+              suffix: ''
+              thousand_separator: ''
+              decimal_separator: .
+              scale: 2
+            second:
+              link: false
+              format_type: medium
+              hidden: false
+              prefix: 'от '
+              suffix: ''
+              thousand_separator: ''
+              decimal_separator: .
+              scale: 2
+            inline: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 1
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        fieldset_2:
+          id: fieldset_2
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: 'card-img-top  image-wrapper'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - field_foto
+          wrapper: div
+          legend: ''
+          classes: 'card-img-top  image-wrapper'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
         field_foto:
           id: field_foto
           table: node__field_foto
@@ -1097,10 +1461,50 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: media_thumbnail
+          type: slick_media
           settings:
-            image_style: medium
-            image_link: ''
+            vanilla: false
+            optionset: custom
+            style: ''
+            skin: default
+            background: false
+            layout: ''
+            caption:
+              field_media_document: '0'
+            view_mode: default
+            optionset_thumbnail: ''
+            skin_thumbnail: ''
+            thumbnail_position: ''
+            image_style: slick_media
+            thumbnail_style: ''
+            thumbnail_effect: ''
+            media_switch: colorbox
+            ratio: ''
+            box_style: ''
+            box_media_style: ''
+            box_caption: ''
+            box_caption_custom: ''
+            grid: null
+            grid_medium: null
+            grid_small: null
+            visible_items: null
+            preserve_keys: false
+            image: ''
+            title: ''
+            link: ''
+            class: ''
+            override: false
+            overridables:
+              arrows: '0'
+              autoplay: '0'
+              dots: '0'
+              draggable: '0'
+              infinite: '0'
+              mouseWheel: '0'
+              randomize: '0'
+              variableWidth: '0'
+            cache: 0
+            current_view_mode: _custom
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1110,12 +1514,194 @@ display:
           delta_first_last: false
           multi_type: separator
           separator: ', '
-          field_api_classes: false
+          field_api_classes: true
           plugin_id: field
+        fieldset_3:
+          id: fieldset_3
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: card-body
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields: {  }
+          wrapper: div
+          legend: ''
+          classes: card-body
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_4:
+          id: fieldset_4
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: 'card-footer  text-muted  bg-white'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - view_node
+          wrapper: div
+          legend: ''
+          classes: 'card-footer  text-muted  bg-white'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="{{ view_node }}" class="btn btn-outline-info" target="_blank">ПОДРОБНЕЕ...</a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: представление
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
       defaults:
         fields: false
         arguments: false
+        style: false
+        row: false
       arguments: {  }
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: 'col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3'
+          default_row_class: true
+          type: ul
+          wrapper_class: ''
+          class: 'list-unstyled row'
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -1126,3 +1712,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_foto'
+        - 'config:field.storage.node.field_size_cost'

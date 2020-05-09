@@ -4,7 +4,7 @@
  */
 
  .image-wrapper{
-     margin: 10px;
+     padding: 10px 0;
  }
 
  /* ----------------------------------------------------------------------- Кнопки (btn) ------------------------------------------------ */
@@ -436,7 +436,7 @@ ul.dropdown-menu li a:hover{
 }
 
 .price-base{
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .card-model-desc{

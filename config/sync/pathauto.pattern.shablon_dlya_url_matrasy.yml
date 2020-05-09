@@ -1,0 +1,22 @@
+uuid: 988235c2-c700-4099-b180-a7d2452ef9bd
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: shablon_dlya_url_matrasy
+label: 'Шаблон для url Матрасы'
+type: 'canonical_entities:node'
+pattern: 'матрасы/[node:title]'
+selection_criteria:
+  24bca0dc-b571-42b3-906a-5753f44abce0:
+    id: node_type
+    bundles:
+      mattresses: mattresses
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 24bca0dc-b571-42b3-906a-5753f44abce0
+selection_logic: and
+weight: -5
+relationships: {  }
