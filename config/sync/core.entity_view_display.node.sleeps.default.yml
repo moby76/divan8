@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.sleeps.field_laundry_box
     - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
+    - field.field.node.sleeps.field_price_from
     - field.field.node.sleeps.field_promoushen_photo
     - field.field.node.sleeps.field_razmer_matrasa
     - field.field.node.sleeps.field_razmer_matrasa_2
@@ -131,6 +132,15 @@ content:
     region: content
   field_price_base:
     weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_price_from:
+    weight: 22
     label: above
     settings:
       thousand_separator: ''
