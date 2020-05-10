@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.sleeps.field_laundry_box
     - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
+    - field.field.node.sleeps.field_price_from
     - field.field.node.sleeps.field_promoushen_photo
     - field.field.node.sleeps.field_razmer_matrasa
     - field.field.node.sleeps.field_razmer_matrasa_2
@@ -58,6 +59,7 @@ hidden:
   field_laundry_box: true
   field_new_item: true
   field_price_base: true
+  field_price_from: true
   field_promoushen_photo: true
   field_razmer_matrasa: true
   field_razmer_matrasa_2: true
