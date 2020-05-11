@@ -397,14 +397,14 @@ blocks:
 menus:
   -
     menu_name: main
-    title: 'Наше производство'
+    title: 'Серийная мебель'
     parent: null
     uri: 'route:<nolink>'
     link_title: ''
     description: null
     enabled: '1'
     expanded: '1'
-    weight: '0'
+    weight: '-49'
     langcode: ru
     uuid: 946fd309-89f8-4e89-b851-008a1dc08537
   -
@@ -414,8 +414,80 @@ menus:
     uri: 'route:<nolink>'
     link_title: ''
     description: null
-    enabled: '1'
+    enabled: '0'
     expanded: '1'
-    weight: '0'
+    weight: '-48'
     langcode: ru
     uuid: 81caabd6-4156-4039-8df8-ad0210a0e748
+  -
+    menu_name: main
+    title: Матрасы
+    parent: 'menu_link_content:946fd309-89f8-4e89-b851-008a1dc08537'
+    uri: 'internal:/матрасы'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-48'
+    langcode: ru
+    uuid: 073d1f12-7474-45a6-a50f-d2a171cb42a1
+  -
+    menu_name: main
+    title: 'Под заказ'
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '-47'
+    langcode: ru
+    uuid: 26f34ac2-143b-4285-86b1-6a6ac57bb7c9
+  -
+    menu_name: main
+    title: 'Создано "с нуля"'
+    parent: 'menu_link_content:26f34ac2-143b-4285-86b1-6a6ac57bb7c9'
+    uri: 'internal:/индивидуальные-заказы'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '-50'
+    langcode: ru
+    uuid: e95b916f-8834-4929-bbd9-6941eb106984
+  -
+    menu_name: main
+    title: 'Мягкая мебель'
+    parent: 'menu_link_content:946fd309-89f8-4e89-b851-008a1dc08537'
+    uri: 'internal:/soft-furniture-all'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '-50'
+    langcode: ru
+    uuid: 65fc8654-134f-4ab9-8e1b-b6f3aabf2f0c
+  -
+    menu_name: main
+    title: Кровати
+    parent: 'menu_link_content:946fd309-89f8-4e89-b851-008a1dc08537'
+    uri: 'internal:/all-beds'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-49'
+    langcode: ru
+    uuid: ab03aec2-f890-4279-b085-41739588ae1f
+  -
+    menu_name: main
+    title: Реставрация
+    parent: 'menu_link_content:26f34ac2-143b-4285-86b1-6a6ac57bb7c9'
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-49'
+    langcode: ru
+    uuid: 553f015e-d91a-48f1-b1a7-7af49c2eaa25
