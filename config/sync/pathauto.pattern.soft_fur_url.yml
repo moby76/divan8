@@ -7,16 +7,16 @@ dependencies:
 id: soft_fur_url
 label: 'Шаблон для url мягкой мебели'
 type: 'canonical_entities:node'
-pattern: '[node:field_tip_mebeli]/[node:field_soft_fur_config]/[node:field_soft_fur_model]/[node:nid]'
+pattern: '[node:field_tip_mebeli]/[node:field_soft_fur_config]/[node:field_soft_fur_model]-[node:nid]'
 selection_criteria:
-  a8243fa1-7cf5-4ecc-96df-1745aec3f32c:
+  85d0369c-c012-499d-8648-f220972f412f:
     id: node_type
     bundles:
       soft_fur: soft_fur
     negate: false
     context_mapping:
       node: node
-    uuid: a8243fa1-7cf5-4ecc-96df-1745aec3f32c
+    uuid: 85d0369c-c012-499d-8648-f220972f412f
 selection_logic: and
 weight: -5
 relationships: {  }

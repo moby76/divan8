@@ -1,0 +1,22 @@
+uuid: b9e44022-f776-4ac7-9a16-ea5e40d79f36
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: shablon_dlya_url_krovati
+label: 'Шаблон для url Кровати'
+type: 'canonical_entities:node'
+pattern: '[node:field_tip_mebeli]/[node:field_sleep_model]-[node:nid]'
+selection_criteria:
+  ffbbe836-c330-4906-ba89-6cd334b787a1:
+    id: node_type
+    bundles:
+      sleeps: sleeps
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ffbbe836-c330-4906-ba89-6cd334b787a1
+selection_logic: and
+weight: -5
+relationships: {  }

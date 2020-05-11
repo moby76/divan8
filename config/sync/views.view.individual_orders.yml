@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_soft_fur_model
     - image.style.large
     - node.type.individual_orders
-    - system.menu.main
   module:
     - node
     - slick
@@ -851,7 +850,7 @@ display:
       display_extenders: {  }
       path: индивидуальные-заказы
       menu:
-        type: normal
+        type: none
         title: 'Индивидуальные заказы'
         description: ''
         expanded: true
@@ -859,7 +858,6 @@ display:
         weight: -49
         context: '0'
         menu_name: main
-        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
