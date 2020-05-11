@@ -1,0 +1,23 @@
+uuid: 441907b3-7ac5-48ed-b3d9-9f8386ec8855
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_productor
+    - node.type.sleeps
+id: node.sleeps.field_productor
+field_name: field_productor
+entity_type: node
+bundle: sleeps
+label: Производство
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Наше
+  off_label: 'Наших партнёров'
+field_type: boolean

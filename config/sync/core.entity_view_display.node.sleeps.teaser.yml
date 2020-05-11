@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.sleeps.field_age_kategory
     - field.field.node.sleeps.field_available
     - field.field.node.sleeps.field_bed_base
+    - field.field.node.sleeps.field_bed_base_transform
     - field.field.node.sleeps.field_buy_komplekt
     - field.field.node.sleeps.field_depth
     - field.field.node.sleeps.field_features
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
     - field.field.node.sleeps.field_price_from
+    - field.field.node.sleeps.field_productor
     - field.field.node.sleeps.field_promoushen_photo
     - field.field.node.sleeps.field_razmer_matrasa
     - field.field.node.sleeps.field_razmer_matrasa_2
@@ -52,6 +54,7 @@ hidden:
   field_age_kategory: true
   field_available: true
   field_bed_base: true
+  field_bed_base_transform: true
   field_buy_komplekt: true
   field_depth: true
   field_features: true
@@ -60,6 +63,7 @@ hidden:
   field_new_item: true
   field_price_base: true
   field_price_from: true
+  field_productor: true
   field_promoushen_photo: true
   field_razmer_matrasa: true
   field_razmer_matrasa_2: true

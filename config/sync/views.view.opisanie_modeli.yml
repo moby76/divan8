@@ -23,6 +23,7 @@ dependencies:
     - node.type.sleeps
     - node.type.soft_fur
   module:
+    - blazy
     - colorbox
     - node
     - options
@@ -1502,15 +1503,24 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: colorbox
+          type: blazy
           settings:
-            colorbox_node_style: scale_330_330
-            colorbox_node_style_first: ''
-            colorbox_image_style: ''
-            colorbox_gallery: post
-            colorbox_gallery_custom: ''
-            colorbox_caption: none
-            colorbox_caption_custom: ''
+            style: ''
+            background: false
+            caption:
+              title: '0'
+              alt: '0'
+            image_style: scale_330_330
+            thumbnail_style: ''
+            media_switch: colorbox
+            ratio: ''
+            box_style: ''
+            box_caption: ''
+            box_caption_custom: ''
+            grid: null
+            grid_medium: null
+            grid_small: null
+            current_view_mode: _custom
           group_column: entity_id
           group_columns: {  }
           group_rows: true
@@ -1642,7 +1652,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'Данный товар временно отсутствует'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true

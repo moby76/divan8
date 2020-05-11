@@ -183,6 +183,7 @@ permissions:
   - 'view dynamic_block_field:node-brief_description_of_mattres on node'
   - 'view dynamic_block_field:node-characteristics_of_mattresses on node'
   - 'view dynamic_block_field:node-opisanie on node'
+  - 'view dynamic_block_field:node-opisanie_krovati on node'
   - 'view dynamic_block_field:node-opisanie_modeli on node'
   - 'view dynamic_block_field:node-that_collection on node'
   - 'view dynamic_block_field:node-where_buy on node'
