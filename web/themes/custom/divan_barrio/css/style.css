@@ -461,7 +461,7 @@ ul.dropdown-menu li a:hover{
 }
 
 #summary div.collapse:not(.show) {
-    height: 190px !important;
+    height: 120px !important;
     overflow: hidden;
   
     display: block;
@@ -470,7 +470,7 @@ ul.dropdown-menu li a:hover{
 }
 
 #summary div.collapsing {
-    min-height: 190px !important;
+    min-height: 120px !important;
 }
 
 #summary a.collapsed:after  {

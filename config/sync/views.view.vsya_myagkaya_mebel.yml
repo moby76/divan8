@@ -7,7 +7,6 @@ dependencies:
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
     - node.type.soft_fur
-    - system.menu.main
   module:
     - node
     - user
@@ -865,7 +864,7 @@ display:
       display_extenders: {  }
       path: soft-furniture-all
       menu:
-        type: normal
+        type: none
         title: 'Серийное производство'
         description: ''
         expanded: true
@@ -873,7 +872,6 @@ display:
         weight: -50
         context: '0'
         menu_name: main
-        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
