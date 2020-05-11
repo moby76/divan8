@@ -13,16 +13,19 @@ settings:
   allowed_values:
     -
       value: '0'
-      label: Подъёмное
+      label: 'Ламели на металлокаркасе'
     -
       value: '1'
-      label: Стационарное
+      label: 'Ламели на деревянном каркасе'
     -
       value: '2'
-      label: Складное
+      label: 'Жёсткое основание(ЛДСП/фанера)'
     -
       value: '3'
-      label: Сдвижное
+      label: 'Металлическая сетка'
+    -
+      value: '4'
+      label: 'Пружинный блок - змейка'
   allowed_values_function: ''
 module: options
 locked: false

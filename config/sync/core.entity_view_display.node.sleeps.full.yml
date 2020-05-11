@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.sleeps.field_age_kategory
     - field.field.node.sleeps.field_available
     - field.field.node.sleeps.field_bed_base
+    - field.field.node.sleeps.field_bed_base_transform
     - field.field.node.sleeps.field_buy_komplekt
     - field.field.node.sleeps.field_depth
     - field.field.node.sleeps.field_features
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
     - field.field.node.sleeps.field_price_from
+    - field.field.node.sleeps.field_productor
     - field.field.node.sleeps.field_promoushen_photo
     - field.field.node.sleeps.field_razmer_matrasa
     - field.field.node.sleeps.field_razmer_matrasa_2
@@ -29,9 +31,6 @@ dependencies:
     - node.type.sleeps
   module:
     - ds
-    - options
-    - taxonomy
-    - text
     - user
 third_party_settings:
   ds:
@@ -94,34 +93,9 @@ third_party_settings:
     regions:
       top:
         - 'dynamic_block_field:node-foto'
-      top_left:
-        - field_where
-      top_right:
-        - node_title
-        - field_price_base
-        - field_price_from
-        - field_tip_mebeli
-        - field_sleep_config
-        - field_sleep_model
-        - field_new_item
-        - field_set_available
-      bottom_left:
-        - field_width
-        - field_depth
-        - field_razmer_matrasa
-        - field_razmer_matrasa_2
-        - field_bed_base
-        - field_laundry_box
-      bottom_right:
-        - field_features
-      bottom:
-        - field_buy_komplekt
+      middle:
+        - 'dynamic_block_field:node-opisanie_krovati'
     fields:
-      node_title:
-        plugin_id: node_title
-        weight: 2
-        label: hidden
-        formatter: default
       'dynamic_block_field:node-foto':
         plugin_id: 'dynamic_block_field:node-foto'
         weight: 0
@@ -133,180 +107,40 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
+      'dynamic_block_field:node-opisanie_krovati':
+        plugin_id: 'dynamic_block_field:node-opisanie_krovati'
+        weight: 1
+        label: hidden
+        formatter: default
 id: node.sleeps.full
 targetEntityType: node
 bundle: sleeps
 mode: full
-content:
-  field_bed_base:
-    type: list_default
-    weight: 14
-    region: bottom_left
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_buy_komplekt:
-    type: entity_reference_entity_view
-    weight: 17
-    region: bottom
-    label: above
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-  field_depth:
-    type: list_default
-    weight: 11
-    region: bottom_left
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_features:
-    type: text_default
-    weight: 16
-    region: bottom_right
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_laundry_box:
-    type: boolean
-    weight: 15
-    region: bottom_left
-    label: inline
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-  field_new_item:
-    type: boolean
-    weight: 8
-    region: top_right
-    label: inline
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-  field_price_base:
-    weight: 3
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: number_integer
-    region: top_right
-  field_price_from:
-    type: number_integer
-    weight: 4
-    region: top_right
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-  field_razmer_matrasa:
-    type: string
-    weight: 12
-    region: bottom_left
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_razmer_matrasa_2:
-    type: string
-    weight: 13
-    region: bottom_left
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_set_available:
-    type: boolean
-    weight: 9
-    region: top_right
-    label: inline
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-  field_sleep_config:
-    type: list_default
-    weight: 6
-    region: top_right
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_sleep_model:
-    weight: 7
-    label: inline
-    settings:
-      view_mode: scheem_dim
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: entity_reference_entity_view
-    region: top_right
-  field_tip_mebeli:
-    type: entity_reference_rss_category
-    weight: 5
-    region: top_right
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_where:
-    weight: 1
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: entity_reference_entity_view
-    region: top_left
-  field_width:
-    type: list_default
-    weight: 10
-    region: bottom_left
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
+content: {  }
 hidden:
   body: true
   field_age_kategory: true
   field_available: true
+  field_bed_base: true
+  field_bed_base_transform: true
+  field_buy_komplekt: true
+  field_depth: true
+  field_features: true
   field_foto: true
+  field_laundry_box: true
+  field_new_item: true
+  field_price_base: true
+  field_price_from: true
+  field_productor: true
   field_promoushen_photo: true
+  field_razmer_matrasa: true
+  field_razmer_matrasa_2: true
+  field_set_available: true
+  field_sleep_config: true
+  field_sleep_model: true
   field_text_promoushn: true
+  field_tip_mebeli: true
+  field_where: true
+  field_width: true
   langcode: true
   links: true

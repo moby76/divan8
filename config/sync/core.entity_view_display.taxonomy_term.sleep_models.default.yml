@@ -6,8 +6,10 @@ dependencies:
     - field.field.taxonomy_term.sleep_models.field_dim
     - field.field.taxonomy_term.sleep_models.field_model_desc
     - field.field.taxonomy_term.sleep_models.field_scheme
+    - image.style.medium
     - taxonomy.vocabulary.sleep_models
   module:
+    - ds
     - image
     - text
 id: taxonomy_term.sleep_models.default
@@ -35,9 +37,17 @@ content:
     weight: 0
     label: above
     settings:
-      image_style: ''
+      image_style: medium
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: image
     region: content
 hidden:
