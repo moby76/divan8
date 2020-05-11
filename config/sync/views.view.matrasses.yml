@@ -1221,7 +1221,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-7 pl-0\">  \r\n        <h4><span class=\"badge pr-2 pl-2 pt-2 pb-2 badge-secondary\">{{ title }} </span></h4>\r\n</div>"
+            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge pr-3 pl-3 pt-2 pb-2 badge border border-danger text-dark\">{{ title }} </span></h4>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
