@@ -1,0 +1,21 @@
+uuid: 8156f3f9-9903-41a8-8171-9f8aff4f37d7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bed_base_transform
+    - node.type.sleeps
+  module:
+    - options
+id: node.sleeps.field_bed_base_transform
+field_name: field_bed_base_transform
+entity_type: node
+bundle: sleeps
+label: 'Трансформация основания'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

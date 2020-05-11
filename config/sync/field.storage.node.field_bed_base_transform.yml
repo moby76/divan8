@@ -1,0 +1,33 @@
+uuid: bf9a46c2-dc45-4b54-8bdf-9f68d72f7c57
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_bed_base_transform
+field_name: field_bed_base_transform
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Подъёмное
+    -
+      value: '1'
+      label: Стационарное
+    -
+      value: '2'
+      label: Складное
+    -
+      value: '3'
+      label: Сдвижное
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
