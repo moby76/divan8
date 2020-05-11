@@ -20,7 +20,6 @@ dependencies:
     - field.storage.taxonomy_term.field_scheme
     - image.style.scale_330_330
     - node.type.sleeps
-    - system.menu.main
   module:
     - blazy
     - media
@@ -1723,7 +1722,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"col-sm-6\">\r\n    <div class=\"row float-right mr-3\">\r\n  <h1><span class=\"price-base badge pr-5 pl-5 pt-4 pb-4 mr-3 badge-warning\">от&nbsp; {{ field_price_from }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n</div>"
+          empty: "<div class=\"col-sm-6\">\r\n    <div class=\"row float-right mr-3\">\r\n  <h1><span class=\"price-base badge pr-4 pl-4 pt-3 pb-3 mr-3 badge-warning\">от&nbsp; {{ field_price_from }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2101,12 +2100,12 @@ display:
       display_extenders: {  }
       path: all-beds
       menu:
-        type: normal
+        type: none
         title: Кровати
         description: ''
         expanded: false
         parent: 'menu_link_content:946fd309-89f8-4e89-b851-008a1dc08537'
-        weight: -48
+        weight: -49
         context: '0'
         menu_name: main
       title: Кровати
