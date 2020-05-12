@@ -1346,7 +1346,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'Для данной модели ещё нет схемы.'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1424,7 +1424,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'У этой модели пока нет описания...'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
