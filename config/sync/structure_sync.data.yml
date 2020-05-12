@@ -445,7 +445,7 @@ menus:
     uuid: 26f34ac2-143b-4285-86b1-6a6ac57bb7c9
   -
     menu_name: main
-    title: 'Создано "с нуля"'
+    title: Изготовление
     parent: 'menu_link_content:26f34ac2-143b-4285-86b1-6a6ac57bb7c9'
     uri: 'internal:/индивидуальные-заказы'
     link_title: ''
@@ -483,11 +483,11 @@ menus:
     menu_name: main
     title: Реставрация
     parent: 'menu_link_content:26f34ac2-143b-4285-86b1-6a6ac57bb7c9'
-    uri: 'route:<nolink>'
+    uri: 'internal:/#'
     link_title: ''
     description: null
     enabled: '1'
-    expanded: '0'
+    expanded: '1'
     weight: '-49'
     langcode: ru
     uuid: 553f015e-d91a-48f1-b1a7-7af49c2eaa25
