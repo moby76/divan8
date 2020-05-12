@@ -41,6 +41,7 @@
         "drupal/field_group": "^3.0",
         "drupal/field_slideshow": "^3.0@beta",
         "drupal/fontawesome": "^2.16",
+        "drupal/fontawesome_menu_icons": "^1.8",
         "drupal/geolocation": "^1.11",
         "drupal/imagefield_slideshow": "^1.10",
         "drupal/jcarousel": "^4.0",
