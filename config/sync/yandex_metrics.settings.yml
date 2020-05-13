@@ -1,0 +1,11 @@
+counter_code: ''
+visibility:
+  path:
+    visibility: 0
+    pages: "admin\r\nadmin/*\r\nbatch\r\nnode/add*\r\nnode/*/*\r\nuser/*/*"
+  role:
+    visibility: 0
+    roles: {  }
+_core:
+  default_config_hash: 9yOw9LvO3GY6VlFxKmJypi61KBhqwCTwsWvYey0vrdk
+langcode: ru

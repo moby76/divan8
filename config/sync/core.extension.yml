@@ -101,6 +101,7 @@ module:
   views_slideshow: 0
   views_slideshow_cycle: 0
   views_ui: 0
+  yandex_metrics: 0
   ds: 1
   menu_link_content: 1
   pathauto: 1
