@@ -1,0 +1,3 @@
+visibility:
+  path:
+    pages: "admin\r\nadmin/*\r\nbatch\r\nnode/add*\r\nnode/*/*\r\nuser/*/*"
