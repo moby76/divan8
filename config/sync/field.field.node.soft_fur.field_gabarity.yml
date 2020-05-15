@@ -1,0 +1,28 @@
+uuid: 38fdc30e-a245-416e-b534-bbf2e3f533d8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gabarity
+    - media.type.image
+    - node.type.soft_fur
+id: node.soft_fur.field_gabarity
+field_name: field_gabarity
+entity_type: node
+bundle: soft_fur
+label: Габариты
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

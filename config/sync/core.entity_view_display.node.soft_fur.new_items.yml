@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_gabarity
     - field.field.node.soft_fur.field_height
     - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
@@ -243,6 +244,7 @@ hidden:
   field_basis_type: true
   field_depth: true
   field_depth_full: true
+  field_gabarity: true
   field_height: true
   field_mekhanizm: true
   field_new_item: true

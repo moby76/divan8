@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
+    - field.field.node.soft_fur.field_gabarity
     - field.field.node.soft_fur.field_height
     - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
@@ -96,6 +97,15 @@ content:
   field_foto:
     type: entity_reference_entity_view
     weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_gabarity:
+    type: entity_reference_entity_view
+    weight: 21
     label: above
     settings:
       view_mode: default

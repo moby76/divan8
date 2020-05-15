@@ -1,0 +1,42 @@
+uuid: 1bb8a87b-27e7-447d-b8a6-5d4a41b83889
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.gabarity
+  module:
+    - views
+name: gabarity
+label: Габариты
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  662e63fe-585c-4f98-9edd-c6e4a37d07b1:
+    settings:
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+      upload_location: 'public://'
+      multiple: '1'
+      submit_text: 'Выберите файлы'
+    uuid: 662e63fe-585c-4f98-9edd-c6e4a37d07b1
+    weight: 1
+    label: 'Загрузить изображения'
+    id: media_image_upload
+  9887e5ee-b8e9-4017-b2c7-a7b124a8f1d2:
+    settings:
+      view: gabarity
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 9887e5ee-b8e9-4017-b2c7-a7b124a8f1d2
+    weight: 2
+    label: view
+    id: view
