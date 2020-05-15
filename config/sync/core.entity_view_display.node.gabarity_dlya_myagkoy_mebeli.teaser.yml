@@ -1,0 +1,78 @@
+uuid: 5a3180fe-2688-4d3f-8290-f88f89d9fcef
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.body
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_image
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_config
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_model
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_width
+    - image.style.media_library
+    - node.type.gabarity_dlya_myagkoy_mebeli
+  module:
+    - ds
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_image
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.gabarity_dlya_myagkoy_mebeli.teaser
+targetEntityType: node
+bundle: gabarity_dlya_myagkoy_mebeli
+mode: teaser
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: main
+    label: above
+    settings:
+      image_style: media_library
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  body: true
+  field_soft_fur_config: true
+  field_soft_fur_model: true
+  field_width: true
+  langcode: true
+  links: true

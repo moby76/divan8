@@ -1,0 +1,6 @@
+status: 1
+pattern: 'Габариты для: [node:field_soft_fur_config] [node:field_soft_fur_model] [node:field_width]'
+escape: false
+dependencies:
+  config:
+    - node.type.gabarity_dlya_myagkoy_mebeli

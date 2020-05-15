@@ -1,0 +1,11 @@
+uuid: 708d0028-d2fd-4b45-8615-03db5aa8e2d6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.gabarity_dlya_myagkoy_mebeli
+id: node.gabarity_dlya_myagkoy_mebeli
+target_entity_type_id: node
+target_bundle: gabarity_dlya_myagkoy_mebeli
+default_langcode: site_default
+language_alterable: false
