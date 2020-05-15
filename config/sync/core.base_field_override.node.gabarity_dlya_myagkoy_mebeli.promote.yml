@@ -1,0 +1,22 @@
+uuid: cea5e6d6-51ae-4fb7-a86d-b535255465d7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.gabarity_dlya_myagkoy_mebeli
+id: node.gabarity_dlya_myagkoy_mebeli.promote
+field_name: promote
+entity_type: node
+bundle: gabarity_dlya_myagkoy_mebeli
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

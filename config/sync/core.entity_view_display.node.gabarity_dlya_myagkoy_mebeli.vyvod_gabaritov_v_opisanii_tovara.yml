@@ -1,0 +1,102 @@
+uuid: b578b40d-ed44-4c22-9ec2-00a279b4ec2d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.vyvod_gabaritov_v_opisanii_tovara
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.body
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_image
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_config
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_model
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_width
+    - image.style.scale_330_330
+    - image.style.thumbnail
+    - node.type.gabarity_dlya_myagkoy_mebeli
+  module:
+    - blazy
+    - ds
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_image
+id: node.gabarity_dlya_myagkoy_mebeli.vyvod_gabaritov_v_opisanii_tovara
+targetEntityType: node
+bundle: gabarity_dlya_myagkoy_mebeli
+mode: vyvod_gabaritov_v_opisanii_tovara
+content:
+  field_image:
+    type: blazy
+    weight: 0
+    region: main
+    label: hidden
+    settings:
+      style: ''
+      image_style: scale_330_330
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: thumbnail
+      ratio: ''
+      box_caption: ''
+      box_caption_custom: ''
+      grid: null
+      grid_medium: 2
+      grid_small: 3
+      current_view_mode: vyvod_gabaritov_v_opisanii_tovara
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: ''
+      fx: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  body: true
+  field_soft_fur_config: true
+  field_soft_fur_model: true
+  field_width: true
+  langcode: true
+  links: true

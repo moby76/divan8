@@ -1,0 +1,31 @@
+uuid: 1bb8a87b-27e7-447d-b8a6-5d4a41b83889
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.gabarity_dlya_myagkoy_mebeli
+  module:
+    - views
+name: gabarity
+label: Габариты
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  591cc3a8-dacc-47e9-8b12-e04cff169033:
+    settings:
+      view: gabarity_dlya_myagkoy_mebeli
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 591cc3a8-dacc-47e9-8b12-e04cff169033
+    weight: 1
+    label: view
+    id: view

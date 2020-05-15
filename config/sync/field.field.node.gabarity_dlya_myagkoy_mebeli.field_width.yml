@@ -1,0 +1,21 @@
+uuid: ad161490-256f-43c2-a94b-c321a385cbb0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_width
+    - node.type.gabarity_dlya_myagkoy_mebeli
+  module:
+    - options
+id: node.gabarity_dlya_myagkoy_mebeli.field_width
+field_name: field_width
+entity_type: node
+bundle: gabarity_dlya_myagkoy_mebeli
+label: 'Ширина общая'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

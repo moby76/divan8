@@ -1,0 +1,18 @@
+uuid: 00ad30ef-8392-4c0f-ad82-5c54635f1b9b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Габариты для мягкой мебели'
+type: gabarity_dlya_myagkoy_mebeli
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

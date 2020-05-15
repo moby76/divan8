@@ -1,0 +1,96 @@
+uuid: 5aae9478-6f30-4ec4-b1d0-d976a84002d4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.body
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_image
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_config
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_model
+    - field.field.node.gabarity_dlya_myagkoy_mebeli.field_width
+    - image.style.medium
+    - node.type.gabarity_dlya_myagkoy_mebeli
+  module:
+    - blazy
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_image
+id: node.gabarity_dlya_myagkoy_mebeli.default
+targetEntityType: node
+bundle: gabarity_dlya_myagkoy_mebeli
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      style: ''
+      image_style: medium
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: ''
+      ratio: ''
+      box_caption: ''
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: ''
+      fx: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: blazy
+    region: main
+hidden:
+  body: true
+  field_soft_fur_config: true
+  field_soft_fur_model: true
+  field_width: true
+  langcode: true
+  links: true
