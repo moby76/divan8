@@ -1,0 +1,29 @@
+uuid: 75cfff48-a163-46de-a9c2-5a975833314f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_soft_fur_model
+    - node.type.gabarity_dlya_myagkoy_mebeli
+    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+id: node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_model
+field_name: field_soft_fur_model
+entity_type: node
+bundle: gabarity_dlya_myagkoy_mebeli
+label: Модель
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      modeli_myagkoy_mebeli: modeli_myagkoy_mebeli
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

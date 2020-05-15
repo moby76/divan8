@@ -1,0 +1,10 @@
+uuid: f538b7d5-df76-4989-b9f6-5ee7cd64ce7f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.vyvod_gabaritov_v_opisanii_tovara
+label: 'Вывод габаритов в описании товара'
+targetEntityType: node
+cache: true

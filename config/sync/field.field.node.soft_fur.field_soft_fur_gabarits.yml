@@ -1,26 +1,26 @@
-uuid: 38fdc30e-a245-416e-b534-bbf2e3f533d8
+uuid: 21678b1f-3728-4df6-b48f-8f5f4ddcaba2
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_gabarity
-    - media.type.image
+    - field.storage.node.field_soft_fur_gabarits
+    - node.type.gabarity_dlya_myagkoy_mebeli
     - node.type.soft_fur
-id: node.soft_fur.field_gabarity
-field_name: field_gabarity
+id: node.soft_fur.field_soft_fur_gabarits
+field_name: field_soft_fur_gabarits
 entity_type: node
 bundle: soft_fur
-label: Габариты
+label: 'Габариты мягкой мебели'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      image: image
+      gabarity_dlya_myagkoy_mebeli: gabarity_dlya_myagkoy_mebeli
     sort:
       field: _none
     auto_create: false

@@ -3,6 +3,7 @@ langcode: ru
 status: true
 dependencies:
   config:
+    - entity_browser.browser.gabarity
     - field.field.node.soft_fur.body
     - field.field.node.soft_fur.field_age_kategory
     - field.field.node.soft_fur.field_available
@@ -12,7 +13,6 @@ dependencies:
     - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_gabarity
     - field.field.node.soft_fur.field_height
     - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
+    - field.field.node.soft_fur.field_soft_fur_gabarits
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
@@ -88,9 +89,9 @@ third_party_settings:
         - field_depth
         - field_depth_full
         - field_sleep_dim
-        - field_gabarity
+        - field_soft_fur_gabarits
       parent_name: ''
-      weight: 24
+      weight: 23
       format_type: fieldset
       region: content
       format_settings:
@@ -195,20 +196,6 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
-  field_gabarity:
-    type: entity_browser_entity_reference
-    weight: 29
-    settings:
-      entity_browser: null
-      open: false
-      field_widget_display: label
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: false
-      field_widget_display_settings: {  }
-      selection_mode: selection_append
-    third_party_settings: {  }
-    region: content
   field_height:
     weight: 25
     settings: {  }
@@ -274,6 +261,21 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_soft_fur_gabarits:
+    weight: 29
+    settings:
+      entity_browser: gabarity
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: teaser
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
     region: content
   field_soft_fur_model:
     weight: 11

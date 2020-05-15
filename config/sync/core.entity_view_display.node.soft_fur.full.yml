@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.soft_fur.field_depth_full
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
-    - field.field.node.soft_fur.field_gabarity
     - field.field.node.soft_fur.field_height
     - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
@@ -24,6 +23,7 @@ dependencies:
     - field.field.node.soft_fur.field_set_available
     - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
+    - field.field.node.soft_fur.field_soft_fur_gabarits
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
@@ -164,7 +164,6 @@ hidden:
   field_depth_full: true
   field_features: true
   field_foto: true
-  field_gabarity: true
   field_height: true
   field_mekhanizm: true
   field_new_item: true
@@ -175,6 +174,7 @@ hidden:
   field_set_available: true
   field_sleep_dim: true
   field_soft_fur_config: true
+  field_soft_fur_gabarits: true
   field_soft_fur_model: true
   field_text_promoushn: true
   field_tip_mebeli: true

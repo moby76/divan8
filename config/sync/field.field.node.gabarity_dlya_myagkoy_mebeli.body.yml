@@ -1,0 +1,23 @@
+uuid: c45408ea-1fff-4853-a39c-8577531c0b9e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.gabarity_dlya_myagkoy_mebeli
+  module:
+    - text
+id: node.gabarity_dlya_myagkoy_mebeli.body
+field_name: body
+entity_type: node
+bundle: gabarity_dlya_myagkoy_mebeli
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
