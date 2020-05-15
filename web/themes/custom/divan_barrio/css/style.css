@@ -23,7 +23,7 @@
 
 .carousel-control-prev,
 .carousel-control-next{
-    bottom: 0;
+    bottom: 46%;
     top: auto;
     padding: 10px;
     background-color: #ff0000;
@@ -504,4 +504,10 @@ tr.odd,
 
 tr.even{
     background-color: #6f6f6f;
+}
+
+/* ---------------------------------------------------- Карточки товаров --------------------------------------------------------------------- */
+
+.card-body{
+    flex: 0.5 0 auto;
 }
