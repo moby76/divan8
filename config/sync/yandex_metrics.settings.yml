@@ -1,11 +1,15 @@
-counter_code: ''
+counter_code: "<!-- Yandex.Metrika counter -->\r\n<script type=\"text/javascript\" >\r\n   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\r\n   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\r\n   (window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\r\n\r\n   ym(53734816, \"init\", {\r\n        clickmap:true,\r\n        trackLinks:true,\r\n        accurateTrackBounce:true,\r\n        webvisor:true\r\n   });\r\n</script>\r\n<noscript><div><img src=\"https://mc.yandex.ru/watch/53734816\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\r\n<!-- /Yandex.Metrika counter -->"
 visibility:
   path:
     visibility: 0
     pages: "admin\r\nadmin/*\r\nbatch\r\nnode/add*\r\nnode/*/*\r\nuser/*/*"
   role:
     visibility: 0
-    roles: {  }
+    roles:
+      anonymous: '0'
+      authenticated: '0'
+      administrator: '0'
+      redaktor: '0'
 _core:
   default_config_hash: 9yOw9LvO3GY6VlFxKmJypi61KBhqwCTwsWvYey0vrdk
 langcode: ru
