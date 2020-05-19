@@ -1,0 +1,25 @@
+uuid: e4fc3545-52a5-43cf-8a92-a02a02a4bed9
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d4566dc4-78ae-4952-9573-d2122d5771eb'
+  module:
+    - block_content
+  theme:
+    - divan_barrio
+id: socialnyessylkivshapke
+theme: divan_barrio
+region: top_header
+weight: -11
+provider: null
+plugin: 'block_content:d4566dc4-78ae-4952-9573-d2122d5771eb'
+settings:
+  id: 'block_content:d4566dc4-78ae-4952-9573-d2122d5771eb'
+  label: 'Социальные ссылки в шапке'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
