@@ -249,8 +249,6 @@
 .views_slideshow_controls_text_next:hover,
 .views_slideshow_controls_text_previous:hover{
     background: #26a0e6;
-    
-
 }
 
 .view-content .skin-default{
@@ -399,20 +397,9 @@ ul.dropdown-menu li a:hover{
 
 /* ------------------------------------------------------------- Социальные иконки ----------------------------------------------- */
 
-.social-buttons{
-    position: fixed;
-    top: 250px;
-    left: 10px;
-    padding: 10px;
-}
 
-.social-buttons .btn{
-    color:#007cf9;
-}
 
-.social-buttons .btn:hover{
-    color:#5badff;
-}
+
 /* ----------------------------------------------------------------- Темизация views Описание товара на странице материала ---------------------------------- */
 
 
@@ -511,3 +498,42 @@ tr.even{
 .card-body{
     flex: 0.5 0 auto;
 }
+
+/* ----------------------------------------------------- Блок социальных ссылок и телефон в шапке ------------------------------------------------- */
+
+.region-top-header{
+    width: 100%;
+}
+
+#block-socialnyessylkivshapke{
+    width: 100%;
+}
+
+.fa-mobile-alt{
+    color: white;
+
+}
+
+.btn-social{
+    color: #ff6000;
+    background: white;
+}
+
+.btn-social:hover{
+    color: red;
+}
+/* .social-buttons{
+    position: fixed;
+    top: 250px;
+    left: 10px;
+    padding: 10px;
+} */
+
+/* .social-buttons .btn{
+    color:#007cf9;
+} */
+
+/* .social-buttons .btn:hover{
+    color:#5badff;
+} */
+

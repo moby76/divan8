@@ -381,19 +381,6 @@ taxonomies:
       parent: '0'
       uuid: 77364c6a-c651-4df7-a0e6-14dd927f68c9
   tags: {  }
-blocks:
-  -
-    info: 'Социальные ссылки 2'
-    langcode: ru
-    uuid: 7e5a798d-9b21-495e-848a-6e6d325fdb46
-    bundle: basic
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        value: "<div class=\"social-buttons\">\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-facebook\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-facebook-f\"></i></a>\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-twitter\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-twitter\"></i></a>\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-odnoklassniki\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-odnoklassniki\"></i></a>\r\n<a href=\"#\" class=\"btn btn-block btn-social btn-instagram\" type=\"button\" role=\"button\"><i class=\"fab fa-2x mr-2 fa-instagram\"></i></a>\r\n<a href=\"https://vk.com/pavel_alyamovski\" class=\"btn btn-block btn-social btn-vk\" type=\"button\" role=\"button\"><i class=\"fab mr-2 fa-2x fa-vk\"></i></a>\r\n</div>"
-        summary: ''
-        format: full_html
 menus:
   -
     menu_name: main
@@ -491,3 +478,16 @@ menus:
     weight: '-49'
     langcode: ru
     uuid: 553f015e-d91a-48f1-b1a7-7af49c2eaa25
+blocks:
+  -
+    info: 'Социальные ссылки в шапке'
+    langcode: ru
+    uuid: d4566dc4-78ae-4952-9573-d2122d5771eb
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<div class=\"row\">\r\n    <div class=\"col-6\">\r\n        <div class =\"row pl-4\">\r\n        <div class=col-3>\r\n            <a href=\"https://facebook.com/groups/298308167617767\" class=\"btn btn-block btn-social btn-facebook\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab fa-2x mr-2 fa-facebook-f\"></i>\r\n            </a>\r\n        </div>\r\n        <div class=col-3>\r\n            <a href=\"https://ok/profile/590046956350\" class=\"btn btn-block btn-social btn-odnoklassniki\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab fa-2x mr-2 fa-odnoklassniki\"></i>\r\n            </a>\r\n        </div>\r\n        <div class=\"col-3\">\r\n            <a href=\"https://instagram.com/divan_nvkz/\" class=\"btn btn-block btn-social btn-instagram\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab fa-2x mr-2 fa-instagram\"></i>\r\n            </a>\r\n        </div>\r\n        <div class=\"col-3\">\r\n            <a href=\"https://vk.com/id594175569\" class=\"btn btn-block btn-social btn-vk\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab mr-2 fa-2x fa-vk\"></i>\r\n            </a>\r\n        </div>\r\n        </div>\r\n    </div> \r\n  <div class=\"col-6 text-right\">\r\n    <div class=\"row justify-content-end pr-3\">\r\n         <i class=\"fas fa-mobile-alt fa-3x\"></i><h1 class=\"text-light ml-3\">+79039080424</h1></span>        \r\n    </div> \r\n  </div>\r\n</div>"
+        summary: ''
+        format: full_html

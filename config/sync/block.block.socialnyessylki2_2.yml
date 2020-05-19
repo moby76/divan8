@@ -1,6 +1,6 @@
 uuid: 76133c58-c1ee-4310-9561-bcfd6c8993e3
 langcode: ru
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:7e5a798d-9b21-495e-848a-6e6d325fdb46'
