@@ -69,6 +69,7 @@
         "drupal/views_fieldsets": "^3.3",
         "drupal/views_slideshow_jcarousel": "^1.0@alpha",
         "drupal/views_slideshow_xtra": "^4.0@alpha",
+        "drupal/webform": "^5.13",
         "drupal/yandex_metrics": "3.x-dev",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
