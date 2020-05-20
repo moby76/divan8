@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.soft_fur.field_price_from
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_similar_soft_order
     - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_gabarits
@@ -34,6 +35,7 @@ dependencies:
     - serial
     - text
     - user
+    - webform
 id: node.soft_fur.default
 targetEntityType: node
 bundle: soft_fur
@@ -141,6 +143,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_similar_soft_order:
+    weight: 22
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
     region: content
   field_sleep_dim:
     weight: 17

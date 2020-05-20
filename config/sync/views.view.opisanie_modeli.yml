@@ -11,6 +11,7 @@ dependencies:
     - field.storage.node.field_mekhanizm
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
+    - field.storage.node.field_similar_soft_order
     - field.storage.node.field_sleep_dim
     - field.storage.node.field_soft_fur_gabarits
     - field.storage.node.field_soft_fur_model
@@ -30,6 +31,7 @@ dependencies:
     - user
     - views_bootstrap
     - views_fieldsets
+    - webform
 id: opisanie_modeli
 label: 'Описание модели views'
 module: views
@@ -933,6 +935,73 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_similar_soft_order:
+          id: field_similar_soft_order
+          table: node__field_similar_soft_order
+          field: field_similar_soft_order
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: " <a href=\"#\" class=\"btn btn-outline-info p-4\">{{ field_similar_soft_order }}<i class=\"fas fa-external-link-alt pl-4 fa-2x\"></i></a>\r\n        "
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: webform_entity_reference_link
+          settings:
+            label: 'Перейти к форме заказа'
+            dialog: narrow
+            attributes:
+              class:
+                - 'btn btn-outline-info p-4'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_where:
           id: field_where
           table: node__field_where
@@ -977,7 +1046,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: 'Данный товар временно отсутствует'
+          empty: "<div class=\"jumbotron text-center\">\r\n<div class=\"col-12 alert alert-danger\"> Этот товар отсутствует, но вы можете заказать подобный перейдя по ссылке</div>\r\n<div class=\"col-12 m-4\">{{ field_similar_soft_order }}<i class=\"fas fa-external-link-alt \"></i> </div> \r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1722,7 +1791,112 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "    <div class=\"tab-pane fade\" id=\"where\">\r\n            {{ field_where }}\r\n    </div>"
+            text: "<div class=\"tab-pane fade\" id=\"where\">\r\n            {{ field_where }}     \r\n</div>\r\n   "
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+        fieldset_3:
+          id: fieldset_3
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - field_similar_soft_order_1
+          wrapper: div
+          legend: ''
+          classes: card
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        field_similar_soft_order_1:
+          id: field_similar_soft_order_1
+          table: node__field_similar_soft_order
+          field: field_similar_soft_order
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1758,8 +1932,22 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: webform_entity_reference_entity_view
+          settings:
+            source_entity: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
     cache_metadata:
       max-age: -1
       contexts:
@@ -1778,6 +1966,7 @@ display:
         - 'config:field.storage.node.field_mekhanizm'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_price_from'
+        - 'config:field.storage.node.field_similar_soft_order'
         - 'config:field.storage.node.field_sleep_dim'
         - 'config:field.storage.node.field_soft_fur_gabarits'
         - 'config:field.storage.node.field_soft_fur_model'
