@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.soft_fur.field_price_from
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_similar_soft_order
     - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_gabarits
@@ -142,7 +143,7 @@ content:
     type: entity_reference_entity_view
     weight: 2
     region: bottom
-    label: above
+    label: hidden
     settings:
       view_mode: teaser
       link: false
@@ -172,6 +173,7 @@ hidden:
   field_price_from: true
   field_promoushen_photo: true
   field_set_available: true
+  field_similar_soft_order: true
   field_sleep_dim: true
   field_soft_fur_config: true
   field_soft_fur_gabarits: true

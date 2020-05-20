@@ -1,0 +1,32 @@
+uuid: 6c7c7b07-f570-48a0-916f-b6c57be6f8f1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_similar_soft_order
+    - node.type.soft_fur
+    - webform.webform.similar_soft_order
+  module:
+    - webform
+id: node.soft_fur.field_similar_soft_order
+field_name: field_similar_soft_order
+entity_type: node
+bundle: soft_fur
+label: 'Заказать подобный комплект'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_data: "# This is an example of a comment.\r\nelement_key: 'some value'\r\n\r\n# The below example uses a token to get the current node's title.\r\n# Add ':clear' to the end token to return an empty value when the token is missing.\r\ntitle: '[webform_submission:node:title:clear]'\r\n# The below example uses a token to get a field value from the current node.\r\nURL: '[webform_submission:node:url]'"
+    status: open
+    open: ''
+    close: ''
+    target_uuid: ed416e9d-7350-467f-bfc7-83cbdfd1671b
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

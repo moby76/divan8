@@ -447,6 +447,11 @@ ul.dropdown-menu li a:hover{
     color: #2FA4E7;
     text-decoration: underline;
 }
+
+.fa-external-link-alt{
+    vertical-align: top;
+    margin: 10px 0px 0 -25px;
+}
                             /* ----------------------------------- Стили для создания "read more" ----------------------- */
 
 #summary {
@@ -537,3 +542,20 @@ tr.even{
     color:#5badff;
 } */
 
+/* ------------------------------------------------------- Модальное окно ------------------------------------------------- */
+
+.ui-dialog .ui-dialog-content{
+    padding: 0;
+}
+
+/* ---------------------------------------------------- Форма заказа мягкой мебели -------------------------------------------- */
+
+.webform-submission-similar-soft-order-form   {
+    background: #145873;
+    padding: 31px 20px 10px 20px;
+    color: white;
+}
+
+.form-control{
+    border-radius: 0.1rem;
+}
