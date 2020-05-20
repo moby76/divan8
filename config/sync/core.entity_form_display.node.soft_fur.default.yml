@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.soft_fur.field_price_from
     - field.field.node.soft_fur.field_promoushen_photo
     - field.field.node.soft_fur.field_set_available
+    - field.field.node.soft_fur.field_similar_soft_order
     - field.field.node.soft_fur.field_sleep_dim
     - field.field.node.soft_fur.field_soft_fur_config
     - field.field.node.soft_fur.field_soft_fur_gabarits
@@ -39,6 +40,7 @@ dependencies:
     - path
     - serial
     - text
+    - webform
 third_party_settings:
   field_group:
     group_promoushn:
@@ -105,7 +107,7 @@ third_party_settings:
         - field_basis_type
         - field_mekhanizm
       parent_name: ''
-      weight: 25
+      weight: 24
       format_type: fieldset
       region: content
       format_settings:
@@ -248,6 +250,13 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_similar_soft_order:
+    type: webform_entity_reference_select
+    weight: 26
+    region: content
+    settings:
+      default_data: true
+    third_party_settings: {  }
   field_sleep_dim:
     weight: 28
     settings:

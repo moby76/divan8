@@ -12,6 +12,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'create webform content'
   - 'ds switch view mode'
   - 'search content'
   - 'use text format restricted_html'
