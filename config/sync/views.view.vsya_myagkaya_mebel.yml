@@ -322,7 +322,6 @@ display:
           hide_alter_empty: true
           fields:
             - title
-            - field_price_base
           wrapper: div
           legend: ''
           classes: row
@@ -393,70 +392,6 @@ display:
           field_api_classes: false
           entity_type: node
           entity_field: title
-          plugin_id: field
-        field_price_base:
-          id: field_price_base
-          table: node__field_price_base
-          field: field_price_base
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "<div class=\"col-5\">\r\n       <div class=\"row float-right\">\r\n                <h4><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h4><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: "<div class=\"col-5\">\r\n       <div class=\"row float-right\">\r\n                <h4><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h4><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
           plugin_id: field
         fieldset_2:
           id: fieldset_2
@@ -745,10 +680,67 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - view_node
+            - fieldset_6
           wrapper: div
           legend: ''
           classes: 'card-footer  text-muted  bg-white'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_6:
+          id: fieldset_6
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: row
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - view_node
+            - field_price_base
+          wrapper: div
+          legend: ''
+          classes: row
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -763,7 +755,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="{{ view_node }}" class="btn btn-outline-info" target="_blank">ПОДРОБНЕЕ...</a>'
+            text: '<div class="col-6"><a href="{{ view_node }}" class="btn btn-outline-info" target="_blank">ПОДРОБНЕЕ...</a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -805,6 +797,70 @@ display:
           absolute: false
           entity_type: node
           plugin_id: entity_link
+        field_price_base:
+          id: field_price_base
+          table: node__field_price_base
+          field: field_price_base
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-6\">\r\n       <div class=\"row float-right\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "<div class=\"col-6\">\r\n       <div class=\"row float-right\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         nothing:
           id: nothing
           table: views
