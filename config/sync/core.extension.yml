@@ -101,6 +101,7 @@ module:
   views_fieldsets: 0
   views_slideshow: 0
   views_slideshow_cycle: 0
+  views_taxonomy_term_name_into_id: 0
   views_ui: 0
   webform: 0
   webform_node: 0
