@@ -2,7 +2,7 @@ id: that_collection
 label: 'Из той-же коллекции'
 ui_limit: soft_fur|full
 properties:
-  block: 'views_block:that_collection-block_1'
+  block: 'views_block:soft_fur_that_collection-block_1'
   use_block_title: true
   add_block_wrappers: true
 type: block
