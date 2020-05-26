@@ -1,0 +1,25 @@
+uuid: b1a78edd-0b21-4f3b-b361-daebf5616c0c
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2a12a3da-2bfa-4b77-a8b5-4ab62ee2f775'
+  module:
+    - block_content
+  theme:
+    - divan_barrio
+id: telefon
+theme: divan_barrio
+region: top_header
+weight: -9
+provider: null
+plugin: 'block_content:2a12a3da-2bfa-4b77-a8b5-4ab62ee2f775'
+settings:
+  id: 'block_content:2a12a3da-2bfa-4b77-a8b5-4ab62ee2f775'
+  label: Телефон
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

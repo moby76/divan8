@@ -11,7 +11,7 @@ dependencies:
 id: socialnyessylkivshapke
 theme: divan_barrio
 region: top_header
-weight: -11
+weight: -10
 provider: null
 plugin: 'block_content:d4566dc4-78ae-4952-9573-d2122d5771eb'
 settings:
