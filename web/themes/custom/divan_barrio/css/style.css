@@ -559,3 +559,15 @@ tr.even{
 .form-control{
     border-radius: 0.1rem;
 }
+
+/* ------------------------------------------------ Главная страница ---------------------------------------------------------- */
+
+.block-views h2{
+    margin: 0 auto 1em;
+    text-align: center;
+    /* background: chocolate; */
+    width: 100%;
+    /* color: white; */
+    border-bottom: #009df785 dashed 2px;
+    padding: 0 0 0.5em;
+}

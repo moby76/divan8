@@ -85,7 +85,7 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: col-12
+          row_class: 'col-12 mb-3'
           default_row_class: false
           type: ul
           wrapper_class: ''
@@ -287,6 +287,7 @@ display:
       link_url: ''
       link_display: '0'
       use_ajax: true
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -604,7 +605,7 @@ display:
             - fieldset_1
           wrapper: div
           legend: ''
-          classes: 'card  mb-3  col-12  shadow'
+          classes: 'card  h-100  mb-3  col-12  shadow'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -773,7 +774,7 @@ display:
             - field_foto
           wrapper: div
           legend: ''
-          classes: 'card-img  p-3'
+          classes: 'card-img  p-3  h-100'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
