@@ -266,6 +266,14 @@
 #navbar-main{
     background-color: inherit;
 }
+
+
+/* ----------------------------------------------------- navbar-top ----------------------------------------------------- */
+
+#navbar-top{
+    padding: 20px 0 10px 0;
+}
+
 /* -------------------------------------------------- Меню основное ------------------------------------------------- */
 .navbar-nav{
     margin-right: 1em ;
@@ -349,14 +357,14 @@ ul.dropdown-menu li a:hover{
 .dropdown-item .fa-bed,
 .dropdown-item .fa-layer-group,
 .dropdown-item .fa-paint-roller{
-    font-size: 4em;
+    font-size: 3em;
     color: #ff8300;
     vertical-align: middle;
     /* background: #fbfbfb; */
     border-right: solid #5d5d5d 1px;
-    padding: 0 14px;
+    padding: 0 10px 0 0;
     margin: 0 10px 0 0;
-    height: 0.7em;
+    /* height: 0.7em; */
     width: 100px;
 }
 
@@ -394,11 +402,6 @@ ul.dropdown-menu li a:hover{
 .slick-list{
     display: list-item;
 }
-
-/* ------------------------------------------------------------- Социальные иконки ----------------------------------------------- */
-
-
-
 
 /* ----------------------------------------------------------------- Темизация views Описание товара на странице материала ---------------------------------- */
 
@@ -506,41 +509,53 @@ tr.even{
 
 /* ----------------------------------------------------- Блок социальных ссылок и телефон в шапке ------------------------------------------------- */
 
-.region-top-header{
-    width: 100%;
-}
-
-#block-socialnyessylkivshapke{
-    width: 100%;
-}
-
 .fa-mobile-alt{
     color: white;
-
 }
 
-.btn-social{
-    color: #ff6000;
-    background: white;
+.social-block{
+    background: #fbfbfb;
+    padding: 10px 0;
+    border-radius: 50px;
+    /* border: #ff8300 solid 2px; */
 }
 
-.btn-social:hover{
-    color: red;
+.social-item{
+    /* background-color: #2b2b2b; */
 }
-/* .social-buttons{
-    position: fixed;
-    top: 250px;
-    left: 10px;
-    padding: 10px;
-} */
 
-/* .social-buttons .btn{
-    color:#007cf9;
-} */
-
-/* .social-buttons .btn:hover{
-    color:#5badff;
-} */
+/* Style all font awesome icons */
+.fa {
+    padding: 13px 7px;
+    /* font-size: 30px; */
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+  }
+  
+  /* Add a hover effect if you want */
+.fa:hover {
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 2px 5px 0px #909090;
+  }
+  
+.fa-facebook {
+    /* color: white; */
+    background-color: #3b5999;
+  }
+ .fa-odnoklassniki{
+    background-color: #ed812b;
+ }
+ .fa-instagram{
+    background-color: #e4405f;
+ }
+ .fa-vk{
+    background-color: #4c75a3;
+ }
 
 /* ------------------------------------------------------- Модальное окно ------------------------------------------------- */
 
