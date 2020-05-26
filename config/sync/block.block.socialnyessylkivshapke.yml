@@ -5,9 +5,13 @@ dependencies:
   content:
     - 'block_content:basic:d4566dc4-78ae-4952-9573-d2122d5771eb'
   module:
+    - block_class
     - block_content
   theme:
     - divan_barrio
+third_party_settings:
+  block_class:
+    classes: col-6
 id: socialnyessylkivshapke
 theme: divan_barrio
 region: top_header

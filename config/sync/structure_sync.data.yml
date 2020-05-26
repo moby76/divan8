@@ -480,6 +480,18 @@ menus:
     uuid: 553f015e-d91a-48f1-b1a7-7af49c2eaa25
 blocks:
   -
+    info: Телефон
+    langcode: ru
+    uuid: 2a12a3da-2bfa-4b77-a8b5-4ab62ee2f775
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "    <div class=\"row justify-content-end pt-3 pb-3\">\r\n         <i class=\"fas fa-mobile-alt fa-3x\"></i>\r\n         <h1 class=\"text-light ml-3\">+79039080424</h1>      \r\n    </div>"
+        summary: ''
+        format: full_html
+  -
     info: 'Социальные ссылки в шапке'
     langcode: ru
     uuid: d4566dc4-78ae-4952-9573-d2122d5771eb
@@ -488,6 +500,6 @@ blocks:
     rev_id_current: null
     fields:
       body:
-        value: "<div class=\"row\">\r\n    <div class=\"col-6\">\r\n        <div class =\"row pl-4\">\r\n        <div class=col-3>\r\n            <a href=\"https://facebook.com/groups/298308167617767\" class=\"btn btn-block btn-social btn-facebook\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab fa-2x mr-2 fa-facebook-f\"></i>\r\n            </a>\r\n        </div>\r\n        <div class=col-3>\r\n            <a href=\"https://ok/profile/590046956350\" class=\"btn btn-block btn-social btn-odnoklassniki\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab fa-2x mr-2 fa-odnoklassniki\"></i>\r\n            </a>\r\n        </div>\r\n        <div class=\"col-3\">\r\n            <a href=\"https://instagram.com/divan_nvkz/\" class=\"btn btn-block btn-social btn-instagram\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab fa-2x mr-2 fa-instagram\"></i>\r\n            </a>\r\n        </div>\r\n        <div class=\"col-3\">\r\n            <a href=\"https://vk.com/id594175569\" class=\"btn btn-block btn-social btn-vk\" type=\"button\" role=\"button\" target=\"_blank\">\r\n                <i class=\"fab mr-2 fa-2x fa-vk\"></i>\r\n            </a>\r\n        </div>\r\n        </div>\r\n    </div> \r\n  <div class=\"col-6 text-right\">\r\n    <div class=\"row justify-content-end pr-3\">\r\n         <i class=\"fas fa-mobile-alt fa-3x\"></i><h1 class=\"text-light ml-3\">+79039080424</h1></span>        \r\n    </div> \r\n  </div>\r\n</div>"
+        value: "<div class =\"row social-block ml-2\">\r\n    <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center social-item\">\r\n        <a href=\"https://facebook.com/groups/298308167617767\" class=\"fa fa-2x mr-2 fa-facebook\" target=\"_blank\"></a>\r\n    </div>\r\n    <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center social-item\">\r\n        <a href=\"https://ok.ru/profile/590046956350\" class=\"fa fa-2x mr-2 fa-odnoklassniki\" target=\"_blank\"></a>\r\n    </div>\r\n    <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center social-item\">\r\n        <a href=\"https://instagram.com/divan_nvkz/\" class=\"fa fa-2x mr-2 fa-instagram\" target=\"_blank\"></a>\r\n    </div>\r\n    <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center social-item\">\r\n        <a href=\"https://vk.com/id594175569\" class=\"fa mr-2 fa-2x fa-vk\" target=\"_blank\"></a>\r\n    </div>\r\n</div>"
         summary: ''
         format: full_html

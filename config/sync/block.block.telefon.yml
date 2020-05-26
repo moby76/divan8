@@ -5,9 +5,13 @@ dependencies:
   content:
     - 'block_content:basic:2a12a3da-2bfa-4b77-a8b5-4ab62ee2f775'
   module:
+    - block_class
     - block_content
   theme:
     - divan_barrio
+third_party_settings:
+  block_class:
+    classes: col-6
 id: telefon
 theme: divan_barrio
 region: top_header
