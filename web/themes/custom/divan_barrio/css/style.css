@@ -455,6 +455,13 @@ ul.dropdown-menu li a:hover{
     vertical-align: top;
     margin: 10px 0px 0 -25px;
 }
+
+.fa-list-ul,
+.fa-grip-horizontal,
+.fa-warehouse{
+    /* color: #2b556d; */
+    margin:  0 8px 0 0;
+}
                             /* ----------------------------------- Стили для создания "read more" ----------------------- */
 
 #summary {
