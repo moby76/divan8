@@ -1,5 +1,5 @@
 tag: i
-method: svg
+method: webfonts
 use_cdn: false
 external_svg_location: 'https://use.fontawesome.com/releases/v5.12.0/js/all.js'
 use_shim: true
