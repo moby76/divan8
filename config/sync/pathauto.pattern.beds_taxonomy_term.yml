@@ -1,0 +1,23 @@
+uuid: c75f99b4-6d35-46c8-a2db-e85ba54f8e04
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: beds_taxonomy_term
+label: 'Шаблон для терминов таксономии словаря "Модели кроватей"'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'модели/[term:vocabulary]/[term:name]'
+selection_criteria:
+  3e67cb38-7fad-465f-b33e-b6f3bb73165b:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      sleep_models: sleep_models
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 3e67cb38-7fad-465f-b33e-b6f3bb73165b
+selection_logic: and
+weight: -5
+relationships: {  }

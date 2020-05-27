@@ -104,7 +104,6 @@ third_party_settings:
       middle:
         - 'dynamic_block_field:node-opisanie_modeli'
       bottom:
-        - field_buy_komplekt
         - 'dynamic_block_field:node-that_collection'
     fields:
       'dynamic_block_field:node-foto':
@@ -125,7 +124,7 @@ third_party_settings:
         formatter: default
       'dynamic_block_field:node-that_collection':
         plugin_id: 'dynamic_block_field:node-that_collection'
-        weight: 3
+        weight: 2
         label: hidden
         formatter: default
         ft:
@@ -138,29 +137,13 @@ id: node.soft_fur.full
 targetEntityType: node
 bundle: soft_fur
 mode: full
-content:
-  field_buy_komplekt:
-    type: entity_reference_entity_view
-    weight: 2
-    region: bottom
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: 'К этому товару подойдёт'
-            lb-col: true
-            classes: {  }
+content: {  }
 hidden:
   body: true
   field_age_kategory: true
   field_available: true
   field_basis_type: true
+  field_buy_komplekt: true
   field_depth: true
   field_depth_full: true
   field_features: true

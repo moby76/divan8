@@ -1,8 +1,9 @@
-uuid: afda4574-34e1-41d0-aea5-72dd8736ad10
+uuid: bb2f36b6-d08c-4383-a0cf-551d3fe47895
 langcode: ru
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.sleep_models.field_dim
     - field.field.taxonomy_term.sleep_models.field_model_desc
     - field.field.taxonomy_term.sleep_models.field_scheme
@@ -11,11 +12,16 @@ dependencies:
   module:
     - ds
     - field_slideshow
+    - layout_builder
     - text
-id: taxonomy_term.sleep_models.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: taxonomy_term.sleep_models.full
 targetEntityType: taxonomy_term
 bundle: sleep_models
-mode: default
+mode: full
 content:
   field_model_desc:
     weight: 1

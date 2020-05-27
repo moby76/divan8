@@ -73,7 +73,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 6
+          items_per_page: 9
           offset: 0
           id: 0
           total_pages: null
@@ -471,6 +471,7 @@ display:
         fields: false
         arguments: false
         relationships: false
+        title: false
       row:
         type: fields
         options:
@@ -2035,6 +2036,7 @@ display:
           admin_label: 'field_sleep_model: Taxonomy term'
           required: false
           plugin_id: standard
+      title: 'Кровати - блок описания материала'
     cache_metadata:
       max-age: -1
       contexts:
@@ -2095,7 +2097,7 @@ display:
         weight: -49
         context: '0'
         menu_name: main
-      title: Кровати
+      title: 'Кровати - все материалы'
       defaults:
         title: false
         fields: false

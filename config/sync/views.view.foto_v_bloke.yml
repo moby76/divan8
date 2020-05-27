@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_foto
+    - image.style.max_1300x1300
     - node.type.sleeps
     - node.type.soft_fur
   module:
@@ -130,7 +131,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: ''
+            image_style: max_1300x1300
             image_link: ''
           group_column: target_id
           group_columns: {  }

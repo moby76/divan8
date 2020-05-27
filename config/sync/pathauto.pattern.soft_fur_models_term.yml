@@ -1,0 +1,23 @@
+uuid: d77bf532-bb9f-42c2-9111-682e3ba804b3
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: soft_fur_models_term
+label: 'Шаблон для терминов таксономии словаря "Модели мягкой мебели"'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'модели/[term:vocabulary]/[term:name]'
+selection_criteria:
+  6edc2ac0-1258-41e8-bd7a-b84fda9deea1:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      modeli_myagkoy_mebeli: modeli_myagkoy_mebeli
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 6edc2ac0-1258-41e8-bd7a-b84fda9deea1
+selection_logic: and
+weight: -5
+relationships: {  }
