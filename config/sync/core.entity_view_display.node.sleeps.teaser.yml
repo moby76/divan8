@@ -28,29 +28,92 @@ dependencies:
     - field.field.node.sleeps.field_tip_mebeli
     - field.field.node.sleeps.field_where
     - field.field.node.sleeps.field_width
+    - image.style.scale_330_330
     - node.type.sleeps
   module:
-    - text
+    - ds
+    - media
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_foto
+      bottom:
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Узнать больше'
+          'link class': 'btn btn-outline-primary'
+          wrapper: ''
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.sleeps.teaser
 targetEntityType: node
 bundle: sleeps
 mode: teaser
 content:
-  body:
+  field_foto:
+    type: media_thumbnail
+    weight: 0
+    region: main
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+      image_style: scale_330_330
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
+  body: true
   field_age_kategory: true
   field_available: true
   field_bed_base: true
@@ -58,7 +121,6 @@ hidden:
   field_buy_komplekt: true
   field_depth: true
   field_features: true
-  field_foto: true
   field_laundry_box: true
   field_new_item: true
   field_price_base: true
@@ -75,3 +137,4 @@ hidden:
   field_where: true
   field_width: true
   langcode: true
+  links: true
