@@ -33,7 +33,7 @@ dependencies:
     - views_fieldsets
     - webform
 id: opisanie_modeli
-label: 'Описание модели views'
+label: 'Мягкая мебель - страница материала'
 module: views
 description: ''
 tag: ''

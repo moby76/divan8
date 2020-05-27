@@ -98,6 +98,7 @@ module:
   toolbar: 0
   tour: 0
   transliterate_filenames: 0
+  tvi: 0
   update: 0
   user: 0
   views_bootstrap: 0

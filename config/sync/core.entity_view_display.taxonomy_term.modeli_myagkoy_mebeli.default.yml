@@ -7,51 +7,124 @@ dependencies:
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_scheme
     - image.style.large
-    - image.style.medium
     - taxonomy.vocabulary.modeli_myagkoy_mebeli
   module:
+    - blazy
     - ds
     - field_slideshow
-    - image
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col_bricked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          top_left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          top_right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          middle:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom_left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom_right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - field_model_desc
+      top_left:
+        - field_scheme
+      top_right:
+        - field_dim
 id: taxonomy_term.modeli_myagkoy_mebeli.default
 targetEntityType: taxonomy_term
 bundle: modeli_myagkoy_mebeli
 mode: default
 content:
-  description:
-    type: text_default
-    weight: 0
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_dim:
-    weight: 1
-    label: hidden
-    settings:
-      image_style: medium
-      image_link: ''
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: image
-    region: content
-  field_model_desc:
+    type: blazy
     weight: 2
+    region: top_right
+    label: above
+    settings:
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      current_view_mode: ''
+      skin: ''
+      fx: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      caption: {  }
+      responsive_image_style: ''
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: 0
+      grid_medium: 0
+      grid_small: 0
+    third_party_settings: {  }
+  field_model_desc:
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
+    region: top
   field_scheme:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       image_style: large
@@ -90,14 +163,7 @@ content:
             lb-col: false
             classes: {  }
     type: slideshow
-    region: content
-  langcode:
-    type: language
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-      native_language: false
-    third_party_settings: {  }
-hidden: {  }
+    region: top_left
+hidden:
+  description: true
+  langcode: true

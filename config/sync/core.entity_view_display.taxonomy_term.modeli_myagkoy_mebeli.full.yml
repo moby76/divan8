@@ -1,4 +1,4 @@
-uuid: 4a12d2e1-650b-4ea2-a462-09f5ef9128e0
+uuid: 38374c61-fd19-444c-97a6-bda56189afbe
 langcode: ru
 status: true
 dependencies:
@@ -7,73 +7,146 @@ dependencies:
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_dim
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_scheme
-    - image.style.large
     - image.style.medium
+    - responsive_image.styles.wide
     - taxonomy.vocabulary.modeli_myagkoy_mebeli
   module:
     - ds
-    - field_slideshow
-    - image
+    - layout_builder
+    - slick
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col_bricked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          top_left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          top_right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          middle:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom_left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom_right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top_left:
+        - field_scheme
+      top_right:
+        - field_model_desc
+  layout_builder:
+    allow_custom: false
+    enabled: false
 id: taxonomy_term.modeli_myagkoy_mebeli.full
 targetEntityType: taxonomy_term
 bundle: modeli_myagkoy_mebeli
 mode: full
 content:
-  field_dim:
-    weight: 1
-    label: hidden
-    settings:
-      image_style: medium
-      image_link: ''
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: image
-    region: content
   field_model_desc:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
+    region: top_right
   field_scheme:
+    type: slick_image
     weight: 0
+    region: top_left
     label: hidden
     settings:
-      image_style: large
-      image_link: ''
-      slideshow:
-        fx: fade
-        autoHeight: '0'
-        delay: '0'
-        loader: 'false'
-        loop: '1000'
-        speed: '500'
-        startingSlide: '0'
-        sync: '1'
-        timeout: '4000'
-        allowWrap: 0
-        hideNonActive: 0
-        pauseOnHover: 0
-        paused: 0
-        random: 0
-        reverse: 0
-        swipe: 0
-      slideshow_pager:
-        pager:
-          after: after
-          before: 0
-        pager_type: thumbnails
-        controls: 0
-      colorbox_image_style: null
+      style: grid
+      optionset: custom
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: ''
+      responsive_image_style: wide
+      thumbnail_effect: grid
+      thumbnail_position: ''
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: medium
+      ratio: ''
+      box_caption: ''
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      current_view_mode: full
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      view_mode: ''
+      box_media_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
     third_party_settings:
       ds:
         ds_limit: ''
@@ -83,8 +156,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: slideshow
-    region: content
 hidden:
   description: true
+  field_dim: true
   langcode: true
