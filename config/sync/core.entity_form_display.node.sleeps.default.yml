@@ -42,7 +42,7 @@ third_party_settings:
         - group_foto_na_promoushen
         - group_tekst_na_promoushn
       parent_name: ''
-      weight: 14
+      weight: 5
       format_type: tabs
       region: content
       format_settings:
@@ -68,15 +68,15 @@ third_party_settings:
       children:
         - field_text_promoushn
       parent_name: group_promoushen
-      weight: 29
+      weight: 30
       format_type: tab
       region: content
       format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
-        formatter: open
-        required_fields: true
       label: 'Текст на промоушн'
     group_tip_konfiguraciya_model:
       children:
@@ -84,7 +84,7 @@ third_party_settings:
         - field_sleep_config
         - field_sleep_model
       parent_name: ''
-      weight: 13
+      weight: 4
       format_type: fieldset
       region: content
       format_settings:
@@ -99,7 +99,7 @@ third_party_settings:
         - group_razmery_matrasov
         - group_osnovanie_mesto_dlya_belya
       parent_name: ''
-      weight: 12
+      weight: 3
       format_type: tabs
       region: content
       format_settings:
@@ -112,7 +112,7 @@ third_party_settings:
         - field_width
         - field_depth
       parent_name: group_kharakteristiki
-      weight: 13
+      weight: 24
       format_type: tab
       region: content
       format_settings:
@@ -127,15 +127,15 @@ third_party_settings:
         - field_razmer_matrasa
         - field_razmer_matrasa_2
       parent_name: group_kharakteristiki
-      weight: 14
+      weight: 26
       format_type: tab
       region: content
       format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
-        formatter: open
-        required_fields: true
       label: 'Размеры матрасов'
     group_osnovanie_mesto_dlya_belya:
       children:
@@ -143,7 +143,7 @@ third_party_settings:
         - field_bed_base_transform
         - field_laundry_box
       parent_name: group_kharakteristiki
-      weight: 15
+      weight: 27
       format_type: tab
       region: content
       format_settings:
@@ -155,25 +155,23 @@ third_party_settings:
       label: 'Основание/место для белья'
     group_predstavlenie:
       children:
-        - title
-        - field_foto
-        - field_features
+        - group_foto
+        - group_opisanie_tovara
       parent_name: ''
-      weight: 11
-      format_type: fieldset
+      weight: 2
+      format_type: tabs
       region: content
       format_settings:
+        direction: horizontal
         id: ''
         classes: ''
-        description: ''
-        required_fields: true
       label: Представление
     group_komplektaciya:
       children:
         - field_buy_komplekt
         - field_set_available
       parent_name: ''
-      weight: 10
+      weight: 1
       format_type: fieldset
       region: content
       format_settings:
@@ -186,6 +184,7 @@ third_party_settings:
       children:
         - group_cenoobrazovanie
         - group_nalichie
+        - group_novinka
         - group_prochie_kharakteristiki
       parent_name: ''
       weight: 0
@@ -213,9 +212,9 @@ third_party_settings:
       label: Ценообразование
     group_nalichie:
       children:
+        - title
         - field_available
         - field_where
-        - field_new_item
       parent_name: group_torgovlya
       weight: 21
       format_type: tab
@@ -232,7 +231,7 @@ third_party_settings:
         - field_age_kategory
         - field_productor
       parent_name: group_torgovlya
-      weight: 22
+      weight: 23
       format_type: tab
       region: content
       format_settings:
@@ -242,6 +241,63 @@ third_party_settings:
         formatter: open
         required_fields: true
       label: 'Прочие характеристики'
+    group_foto:
+      children:
+        - field_foto
+      parent_name: group_predstavlenie
+      weight: 17
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: Фото
+    group_opisanie_tovara:
+      children:
+        - field_features
+      parent_name: group_predstavlenie
+      weight: 18
+      format_type: tab
+      region: content
+      format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Особенности товара'
+    group_novinka:
+      children:
+        - field_new_item
+      parent_name: group_torgovlya
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        description: ''
+        open: '1'
+        weight: '0'
+        required_fields: true
+        id: ''
+        classes: ''
+        formatter: closed
+      label: 'Это Новинка?'
+    group_podrobno:
+      children: {  }
+      parent_name: ''
+      weight: 17
+      format_type: details
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Подробно
 id: node.sleeps.default
 targetEntityType: node
 bundle: sleeps
@@ -249,7 +305,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -266,13 +322,13 @@ content:
     type: options_buttons
     region: content
   field_bed_base:
-    weight: 21
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_bed_base_transform:
-    weight: 22
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -290,7 +346,7 @@ content:
     type: options_select
     region: content
   field_features:
-    weight: 16
+    weight: 15
     settings:
       rows: 5
       placeholder: ''
@@ -305,18 +361,19 @@ content:
     type: media_library_widget
     region: content
   field_laundry_box:
-    weight: 23
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_new_item:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
+    type: boolean_checkbox
+    weight: 15
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_price_base:
     weight: 0
     settings:
@@ -338,7 +395,7 @@ content:
     type: options_buttons
     region: content
   field_promoushen_photo:
-    weight: 31
+    weight: 21
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -346,7 +403,7 @@ content:
     type: image_image
     region: content
   field_razmer_matrasa:
-    weight: 13
+    weight: 24
     settings:
       size: 60
       placeholder: ''
@@ -354,7 +411,7 @@ content:
     type: string_textfield
     region: content
   field_razmer_matrasa_2:
-    weight: 15
+    weight: 25
     settings:
       size: 60
       placeholder: ''
@@ -375,7 +432,7 @@ content:
     type: options_select
     region: content
   field_sleep_model:
-    weight: 33
+    weight: 34
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -395,7 +452,7 @@ content:
     type: options_select
     region: content
   field_where:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -408,14 +465,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 6
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -423,26 +480,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 9
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 13
+    weight: 0
     region: content
     settings:
       size: 60
@@ -450,7 +507,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -459,7 +516,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 9
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
