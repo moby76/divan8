@@ -26,6 +26,9 @@ settings:
     -
       value: '4'
       label: '"Финка" + замок NSM'
+    -
+      value: '5'
+      label: Седафлекс
   allowed_values_function: ''
 module: options
 locked: false
