@@ -48,7 +48,7 @@ third_party_settings:
         - group_tekst_na_promoushn
         - group_foto_na_promoushen
       parent_name: ''
-      weight: 22
+      weight: 6
       format_type: tabs
       region: content
       format_settings:
@@ -60,7 +60,7 @@ third_party_settings:
       children:
         - field_text_promoushn
       parent_name: group_promoushn
-      weight: 24
+      weight: 21
       format_type: tab
       region: content
       format_settings:
@@ -74,7 +74,7 @@ third_party_settings:
       children:
         - field_promoushen_photo
       parent_name: group_promoushn
-      weight: 25
+      weight: 22
       format_type: tab
       region: content
       format_settings:
@@ -91,38 +91,39 @@ third_party_settings:
         - field_depth
         - field_depth_full
         - field_sleep_dim
-        - field_soft_fur_gabarits
-      parent_name: ''
-      weight: 23
-      format_type: fieldset
+      parent_name: group_kharakteristiki
+      weight: 3
+      format_type: tab
       region: content
       format_settings:
+        description: ''
+        formatter: open
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
-        required_fields: true
-      label: Размеры
+      label: 'Размеры числовые'
     group_basic_mech:
       children:
         - field_basis_type
         - field_mekhanizm
-      parent_name: ''
-      weight: 24
-      format_type: fieldset
+      parent_name: group_kharakteristiki
+      weight: 5
+      format_type: tab
       region: content
       format_settings:
         id: ''
         classes: ''
         description: ''
         required_fields: true
+        formatter: closed
       label: 'Основание и механизм'
     group_cenoobrazovanie:
       children:
         - field_price_base
         - field_price_from
-      parent_name: ''
+      parent_name: group_torgovlya
       weight: 14
-      format_type: fieldset
+      format_type: tab
       region: content
       format_settings:
         id: ''
@@ -131,7 +132,150 @@ third_party_settings:
         open: false
         required_fields: true
         weight: 0
+        formatter: closed
       label: Ценообразование
+    group_torgovlya:
+      children:
+        - group_cenoobrazovanie
+        - group_nalichie
+        - group_eto_novinka
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Торговля
+    group_nalichie:
+      children:
+        - field_available
+        - field_where
+        - field_similar_soft_order
+      parent_name: group_torgovlya
+      weight: 15
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Наличие
+    group_komplektaciya:
+      children:
+        - field_buy_komplekt
+        - field_set_available
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Комплектация
+    group_kharakteristiki:
+      children:
+        - group_product_size
+        - group_razmery_skhematichnye
+        - group_basic_mech
+      parent_name: ''
+      weight: 4
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Характеристики
+    group_razmery_skhematichnye:
+      children:
+        - field_soft_fur_gabarits
+      parent_name: group_kharakteristiki
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Размеры схематичные'
+    group_predstavlenie:
+      children:
+        - group_foto
+        - group_opisanie_tovara
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Представление
+    group_foto:
+      children:
+        - field_foto
+      parent_name: group_predstavlenie
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: Фото
+    group_opisanie_tovara:
+      children:
+        - field_features
+      parent_name: group_predstavlenie
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Особенности товара'
+    group_tip_konfiguraciya_model:
+      children:
+        - field_tip_mebeli
+        - field_soft_fur_config
+        - field_soft_fur_model
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Тип/конфигурация/модель
+    group_eto_novinka:
+      children:
+        - field_new_item
+      parent_name: group_torgovlya
+      weight: 16
+      format_type: tab
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Это новинка?'
 id: node.soft_fur.default
 targetEntityType: node
 bundle: soft_fur
@@ -139,12 +283,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_age_kategory:
-    weight: 19
+    weight: 7
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -154,37 +298,37 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_available:
-    weight: 13
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_basis_type:
-    weight: 25
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_buy_komplekt:
-    weight: 12
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_depth:
-    weight: 26
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_depth_full:
-    weight: 27
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_features:
-    weight: 18
+    weight: 17
     settings:
       rows: 5
       placeholder: ''
@@ -193,31 +337,31 @@ content:
     region: content
   field_foto:
     type: media_library_widget
-    weight: 1
+    weight: 21
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_height:
-    weight: 25
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_mekhanizm:
-    weight: 26
+    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_new_item:
-    weight: 17
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_number:
-    weight: 21
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: serial_default_widget
@@ -237,7 +381,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_promoushen_photo:
-    weight: 22
+    weight: 26
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -245,20 +389,21 @@ content:
     type: image_image
     region: content
   field_set_available:
-    weight: 16
-    settings: {  }
+    weight: 15
+    settings:
+      display_label: true
     third_party_settings: {  }
-    type: options_buttons
+    type: boolean_checkbox
     region: content
   field_similar_soft_order:
     type: webform_entity_reference_select
-    weight: 26
+    weight: 18
     region: content
     settings:
       default_data: true
     third_party_settings: {  }
   field_sleep_dim:
-    weight: 28
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -266,13 +411,13 @@ content:
     type: string_textfield
     region: content
   field_soft_fur_config:
-    weight: 10
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_soft_fur_gabarits:
-    weight: 29
+    weight: 32
     settings:
       entity_browser: gabarity
       field_widget_display: rendered_entity
@@ -287,7 +432,7 @@ content:
     type: entity_browser_entity_reference
     region: content
   field_soft_fur_model:
-    weight: 11
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -301,33 +446,33 @@ content:
     type: text_textarea
     region: content
   field_tip_mebeli:
-    weight: 9
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_where:
-    weight: 15
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_width:
-    weight: 24
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 8
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -335,21 +480,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 11
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 12
     region: content
     third_party_settings: {  }
   title:
@@ -362,7 +507,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -371,7 +516,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 20
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
