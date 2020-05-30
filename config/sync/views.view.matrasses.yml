@@ -1203,7 +1203,6 @@ display:
           hide_alter_empty: true
           fields:
             - title
-            - field_size_cost
           wrapper: div
           legend: ''
           classes: row
@@ -1221,7 +1220,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge pr-3 pl-3 pt-2 pb-2 badge border border-danger text-dark\">{{ title }} </span></h4>\r\n</div>"
+            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge badge-info pr-3 pl-3 pt-3 pb-3\">{{ title }} </span></h4>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1275,94 +1274,13 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_size_cost:
-          id: field_size_cost
-          table: node__field_size_cost
-          field: field_size_cost
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "<div class=\"col-5\">\r\n       <div class=\"row float-right\">\r\n                <h4><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_size_cost__second }}</span></h4><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: first
-          type: double_field_unformatted_list
-          settings:
-            first:
-              link: false
-              format_type: medium
-              hidden: true
-              prefix: ''
-              suffix: ''
-              thousand_separator: ''
-              decimal_separator: .
-              scale: 2
-            second:
-              link: false
-              format_type: medium
-              hidden: false
-              prefix: 'от '
-              suffix: ''
-              thousand_separator: ''
-              decimal_separator: .
-              scale: 2
-            inline: true
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 1
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         fieldset_2:
           id: fieldset_2
           table: views
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card-img-top  image-wrapper'
+          admin_label: 'card-img-top  pt-5  pb-5  h-50'
           label: ''
           exclude: false
           alter:
@@ -1408,7 +1326,7 @@ display:
             - field_foto
           wrapper: div
           legend: ''
-          classes: 'card-img-top  image-wrapper'
+          classes: 'card-img-top  pt-5  pb-5  h-50'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -1577,7 +1495,63 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card-footer  text-muted  bg-white'
+          admin_label: 'card-footer  h-25  d-flex  flex-column  justify-content-center  text-muted  bg-white'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - fieldset_6
+          wrapper: div
+          legend: ''
+          classes: 'card-footer  h-25  d-flex  flex-column  justify-content-center  text-muted  bg-white'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_6:
+          id: fieldset_6
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: row
           label: ''
           exclude: false
           alter:
@@ -1621,9 +1595,10 @@ display:
           hide_alter_empty: true
           fields:
             - view_node
+            - field_size_cost
           wrapper: div
           legend: ''
-          classes: 'card-footer  text-muted  bg-white'
+          classes: row
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -1638,7 +1613,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="{{ view_node }}" class="btn btn-outline-info" target="_blank">ПОДРОБНЕЕ...</a>'
+            text: '<div class="col-6"><a href="{{ view_node }}" class="btn btn-outline-info" target="_blank">ПОДРОБНЕЕ...</a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -1680,6 +1655,87 @@ display:
           absolute: false
           entity_type: node
           plugin_id: entity_link
+        field_size_cost:
+          id: field_size_cost
+          table: node__field_size_cost
+          field: field_size_cost
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-danger\">от {{ field_size_cost__second }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: first
+          type: double_field_unformatted_list
+          settings:
+            first:
+              link: false
+              format_type: medium
+              hidden: true
+              prefix: ''
+              suffix: ''
+              thousand_separator: ''
+              decimal_separator: .
+              scale: 2
+            second:
+              link: false
+              format_type: medium
+              hidden: false
+              prefix: 'от '
+              suffix: ''
+              thousand_separator: ''
+              decimal_separator: .
+              scale: 2
+            inline: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 1
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       defaults:
         fields: false
         arguments: false
