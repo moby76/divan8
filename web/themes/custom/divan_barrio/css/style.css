@@ -514,6 +514,14 @@ tr.even{
     flex: 0.5 0 auto;
 }
 
+.card-img-top{
+    background: radial-gradient(circle farthest-corner at 100px 50px, #ffffff, #a7a7a7);
+}
+
+.media__image{
+    margin: 0 auto;
+}
+
 /* ----------------------------------------------------- Блок социальных ссылок и телефон в шапке ------------------------------------------------- */
 
 .fa-mobile-alt{
