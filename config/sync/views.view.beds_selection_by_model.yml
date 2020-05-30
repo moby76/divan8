@@ -1105,7 +1105,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card h-100 shadow'
+          admin_label: 'card  h-100  shadow  mb-3'
           label: ''
           exclude: false
           alter:
@@ -1281,7 +1281,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge pr-3 pl-3 pt-2 pb-2 badge border border-danger text-dark\">{{ title }} </span></h4>\r\n</div>"
+            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge badge-info pr-3 pl-3 pt-3 pb-3\">{{ title }} </span></h4>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1659,7 +1659,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card-footer text-muted bg-white'
+          admin_label: 'card-footer  h-25  d-flex  flex-column  justify-content-center  text-muted  bg-white'
           label: ''
           exclude: false
           alter:
@@ -1705,7 +1705,7 @@ display:
             - fieldset_6
           wrapper: div
           legend: ''
-          classes: 'card-footer  text-muted  bg-white'
+          classes: 'card-footer  h-25  d-flex  flex-column  justify-content-center  text-muted  bg-white'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -1830,7 +1830,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-6\">\r\n       <div class=\"row float-right\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
             make_link: false
             path: ''
             absolute: false
@@ -1863,7 +1863,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"col-6\">\r\n       <div class=\"row float-right\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-warning\">{{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
