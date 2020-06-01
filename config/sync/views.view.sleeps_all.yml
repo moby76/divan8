@@ -1335,7 +1335,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: 'Данный товар временно отсутствует'
+          empty: "<div class=\"nothing flex-column justify-content-top text-center\">\r\n    <div class=\"col-12 alert alert-danger\">Этот товар отсутствует, но вы можете заказать подобный перейдя по ссылке</div>\r\n    <div class=\"col-12\">{{ field_similar_soft_order }}<i class=\"fas fa-external-link-alt \"></i></div> \r\n</div>"
           hide_empty: false
           empty_zero: true
           hide_alter_empty: true
