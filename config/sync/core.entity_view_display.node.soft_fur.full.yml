@@ -35,6 +35,7 @@ dependencies:
     - ds
     - layout_builder
     - user
+    - webform
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -103,6 +104,7 @@ third_party_settings:
         - 'dynamic_block_field:node-foto'
       middle:
         - 'dynamic_block_field:node-opisanie_modeli'
+        - field_similar_soft_order
       bottom:
         - 'dynamic_block_field:node-that_collection'
     fields:
@@ -124,7 +126,7 @@ third_party_settings:
         formatter: default
       'dynamic_block_field:node-that_collection':
         plugin_id: 'dynamic_block_field:node-that_collection'
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
         ft:
@@ -137,7 +139,15 @@ id: node.soft_fur.full
 targetEntityType: node
 bundle: soft_fur
 mode: full
-content: {  }
+content:
+  field_similar_soft_order:
+    type: webform_entity_reference_entity_view
+    weight: 2
+    region: middle
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
 hidden:
   body: true
   field_age_kategory: true
@@ -156,7 +166,6 @@ hidden:
   field_price_from: true
   field_promoushen_photo: true
   field_set_available: true
-  field_similar_soft_order: true
   field_sleep_dim: true
   field_soft_fur_config: true
   field_soft_fur_gabarits: true

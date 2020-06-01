@@ -12,22 +12,22 @@ id: similar_soft_order
 title: 'Заказать комплект мягкой мебели'
 description: ''
 category: ''
-elements: "yours_name:\n  '#type': textfield\n  '#title': 'Ваше имя'\n  '#title_display': invisible\n  '#placeholder': 'Как к Вам обращаться'\n  '#autocomplete': 'off'\n  '#attributes':\n    class:\n      - col-12\nuser_data:\n  '#type': container\n  '#attributes':\n    class:\n      - row\n  phone_text_field:\n    '#type': textfield\n    '#title': Телефон\n    '#autocomplete': ''\n    '#input_mask': '+7(999) 999-9999'\n    '#required': true\n    '#required_error': 'Поле не заполнено'\n    '#wrapper_attributes':\n      class:\n        - 'col-lg-6 col-md-6 col-sm-12 col-xs-12'\n  your_email:\n    '#type': email\n    '#title': 'Ваш e-mail'\n    '#autocomplete': ''\n    '#wrapper_attributes':\n      class:\n        - 'col-lg-6 col-md-6 col-sm-12 col-xs-12'\nask_your_question:\n  '#type': textarea\n  '#title': 'Задать вопрос'\n  '#description': 'Задайте свой вопрос или пожелания'"
+elements: "annotation:\n  '#type': webform_markup\n  '#markup': |\n    <div class=\"alert alert-info\" role=\"alert\">\n    <h4 class=\"alert-heading\">Заполните форму заказа</h4>\n    \n    <hr />\n    <p class=\"mb-0\">Вы можете заказать точно такой-же комплект заполнив данную форму. Это обойдётся немного дешевле чем покупать готовый товар. Только придётся подождать. Срок изготовления от 14 дней.</p>\n    </div>\n    \ndatas_fieldset:\n  '#type': fieldset\n  '#title': 'Укажите Ваши данные'\n  '#attributes':\n    class:\n      - datas-fieldset\n  yours_name:\n    '#type': textfield\n    '#title': 'Ваше имя'\n    '#title_display': invisible\n    '#placeholder': 'Как к Вам обращаться'\n    '#autocomplete': 'off'\n    '#attributes':\n      class:\n        - col-12\n  datas:\n    '#type': webform_flexbox\n    '#align_items': center\n    phone_text_field:\n      '#type': textfield\n      '#title': 'Телефон *'\n      '#autocomplete': ''\n      '#input_mask': '+7(999) 999-9999'\n      '#required': true\n      '#required_error': 'Поле не заполнено'\n    your_email:\n      '#type': email\n      '#title': 'Ваш e-mail'\n      '#autocomplete': ''\nask_your_question:\n  '#type': textarea\n  '#title': 'Задать вопрос'\n  '#description': 'Задайте свой вопрос или пожелания'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Отправить запрос'\n  '#submit__attributes':\n    class:\n      - 'btn btn-info p-4'"
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
-  ajax_progress_type: ''
-  ajax_effect: ''
-  ajax_speed: null
+  ajax_progress_type: throbber
+  ajax_effect: fade
+  ajax_speed: 1000
   page: false
   page_submit_path: ''
   page_confirm_path: ''
   page_admin_theme: false
   form_title: source_entity_webform
   form_submit_once: false
-  form_exception_message: "[current-page:title]<br />\r\n[current-page:url]\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -17px; top: -20px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>"
+  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
   form_previous_submissions: true
@@ -99,9 +99,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: modal
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Ваш запроc успешно отправлен.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -109,7 +109,7 @@ settings:
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
-  confirmation_update: false
+  confirmation_update: true
   limit_total: null
   limit_total_interval: null
   limit_total_message: ''
