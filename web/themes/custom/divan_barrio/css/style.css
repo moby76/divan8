@@ -284,7 +284,7 @@
 }
 .navbar-light .navbar-nav .nav-link{
     color: #3c3c3c;
-    padding: 1em;
+    /* padding: 1em; */
     /* background-color: inherit; */
     font-size: large;
 }
@@ -319,7 +319,7 @@ ul.dropdown-menu{
     width: 100%;
 }
 ul.dropdown-menu li{
-    padding: unset;
+    padding: 0;
 }
 
 .dropdown-item:hover,
@@ -332,7 +332,7 @@ ul.dropdown-menu li{
 ul.dropdown-menu li a{
     color: #2b2b2b;
     display: block;
-    padding: 1em;
+    padding: 0.5em;
     background: #fbfbfb;
     margin: 0.5em 0;
     /* border: 1px black solid; */
@@ -580,7 +580,7 @@ tr.even{
 
 /* ---------------------------------------------------- Форма заказа мягкой мебели -------------------------------------------- */
 
-.webform-submission-similar-soft-order-form   {
+/* .webform-submission-similar-soft-order-form   {
     background: #145873;
     padding: 31px 20px 10px 20px;
     color: white;
@@ -588,8 +588,25 @@ tr.even{
 
 .form-control{
     border-radius: 0.1rem;
+} */
+.webform-submission-similar-soft-order-form{
+    /* background: #f5f5f5; */
+    padding: 2rem 2rem 1rem 2rem;
+    border: 5px #055a8e solid;
+    /* color: white; */
+    /* border-radius: 5px; */
+    box-shadow: 0px 5px 7px 0px #969696;
+    margin: 0 0 1rem 0;
+}
+.alert-info {
+    color: #efefef;
+    background-color: #055a8e;
+    border-color: #b8c8d8;
 }
 
+.datas-fieldset{
+    background: red;    background: #dcdcdc7d;
+    padding: 0 1rem;}
 /* ------------------------------------------------ Главная страница ---------------------------------------------------------- */
 
 .block-views h2{
@@ -597,15 +614,50 @@ tr.even{
     text-align: center;
     /* background: chocolate; */
     width: 100%;
-    /* color: white; */
-    border-bottom: #009df785 dashed 2px;
+    color: black;
+    /* border-bottom: black dashed 2px; */
     padding: 0 0 0.5em;
+    overflow: hidden;
 }
+
+.title {
+	/* чтобы линии не выходили за ширину блока заголовка */
+}
+.block-views h2:before,
+.block-views h2:after {
+	content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1px;
+    background: #b1b1b1;
+    border: solid #FFF;
+    border-width: 0 16px;
+}
+.block-views h2:before {
+	/* смещаем левую линию влево отрицательным отступом, равным 100% ширины
+	** благодаря этому линия встает слева от текста
+	*/
+	margin-left: -100%;
+}
+.block-views h2:after {
+	/* смещаем правую линию вправо отрицательным отступом, равным 100% ширины
+	** благодаря этому линия встает справа от текста
+	*/
+	margin-right: -100%;
+}
+
+.block-views {
+    margin: 1rem -2rem 0 -2rem;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
 
 .nothing{
     background: url(../images/no-product-found-1.png);
     background-repeat: no-repeat;
-    min-height: 360px;
-    background-position: 90% 90%;
+    min-height: 350px;
+    background-position: center 100%;
     background-size: auto;
 }
