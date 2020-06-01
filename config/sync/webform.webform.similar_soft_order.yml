@@ -176,5 +176,119 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  sales_dept:
+    id: email
+    label: 'Отдел продаж'
+    handler_id: sales_dept
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: nartdivan@mail.ru
+      to_options: {  }
+      cc_mail: germes.06@mail.ru
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:your_email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:yours_name:raw]'
+      subject: "Заявка от [webform_submission:values:yours_name]. Телефон [webform_submission:values:\tphone_text_field]"
+      body: "<p>Пожалуйста, ответьте на заявку:<br />\r\n<br />\r\nSubmitted on [webform_submission:created]</p>\r\n\r\n<p>Submitted by: [webform_submission:user]</p>\r\n\r\n<p>Submitted values are:</p>\r\n[webform_submission:values]"
+      excluded_elements:
+        annotation: annotation
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  admin:
+    id: email
+    label: Администратор
+    handler_id: admin
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: moby76job@mail.ru
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:your_email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:yours_name:raw]'
+      subject: "Заявка от [webform_submission:values:yours_name]. Телефон [webform_submission:values:\tphone_text_field]"
+      body: _default
+      excluded_elements:
+        annotation: annotation
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  confirmation:
+    id: email
+    label: Подтверждение
+    handler_id: confirmation
+    status: true
+    conditions:
+      enabled:
+        ':input[name="your_email"]':
+          filled: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:your_email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: 'Подтверждение отправки запроса'
+      body: "<p>Здравствуйте&nbsp;[webform_submission:values:yours_name]<br />\r\n<br />\r\nSubmitted on [webform_submission:created]</p>\r\n\r\n<p>Submitted by: [webform_submission:user]</p>\r\n\r\n<p>Submitted values are:</p>\r\n[webform_submission:values]"
+      excluded_elements:
+        annotation: annotation
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
 variants: {  }
