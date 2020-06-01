@@ -61,6 +61,7 @@ module:
   link: 0
   link_field_display_mode_formatter: 0
   locale: 0
+  maillog: 0
   media: 0
   media_library: 0
   menu_link_attributes: 0
