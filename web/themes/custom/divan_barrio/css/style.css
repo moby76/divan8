@@ -601,3 +601,11 @@ tr.even{
     border-bottom: #009df785 dashed 2px;
     padding: 0 0 0.5em;
 }
+
+.nothing{
+    background: url(../images/no-product-found-1.png);
+    background-repeat: no-repeat;
+    min-height: 360px;
+    background-position: 90% 90%;
+    background-size: auto;
+}
