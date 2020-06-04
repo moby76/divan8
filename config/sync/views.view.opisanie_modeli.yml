@@ -20,6 +20,7 @@ dependencies:
     - field.storage.taxonomy_term.field_model_desc
     - field.storage.taxonomy_term.field_scheme
     - image.style.scale_330_330
+    - image.style.skhemy_300_200
     - node.type.sleeps
     - node.type.soft_fur
   module:
@@ -1169,16 +1170,17 @@ display:
             caption:
               title: '0'
               alt: '0'
-            image_style: scale_330_330
+            image_style: skhemy_300_200
             thumbnail_style: ''
+            responsive_image_style: ''
             media_switch: colorbox
             ratio: ''
             box_style: ''
             box_caption: ''
             box_caption_custom: ''
-            grid: null
-            grid_medium: null
-            grid_small: null
+            grid: 3
+            grid_medium: 2
+            grid_small: 1
             current_view_mode: _custom
           group_column: entity_id
           group_columns: {  }

@@ -111,8 +111,9 @@
     position: relative;
 } 
 .slick img {
-    /* margin: 0 15px; */
+    /* margin: 0 50px; */
 }
+
 /* ================================================================================================================================================= */
 
 .card-footer{
@@ -128,7 +129,7 @@
 }
 
 .slick-initialized .slick-slide{
-    /* margin: 0 50px; */
+    /* margin-right: 50px; */
 }
 
 /* .slide__link{
@@ -136,8 +137,7 @@
     } */
 
 .slide__content, .grid__content {
-        /* position: relative;
-        min-height: 411px; */
+    margin: 0 50px 0 50px;
 }     
 
 .slick--skin--classic .slide__caption{
@@ -410,7 +410,7 @@ ul.dropdown-menu li a:hover{
 }
 
 .slick-list{
-    display: list-item;
+    /* display: list-item; */
 }
 
 /* ----------------------------------------------------------------- Темизация views Описание товара на странице материала ---------------------------------- */
@@ -434,6 +434,7 @@ ul.dropdown-menu li a:hover{
 
 .field--name-field-scheme .field__item{
     float: left;
+    margin: 0 1rem 0 0;
 }
 
 .tab-content>.tab-pane .field__label{
@@ -450,7 +451,7 @@ ul.dropdown-menu li a:hover{
 }
 
 .description-right{
-    border-left: dashed 1px #d2d2d2;
+    /* border-left: dashed 1px #d2d2d2; */
 }
 .card-model-desc .card-title{
     color: #040404;
