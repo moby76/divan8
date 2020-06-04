@@ -1,4 +1,4 @@
-uuid: ed416e9d-7350-467f-bfc7-83cbdfd1671b
+uuid: a6bce44f-4eca-4b10-9423-68b7c2e5be70
 langcode: ru
 status: open
 dependencies: {  }
@@ -8,11 +8,11 @@ weight: 0
 uid: 1
 template: false
 archive: false
-id: similar_soft_order
-title: 'Заказать комплект мягкой мебели'
+id: bed_order_form
+title: 'Заказать комплект кровати'
 description: ''
 category: ''
-elements: "annotation:\n  '#type': webform_markup\n  '#markup': |\n    <div class=\"alert alert-info\" role=\"alert\">\n    <h4 class=\"alert-heading\">Заполните форму заказа</h4>\n    \n    <hr />\n    <p class=\"mb-0\">Вы можете заказать точно такой-же комплект мягкой мебели заполнив данную форму. Это обойдётся немного дешевле чем покупать готовый товар. Только придётся подождать. Срок изготовления от 14 дней.</p>\n    </div>\n    \ndatas_fieldset:\n  '#type': fieldset\n  '#title': 'Укажите Ваши данные'\n  '#attributes':\n    class:\n      - datas-fieldset\n  yours_name:\n    '#type': textfield\n    '#title': 'Ваше имя'\n    '#title_display': invisible\n    '#placeholder': 'Как к Вам обращаться'\n    '#autocomplete': 'off'\n    '#attributes':\n      class:\n        - col-12\n  datas:\n    '#type': webform_flexbox\n    '#align_items': center\n    phone_text_field:\n      '#type': textfield\n      '#title': 'Телефон *'\n      '#autocomplete': ''\n      '#input_mask': '+7(999) 999-9999'\n      '#required': true\n      '#required_error': 'Поле не заполнено'\n    your_email:\n      '#type': email\n      '#title': 'Ваш e-mail'\n      '#autocomplete': ''\nask_your_question:\n  '#type': textarea\n  '#title': 'Задать вопрос'\n  '#description': 'Задайте свой вопрос или пожелания'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Отправить запрос'\n  '#submit__attributes':\n    class:\n      - 'btn btn-info p-4'"
+elements: "annotation:\n  '#type': webform_markup\n  '#markup': |\n    <div class=\"alert alert-info\" role=\"alert\">\n    <h4 class=\"alert-heading\">Заполните форму заказа</h4>\n    \n    <hr />\n    <p class=\"mb-0\">Вы можете заказать точно такой-же комплект кровати&nbsp;заполнив данную форму. Это обойдётся немного дешевле чем покупать готовый товар. Только придётся подождать. Срок изготовления от 14 дней.</p>\n    </div>\n    \ndatas_fieldset:\n  '#type': fieldset\n  '#title': 'Укажите Ваши данные'\n  '#attributes':\n    class:\n      - datas-fieldset\n  yours_name:\n    '#type': textfield\n    '#title': 'Ваше имя'\n    '#title_display': invisible\n    '#placeholder': 'Как к Вам обращаться'\n    '#autocomplete': 'off'\n    '#attributes':\n      class:\n        - col-12\n  datas:\n    '#type': webform_flexbox\n    '#align_items': center\n    phone_text_field:\n      '#type': textfield\n      '#title': 'Телефон *'\n      '#autocomplete': ''\n      '#input_mask': '+7(999) 999-9999'\n      '#required': true\n      '#required_error': 'Поле не заполнено'\n    your_email:\n      '#type': email\n      '#title': 'Ваш e-mail'\n      '#autocomplete': ''\nask_your_question:\n  '#type': textarea\n  '#title': 'Задать вопрос'\n  '#description': 'Задайте свой вопрос или пожелания'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Отправить запрос'\n  '#submit__attributes':\n    class:\n      - 'btn btn-info p-4'"
 css: ''
 javascript: ''
 settings:
