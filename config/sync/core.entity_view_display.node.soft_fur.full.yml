@@ -30,10 +30,13 @@ dependencies:
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
     - field.field.node.soft_fur.field_width
+    - image.style.max_1300x1300
+    - image.style.medium
     - node.type.soft_fur
   module:
     - ds
     - layout_builder
+    - slick
     - user
     - webform
 third_party_settings:
@@ -64,13 +67,17 @@ third_party_settings:
           top_left:
             wrapper: div
             classes:
-              col-sm-6: col-sm-6
+              col-sm-8: col-sm-8
+              col-md-8: col-md-8
+              col-lg-8: col-lg-8
             add_region_classes: 1
             attributes: ''
           top_right:
             wrapper: div
             classes:
-              col-sm-6: col-sm-6
+              col-sm-4: col-sm-4
+              col-md-4: col-md-4
+              col-lg-4: col-lg-4
             add_region_classes: 1
             attributes: ''
           middle:
@@ -100,33 +107,24 @@ third_party_settings:
             add_region_classes: 1
             attributes: ''
     regions:
-      top:
-        - 'dynamic_block_field:node-foto'
+      top_left:
+        - field_foto
+      top_right:
+        - field_where
+        - field_similar_soft_order
       middle:
         - 'dynamic_block_field:node-opisanie_modeli'
-        - field_similar_soft_order
       bottom:
         - 'dynamic_block_field:node-that_collection'
     fields:
-      'dynamic_block_field:node-foto':
-        plugin_id: 'dynamic_block_field:node-foto'
-        weight: 0
-        label: hidden
-        formatter: default
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
       'dynamic_block_field:node-opisanie_modeli':
         plugin_id: 'dynamic_block_field:node-opisanie_modeli'
-        weight: 1
+        weight: 3
         label: hidden
         formatter: default
       'dynamic_block_field:node-that_collection':
         plugin_id: 'dynamic_block_field:node-that_collection'
-        weight: 3
+        weight: 4
         label: hidden
         formatter: default
         ft:
@@ -140,14 +138,102 @@ targetEntityType: node
 bundle: soft_fur
 mode: full
 content:
+  field_foto:
+    type: slick_media
+    weight: 0
+    region: top_left
+    label: hidden
+    settings:
+      style: ''
+      optionset: custom
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: max_1300x1300
+      responsive_image_style: ''
+      thumbnail_effect: grid
+      thumbnail_position: ''
+      media_switch: colorbox
+      box_style: ''
+      thumbnail_style: medium
+      box_media_style: ''
+      ratio: ''
+      box_caption: ''
+      view_mode: slick
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      class: ''
+      cache: 0
+      current_view_mode: full
+      vanilla: false
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      thumbnail_caption: ''
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      id: ''
+      overlay: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_similar_soft_order:
     type: webform_entity_reference_entity_view
     weight: 2
-    region: middle
+    region: top_right
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
+  field_where:
+    type: entity_reference_entity_view
+    weight: 1
+    region: top_right
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: 'Наличие товара'
+            lb-col: true
+            classes: {  }
 hidden:
   body: true
   field_age_kategory: true
@@ -157,7 +243,6 @@ hidden:
   field_depth: true
   field_depth_full: true
   field_features: true
-  field_foto: true
   field_height: true
   field_mekhanizm: true
   field_new_item: true
@@ -172,7 +257,6 @@ hidden:
   field_soft_fur_model: true
   field_text_promoushn: true
   field_tip_mebeli: true
-  field_where: true
   field_width: true
   langcode: true
   links: true

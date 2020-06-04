@@ -473,6 +473,10 @@ ul.dropdown-menu li a:hover{
     /* color: #2b556d; */
     margin:  0 8px 0 0;
 }
+
+.blazy--view--opisanie-modeli--block-1 .list-group-item{
+    border: dashed #6f6f6f 2px;
+}
                             /* ----------------------------------- Стили для создания "read more" ----------------------- */
 
 #summary {
@@ -601,13 +605,15 @@ tr.even{
     border-radius: 0.1rem;
 } */
 .webform-submission-similar-soft-order-form{
-    /* background: #f5f5f5; */
-    padding: 2rem 2rem 1rem 2rem;
-    border: 5px #055a8e solid;
+    background: #ffffff;
+    padding: 1rem 1rem 1rem 1rem;
+    border: 3px #055a8e solid;
     /* color: white; */
     /* border-radius: 5px; */
     box-shadow: 0px 5px 7px 0px #969696;
-    margin: 0 0 1rem 0;
+    /* margin: 0 0 1rem 0; */
+    height: 476px;
+    overflow-y: auto;
 }
 .alert-info {
     color: #efefef;
@@ -618,6 +624,42 @@ tr.even{
 .datas-fieldset{
     background: red;    background: #dcdcdc7d;
     padding: 0 1rem;}
+
+/* .btn .btn-primary{
+    background-image: none;
+    background-color: red;
+} */
+
+.submit{
+    display: block;
+    margin: 0 auto;
+}
+
+.webform-button--next,
+.webform-button--previous{
+    font-size: 1rem;
+    font-weight: 900;
+    /* border-radius: 50%; */
+    border: #a73333 solid 3px;
+    background: none;
+    color: #a73333;
+    vertical-align: middle;
+    padding: 1rem 1rem;
+}  
+
+.webform-button--next{
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    /* margin: 0 -1rem 0 1rem; */
+}
+.webform-button--previous{
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+}
+
+
 /* ------------------------------------------------ Главная страница ---------------------------------------------------------- */
 
 .block-views h2{

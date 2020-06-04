@@ -9,8 +9,7 @@ dependencies:
     - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_config
     - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_model
     - field.field.node.gabarity_dlya_myagkoy_mebeli.field_width
-    - image.style.scale_330_330
-    - image.style.thumbnail
+    - image.style.skhemy_300_200
     - node.type.gabarity_dlya_myagkoy_mebeli
   module:
     - blazy
@@ -56,17 +55,18 @@ content:
     region: main
     label: hidden
     settings:
-      style: ''
-      image_style: scale_330_330
+      style: column
+      image_style: skhemy_300_200
+      responsive_image_style: ''
       media_switch: colorbox
       box_style: ''
-      thumbnail_style: thumbnail
+      thumbnail_style: ''
       ratio: ''
       box_caption: ''
       box_caption_custom: ''
-      grid: null
+      grid: 2
       grid_medium: 2
-      grid_small: 3
+      grid_small: 1
       current_view_mode: vyvod_gabaritov_v_opisanii_tovara
       background: false
       caption:
@@ -79,7 +79,6 @@ content:
       skin: ''
       fx: ''
       box_media_style: ''
-      responsive_image_style: ''
       _uri: ''
       breakpoints: {  }
       sizes: ''
@@ -88,11 +87,32 @@ content:
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: gabarit
+            fi-at: ''
+            suffix: ''
+            lbw: false
             lb-col: false
-            classes: {  }
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
 hidden:
   body: true
   field_soft_fur_config: true

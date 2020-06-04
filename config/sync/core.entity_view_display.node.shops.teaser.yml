@@ -68,9 +68,9 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
+          link: true
           wrapper: h5
           class: block-title
-          link: false
         ft:
           id: default
           settings:
