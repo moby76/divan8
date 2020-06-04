@@ -1,0 +1,15 @@
+uuid: 265ab165-f021-454b-a556-49f66f81eb4b
+langcode: ru
+status: true
+dependencies: {  }
+name: skhemy_300_200
+label: 'Схемы 300*200'
+effects:
+  d9d2fc71-ab11-4673-9336-c2b42876a62e:
+    uuid: d9d2fc71-ab11-4673-9336-c2b42876a62e
+    id: image_scale
+    weight: 1
+    data:
+      width: 280
+      height: null
+      upscale: false
