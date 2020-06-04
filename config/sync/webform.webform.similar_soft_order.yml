@@ -12,7 +12,7 @@ id: similar_soft_order
 title: 'Заказать комплект мягкой мебели'
 description: ''
 category: ''
-elements: "annotation:\n  '#type': webform_markup\n  '#markup': |\n    <div class=\"alert alert-info\" role=\"alert\">\n    <h4 class=\"alert-heading\">Заполните форму заказа</h4>\n    \n    <hr />\n    <p class=\"mb-0\">Вы можете заказать точно такой-же комплект мягкой мебели заполнив данную форму. Это обойдётся немного дешевле чем покупать готовый товар. Только придётся подождать. Срок изготовления от 14 дней.</p>\n    </div>\n    \ndatas_fieldset:\n  '#type': fieldset\n  '#title': 'Укажите Ваши данные'\n  '#attributes':\n    class:\n      - datas-fieldset\n  yours_name:\n    '#type': textfield\n    '#title': 'Ваше имя'\n    '#title_display': invisible\n    '#placeholder': 'Как к Вам обращаться'\n    '#autocomplete': 'off'\n    '#attributes':\n      class:\n        - col-12\n  datas:\n    '#type': webform_flexbox\n    '#align_items': center\n    phone_text_field:\n      '#type': textfield\n      '#title': 'Телефон *'\n      '#autocomplete': ''\n      '#input_mask': '+7(999) 999-9999'\n      '#required': true\n      '#required_error': 'Поле не заполнено'\n    your_email:\n      '#type': email\n      '#title': 'Ваш e-mail'\n      '#autocomplete': ''\nask_your_question:\n  '#type': textarea\n  '#title': 'Задать вопрос'\n  '#description': 'Задайте свой вопрос или пожелания'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Отправить запрос'\n  '#submit__attributes':\n    class:\n      - 'btn btn-info p-4'"
+elements: "anons:\n  '#type': webform_wizard_page\n  '#title': Анонс\n  '#next_button_label': Заполнить\n  annotation:\n    '#type': webform_markup\n    '#markup': |\n      <div class=\"alert alert-info\" role=\"alert\">\n      <h4 class=\"alert-heading\">Заполните форму заказа</h4>\n      \n      <hr />\n      <p class=\"mb-0\">Вы можете заказать точно такой-же, или подобный&nbsp;комплект мягкой мебели заполнив данную форму. Это обойдётся немного дешевле чем покупать готовый товар.&nbsp;Срок изготовления от 14 дней.</p>\n      </div>\n      \nzapolnite_vashi_dannye:\n  '#type': webform_wizard_page\n  '#title': 'Заполните ваши данные'\n  '#open': true\n  '#prev_button_label': '<'\n  '#next_button_label': '>'\n  datas_fieldset:\n    '#type': fieldset\n    '#title': 'Укажите Ваши данные'\n    '#attributes':\n      class:\n        - datas-fieldset\n    yours_name:\n      '#type': textfield\n      '#title': 'Ваше имя'\n      '#title_display': invisible\n      '#placeholder': 'Как к Вам обращаться'\n      '#autocomplete': 'off'\n      '#attributes':\n        class:\n          - col-12\n    datas:\n      '#type': webform_flexbox\n      '#align_items': center\n      phone_text_field:\n        '#type': textfield\n        '#title': 'Телефон *'\n        '#autocomplete': ''\n        '#input_mask': '+7(999) 999-9999'\n        '#required': true\n        '#required_error': 'Поле не заполнено'\n      your_email:\n        '#type': email\n        '#title': 'Ваш e-mail'\n        '#autocomplete': ''\nzadat_vopros:\n  '#type': webform_wizard_page\n  '#title': 'Задать вопрос'\n  '#prev_button_label': '<'\n  ask_your_question:\n    '#type': textarea\n    '#title': 'Задать вопрос'\n    '#description': 'Задайте свой вопрос или пожелания'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Отправить запрос'\n  '#submit__attributes':\n    class:\n      - 'btn btn-info p-4 submit'"
 css: ''
 javascript: ''
 settings:
@@ -77,13 +77,13 @@ settings:
   wizard_progress_bar: true
   wizard_progress_pages: false
   wizard_progress_percentage: false
-  wizard_progress_link: false
+  wizard_progress_link: true
   wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
-  wizard_track: ''
+  wizard_track: name
   preview: 0
   preview_label: ''
   preview_title: ''
