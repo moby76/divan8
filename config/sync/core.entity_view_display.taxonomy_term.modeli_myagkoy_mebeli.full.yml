@@ -7,8 +7,7 @@ dependencies:
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_dim
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_model_desc
     - field.field.taxonomy_term.modeli_myagkoy_mebeli.field_scheme
-    - image.style.medium
-    - responsive_image.styles.wide
+    - image.style.max_2600x2600
     - taxonomy.vocabulary.modeli_myagkoy_mebeli
   module:
     - ds
@@ -99,18 +98,18 @@ content:
     region: top_left
     label: hidden
     settings:
-      style: grid
+      style: ''
       optionset: custom
       optionset_thumbnail: ''
       skin: classic
       skin_thumbnail: ''
-      image_style: ''
-      responsive_image_style: wide
+      image_style: max_2600x2600
+      responsive_image_style: ''
       thumbnail_effect: grid
       thumbnail_position: ''
       media_switch: colorbox
       box_style: ''
-      thumbnail_style: medium
+      thumbnail_style: max_2600x2600
       ratio: ''
       box_caption: ''
       box_caption_custom: ''
