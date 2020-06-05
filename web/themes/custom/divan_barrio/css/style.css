@@ -114,6 +114,7 @@
 .slick-list{
     max-height: 400px;
 }
+
 .slick img {
     /* margin: 0 50px; */
 }
@@ -660,7 +661,7 @@ tr.even{
 .webform-button--previous{
     position: absolute;
     left: 2rem;
-    bottom: 1rem;
+    /* bottom: 1rem; */
 }
 
 
