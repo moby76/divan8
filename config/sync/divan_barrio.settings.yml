@@ -61,7 +61,7 @@ bootstrap_barrio_region_class_featured_top: row
 bootstrap_barrio_region_clean_breadcrumb: 1
 bootstrap_barrio_region_class_breadcrumb: ''
 bootstrap_barrio_region_clean_content: 0
-bootstrap_barrio_region_class_content: 'col-10 offset-1'
+bootstrap_barrio_region_class_content: col-12
 bootstrap_barrio_region_clean_sidebar_first: 0
 bootstrap_barrio_region_class_sidebar_first: ''
 bootstrap_barrio_region_clean_sidebar_second: 1

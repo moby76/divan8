@@ -110,6 +110,11 @@
     margin-top: 250px;
     position: relative;
 } 
+
+.slick-list{
+    max-height: 400px;
+}
+
 .slick img {
     /* margin: 0 50px; */
 }
@@ -656,7 +661,7 @@ tr.even{
 .webform-button--previous{
     position: absolute;
     left: 2rem;
-    bottom: 1rem;
+    /* bottom: 1rem; */
 }
 
 
@@ -702,7 +707,7 @@ tr.even{
 }
 
 .block-views {
-    margin: 1rem -2rem 0 -2rem;
+    /* margin: 1rem -2rem 0 -2rem; */
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
