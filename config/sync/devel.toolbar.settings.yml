@@ -7,8 +7,6 @@ toolbar_items:
   - devel.entity_info_page
   - devel.admin_settings_link
   - devel.menu_rebuild
-  - devel.reinstall
-  - devel.configs_list
 _core:
   default_config_hash: IQjf_ytthngZTAk_MU8-74VecArWD3G5g0oEH6PM6GA
 langcode: ru
