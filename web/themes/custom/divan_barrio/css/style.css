@@ -655,7 +655,7 @@ tr.even{
 .webform-button--next{
     position: absolute;
     right: 2rem;
-    bottom: 1rem;
+    /* bottom: 1rem; */
     /* margin: 0 -1rem 0 1rem; */
 }
 .webform-button--previous{
