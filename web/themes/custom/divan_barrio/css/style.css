@@ -610,6 +610,7 @@ tr.even{
     border-radius: 0.1rem;
 } */
 .webform-submission-similar-soft-order-form{
+    position: relative;
     background: #ffffff;
     padding: 1rem 1rem 1rem 1rem;
     border: 3px #055a8e solid;
@@ -654,13 +655,13 @@ tr.even{
 
 .webform-button--next{
     position: absolute;
-    right: 2rem;
+    right: 1rem;
     /* bottom: 1rem; */
     /* margin: 0 -1rem 0 1rem; */
 }
 .webform-button--previous{
     position: absolute;
-    left: 2rem;
+    left: 1rem;
     /* bottom: 1rem; */
 }
 
