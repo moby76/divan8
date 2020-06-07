@@ -1500,7 +1500,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card  h-100  shadow'
+          admin_label: 'container h-100  shadow'
           label: ''
           exclude: false
           alter:
@@ -1547,7 +1547,7 @@ display:
             - fieldset_3
           wrapper: div
           legend: ''
-          classes: 'card  h-100  shadow'
+          classes: 'container  h-100  shadow'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
