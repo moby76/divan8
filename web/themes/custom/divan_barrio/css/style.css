@@ -281,12 +281,24 @@
 
 .navbar-light .navbar-brand{
     margin: 0 0 0 1rem;
+    height: 3.5rem;
+    width: 5rem;
 }                           
+
+.navbar-brand img{
+    padding: 0.25rem;
+    /* background: #ed812b; */
+    border-radius: 100%;
+    box-shadow: 0 1px 4px 0px #1f1f1f;
+    background: radial-gradient(circle at center, rgb(8, 147, 232) 0%, rgb(5, 25, 37) 79%, rgb(8, 46, 70) 100%);   
+}
+
+
 
 /* ----------------------------------------------------- navbar-top ----------------------------------------------------- */
 
 #navbar-top{
-    padding: 20px 0 10px 0;
+    padding: 0.5rem 0;
 }
 
 /* -------------------------------------------------- Меню основное ------------------------------------------------- */
@@ -372,7 +384,7 @@ ul.dropdown-menu li a:hover{
 .dropdown-item .fa-bed,
 .dropdown-item .fa-layer-group,
 .dropdown-item .fa-paint-roller{
-    font-size: 3em;
+    font-size: 2rem;
     color: #ff8300;
     vertical-align: middle;
     /* background: #fbfbfb; */
@@ -380,7 +392,7 @@ ul.dropdown-menu li a:hover{
     padding: 0 10px 0 0;
     margin: 0 10px 0 0;
     /* height: 0.7em; */
-    width: 100px;
+    /* width: 100px; */
 }
 
 /* .dropdown-item .fa-project-diagram{
@@ -550,9 +562,8 @@ tr.even{
 
 .social-block{
     background: #fbfbfb;
-    padding: 10px 0;
+    padding: 0.5rem 0;
     border-radius: 50px;
-    /* border: #ff8300 solid 2px; */
 }
 
 .social-item{
@@ -561,14 +572,14 @@ tr.even{
 
 /* Style all font awesome icons */
 .fa {
-    padding: 13px 7px;
+    padding: 9px 7px;
     /* font-size: 30px; */
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    color: white;
+    color: white
   }
   
   /* Add a hover effect if you want */
