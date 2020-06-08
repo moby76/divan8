@@ -11,7 +11,7 @@ dependencies:
     - divan_barrio
 third_party_settings:
   block_class:
-    classes: col-6
+    classes: 'col-6 my-auto'
 id: telefon
 theme: divan_barrio
 region: top_header
