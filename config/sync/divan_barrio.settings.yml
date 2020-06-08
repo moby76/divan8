@@ -12,7 +12,7 @@ bootstrap_barrio_button_outline: 0
 bootstrap_barrio_navbar_toggle: navbar-toggleable-sm
 bootstrap_barrio_navbar_container: 0
 bootstrap_barrio_navbar_top_position: ''
-bootstrap_barrio_navbar_top_color: ''
+bootstrap_barrio_navbar_top_color: navbar-light
 bootstrap_barrio_navbar_top_background: ''
 bootstrap_barrio_navbar_position: ''
 bootstrap_barrio_navbar_color: navbar-light
@@ -35,7 +35,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://comf_2.png'
+  path: 'public://logo-6_0.png'
 favicon:
   use_default: 1
 bootstrap_barrio_region_clean_top_header: 0
