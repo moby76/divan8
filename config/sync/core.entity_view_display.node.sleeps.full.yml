@@ -107,10 +107,17 @@ third_party_settings:
         - field_similar_bed_order
       middle:
         - 'dynamic_block_field:node-opisanie_krovati'
+      bottom:
+        - 'dynamic_block_field:node-that_collection_beds'
     fields:
       'dynamic_block_field:node-opisanie_krovati':
         plugin_id: 'dynamic_block_field:node-opisanie_krovati'
         weight: 3
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-that_collection_beds':
+        plugin_id: 'dynamic_block_field:node-that_collection_beds'
+        weight: 4
         label: hidden
         formatter: default
 id: node.sleeps.full

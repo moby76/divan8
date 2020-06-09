@@ -1,5 +1,5 @@
 id: that_collection
-label: 'Из той-же коллекции'
+label: 'Из той-же коллекции(Мягкая мебель)'
 ui_limit: soft_fur|full
 properties:
   block: 'views_block:soft_fur_that_collection-block_1'
