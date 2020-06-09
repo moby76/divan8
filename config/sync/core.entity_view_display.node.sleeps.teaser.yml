@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.sleeps.field_razmer_matrasa
     - field.field.node.sleeps.field_razmer_matrasa_2
     - field.field.node.sleeps.field_set_available
+    - field.field.node.sleeps.field_similar_bed_order
     - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
     - field.field.node.sleeps.field_text_promoushn
@@ -130,6 +131,7 @@ hidden:
   field_razmer_matrasa: true
   field_razmer_matrasa_2: true
   field_set_available: true
+  field_similar_bed_order: true
   field_sleep_config: true
   field_sleep_model: true
   field_text_promoushn: true

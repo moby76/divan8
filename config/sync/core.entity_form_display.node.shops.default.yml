@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.shops.body
     - field.field.node.shops.field_hours
     - field.field.node.shops.field_location
+    - field.field.node.shops.field_owner
     - field.field.node.shops.field_phone
     - field.field.node.shops.field_podrobno
     - node.type.shops
@@ -65,6 +66,12 @@ content:
       explicite_actions_address_field: ''
     third_party_settings: {  }
     type: geolocation_googlegeocoder
+    region: content
+  field_owner:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_phone:
     weight: 9
@@ -133,6 +140,11 @@ content:
       placeholder: ''
       match_limit: 10
     region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   body: true

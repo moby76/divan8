@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.shops.body
     - field.field.node.shops.field_hours
     - field.field.node.shops.field_location
+    - field.field.node.shops.field_owner
     - field.field.node.shops.field_phone
     - field.field.node.shops.field_podrobno
     - node.type.shops
@@ -60,11 +61,6 @@ third_party_settings:
               col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
-          ds_hidden:
-            wrapper: div
-            classes: {  }
-            add_region_classes: 1
-            attributes: ''
     regions:
       top:
         - links
@@ -76,8 +72,6 @@ third_party_settings:
         - field_hours
       bottom:
         - node_link
-      ds_hidden:
-        - langcode
     fields:
       node_link:
         plugin_id: node_link
@@ -85,7 +79,7 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          'link text': 'Read more'
+          'link text': Подробнее
           'link class': 'btn btn-default'
           wrapper: h1
           class: block-title
@@ -183,15 +177,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: right
-  langcode:
-    type: language
-    weight: 6
-    region: ds_hidden
-    label: above
-    settings:
-      link_to_entity: false
-      native_language: false
-    third_party_settings: {  }
   links:
     weight: 0
     region: top
@@ -199,3 +184,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_owner: true
+  langcode: true

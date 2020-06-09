@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.sleeps.field_razmer_matrasa
     - field.field.node.sleeps.field_razmer_matrasa_2
     - field.field.node.sleeps.field_set_available
+    - field.field.node.sleeps.field_similar_bed_order
     - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
     - field.field.node.sleeps.field_text_promoushn
@@ -36,6 +37,7 @@ dependencies:
     - options
     - text
     - user
+    - webform
 id: node.sleeps.default
 targetEntityType: node
 bundle: sleeps
@@ -201,6 +203,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_similar_bed_order:
+    weight: 25
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
     region: content
   field_sleep_config:
     weight: 15

@@ -1,0 +1,23 @@
+uuid: 36a75bbf-8f88-446e-aea3-30e728372334
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_owner
+    - node.type.shops
+id: node.shops.field_owner
+field_name: field_owner
+entity_type: node
+bundle: shops
+label: Собственник
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Наш магазин'
+  off_label: 'Магазин партнёров'
+field_type: boolean
