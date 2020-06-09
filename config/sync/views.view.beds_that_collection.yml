@@ -1,4 +1,4 @@
-uuid: 986dc93c-c4e1-4274-a868-d413dc0d4f00
+uuid: 24753a44-d376-4920-85f0-15aa91fdae93
 langcode: ru
 status: true
 dependencies:
@@ -6,18 +6,19 @@ dependencies:
     - field.storage.node.field_foto
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
-    - field.storage.node.field_soft_fur_config
-    - node.type.soft_fur
+    - field.storage.node.field_sleep_config
+    - node.type.sleeps
     - responsive_image.styles.narrow
-    - taxonomy.vocabulary.modeli_myagkoy_mebeli
+    - taxonomy.vocabulary.sleep_models
   module:
     - blazy
     - node
+    - options
     - taxonomy
     - user
     - views_fieldsets
-id: soft_fur_that_collection
-label: 'Мягкая мебель из той-же коллекции'
+id: beds_that_collection
+label: 'Кровати из той-же коллекции'
 module: views
 description: ''
 tag: ''
@@ -577,16 +578,17 @@ display:
           hide_alter_empty: true
           fields:
             - field_soft_fur_config
+            - field_sleep_config
           wrapper: div
           legend: ''
           classes: card-body
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
-        field_soft_fur_config:
-          id: field_soft_fur_config
-          table: node__field_soft_fur_config
-          field: field_soft_fur_config
+        field_sleep_config:
+          id: field_sleep_config
+          table: node__field_sleep_config
+          field: field_sleep_config
           relationship: none
           group_type: group
           admin_label: ''
@@ -631,11 +633,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -894,14 +895,44 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            soft_fur: soft_fur
+            sleeps: sleeps
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
       sorts:
         created:
           id: created
@@ -918,21 +949,63 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Мягкая мебель из той-же коллекции'
+      title: 'Кровати из той-же коллекции'
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
-        field_soft_fur_model:
-          id: field_soft_fur_model
-          table: node__field_soft_fur_model
-          field: field_soft_fur_model
+        field_sleep_model:
+          id: field_sleep_model
+          table: node__field_sleep_model
+          field: field_sleep_model
           relationship: none
           group_type: group
-          admin_label: 'field_soft_fur_model: Taxonomy term'
+          admin_label: 'field_sleep_model: Taxonomy term'
           required: false
           plugin_id: standard
       arguments:
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: field_sleep_model
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: 'Другие товары модели {{ arguments.tid }}'
+          default_argument_type: taxonomy_tid
+          default_argument_options:
+            node: true
+            limit: true
+            vids:
+              sleep_models: sleep_models
+            anyall: +
+            term_page: '0'
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy
         nid:
           id: nid
           table: node_field_data
@@ -969,48 +1042,6 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
-        tid:
-          id: tid
-          table: taxonomy_term_field_data
-          field: tid
-          relationship: field_soft_fur_model
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: 'Другие товары модели {{ arguments.tid }}'
-          default_argument_type: taxonomy_tid
-          default_argument_options:
-            node: true
-            limit: true
-            vids:
-              modeli_myagkoy_mebeli: modeli_myagkoy_mebeli
-            anyall: +
-            term_page: '0'
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          entity_type: taxonomy_term
-          entity_field: tid
-          plugin_id: taxonomy
       display_extenders: {  }
       use_ajax: true
     cache_metadata:
@@ -1026,7 +1057,7 @@ display:
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_price_from'
-        - 'config:field.storage.node.field_soft_fur_config'
+        - 'config:field.storage.node.field_sleep_config'
   block_1:
     display_plugin: block
     id: block_1
@@ -1048,4 +1079,4 @@ display:
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_price_from'
-        - 'config:field.storage.node.field_soft_fur_config'
+        - 'config:field.storage.node.field_sleep_config'
