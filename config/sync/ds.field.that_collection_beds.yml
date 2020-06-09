@@ -1,0 +1,11 @@
+id: that_collection_beds
+label: 'Из той-же коллекции(Кровати)'
+ui_limit: sleeps|full
+properties:
+  block: 'views_block:beds_that_collection-block_1'
+  use_block_title: true
+  add_block_wrappers: true
+type: block
+type_label: 'Block field'
+entities:
+  node: node

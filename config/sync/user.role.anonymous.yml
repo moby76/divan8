@@ -36,6 +36,7 @@ permissions:
   - 'view dynamic_block_field:node-opisanie_krovati on node'
   - 'view dynamic_block_field:node-opisanie_modeli on node'
   - 'view dynamic_block_field:node-that_collection on node'
+  - 'view dynamic_block_field:node-that_collection_beds on node'
   - 'view dynamic_block_field:node-where_buy on node'
   - 'view media'
   - 'view media_name on media'
