@@ -1,0 +1,32 @@
+uuid: 914b271c-8130-4af0-acff-1638bc99e370
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_similar_bed_order
+    - node.type.sleeps
+    - webform.webform.bed_order_form
+  module:
+    - webform
+id: node.sleeps.field_similar_bed_order
+field_name: field_similar_bed_order
+entity_type: node
+bundle: sleeps
+label: 'Заказать подобный комплект'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    target_uuid: a6bce44f-4eca-4b10-9423-68b7c2e5be70
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

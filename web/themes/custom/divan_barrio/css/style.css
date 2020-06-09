@@ -281,7 +281,7 @@
 
 .navbar-light .navbar-brand{
     margin: 0 0 0 1rem;
-    height: 3.5rem;
+    height: 5.5rem;
     width: 5rem;
 }                           
 
@@ -620,7 +620,8 @@ tr.even{
 .form-control{
     border-radius: 0.1rem;
 } */
-.webform-submission-similar-soft-order-form{
+.webform-submission-similar-soft-order-form,
+.webform-submission-bed-order-form-form{
     position: relative;
     background: #ffffff;
     padding: 1rem 1rem 1rem 1rem;
@@ -657,9 +658,9 @@ tr.even{
     font-size: 1rem;
     font-weight: 900;
     /* border-radius: 50%; */
-    border: #a73333 solid 3px;
+    /* border: #a73333 solid 3px; */
     background: none;
-    color: #a73333;
+    color: #055a8e;
     vertical-align: middle;
     padding: 1rem 1rem;
 }  
