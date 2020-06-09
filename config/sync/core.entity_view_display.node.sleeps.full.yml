@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.sleeps.field_razmer_matrasa
     - field.field.node.sleeps.field_razmer_matrasa_2
     - field.field.node.sleeps.field_set_available
+    - field.field.node.sleeps.field_similar_bed_order
     - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
     - field.field.node.sleeps.field_text_promoushn
@@ -35,6 +36,7 @@ dependencies:
     - ds
     - slick
     - user
+    - webform
 third_party_settings:
   ds:
     layout:
@@ -102,12 +104,13 @@ third_party_settings:
         - field_foto
       top_right:
         - field_where
+        - field_similar_bed_order
       middle:
         - 'dynamic_block_field:node-opisanie_krovati'
     fields:
       'dynamic_block_field:node-opisanie_krovati':
         plugin_id: 'dynamic_block_field:node-opisanie_krovati'
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
 id: node.sleeps.full
@@ -180,6 +183,21 @@ content:
     third_party_settings:
       ds:
         ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_similar_bed_order:
+    type: webform_entity_reference_entity_view
+    weight: 2
+    region: top_right
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings:
+      ds:
         ft:
           id: default
           settings:
