@@ -480,10 +480,14 @@ display:
       path: bookmarks
       menu:
         type: normal
-        title: 'My Bookmarks'
+        title: 'Мои закладки'
         description: ''
         weight: 0
         context: '0'
+        menu_name: main
+        parent: ''
+        expanded: false
+        enabled: false
       display_extenders: {  }
     cache_metadata:
       max-age: 0
