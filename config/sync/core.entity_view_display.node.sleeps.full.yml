@@ -105,6 +105,7 @@ third_party_settings:
       top_right:
         - field_where
         - field_similar_bed_order
+        - flag_add_bookmarks
       middle:
         - 'dynamic_block_field:node-opisanie_krovati'
       bottom:
@@ -112,12 +113,12 @@ third_party_settings:
     fields:
       'dynamic_block_field:node-opisanie_krovati':
         plugin_id: 'dynamic_block_field:node-opisanie_krovati'
-        weight: 3
+        weight: 4
         label: hidden
         formatter: default
       'dynamic_block_field:node-that_collection_beds':
         plugin_id: 'dynamic_block_field:node-that_collection_beds'
-        weight: 4
+        weight: 5
         label: hidden
         formatter: default
 id: node.sleeps.full
@@ -228,6 +229,11 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+  flag_add_bookmarks:
+    weight: 3
+    region: top_right
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
   field_age_kategory: true

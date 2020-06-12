@@ -1,0 +1,12 @@
+uuid: ed485814-69e8-40f3-8a82-76d634035739
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.add_bookmarks
+id: flagging.add_bookmarks.default
+targetEntityType: flagging
+bundle: add_bookmarks
+mode: default
+content: {  }
+hidden: {  }

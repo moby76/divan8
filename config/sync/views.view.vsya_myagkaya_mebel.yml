@@ -7,10 +7,12 @@ dependencies:
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
     - field.storage.node.field_soft_fur_config
+    - flag.flag.add_bookmarks
     - node.type.soft_fur
     - responsive_image.styles.narrow
   module:
     - blazy
+    - flag
     - node
     - user
     - views_fieldsets
@@ -324,6 +326,7 @@ display:
           hide_alter_empty: true
           fields:
             - title
+            - link_flag
           wrapper: div
           legend: ''
           classes: row
@@ -395,6 +398,56 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        link_flag:
+          id: link_flag
+          table: flagging
+          field: link_flag
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: flagging
+          plugin_id: flag_link
         fieldset_2:
           id: fieldset_2
           table: views
@@ -923,7 +976,19 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: node_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Флаги
+          required: false
+          flag: add_bookmarks
+          user_scope: current
+          entity_type: node
+          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
       css_class: ''
