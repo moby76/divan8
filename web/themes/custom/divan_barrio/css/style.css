@@ -732,3 +732,36 @@ tr.even{
     background-position: center 100%;
     background-size: auto;
 }
+
+/* --------------------------------------- Флаги ------------------------------------------------- */
+.node--view-mode-full .flag-add-bookmarks{
+    margin-top: 1rem;
+}
+.flag-add-bookmarks.action-unflag{
+    color: red;
+    display: flex;
+    font-size: 2rem;
+}
+.flag-add-bookmarks.action-flag{
+    color: #658a2c;
+    display: flex;
+    font-size: 2rem;
+}
+
+.flag-add-bookmarks a,
+.flag-add-bookmarks a:hover{
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0 0 0 0.5rem;
+    font-size: initial;
+}
+
+/* ----------------------------------------------------- список товаров (закладки) ------------------------------------------- */
+
+.views-field-field-available{
+    color: black;
+}
+
+.fa-ruble-sign{
+    color: #737373;
+}
