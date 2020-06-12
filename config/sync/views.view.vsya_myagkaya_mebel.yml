@@ -408,8 +408,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<div class="col-5">{{ link_flag }}</div>'
             make_link: false
             path: ''
             absolute: false
