@@ -2235,55 +2235,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: "    <div class=\"card h-100 shadow\">\r\n        <div class=\"card-header bg-transparent\">\r\n            <h4 class=\"card-title text-info text-right \">{{ field_price_base }}</h4>\r\n          </div>\r\n        <div class=\"card-img-top image-wrapper\" width=\"100%\">{{ field_foto }}</div>\r\n          <div class=\"card-body\">\r\n          </div>\r\n          <div class=\"card-footer text-muted bg-white\">\r\n            <a href=\"{{ view_node }}\" class=\"btn btn-outline-info\">ПОДРОБНЕЕ...</a>\r\n          </div>\r\n    </div>"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
         fieldset:
           id: fieldset
           table: views
@@ -2532,8 +2483,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<div class="col-5">{{ link_flag }}</div>'
             make_link: false
             path: ''
             absolute: false
@@ -2572,60 +2523,6 @@ display:
           hide_alter_empty: true
           entity_type: flagging
           plugin_id: flag_link
-        flagged:
-          id: flagged
-          table: flagging
-          field: flagged
-          relationship: flag_relationship
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: unicode-yes-no
-          type_custom_true: ''
-          type_custom_false: ''
-          not: 0
-          entity_type: flagging
-          plugin_id: flag_flagged
         fieldset_3:
           id: fieldset_3
           table: views
