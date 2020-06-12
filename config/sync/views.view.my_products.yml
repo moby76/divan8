@@ -3,7 +3,10 @@ langcode: ru
 status: true
 dependencies:
   config:
+    - field.storage.node.field_available
     - field.storage.node.field_foto
+    - field.storage.node.field_price_base
+    - field.storage.node.field_price_from
     - flag.flag.add_bookmarks
     - image.style.medium
   module:
@@ -76,39 +79,55 @@ display:
           row_class: ''
           default_row_class: true
           override: 1
-          sticky: 1
+          sticky: 0
           caption: ''
           summary: ''
           description: ''
           columns:
+            field_price_from: field_price_from
             title: title
             field_foto: field_foto
+            field_price_base: field_price_base
             flagged: flagged
             link_flag: link_flag
           info:
+            field_price_from:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
             title:
               sortable: 0
               default_sort_order: asc
-              align: views-align-center
+              align: ''
               separator: ''
               empty_column: 0
               responsive: ''
             field_foto:
-              align: views-align-left
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_price_base:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
               separator: ''
               empty_column: 0
               responsive: ''
             flagged:
               sortable: 0
               default_sort_order: asc
-              align: views-align-center
+              align: ''
               separator: ''
               empty_column: 0
               responsive: ''
             link_flag:
               sortable: 0
               default_sort_order: asc
-              align: views-align-center
+              align: ''
               separator: ''
               empty_column: 0
               responsive: ''
@@ -116,10 +135,10 @@ display:
           empty_table: 0
           responsive: 1
           bootstrap_styles:
-            hover: hover
-            condensed: condensed
             striped: 0
             bordered: 0
+            hover: 0
+            condensed: 0
       row:
         type: fields
         options:
@@ -128,6 +147,70 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
+        field_price_from:
+          id: field_price_from
+          table: node__field_price_from
+          field: field_price_from
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -232,6 +315,135 @@ display:
           group_columns: {  }
           group_rows: true
           delta_limit: 1
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_available:
+          id: field_available
+          table: node__field_available
+          field: field_available
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Наличие товара'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: custom
+            format_custom_true: 'В наличии'
+            format_custom_false: 'Под заказ'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_price_base:
+          id: field_price_base
+          table: node__field_price_base
+          field: field_price_base
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "    <div class=\"row d-flex justify-content-center\">\r\n  <h3><span class=\"price-base badge pr-4 pl-4 pt-3 pb-3 mr-3 badge-danger\">{{ field_price_base }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   "
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "    <div class=\"row d-flex justify-content-center\">\r\n  <h3><span class=\"price-base badge pr-4 pl-4 pt-3 pb-3 mr-3 badge-warning\">от&nbsp; {{ field_price_from }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n"
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -415,7 +627,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_available'
         - 'config:field.storage.node.field_foto'
+        - 'config:field.storage.node.field_price_base'
+        - 'config:field.storage.node.field_price_from'
   page_1:
     display_plugin: page
     id: page_1
@@ -433,4 +648,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_available'
         - 'config:field.storage.node.field_foto'
+        - 'config:field.storage.node.field_price_base'
+        - 'config:field.storage.node.field_price_from'
