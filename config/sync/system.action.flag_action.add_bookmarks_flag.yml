@@ -1,0 +1,15 @@
+uuid: 7fd9ceed-a369-4d6b-800a-5477feba3b78
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.add_bookmarks
+  module:
+    - flag
+id: flag_action.add_bookmarks_flag
+label: 'Отметить флагом'
+type: node
+plugin: 'flag_action:add_bookmarks_flag'
+configuration:
+  flag_id: add_bookmarks
+  flag_action: flag

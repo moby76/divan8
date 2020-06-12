@@ -1,0 +1,33 @@
+uuid: c6279c9b-20a2-4e00-a2d9-0cb7d637324d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: add_bookmarks
+label: 'В закладки'
+bundles:
+  - sleeps
+  - soft_fur
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Добавить в закладки'
+flag_long: ''
+flag_message: 'Добавлено в закладки'
+unflag_short: 'Удалить из закладок'
+unflag_long: 'Данный товар удалён из закладок'
+unflag_message: 'Удалено из закладок'
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+    new_items: new_items
+  show_as_field: true
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

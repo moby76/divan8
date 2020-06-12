@@ -1,0 +1,15 @@
+uuid: 5f64b527-a629-44f3-bf76-5a1cedfb7740
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.add_bookmarks
+  module:
+    - flag
+id: flag_action.add_bookmarks_unflag
+label: 'Снять флаг'
+type: node
+plugin: 'flag_action:add_bookmarks_unflag'
+configuration:
+  flag_id: add_bookmarks
+  flag_action: unflag
