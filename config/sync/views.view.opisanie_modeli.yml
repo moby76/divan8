@@ -19,6 +19,7 @@ dependencies:
     - field.storage.node.field_width
     - field.storage.taxonomy_term.field_model_desc
     - field.storage.taxonomy_term.field_scheme
+    - image.style.original_watermark
     - image.style.scale_330_330
     - image.style.skhemy_300_200
     - node.type.sleeps
@@ -1175,7 +1176,7 @@ display:
             responsive_image_style: ''
             media_switch: colorbox
             ratio: ''
-            box_style: ''
+            box_style: original_watermark
             box_caption: ''
             box_caption_custom: ''
             grid: 3
