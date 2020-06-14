@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
     - field.storage.node.field_soft_fur_config
+    - image.style.original_watermark
     - node.type.soft_fur
     - responsive_image.styles.narrow
     - taxonomy.vocabulary.modeli_myagkoy_mebeli
@@ -1449,7 +1450,7 @@ display:
             responsive_image_style: narrow
             media_switch: colorbox
             ratio: ''
-            box_style: ''
+            box_style: original_watermark
             box_media_style: ''
             box_caption: ''
             box_caption_custom: ''
