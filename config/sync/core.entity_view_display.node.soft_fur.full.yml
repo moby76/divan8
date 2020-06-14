@@ -30,8 +30,8 @@ dependencies:
     - field.field.node.soft_fur.field_tip_mebeli
     - field.field.node.soft_fur.field_where
     - field.field.node.soft_fur.field_width
-    - image.style.max_1300x1300
     - image.style.medium
+    - image.style.original_watermark
     - node.type.soft_fur
   module:
     - ds
@@ -150,12 +150,12 @@ content:
       optionset_thumbnail: ''
       skin: classic
       skin_thumbnail: ''
-      image_style: max_1300x1300
+      image_style: original_watermark
       responsive_image_style: ''
       thumbnail_effect: grid
       thumbnail_position: ''
       media_switch: colorbox
-      box_style: ''
+      box_style: original_watermark
       thumbnail_style: medium
       box_media_style: ''
       ratio: ''

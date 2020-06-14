@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_price_from
     - field.storage.node.field_soft_fur_config
     - flag.flag.add_bookmarks
+    - image.style.original_watermark
     - node.type.soft_fur
     - responsive_image.styles.narrow
   module:
@@ -560,12 +561,12 @@ display:
             caption:
               field_media_document: '0'
             view_mode: default
-            image_style: ''
+            image_style: original_watermark
             thumbnail_style: ''
             responsive_image_style: narrow
             media_switch: colorbox
             ratio: ''
-            box_style: ''
+            box_style: original_watermark
             box_media_style: ''
             box_caption: ''
             box_caption_custom: ''
