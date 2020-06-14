@@ -1,0 +1,21 @@
+uuid: 6560e5ac-f807-4549-9a9e-3737d89c1385
+langcode: ru
+status: true
+dependencies:
+  module:
+    - image_effects
+name: original_watermark
+label: 'Original + watermark'
+effects:
+  86d432ec-5d1f-4c8c-9b0e-e0c4624e85f7:
+    uuid: 86d432ec-5d1f-4c8c-9b0e-e0c4624e85f7
+    id: image_effects_watermark
+    weight: 1
+    data:
+      watermark_image: sites/default/files/watermark-2.png
+      watermark_width: ''
+      watermark_height: ''
+      placement: center-center
+      x_offset: ''
+      y_offset: ''
+      opacity: 100
