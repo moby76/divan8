@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.gabarity_dlya_myagkoy_mebeli.field_soft_fur_model
     - field.field.node.gabarity_dlya_myagkoy_mebeli.field_width
     - image.style.medium
+    - image.style.original_watermark
     - node.type.gabarity_dlya_myagkoy_mebeli
   module:
     - blazy
@@ -50,8 +51,9 @@ content:
     settings:
       style: ''
       image_style: medium
+      responsive_image_style: ''
       media_switch: colorbox
-      box_style: ''
+      box_style: original_watermark
       thumbnail_style: ''
       ratio: ''
       box_caption: ''
@@ -71,7 +73,6 @@ content:
       skin: ''
       fx: ''
       box_media_style: ''
-      responsive_image_style: ''
       _uri: ''
       breakpoints: {  }
       sizes: ''
