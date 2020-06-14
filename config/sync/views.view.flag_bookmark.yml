@@ -444,7 +444,7 @@ display:
           group: 1
           plugin_id: boolean
       sorts: {  }
-      title: 'My Bookmarks'
+      title: 'Мои закладки'
       header: {  }
       footer: {  }
       empty:
