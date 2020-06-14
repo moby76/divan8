@@ -44,6 +44,9 @@ module:
   field_slideshow: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
+  file_mdm_exif: 0
+  file_mdm_font: 0
   filter: 0
   flag: 0
   flag_bookmark: 0
@@ -54,6 +57,7 @@ module:
   help: 0
   history: 0
   image: 0
+  image_effects: 0
   jquery_ui: 0
   jquery_ui_draggable: 0
   jquery_ui_droppable: 0

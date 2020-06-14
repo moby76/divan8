@@ -1,15 +1,29 @@
 uuid: 265ab165-f021-454b-a556-49f66f81eb4b
 langcode: ru
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: skhemy_300_200
 label: 'Схемы 300*200'
 effects:
   d9d2fc71-ab11-4673-9336-c2b42876a62e:
     uuid: d9d2fc71-ab11-4673-9336-c2b42876a62e
     id: image_scale
-    weight: 1
+    weight: -10
     data:
       width: 280
       height: null
       upscale: false
+  6b4db337-913d-47de-b758-4a90dde6cc97:
+    uuid: 6b4db337-913d-47de-b758-4a90dde6cc97
+    id: image_effects_watermark
+    weight: 3
+    data:
+      watermark_image: sites/default/files/watermark-2.png
+      watermark_width: 50%
+      watermark_height: ''
+      placement: center-center
+      x_offset: ''
+      y_offset: ''
+      opacity: 100
