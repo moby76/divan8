@@ -1,0 +1,33 @@
+uuid: 66f21b48-6018-4ed4-94ac-7b6832fc7f95
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.vsya_myagkaya_mebel
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - divan_barrio
+third_party_settings:
+  block_class:
+    classes: block-filters
+id: raskrytayaformavsya_myagkaya_mebelpage_1
+theme: divan_barrio
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:vsya_myagkaya_mebel-page_1'
+settings:
+  id: 'views_exposed_filter_block:vsya_myagkaya_mebel-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /soft-furniture-all
+    negate: false
+    context_mapping: {  }
