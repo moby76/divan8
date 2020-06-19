@@ -11,10 +11,12 @@ dependencies:
     - image.style.original_watermark
     - node.type.soft_fur
     - responsive_image.styles.narrow
+    - taxonomy.vocabulary.soft_fur_config
   module:
     - blazy
     - flag
     - node
+    - taxonomy
     - user
     - views_fieldsets
 id: vsya_myagkaya_mebel
@@ -49,13 +51,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          submit_button: Применить
+          reset_button: true
+          reset_button_label: Сбросить
+          exposed_sorts_label: Сортировать
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
       pager:
         type: full
         options:
@@ -345,7 +347,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge badge-info pr-3 pl-3 pt-3 pb-3\">{{ title }} </span></h4>\r\n</div>"
+            text: "<div class=\"col-7 pl-0\">  \r\n        <h4><span class=\"badge badge-info pr-2 pl-2 pt-2 pb-2\">{{ title }} </span></h4>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -410,7 +412,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="col-5">{{ link_flag }}</div>'
+            text: '<div class="col-5 p-0">{{ link_flag }}</div>'
             make_link: false
             path: ''
             absolute: false
@@ -881,7 +883,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-2\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
             make_link: false
             path: ''
             absolute: false
@@ -914,7 +916,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-2\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -960,6 +962,54 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_soft_fur_config_target_id:
+          id: field_soft_fur_config_target_id
+          table: node__field_soft_fur_config
+          field: field_soft_fur_config_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_soft_fur_config_target_id_op
+            label: Конфигурация
+            description: ''
+            use_operator: false
+            operator: field_soft_fur_config_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_soft_fur_config_target_id
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              redaktor: redaktor
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: soft_fur_config
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         weight:
           id: weight
@@ -996,13 +1046,15 @@ display:
       use_more: false
       use_more_always: true
       use_more_text: more
-      use_ajax: false
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1027,12 +1079,15 @@ display:
         weight: -50
         context: '0'
         menu_name: main
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

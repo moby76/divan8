@@ -68,13 +68,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          submit_button: Применить
+          reset_button: true
+          reset_button_label: Сбросить
+          exposed_sorts_label: Сортировать
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
       pager:
         type: full
         options:
@@ -442,7 +442,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      use_ajax: false
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -477,6 +477,7 @@ display:
         arguments: false
         relationships: false
         title: false
+        use_ajax: false
       row:
         type: fields
         options:
@@ -2106,6 +2107,7 @@ display:
           required: false
           plugin_id: standard
       title: 'Кровати - блок описания материала'
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2167,12 +2169,14 @@ display:
         weight: -49
         context: '0'
         menu_name: main
-      title: 'Кровати - все материалы'
+      title: Кровати
       defaults:
         title: false
         fields: false
         sorts: false
         relationships: false
+        filters: false
+        filter_groups: false
       fields:
         field_price_from:
           id: field_price_from
@@ -2422,7 +2426,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge badge-info pr-3 pl-3 pt-3 pb-3\">{{ title }} </span></h4>\r\n</div>"
+            text: "<div class=\"col-7 pl-0\">  \r\n        <h4><span class=\"badge badge-info pr-2 pl-2 pt-2 pb-2\">{{ title }} </span></h4>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -2957,7 +2961,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-2\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
             make_link: false
             path: ''
             absolute: false
@@ -2990,7 +2994,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-2\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -3036,11 +3040,86 @@ display:
           user_scope: current
           entity_type: node
           plugin_id: flag_relationship
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            sleeps: sleeps
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_sleep_config_value:
+          id: field_sleep_config_value
+          table: node__field_sleep_config
+          field: field_sleep_config_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_sleep_config_value_op
+            label: Конфигурация
+            description: ''
+            use_operator: false
+            operator: field_sleep_config_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_sleep_config_value
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+              redaktor: redaktor
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions

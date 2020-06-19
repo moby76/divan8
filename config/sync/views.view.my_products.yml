@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_foto
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
+    - field.storage.node.field_where
     - flag.flag.add_bookmarks
     - image.style.medium
   module:
@@ -199,7 +200,7 @@ display:
           type: number_integer
           settings:
             thousand_separator: ''
-            prefix_suffix: true
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -387,6 +388,69 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_where:
+          id: field_where
+          table: node__field_where
+          field: field_where
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Где купить'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 2
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_price_base:
           id: field_price_base
           table: node__field_price_base
@@ -398,7 +462,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "    <div class=\"row d-flex justify-content-center\">\r\n  <h3><span class=\"price-base badge pr-4 pl-4 pt-3 pb-3 mr-3 badge-danger\">{{ field_price_base }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   "
+            text: "    <div class=\"row d-flex justify-content-start ml-1\">\r\n  <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   "
             make_link: false
             path: ''
             absolute: false
@@ -431,7 +495,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "    <div class=\"row d-flex justify-content-center\">\r\n  <h3><span class=\"price-base badge pr-4 pl-4 pt-3 pb-3 mr-3 badge-warning\">от&nbsp; {{ field_price_from }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n"
+          empty: "    <div class=\"row d-flex justify-content-start ml-1\">\r\n  <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-warning\">от&nbsp; {{ field_price_from }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -439,7 +503,7 @@ display:
           type: number_integer
           settings:
             thousand_separator: ''
-            prefix_suffix: true
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -617,7 +681,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: false
-      title: 'Материалы для сравнения'
+      title: 'Мой список'
     cache_metadata:
       max-age: -1
       contexts:
@@ -631,6 +695,7 @@ display:
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_price_from'
+        - 'config:field.storage.node.field_where'
   page_1:
     display_plugin: page
     id: page_1
@@ -652,3 +717,4 @@ display:
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_price_from'
+        - 'config:field.storage.node.field_where'

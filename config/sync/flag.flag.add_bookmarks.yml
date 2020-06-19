@@ -12,10 +12,10 @@ bundles:
 entity_type: node
 global: false
 weight: 0
-flag_short: 'Добавить в закладки'
+flag_short: 'Добавить в список'
 flag_long: 'Добавьте данный материал в свой список'
 flag_message: ''
-unflag_short: 'Удалить из закладок'
+unflag_short: 'Удалить из списка'
 unflag_long: 'Удалить  материал из списка'
 unflag_message: ''
 unflag_denied_text: ''
