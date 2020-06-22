@@ -8,6 +8,7 @@ dependencies:
     - field.field.taxonomy_term.sleep_models.field_model_desc
     - field.field.taxonomy_term.sleep_models.field_scheme
     - image.style.medium
+    - image.style.original_watermark
     - responsive_image.styles.wide
     - taxonomy.vocabulary.sleep_models
   module:
@@ -107,7 +108,7 @@ content:
       thumbnail_effect: grid
       thumbnail_position: ''
       media_switch: colorbox
-      box_style: ''
+      box_style: original_watermark
       thumbnail_style: medium
       ratio: ''
       box_caption: ''
