@@ -983,7 +983,7 @@ display:
             operator_list: {  }
             identifier: field_soft_fur_config_target_id
             required: false
-            remember: true
+            remember: false
             multiple: true
             remember_roles:
               anonymous: anonymous
@@ -1003,7 +1003,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
+          reduce_duplicates: true
           type: select
           limit: true
           vid: soft_fur_config
@@ -1040,7 +1040,12 @@ display:
           user_scope: current
           entity_type: node
           plugin_id: flag_relationship
-      arguments: {  }
+      arguments:
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          plugin_id: taxonomy_index_tid
       display_extenders: {  }
       css_class: ''
       use_more: false
