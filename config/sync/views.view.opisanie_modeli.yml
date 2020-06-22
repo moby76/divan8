@@ -1270,7 +1270,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'container h-100  shadow'
+          admin_label: 'container h-100  shadow  mt-3'
           label: ''
           exclude: false
           alter:
@@ -1317,7 +1317,7 @@ display:
             - fieldset_2
           wrapper: div
           legend: ''
-          classes: 'container  h-100  shadow'
+          classes: 'container  h-100  shadow  mt-3'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
