@@ -7,12 +7,14 @@ dependencies:
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
     - field.storage.node.field_sleep_config
+    - flag.flag.add_bookmarks
     - image.style.original_watermark
     - node.type.sleeps
     - responsive_image.styles.narrow
     - taxonomy.vocabulary.sleep_models
   module:
     - blazy
+    - flag
     - node
     - options
     - taxonomy
@@ -324,6 +326,7 @@ display:
           hide_alter_empty: true
           fields:
             - title
+            - link_flag
           wrapper: div
           legend: ''
           classes: row
@@ -393,6 +396,56 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        link_flag:
+          id: link_flag
+          table: flagging
+          field: link_flag
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<div class="col-5 p-0">{{ link_flag }}</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: flagging
+          plugin_id: flag_link
         fieldset_3:
           id: fieldset_3
           table: views
@@ -578,7 +631,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - field_soft_fur_config
             - field_sleep_config
           wrapper: div
           legend: ''
@@ -964,6 +1016,18 @@ display:
           admin_label: 'field_sleep_model: Taxonomy term'
           required: false
           plugin_id: standard
+        flag_relationship:
+          id: flag_relationship
+          table: node_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Флаги
+          required: false
+          flag: add_bookmarks
+          user_scope: current
+          entity_type: node
+          plugin_id: flag_relationship
       arguments:
         tid:
           id: tid
@@ -978,7 +1042,7 @@ display:
             title_enable: false
             title: All
           title_enable: true
-          title: 'Другие товары модели {{ arguments.tid }}'
+          title: 'Другие кровати модели  {{ arguments.tid }}'
           default_argument_type: taxonomy_tid
           default_argument_options:
             node: true
