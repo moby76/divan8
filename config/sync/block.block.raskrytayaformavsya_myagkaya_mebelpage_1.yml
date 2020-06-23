@@ -5,14 +5,10 @@ dependencies:
   config:
     - views.view.vsya_myagkaya_mebel
   module:
-    - block_class
     - system
     - views
   theme:
     - divan_barrio
-third_party_settings:
-  block_class:
-    classes: block-filters
 id: raskrytayaformavsya_myagkaya_mebelpage_1
 theme: divan_barrio
 region: sidebar_first
@@ -23,8 +19,8 @@ settings:
   id: 'views_exposed_filter_block:vsya_myagkaya_mebel-page_1'
   label: ''
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: visible
+  views_label: Конфигурация
 visibility:
   request_path:
     id: request_path
