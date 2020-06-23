@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.sleeps.field_buy_komplekt
     - field.field.node.sleeps.field_depth
     - field.field.node.sleeps.field_features
+    - field.field.node.sleeps.field_field_sleep_config
     - field.field.node.sleeps.field_foto
     - field.field.node.sleeps.field_laundry_box
     - field.field.node.sleeps.field_new_item
@@ -22,7 +23,6 @@ dependencies:
     - field.field.node.sleeps.field_razmer_matrasa_2
     - field.field.node.sleeps.field_set_available
     - field.field.node.sleeps.field_similar_bed_order
-    - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
     - field.field.node.sleeps.field_text_promoushn
     - field.field.node.sleeps.field_tip_mebeli
@@ -83,7 +83,7 @@ third_party_settings:
     group_tip_konfiguraciya_model:
       children:
         - field_tip_mebeli
-        - field_sleep_config
+        - field_field_sleep_config
         - field_sleep_model
       parent_name: ''
       weight: 4
@@ -356,6 +356,12 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_field_sleep_config:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_foto:
     weight: 15
     settings:
@@ -435,12 +441,6 @@ content:
     third_party_settings: {  }
     type: webform_entity_reference_select
     region: content
-  field_sleep_config:
-    weight: 32
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_sleep_model:
     weight: 33
     settings: {  }
@@ -473,6 +473,11 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  flag:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 6

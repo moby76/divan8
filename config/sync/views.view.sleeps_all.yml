@@ -8,13 +8,13 @@ dependencies:
     - field.storage.node.field_bed_base_transform
     - field.storage.node.field_depth
     - field.storage.node.field_features
+    - field.storage.node.field_field_sleep_config
     - field.storage.node.field_foto
     - field.storage.node.field_laundry_box
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
     - field.storage.node.field_razmer_matrasa
     - field.storage.node.field_razmer_matrasa_2
-    - field.storage.node.field_sleep_config
     - field.storage.node.field_sleep_model
     - field.storage.node.field_where
     - field.storage.node.field_width
@@ -26,7 +26,9 @@ dependencies:
     - image.style.skhemy_300_200
     - node.type.sleeps
     - responsive_image.styles.narrow
+    - taxonomy.vocabulary.sleep_config
   module:
+    - better_exposed_filters
     - blazy
     - flag
     - media
@@ -66,7 +68,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Применить
           reset_button: true
@@ -75,6 +77,23 @@ display:
           expose_sort_order: true
           sort_asc_label: 'По возрастанию'
           sort_desc_label: 'По убыванию'
+          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
+          text_input_required_format: null
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Дополнительные настройки'
+              secondary_open: false
+            sort:
+              plugin_id: default
+            filter:
+              field_sleep_config_value:
+                plugin_id: default
       pager:
         type: full
         options:
@@ -2177,6 +2196,7 @@ display:
         relationships: false
         filters: false
         filter_groups: false
+        exposed_form: false
       fields:
         field_price_from:
           id: field_price_from
@@ -2408,7 +2428,6 @@ display:
           fields:
             - title
             - link_flag
-            - flagged
           wrapper: div
           legend: ''
           classes: row
@@ -2715,17 +2734,17 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - field_sleep_config
+            - field_field_sleep_config
           wrapper: div
           legend: ''
           classes: card-body
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
-        field_sleep_config:
-          id: field_sleep_config
-          table: node__field_sleep_config
-          field: field_sleep_config
+        field_field_sleep_config:
+          id: field_field_sleep_config
+          table: node__field_field_sleep_config
+          field: field_field_sleep_config
           relationship: none
           group_type: group
           admin_label: ''
@@ -2770,10 +2789,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -3066,10 +3086,10 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_sleep_config_value:
-          id: field_sleep_config_value
-          table: node__field_sleep_config
-          field: field_sleep_config_value
+        field_field_sleep_config_target_id:
+          id: field_field_sleep_config_target_id
+          table: node__field_field_sleep_config
+          field: field_field_sleep_config_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -3078,22 +3098,22 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_sleep_config_value_op
-            label: Конфигурация
+            operator_id: field_field_sleep_config_target_id_op
+            label: 'Конфигурация кровати'
             description: ''
             use_operator: false
-            operator: field_sleep_config_value_op
+            operator: field_field_sleep_config_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_sleep_config_value
+            identifier: field_field_sleep_config_target_id
             required: false
-            remember: true
+            remember: false
             multiple: true
             remember_roles:
-              anonymous: anonymous
               authenticated: authenticated
-              administrator: administrator
-              redaktor: redaktor
+              anonymous: '0'
+              administrator: '0'
+              redaktor: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -3107,13 +3127,54 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: sleep_config
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
           1: AND
       exposed_block: true
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Применить
+          reset_button: false
+          reset_button_label: Сбросить
+          exposed_sorts_label: Сортировать
+          expose_sort_order: true
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Дополнительные настройки'
+              secondary_open: false
+            filter:
+              field_field_sleep_config_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: 0
+                options_show_only_used: 1
+                options_show_only_used_filtered: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -3121,10 +3182,11 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_field_sleep_config'
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_price_from'
-        - 'config:field.storage.node.field_sleep_config'
