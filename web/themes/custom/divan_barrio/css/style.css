@@ -434,8 +434,7 @@ ul.dropdown-menu li a:hover{
 /* ----------------------------------------------------------------- Темизация views Описание товара на странице материала ---------------------------------- */
 
 
-.view-opisanie-modeli,
-.view-sleeps-all{
+.view-opisanie-modeli{
     margin: 30px 0 0 0;
 }
 
@@ -741,8 +740,9 @@ tr.even{
     /* margin-top: 1rem; */
 }
 
-.flag-add-bookmarks.action-flag{
-    color: #008606;
+.flag-add-bookmarks.action-flag,
+.flag-add-bookmarks.action-unflag{
+
     display: flex;
     /* font-size: 1.5rem; */
     /* background: #008606; */
@@ -752,37 +752,18 @@ tr.even{
     left: 0.5rem;
     border: 1px dashed;
 }
-
+.flag-add-bookmarks.action-flag{
+    color: #008606;
+}
 .flag-add-bookmarks.action-unflag{
     color: red;
-    display: flex;
-        /* font-size: 1.5rem; */
-    /* background: #008606; */
-    padding: 0.25rem 0.3rem;
-    border-radius: 100%;
-    position: absolute;
-    left: 0.5rem;
-    border: 1px dashed;
 }
 
 .flag-add-bookmarks.action-flag a,
-.flag-add-bookmarks.action-flag a:hover{
-    text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    /* margin: 0.25rem 0 0 0.75rem; */
-    font-size: initial;
-    font-weight: 100;
-    color: #001998;
-    position: absolute;
-    display: block;
-    right: -7rem;
-    top: 0;
-    width: 6rem;
-    border-bottom: dashed 1px;
-}
-
+.flag-add-bookmarks.action-flag a:hover,
 .flag-add-bookmarks.action-unflag a,
-.flag-add-bookmarks.action-unflag a:hover{
+.flag-add-bookmarks.action-unflag a:hover
+{
     text-decoration: none;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     /* margin: 0.25rem 0 0 0.75rem; */
@@ -795,6 +776,7 @@ tr.even{
     top: 0;
     width: 6rem;
     border-bottom: dashed 1px;
+    z-index: 100;
 }
 
 .views-field-link-flag .action-flag,
@@ -810,6 +792,17 @@ tr.even{
     left: 1rem;
 }
 
+.js-flag-message{
+    display: none;
+    /* width: 0; */
+
+}
+
+.flag-throbber {
+    display: none;
+    position: absolute;
+    top: -10rem;
+  }
 
 /* ----------------------------------------------------- список товаров (закладки) ------------------------------------------- */
 
@@ -825,9 +818,11 @@ tr.even{
 
 .sidebar .block{
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     padding: 15px 10px;
     margin: 0 0 20px;
+    border-color: #d2d2d2;
+    border-radius: 4px;
 }
 
 .block-filters{
@@ -840,7 +835,8 @@ tr.even{
 .form-row{
     display: inline-block;
 }
-#edit-field-soft-fur-config-target-id{
+#edit-field-soft-fur-config-target-id,
+#edit-field-sleep-config-value{
     display: flex;
 }
 
@@ -863,9 +859,58 @@ tr.even{
 .custom-select[size]:not([size="1"]){
     padding-right: 0;
 }
+
+/*------------------------------------------------ better exposed filters ----------------------------------------*/
+
+#edit-field-soft-fur-config-target-id--wrapper .fieldset-legend,
+#edit-field-field-sleep-config-target-id--wrapper .fieldset-legend{
+    display: none;
+}
+
+#edit-field-soft-fur-config-target-id--wrapper ul,
+#edit-field-field-sleep-config-target-id--wrapper ul{
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* padding-inline-start: 0; */
+}
+
+.custom-switch {
+    padding-left: 0.5rem;
+}
+
+.custom-switch .custom-control-label::before{
+    left: -2.75rem;
+    width: 2.5rem;
+    pointer-events: all;
+    border-radius: 1rem;
+    height: 1.25rem;
+}
+
+.custom-switch .custom-control-label::after{
+    top: calc(0.25rem + 2px);
+    left: calc(-2.75rem + 2px);
+    width: calc(1.25rem - 4px);
+    height: calc(1.25rem - 4px);
+    background-color: #adb5bd;
+    border-radius: 0.5rem;
+    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: #fff;
+    -webkit-transform: translateX(1.25rem);
+    transform: translateX(1.25rem);
+}
 /* ----------------------------------------------- Первая колонка (sidebar_first) ---------------------------------*/
 
 .sidebar_first{
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 1.5rem;
 }
 

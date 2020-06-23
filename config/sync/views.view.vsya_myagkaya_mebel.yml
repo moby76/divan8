@@ -13,6 +13,7 @@ dependencies:
     - responsive_image.styles.narrow
     - taxonomy.vocabulary.soft_fur_config
   module:
+    - better_exposed_filters
     - blazy
     - flag
     - node
@@ -49,15 +50,41 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Применить
-          reset_button: true
+          reset_button: false
           reset_button_label: Сбросить
           exposed_sorts_label: Сортировать
           expose_sort_order: true
           sort_asc_label: 'По возрастанию'
           sort_desc_label: 'По убыванию'
+          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Дополнительные настройки'
+              secondary_open: false
+            filter:
+              field_soft_fur_config_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: 0
+                options_show_only_used: 1
+                options_show_only_used_filtered: 0
       pager:
         type: full
         options:
@@ -1040,12 +1067,7 @@ display:
           user_scope: current
           entity_type: node
           plugin_id: flag_relationship
-      arguments:
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
-          plugin_id: taxonomy_index_tid
+      arguments: {  }
       display_extenders: {  }
       css_class: ''
       use_more: false

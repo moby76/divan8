@@ -1,18 +1,14 @@
-uuid: 20f3711e-f4c3-4263-a3e6-0beece586dbb
+uuid: bdef94af-8ec9-4a00-8db3-528280243d41
 langcode: ru
 status: true
 dependencies:
   config:
     - views.view.sleeps_all
   module:
-    - block_class
     - system
     - views
   theme:
     - divan_barrio
-third_party_settings:
-  block_class:
-    classes: block-filters
 id: raskrytayaformasleeps_allpage_1
 theme: divan_barrio
 region: sidebar_first
@@ -23,8 +19,8 @@ settings:
   id: 'views_exposed_filter_block:sleeps_all-page_1'
   label: ''
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: visible
+  views_label: Конфигурация
 visibility:
   request_path:
     id: request_path

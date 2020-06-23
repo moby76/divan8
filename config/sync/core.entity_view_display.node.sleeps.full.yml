@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.sleeps.field_buy_komplekt
     - field.field.node.sleeps.field_depth
     - field.field.node.sleeps.field_features
+    - field.field.node.sleeps.field_field_sleep_config
     - field.field.node.sleeps.field_foto
     - field.field.node.sleeps.field_laundry_box
     - field.field.node.sleeps.field_new_item
@@ -23,7 +24,6 @@ dependencies:
     - field.field.node.sleeps.field_razmer_matrasa_2
     - field.field.node.sleeps.field_set_available
     - field.field.node.sleeps.field_similar_bed_order
-    - field.field.node.sleeps.field_sleep_config
     - field.field.node.sleeps.field_sleep_model
     - field.field.node.sleeps.field_text_promoushn
     - field.field.node.sleeps.field_tip_mebeli
@@ -243,6 +243,7 @@ hidden:
   field_buy_komplekt: true
   field_depth: true
   field_features: true
+  field_field_sleep_config: true
   field_laundry_box: true
   field_new_item: true
   field_price_base: true
@@ -252,7 +253,6 @@ hidden:
   field_razmer_matrasa: true
   field_razmer_matrasa_2: true
   field_set_available: true
-  field_sleep_config: true
   field_sleep_model: true
   field_text_promoushn: true
   field_tip_mebeli: true
