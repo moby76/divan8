@@ -435,7 +435,7 @@ ul.dropdown-menu li a:hover{
 
 
 .view-opisanie-modeli{
-    margin: 30px 0 0 0;
+    /* margin: 3rem 0 3rem 0; */
 }
 
 .tab-content{
@@ -622,6 +622,11 @@ tr.even{
 .form-control{
     border-radius: 0.1rem;
 } */
+
+.field--name-field-similar-bed-order,
+.field--name-field-similar-soft-order{
+    margin-top: 3rem;
+}
 .webform-submission-similar-soft-order-form,
 .webform-submission-bed-order-form-form{
     position: relative;
@@ -914,3 +919,8 @@ tr.even{
     padding: 0 0 0 1.5rem;
 }
 
+/*----------------------------------------------- Поле Где купить на странице описания товара ----------------------------*/
+
+.field--name-field-where{
+    margin-top: 3rem;
+}

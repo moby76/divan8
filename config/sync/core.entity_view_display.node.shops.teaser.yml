@@ -14,6 +14,8 @@ dependencies:
   module:
     - ds
     - geolocation
+    - office_hours
+    - text
     - user
 third_party_settings:
   ds:
@@ -56,12 +58,15 @@ third_party_settings:
             add_region_classes: 1
             attributes: ''
     regions:
-      left:
+      top:
         - node_title
+      left:
+        - field_hours
       right:
         - field_phone
       bottom:
         - field_location
+        - field_podrobno
     fields:
       node_title:
         plugin_id: node_title
@@ -83,9 +88,44 @@ targetEntityType: node
 bundle: shops
 mode: teaser
 content:
+  field_hours:
+    type: office_hours
+    weight: 1
+    region: left
+    label: above
+    settings:
+      show_closed: current
+      office_hours_first_day: ''
+      day_format: long
+      time_format: G
+      closed_format: Closed
+      separator:
+        days: '<br />'
+        grouped_days: ' - '
+        day_hours: ': '
+        hours_hours: '-'
+        more_hours: ', '
+      current_status:
+        position: ''
+        open_text: 'Currently open!'
+        closed_text: 'Currently closed'
+      compress: false
+      grouped: false
+      schema:
+        enabled: 0
+      timezone_field: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_location:
     type: geolocation_map
-    weight: 2
+    weight: 3
     region: bottom
     label: hidden
     settings:
@@ -93,8 +133,8 @@ content:
       title: ''
       info_text: ''
       google_map_settings:
-        height: 200px
-        width: 100%
+        height: 100px
+        width: 95%
         type: ROADMAP
         zoom: '15'
         maxZoom: 18
@@ -125,16 +165,28 @@ content:
             classes: {  }
   field_phone:
     type: string
-    weight: 1
+    weight: 2
     region: right
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_podrobno:
+    type: text_default
+    weight: 4
+    region: bottom
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
   body: true
-  field_hours: true
   field_owner: true
-  field_podrobno: true
   langcode: true
   links: true
