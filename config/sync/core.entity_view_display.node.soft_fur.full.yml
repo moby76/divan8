@@ -110,9 +110,9 @@ third_party_settings:
       top_left:
         - field_foto
       top_right:
+        - flag_add_bookmarks
         - field_where
         - field_similar_soft_order
-        - flag_add_bookmarks
       middle:
         - 'dynamic_block_field:node-opisanie_modeli'
       bottom:
@@ -212,7 +212,7 @@ content:
             classes: {  }
   field_similar_soft_order:
     type: webform_entity_reference_entity_view
-    weight: 2
+    weight: 3
     region: top_right
     label: hidden
     settings:
@@ -220,7 +220,7 @@ content:
     third_party_settings: {  }
   field_where:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     region: top_right
     label: above
     settings:
@@ -236,7 +236,7 @@ content:
             lb-col: true
             classes: {  }
   flag_add_bookmarks:
-    weight: 3
+    weight: 1
     region: top_right
     settings: {  }
     third_party_settings: {  }
