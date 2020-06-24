@@ -1,8 +1,9 @@
 uuid: c8378cfb-b54c-414c-a452-1a05a381f87b
 langcode: ru
-status: false
+status: true
 dependencies:
   config:
+    - field.storage.node.field_field_sleep_config
     - field.storage.node.field_foto
     - field.storage.node.field_price_base
     - field.storage.node.field_price_from
@@ -12,7 +13,6 @@ dependencies:
     - node.type.sleeps
     - node.type.soft_fur
     - responsive_image.styles.narrow
-    - taxonomy.vocabulary.sleep_models
   module:
     - blazy
     - flag
@@ -998,16 +998,11 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: true
+          specify_validation: false
           validate:
-            type: 'entity:taxonomy_term'
+            type: none
             fail: 'not found'
-          validate_options:
-            bundles:
-              sleep_models: sleep_models
-            operation: view
-            multiple: 0
-            access: false
+          validate_options: {  }
           break_phrase: false
           add_table: false
           require_value: false
@@ -1584,23 +1579,22 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - field_soft_fur_config
-            - field_sleep_config
+            - field_field_sleep_config
           wrapper: div
           legend: ''
           classes: card-body
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
-        field_soft_fur_config:
-          id: field_soft_fur_config
-          table: node__field_soft_fur_config
-          field: field_soft_fur_config
+        field_field_sleep_config:
+          id: field_field_sleep_config
+          table: node__field_field_sleep_config
+          field: field_field_sleep_config
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1968,7 +1962,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_field_sleep_config'
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_price_from'
-        - 'config:field.storage.node.field_soft_fur_config'
