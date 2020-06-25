@@ -556,6 +556,26 @@ tr.even{
     margin: 0 auto;
 }
 
+.far.fa-smile,
+.far.fa-frown{
+    margin-left: 1rem;
+    font-size: xx-large;
+}
+
+.far.fa-smile{
+    color: green;
+}
+
+.far.fa-frown{
+    color: #711a1a;
+}
+
+.can-to-order{
+    margin-left: 1rem;
+    font-style: italic;
+    font-size: smaller;
+    color: gray;
+}
 /* ----------------------------------------------------- Блок социальных ссылок и телефон в шапке ------------------------------------------------- */
 
 .fa-mobile-alt{
@@ -749,12 +769,12 @@ tr.even{
 .flag-add-bookmarks.action-unflag{
 
     display: flex;
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;
     /* background: #008606; */
     padding: 0.25rem 0.3rem;
     border-radius: 100%;
     position: absolute;
-    left: 0.5rem;
+    /* left: 0.5rem; */
     border: 1px dashed;
 }
 .flag-add-bookmarks.action-flag{
@@ -854,15 +874,27 @@ tr.even{
 #edit-submit-vsya-myagkaya-mebel,
 #edit-submit-sleeps-all{
     float: left;
+    margin: 1rem auto;
 }
 
 #edit-reset{
     float: right;
+    margin: 1rem auto;
 }
 
 .custom-select[multiple], 
 .custom-select[size]:not([size="1"]){
     padding-right: 0;
+}
+
+#edit-field-available-value-collapsible{
+    padding: 1rem;
+    border-radius: 4px;
+    border: 2px dashed #d2d2d2;
+}
+
+#edit-field-available-value-collapsible summary{
+    padding: 0 0 1rem 0;
 }
 
 /*------------------------------------------------ better exposed filters ----------------------------------------*/
@@ -885,6 +917,7 @@ tr.even{
 
 .custom-switch {
     padding-left: 0.5rem;
+    margin: 0 0 0.25rem 0;
 }
 
 .custom-switch .custom-control-label::before{
@@ -896,12 +929,12 @@ tr.even{
 }
 
 .custom-switch .custom-control-label::after{
-    top: calc(0.25rem + 2px);
-    left: calc(-2.75rem + 2px);
-    width: calc(1.25rem - 4px);
-    height: calc(1.25rem - 4px);
-    background-color: #adb5bd;
-    border-radius: 0.5rem;
+    top: calc(0rem + 2px);
+    left: calc(-2.75rem + 0px);
+    width: calc(1.25rem + 4px);
+    height: calc(1.25rem + 4px);
+    background-color: #386b9e;
+    border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -909,10 +942,61 @@ tr.even{
 }
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: #fff;
+    background-color: #e41717;
     -webkit-transform: translateX(1.25rem);
     transform: translateX(1.25rem);
 }
+
+.form-radios .form-item-field-available-value{
+    /* margin: 0 0 0.25rem 0; */
+    padding: 0.3rem 0.3rem 0 1.3rem;
+}
+.custom-radio .custom-control-label::before{
+    position: absolute;
+    top: 0.25rem;
+    left: -1.5rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: #adb5bd solid 1px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #2FA4E7;
+    background-color: #ffffff;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+    top: 0.25rem;
+    left: -1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    /* top: calc(0.25rem + 2px);
+    left: calc(-1.5rem + 2px);
+    width: calc(1.5rem - 4px);
+    height: calc(1.5rem - 4px); */
+    background-color: #e41717;
+    /* border: solid 2px #276f6f; */
+    border-radius: 1rem;
+    background-image: none;
+
+}
+.custom-radio .custom-control-label::after{
+    position: absolute;
+    top: 0.35rem;
+    left: -1.35rem;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    content: "";
+    background: no-repeat 50% / 50% 50%;
+    /* background: red; */
+}
+
 /* ----------------------------------------------- Первая колонка (sidebar_first) ---------------------------------*/
 
 .sidebar_first{
