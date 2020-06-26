@@ -11,11 +11,13 @@ dependencies:
     - field.storage.node.field_soft_fur_config
     - field.storage.node.field_soft_fur_model
     - field.storage.node.field_where
+    - flag.flag.add_bookmarks
     - image.style.large
     - taxonomy.vocabulary.fur_type
   content:
     - 'taxonomy_term:fur_type:24350927-c90f-498c-a134-30ea1832ff2a'
   module:
+    - flag
     - node
     - slick
     - taxonomy
@@ -89,7 +91,7 @@ display:
           default_row_class: false
           type: ul
           wrapper_class: ''
-          class: 'list-unstyled row'
+          class: 'list-unstyled container'
       row:
         type: fields
         options:
@@ -281,7 +283,19 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: node_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Флаги
+          required: false
+          flag: add_bookmarks
+          user_scope: current
+          entity_type: node
+          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
       link_url: ''
@@ -310,71 +324,6 @@ display:
         title: false
         fields: false
       fields:
-        field_available:
-          id: field_available
-          table: node__field_available
-          field: field_available
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: unicode-yes-no
-            format_custom_true: ''
-            format_custom_false: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_price_from:
           id: field_price_from
           table: node__field_price_from
@@ -553,6 +502,69 @@ display:
           empty_zero: false
           hide_alter_empty: false
           plugin_id: custom
+        field_where:
+          id: field_where
+          table: node__field_where
+          field: field_where
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: "<p><i class=\"fas fa-map-marker-alt\"></i>{{ field_where }}</p>\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: div
+          element_class: card-text
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 2
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ''
+          field_api_classes: false
+          plugin_id: field
         fieldset:
           id: fieldset
           table: views
@@ -988,10 +1000,6 @@ display:
           hide_alter_empty: true
           fields:
             - fieldset_6
-            - field_soft_fur_config
-            - field_soft_fur_model
-            - field_where
-            - view_node
           wrapper: div
           legend: ''
           classes: card-body
@@ -1061,7 +1069,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: col-7
+          admin_label: col-9
           label: ''
           exclude: false
           alter:
@@ -1105,9 +1113,15 @@ display:
           hide_alter_empty: true
           fields:
             - title
+            - field_soft_fur_config
+            - field_soft_fur_model
+            - field_available
+            - nothing_2
+            - flagged
+            - view_node
           wrapper: div
           legend: ''
-          classes: 'col-7  pl-0'
+          classes: col-9
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -1175,126 +1189,6 @@ display:
           field_api_classes: false
           entity_type: node
           entity_field: title
-          plugin_id: field
-        fieldset_8:
-          id: fieldset_8
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: col-5
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_price_base_1
-          wrapper: div
-          legend: ''
-          classes: 'col-5  pr-0'
-          collapsible: 1
-          collapsed: 0
-          plugin_id: fieldset
-        field_price_base_1:
-          id: field_price_base_1
-          table: node__field_price_base
-          field: field_price_base
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "            <div class=\"row float-right mr-2\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base_1 }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n            </div"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: "            <div class=\"row float-right mr-2\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from}}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n            </div"
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
           plugin_id: field
         field_soft_fur_config:
           id: field_soft_fur_config
@@ -1422,10 +1316,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_where:
-          id: field_where
-          table: node__field_where
-          field: field_where
+        field_available:
+          id: field_available
+          table: node__field_available
+          field: field_available
           relationship: none
           group_type: group
           admin_label: ''
@@ -1433,7 +1327,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: 'Данный комплект можно приобрести в магазине {{ field_where }}'
+            text: "<div class=\"accessibly\">\r\n{% if field_available__value == 1 %}\r\n    <p>Наличие:<i class=\"far fa-smile\"></i></p>\r\n{% elseif field_available__value == 0 %}\r\n    <p>Наличие:<i class=\"far fa-frown\"></i></p>\r\n{% endif %}\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1458,8 +1352,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: card-text
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -1470,14 +1364,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
+          click_sort_column: value
+          type: boolean
           settings:
-            link: true
-          group_column: target_id
+            format: custom
+            format_custom_true: 'В наличии'
+            format_custom_false: 'Под заказ'
+          group_column: value
           group_columns: {  }
           group_rows: true
-          delta_limit: 2
+          delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -1485,6 +1381,109 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        nothing_2:
+          id: nothing_2
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Где купить или под заказ'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"stock\">\r\n{% if field_where %}\r\n    {{ field_where }}\r\n{% else %}\r\n    <p>Под заказ</p>\r\n{% endif %}\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+        flagged:
+          id: flagged
+          table: flagging
+          field: flagged
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if flagged == 1 %}\r\n    <div class=\"flagged\"><p>Данный товар есть в списке<i class=\"fas fa-check\"></i></p></div>\r\n{% elseif flagged == 0 %}\r\n    <p></p>\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: boolean
+          type_custom_true: 'В списке'
+          type_custom_false: 'Нет в списке'
+          not: 0
+          entity_type: flagging
+          plugin_id: flag_flagged
         view_node:
           id: view_node
           table: node
@@ -1538,6 +1537,126 @@ display:
           absolute: false
           entity_type: node
           plugin_id: entity_link
+        fieldset_8:
+          id: fieldset_8
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: 'col-3 pl-0 pr-0'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - field_price_base_1
+          wrapper: div
+          legend: ''
+          classes: 'col-3  pl-0  pr-0'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        field_price_base_1:
+          id: field_price_base_1
+          table: node__field_price_base
+          field: field_price_base
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "            <div class=\"row row d-flex justify-content-end\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base_1 }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n            </div"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "            <div class=\"row row d-flex justify-content-end\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from}}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n            </div"
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
     cache_metadata:
       max-age: -1
       contexts:

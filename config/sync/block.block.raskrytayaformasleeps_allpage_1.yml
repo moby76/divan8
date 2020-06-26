@@ -19,8 +19,8 @@ settings:
   id: 'views_exposed_filter_block:sleeps_all-page_1'
   label: ''
   provider: views
-  label_display: visible
-  views_label: Конфигурация
+  label_display: '0'
+  views_label: ''
 visibility:
   request_path:
     id: request_path
