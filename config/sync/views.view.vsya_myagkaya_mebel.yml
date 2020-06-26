@@ -92,7 +92,7 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: "True|В наличии\r\nЛожь|Под заказ\r\n- Любой -|Мне всё равно"
-                  collapsible: true
+                  collapsible: false
                   is_secondary: true
                 select_all_none: false
                 select_all_none_nested: false
