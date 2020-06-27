@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_transformaciya
     - field.field.node.soft_fur.field_where
     - field.field.node.soft_fur.field_width
     - image.style.thumbnail
@@ -106,6 +107,7 @@ third_party_settings:
       children:
         - field_basis_type
         - field_mekhanizm
+        - field_transformaciya
       parent_name: group_kharakteristiki
       weight: 5
       format_type: tab
@@ -283,7 +285,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -361,7 +363,7 @@ content:
     type: options_buttons
     region: content
   field_number:
-    weight: 17
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: serial_default_widget
@@ -375,7 +377,7 @@ content:
     third_party_settings: {  }
   field_price_from:
     type: number
-    weight: 0
+    weight: 1
     region: content
     settings:
       placeholder: ''
@@ -438,7 +440,7 @@ content:
     type: options_select
     region: content
   field_text_promoushn:
-    weight: 22
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -447,6 +449,12 @@ content:
     region: content
   field_tip_mebeli:
     weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_transformaciya:
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -464,7 +472,7 @@ content:
     type: options_select
     region: content
   flag:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -477,7 +485,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -485,21 +493,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 16
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     region: content
     third_party_settings: {  }
   title:
@@ -512,7 +520,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60
@@ -521,7 +529,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }

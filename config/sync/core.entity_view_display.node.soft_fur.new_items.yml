@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_transformaciya
     - field.field.node.soft_fur.field_where
     - field.field.node.soft_fur.field_width
     - node.type.soft_fur
@@ -145,6 +146,16 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 2
+          90a50c39-0996-40f0-8d38-c56a19f95810:
+            uuid: 90a50c39-0996-40f0-8d38-c56a19f95810
+            region: left
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:soft_fur:flag_add_bookmarks'
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.soft_fur.new_items
 targetEntityType: node
@@ -235,6 +246,11 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  flag_add_bookmarks:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: left
   links:
     weight: 0
     region: content
@@ -256,5 +272,6 @@ hidden:
   field_sleep_dim: true
   field_soft_fur_gabarits: true
   field_text_promoushn: true
+  field_transformaciya: true
   field_width: true
   langcode: true

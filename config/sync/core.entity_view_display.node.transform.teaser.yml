@@ -1,0 +1,90 @@
+uuid: ab07575b-f2a7-4f9d-85b3-02d43f84c6df
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.transform.body
+    - field.field.node.transform.field_video
+    - node.type.transform
+  module:
+    - ds
+    - user
+    - video
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - node_title
+        - field_video
+        - links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h2
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.transform.teaser
+targetEntityType: node
+bundle: transform
+mode: teaser
+content:
+  field_video:
+    type: video_player
+    weight: 1
+    region: main
+    label: hidden
+    settings:
+      width: '300'
+      height: '200'
+      controls: true
+      preload: none
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  links:
+    weight: 2
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true

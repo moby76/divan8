@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_transformaciya
     - field.field.node.soft_fur.field_where
     - field.field.node.soft_fur.field_width
     - node.type.soft_fur
@@ -171,6 +172,11 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: right
+  flag_add_bookmarks:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language
     weight: 0
@@ -202,4 +208,5 @@ hidden:
   field_sleep_dim: true
   field_soft_fur_gabarits: true
   field_text_promoushn: true
+  field_transformaciya: true
   field_width: true

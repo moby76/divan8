@@ -1,0 +1,23 @@
+uuid: ba845939-03cb-44e0-95b4-f2f735cc3af1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.transform
+  module:
+    - text
+id: node.transform.body
+field_name: body
+entity_type: node
+bundle: transform
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
