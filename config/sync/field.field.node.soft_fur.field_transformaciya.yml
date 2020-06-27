@@ -1,0 +1,28 @@
+uuid: 63e46f09-2ccc-4d2d-a5e2-333002dc8bf5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transformaciya
+    - node.type.soft_fur
+    - node.type.transform
+id: node.soft_fur.field_transformaciya
+field_name: field_transformaciya
+entity_type: node
+bundle: soft_fur
+label: Трансформация
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      transform: transform
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
