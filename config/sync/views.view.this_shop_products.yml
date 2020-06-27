@@ -1,4 +1,4 @@
-uuid: 24753a44-d376-4920-85f0-15aa91fdae93
+uuid: 413f5a5c-827c-488c-aba0-968c88fc948c
 langcode: ru
 status: true
 dependencies:
@@ -7,21 +7,20 @@ dependencies:
     - field.storage.node.field_field_sleep_config
     - field.storage.node.field_foto
     - field.storage.node.field_price_base
-    - field.storage.node.field_price_from
+    - field.storage.node.field_soft_fur_config
+    - field.storage.node.field_tip_mebeli
+    - field.storage.node.field_where
     - flag.flag.add_bookmarks
     - image.style.original_watermark
-    - node.type.sleeps
     - responsive_image.styles.narrow
-    - taxonomy.vocabulary.sleep_models
   module:
     - blazy
     - flag
     - node
-    - taxonomy
     - user
     - views_fieldsets
-id: beds_that_collection
-label: 'Кровати из той-же коллекции'
+id: this_shop_products
+label: 'Все товары в этом магазине'
 module: views
 description: ''
 tag: ''
@@ -60,35 +59,22 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: none
         options:
-          items_per_page: 3
           offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
       style:
         type: html_list
         options:
-          grouping: {  }
-          row_class: 'responsive-card-scale col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3'
+          grouping:
+            -
+              field: field_tip_mebeli
+              rendered: true
+              rendered_strip: false
+          row_class: 'col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3'
           default_row_class: false
           type: ul
-          wrapper_class: 'container col-12'
-          class: 'list-unstyled d-flex container col-12'
+          wrapper_class: ''
+          class: 'list-unstyled row'
       row:
         type: fields
         options:
@@ -97,10 +83,10 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        field_price_from:
-          id: field_price_from
-          table: node__field_price_from
-          field: field_price_from
+        field_where:
+          id: field_where
+          table: node__field_where
+          field: field_where
           relationship: none
           group_type: group
           admin_label: ''
@@ -145,12 +131,74 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            thousand_separator: ''
-            prefix_suffix: false
-          group_column: value
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 2
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_tip_mebeli:
+          id: field_tip_mebeli
+          table: node__field_tip_mebeli
+          field: field_tip_mebeli
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: '{{ field_tip_mebeli__target_id }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -167,7 +215,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card  h-100  shadow'
+          admin_label: 'card  h-100  shadow  mb-3'
           label: ''
           exclude: false
           alter:
@@ -210,18 +258,18 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - fieldset_2
+            - fieldset_1
             - fieldset_3
-            - fieldset_5
             - fieldset_4
+            - fieldset_5
           wrapper: div
           legend: ''
-          classes: 'card  h-100  shadow'
+          classes: 'card  h-100  shadow  mb-3'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
-        fieldset_2:
-          id: fieldset_2
+        fieldset_1:
+          id: fieldset_1
           table: views
           field: fieldset
           relationship: none
@@ -269,15 +317,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - fieldset_1
+            - fieldset_2
           wrapper: div
           legend: ''
           classes: 'card-header  bg-transparent'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
-        fieldset_1:
-          id: fieldset_1
+        fieldset_2:
+          id: fieldset_2
           table: views
           field: fieldset
           relationship: none
@@ -558,7 +606,7 @@ display:
             caption:
               field_media_document: '0'
             view_mode: default
-            image_style: original_watermark
+            image_style: ''
             thumbnail_style: ''
             responsive_image_style: narrow
             media_switch: colorbox
@@ -582,8 +630,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        fieldset_5:
-          id: fieldset_5
+        fieldset_4:
+          id: fieldset_4
           table: views
           field: fieldset
           relationship: none
@@ -631,6 +679,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
+            - field_soft_fur_config
             - field_field_sleep_config
             - field_available
           wrapper: div
@@ -639,6 +688,69 @@ display:
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
+        field_soft_fur_config:
+          id: field_soft_fur_config
+          table: node__field_soft_fur_config
+          field: field_soft_fur_config
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_field_sleep_config:
           id: field_field_sleep_config
           table: node__field_field_sleep_config
@@ -767,8 +879,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        fieldset_4:
-          id: fieldset_4
+        fieldset_5:
+          id: fieldset_5
           table: views
           field: fieldset
           relationship: none
@@ -944,7 +1056,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n </div>"
+            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-2\">\r\n                <h3 class=\"price-base\"><span class=\"badge pr-2 pl-2 pt-2 pb-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
             make_link: false
             path: ''
             absolute: false
@@ -977,7 +1089,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-warning\">от {{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n</div>"
+          empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1011,16 +1123,15 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
+        field_available_value:
+          id: field_available_value
+          table: node__field_available
+          field: field_available_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            sleeps: sleeps
+          operator: '='
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -1037,7 +1148,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -1050,9 +1160,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+          plugin_id: boolean
       sorts:
         created:
           id: created
@@ -1069,20 +1177,11 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Кровати из той-же коллекции'
+      title: 'Все товары в этом магазине'
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
-        field_sleep_model:
-          id: field_sleep_model
-          table: node__field_sleep_model
-          field: field_sleep_model
-          relationship: none
-          group_type: group
-          admin_label: 'field_sleep_model: Taxonomy term'
-          required: false
-          plugin_id: standard
         flag_relationship:
           id: flag_relationship
           table: node_field_data
@@ -1096,10 +1195,10 @@ display:
           entity_type: node
           plugin_id: flag_relationship
       arguments:
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
+        field_where_target_id:
+          id: field_where_target_id
+          table: node__field_where
+          field: field_where_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -1128,61 +1227,15 @@ display:
             fail: 'not found'
           validate_options: {  }
           break_phrase: false
-          not: true
-          entity_type: node
-          entity_field: nid
-          plugin_id: node_nid
-        tid:
-          id: tid
-          table: taxonomy_term_field_data
-          field: tid
-          relationship: field_sleep_model
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: 'Другие кровати модели {{ arguments.tid }}'
-          default_argument_type: taxonomy_tid
-          default_argument_options:
-            node: true
-            limit: true
-            vids:
-              sleep_models: sleep_models
-            anyall: +
-            term_page: '0'
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
           not: false
-          entity_type: taxonomy_term
-          entity_field: tid
-          plugin_id: taxonomy
+          plugin_id: numeric
       display_extenders: {  }
-      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1190,7 +1243,9 @@ display:
         - 'config:field.storage.node.field_field_sleep_config'
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
-        - 'config:field.storage.node.field_price_from'
+        - 'config:field.storage.node.field_soft_fur_config'
+        - 'config:field.storage.node.field_tip_mebeli'
+        - 'config:field.storage.node.field_where'
   block_1:
     display_plugin: block
     id: block_1
@@ -1198,14 +1253,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1213,4 +1266,6 @@ display:
         - 'config:field.storage.node.field_field_sleep_config'
         - 'config:field.storage.node.field_foto'
         - 'config:field.storage.node.field_price_base'
-        - 'config:field.storage.node.field_price_from'
+        - 'config:field.storage.node.field_soft_fur_config'
+        - 'config:field.storage.node.field_tip_mebeli'
+        - 'config:field.storage.node.field_where'

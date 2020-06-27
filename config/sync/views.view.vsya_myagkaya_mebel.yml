@@ -124,10 +124,10 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: 'col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3'
+          row_class: 'responsive-card-scale col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3 pl-1'
           default_row_class: false
           type: ul
-          wrapper_class: ''
+          wrapper_class: container
           class: 'list-unstyled row '
       row:
         type: fields
