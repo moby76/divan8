@@ -71,24 +71,13 @@ third_party_settings:
         - field_podrobno
         - field_hours
       bottom:
-        - node_link
+        - 'dynamic_block_field:node-this_shop_products'
     fields:
-      node_link:
-        plugin_id: node_link
+      'dynamic_block_field:node-this_shop_products':
+        plugin_id: 'dynamic_block_field:node-this_shop_products'
         weight: 5
         label: hidden
         formatter: default
-        settings:
-          'link text': Подробнее
-          'link class': 'btn btn-default'
-          wrapper: h1
-          class: block-title
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 id: node.shops.full
 targetEntityType: node
 bundle: shops
@@ -137,7 +126,7 @@ content:
       title: ''
       info_text: ''
       google_map_settings:
-        height: 400px
+        height: 300px
         width: 100%
         type: ROADMAP
         zoom: '15'
@@ -159,7 +148,14 @@ content:
         disableDoubleClickZoom: 0
       use_overridden_map_settings: 0
       common_map: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: geolocation_map
     region: left
   field_phone:

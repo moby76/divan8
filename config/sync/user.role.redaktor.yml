@@ -186,6 +186,7 @@ permissions:
   - 'view dynamic_block_field:node-opisanie_krovati on node'
   - 'view dynamic_block_field:node-opisanie_modeli on node'
   - 'view dynamic_block_field:node-that_collection on node'
+  - 'view dynamic_block_field:node-this_shop_products on node'
   - 'view dynamic_block_field:node-where_buy on node'
   - 'view dynamic_twig_field:node-bottom_leftfield on node'
   - 'view entity_browser_test revisions'

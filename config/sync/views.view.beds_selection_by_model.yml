@@ -86,11 +86,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: 'col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3'
+          row_class: 'responsive-card-scale col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3'
           default_row_class: false
           type: ul
-          wrapper_class: ''
-          class: 'list-unstyled row '
+          wrapper_class: 'container col-12'
+          class: 'list-unstyled row'
       row:
         type: fields
         options:
@@ -980,16 +980,20 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: 'not found'
+          default_action: default
           exception:
             value: all
             title_enable: false
             title: All
           title_enable: true
           title: 'Все кровати модели {{ arguments.tid }}'
-          default_argument_type: fixed
+          default_argument_type: taxonomy_tid
           default_argument_options:
-            argument: ''
+            term_page: '1'
+            anyall: ','
+            node: false
+            limit: false
+            vids: {  }
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -1899,7 +1903,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+            text: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
             make_link: false
             path: ''
             absolute: false
@@ -1932,7 +1936,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-3 pl-3 pt-3 pb-3 mr-2 badge-warning\">{{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
+          empty: "<div class=\"col-6\">\r\n       <div class=\"row justify-content-end pr-3\">\r\n                <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-warning\">{{ field_price_from }}</span></h3><i class=\"fas fa-ruble-sign\"></i>\r\n       </div>\r\n            </div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true

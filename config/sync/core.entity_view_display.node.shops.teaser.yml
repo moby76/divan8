@@ -134,7 +134,7 @@ content:
       info_text: ''
       google_map_settings:
         height: 200px
-        width: 95%
+        width: 100%
         type: ROADMAP
         zoom: '15'
         maxZoom: 18
