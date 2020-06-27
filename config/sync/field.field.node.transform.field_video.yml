@@ -1,0 +1,26 @@
+uuid: d68b4a66-8c82-422f-9acd-5c843ba52b8c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.transform
+  module:
+    - video
+id: node.transform.field_video
+field_name: field_video
+entity_type: node
+bundle: transform
+label: Видео
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

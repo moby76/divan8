@@ -1,0 +1,46 @@
+uuid: 9cff38df-28e2-4a79-b1ea-de86bf0e3511
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.transform.body
+    - field.field.node.transform.field_video
+    - node.type.transform
+  module:
+    - ds
+    - user
+    - video
+id: node.transform.default
+targetEntityType: node
+bundle: transform
+mode: default
+content:
+  field_video:
+    weight: 1
+    label: above
+    settings:
+      width: '854'
+      height: '480'
+      controls: true
+      preload: none
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: video_player_list
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true

@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.soft_fur.field_soft_fur_model
     - field.field.node.soft_fur.field_text_promoushn
     - field.field.node.soft_fur.field_tip_mebeli
+    - field.field.node.soft_fur.field_transformaciya
     - field.field.node.soft_fur.field_where
     - field.field.node.soft_fur.field_width
     - image.style.medium
@@ -35,6 +36,7 @@ dependencies:
     - node.type.soft_fur
   module:
     - ds
+    - field_formatter
     - layout_builder
     - slick
     - user
@@ -113,6 +115,7 @@ third_party_settings:
     regions:
       top_left:
         - field_foto
+        - field_transformaciya
       top_right:
         - flag_add_bookmarks
         - field_where
@@ -124,12 +127,12 @@ third_party_settings:
     fields:
       'dynamic_block_field:node-opisanie_modeli':
         plugin_id: 'dynamic_block_field:node-opisanie_modeli'
-        weight: 4
+        weight: 5
         label: hidden
         formatter: default
       'dynamic_block_field:node-that_collection':
         plugin_id: 'dynamic_block_field:node-that_collection'
-        weight: 5
+        weight: 6
         label: hidden
         formatter: default
         ft:
@@ -216,15 +219,40 @@ content:
             classes: {  }
   field_similar_soft_order:
     type: webform_entity_reference_entity_view
-    weight: 3
+    weight: 4
     region: top_right
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
+  field_transformaciya:
+    type: field_formatter_with_inline_settings
+    weight: 1
+    region: top_left
+    label: hidden
+    settings:
+      field_name: field_video
+      label: hidden
+      type: video_player
+      settings:
+        width: '300'
+        height: '172'
+        controls: true
+        muted: true
+        preload: auto
+        autoplay: false
+        loop: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_where:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 3
     region: top_right
     label: above
     settings:
@@ -240,7 +268,7 @@ content:
             lb-col: true
             classes: {  }
   flag_add_bookmarks:
-    weight: 1
+    weight: 2
     region: top_right
     settings: {  }
     third_party_settings: {  }
