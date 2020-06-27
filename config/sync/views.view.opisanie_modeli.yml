@@ -285,8 +285,8 @@ display:
           row_class: col-12
           default_row_class: false
           type: ul
-          wrapper_class: ''
-          class: 'list-unstyled row mb-5 mt-3'
+          wrapper_class: container
+          class: 'list-unstyled row mt-3'
       defaults:
         style: false
         row: false
@@ -1270,7 +1270,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'container h-100  shadow '
+          admin_label: container
           label: ''
           exclude: false
           alter:
@@ -1317,7 +1317,7 @@ display:
             - fieldset_2
           wrapper: div
           legend: ''
-          classes: 'container  h-100  shadow'
+          classes: container
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset

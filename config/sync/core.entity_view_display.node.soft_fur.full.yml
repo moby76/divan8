@@ -55,6 +55,10 @@ third_party_settings:
           wrapper: div
           classes:
             row: row
+            col-xs-12: col-xs-12
+            col-sm-12: col-sm-12
+            col-md-12: col-md-12
+            col-lg-12: col-lg-12
           add_layout_class: 1
           attributes: ''
         regions:

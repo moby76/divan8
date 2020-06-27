@@ -12,6 +12,20 @@ p{
 .pagination{
     margin: 0 16% 1rem;
 }
+
+.main-content.col{
+    /* padding: 0 0.25rem; */
+}
+
+.responsive-card-scale:hover{
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
  /* ----------------------------------------------------------------------- Кнопки (btn) ------------------------------------------------ */
 .btn{
     /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.48); */
@@ -435,6 +449,13 @@ ul.dropdown-menu li a:hover{
 .slick-list{
     /* display: list-item; */
 }
+/*---------------------------------------------------------------- Страница товара -------------------------------------------*/
+
+                                        /*--------------Поле Где купить на странице описания товара -------------*/
+
+.field--name-field-where{
+    margin-top: 3rem;
+}
 
 /* ----------------------------------------------------------------- Темизация views Описание товара на странице материала ---------------------------------- */
 
@@ -444,7 +465,7 @@ ul.dropdown-menu li a:hover{
 }
 
 .tab-content{
-    min-height: 400px;
+    min-height: 250px;
     overflow: auto;
 }
 
@@ -713,7 +734,7 @@ tr.even{
 /* ------------------------------------------------ Главная страница ---------------------------------------------------------- */
 
 .block-views h2{
-    margin: 0 auto 1em;
+    margin: 1rem auto 0;
     text-align: center;
     /* background: chocolate; */
     width: 100%;
@@ -735,8 +756,8 @@ tr.even{
     width: 100%;
     height: 1px;
     background: #b1b1b1;
-    border: solid #FFF;
-    border-width: 0 16px;
+    border: solid #fbfbfb;
+    border-width: 0 1rem;;
 }
 .block-views h2:before {
 	/* смещаем левую линию влево отрицательным отступом, равным 100% ширины
@@ -1071,8 +1092,43 @@ tr.even{
     padding: 0 0 0 1.5rem;
 }
 
-/*----------------------------------------------- Поле Где купить на странице описания товара ----------------------------*/
 
-.field--name-field-where{
-    margin-top: 3rem;
+
+/*------------------------------------------------- Блок Все товары в этом магазине ---------------------------------*/
+
+.view-this-shop-products .view-content.row h3{
+    width: 100%;
+    text-align: center;
+    color: #ff4800;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+
+.view-this-shop-products .view-content.row h3:before,
+.view-this-shop-products .view-content.row h3:after {
+	content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 15%;
+    height: 1px;
+    background: #ff4800;
+    border: solid #fbfbfb;
+    border-width: 0 1rem;
+}
+.view-this-shop-products .view-content.row h3:before {
+	/* смещаем левую линию влево отрицательным отступом, равным 100% ширины
+	** благодаря этому линия встает слева от текста
+	*/
+	margin-left: -100%;
+}
+.view-this-shop-products .view-content.row h3:after {
+	/* смещаем правую линию вправо отрицательным отступом, равным 100% ширины
+	** благодаря этому линия встает справа от текста
+	*/
+	margin-right: -100%;
+}
+
+.view-this-shop-products .view-content.row h3.price-base{
+    margin: inherit;
 }
