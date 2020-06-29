@@ -13,6 +13,13 @@ p{
     margin: 0 16% 1rem;
 }
 
+/* #main-wrapper{
+    margin: 0 -30px;
+} */
+
+/* #main{
+    margin:0 30px;
+} */
 .main-content.col{
     /* padding: 0 0.25rem; */
 }
@@ -25,6 +32,23 @@ p{
     -moz-transition: all 0.3s ease;;
     -o-transition: all 0.3s ease;;
     transition: all 0.3s ease;
+}
+
+.floating-block-active{
+    left: 0;
+}
+
+.container-fluid, 
+.container-sm, 
+.container-md, 
+.container-lg, 
+.container-xl{
+    overflow: hidden;
+}
+
+.row{
+    /* margin-right: 0px;
+    margin-left: 0px; */
 }
  /* ----------------------------------------------------------------------- Кнопки (btn) ------------------------------------------------ */
 .btn{
@@ -292,6 +316,7 @@ p{
 #navbar-main{
     background-color: inherit;
     padding: 0 0.5rem;
+    z-index: 200;
 }
 
 
@@ -339,7 +364,7 @@ p{
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active{
     /* padding: 1em; */
-    /* background-color: #26a0e6; */
+    background-color: #26123c;
     color: white;
 }
 
@@ -921,8 +946,11 @@ tr.even{
     border-width: 2px;
     padding: 15px 10px;
     margin: 0 0 20px;
-    border-color: #d2d2d2;
+    border-color: #284665;
     border-radius: 4px;
+    /* color: white; */
+    background: #fbfbfb;
+    z-index: 100;
 }
 
 .block-filters{

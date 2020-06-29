@@ -21,6 +21,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal/admin_toolbar": "^2.2",
         "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/back_to_top": "^1.1",
         "drupal/better_exposed_filters": "^4.0@beta",
         "drupal/block_class": "^1.2",
         "drupal/bootstrap_barrio": "^4.24",
