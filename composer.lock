@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a09a10cf1084977ac2633c6b4587afca",
+    "content-hash": "afb223937b13f2ae61e65322ace183c5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4494,6 +4494,56 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flag"
             }
+        },
+        {
+            "name": "drupal/floating_block",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/floating_block.git",
+                "reference": "41f2eff289796d03752f43548686d7db2c4c8dc0"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1590624635",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "alexpott",
+                    "homepage": "https://www.drupal.org/user/157725"
+                },
+                {
+                    "name": "diqidoq",
+                    "homepage": "https://www.drupal.org/user/1001934"
+                },
+                {
+                    "name": "jOksanen",
+                    "homepage": "https://www.drupal.org/user/2352292"
+                }
+            ],
+            "description": "Allows regions of the site to float.",
+            "homepage": "https://www.drupal.org/project/floating_block",
+            "support": {
+                "source": "https://git.drupalcode.org/project/floating_block"
+            },
+            "time": "2020-05-28T00:09:28+00:00"
         },
         {
             "name": "drupal/fontawesome",
@@ -14103,6 +14153,7 @@
         "drupal/bootstrap_quicktabs": 15,
         "drupal/field_slideshow": 10,
         "drupal/flag": 10,
+        "drupal/floating_block": 20,
         "drupal/libraries": 15,
         "drupal/maillog": 20,
         "drupal/owlcarousel": 15,

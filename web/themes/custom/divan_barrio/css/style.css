@@ -287,10 +287,11 @@ p{
 
 #header{
     margin: 0 0 10px 0;
-    box-shadow: #4e4e4e 0 1px 8px 0px;
+    /* box-shadow: #4e4e4e 0 1px 8px 0px; */
 }
 #navbar-main{
     background-color: inherit;
+    padding: 0 0.5rem;
 }
 
 
@@ -331,7 +332,7 @@ p{
 .navbar-light .navbar-nav .nav-link{
     color: #3c3c3c;
     /* padding: 1em; */
-    /* background-color: inherit; */
+    background-color: #fbfbfb;
     font-size: large;
 }
 
@@ -411,6 +412,7 @@ ul.dropdown-menu li a:hover{
     border-right: solid #5d5d5d 1px;
     padding: 0 10px 0 0;
     margin: 0 10px 0 0;
+    text-shadow: 0 0 0 #2b2b2b;
     /* height: 0.7em; */
     /* width: 100px; */
 }

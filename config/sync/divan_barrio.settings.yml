@@ -87,7 +87,7 @@ bootstrap_barrio_navbar_top_navbar: 0
 bootstrap_barrio_navbar_top_class: ''
 bootstrap_barrio_navbar_class: ''
 bootstrap_barrio_navbar_top_affix: 0
-bootstrap_barrio_navbar_affix: 0
+bootstrap_barrio_navbar_affix: 1
 bootstrap_barrio_sidebar_first_affix: 0
 bootstrap_barrio_sidebar_second_affix: 0
 bootstrap_barrio_scroll_spy: ''
