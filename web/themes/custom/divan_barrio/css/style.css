@@ -364,7 +364,7 @@ p{
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active{
     /* padding: 1em; */
-    background-color: #26123c;
+    background-color: #40058e;
     color: white;
 }
 
@@ -431,13 +431,13 @@ ul.dropdown-menu li a:hover{
 .dropdown-item .fa-layer-group,
 .dropdown-item .fa-paint-roller{
     font-size: 2rem;
-    color: #ff0100;
+    /* color: #ff0100; */
     vertical-align: middle;
     /* background: #fbfbfb; */
     border-right: solid #5d5d5d 1px;
     padding: 0 10px 0 0;
     margin: 0 10px 0 0;
-    text-shadow: 0 0 0 #2b2b2b;
+    /* text-shadow: 0 0 0 #2b2b2b; */
     /* height: 0.7em; */
     /* width: 100px; */
 }
@@ -869,7 +869,7 @@ tr.even{
 .flag-add-bookmarks.action-unflag{
 
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1rem;
     /* background: #008606; */
     padding: 0.25rem 0.3rem;
     border-radius: 100%;
@@ -941,13 +941,16 @@ tr.even{
 
 /* ----------------------------------------------- Фильтры в блоке ---------------------------------------------------- */
 
-.sidebar .block{
+.block.block-views-exposed-filter-blockvsya-myagkaya-mebel-page-1,
+.block.block-views-exposed-filter-blocksleeps-all-page-1{
+    /* height: 470px; */
+    position: relative;
     border-style: solid;
-    border-width: 2px;
-    padding: 15px 10px;
-    margin: 0 0 20px;
-    border-color: #284665;
-    border-radius: 4px;
+    border-width: 3px;
+    padding: 0 1rem 2rem 1rem;
+    margin: 0 0.5rem 1rem;
+    border-color: #386b9ea3;
+    border-radius: 5px;
     /* color: white; */
     background: #fbfbfb;
     z-index: 100;
@@ -973,12 +976,17 @@ tr.even{
 #edit-submit-sleeps-all,
 #edit-reset{
     padding: 0.25rem;
+    background: #386b9e;
+    position: absolute;
+    margin: 1rem 0 0 0;
+    bottom: 0.5rem;
+    left: 0.75rem;
 }
 
 #edit-submit-vsya-myagkaya-mebel,
 #edit-submit-sleeps-all{
-    float: left;
-    margin: 1rem auto;
+    /* float: left; */
+    /* margin: 1rem auto; */
 }
 
 #edit-reset{
@@ -1003,31 +1011,43 @@ tr.even{
 
 /*------------------------------------------------ better exposed filters ----------------------------------------*/
 
-#edit-field-soft-fur-config-target-id--wrapper .fieldset-legend,
-#edit-field-field-sleep-config-target-id--wrapper .fieldset-legend,
-#edit-field-available-value--wrapper .fieldset-legend{
-    position: relative;
+#edit-field-soft-fur-config-target-id--wrapper,
+#edit-field-field-sleep-config-target-id--wrapper{
+    float: left;
+}
+#edit-field-available-value--wrapper{
+    float: left;
+    margin: 0 1rem;
+}
+#edit-field-soft-fur-config-target-id--wrapper legend,
+#edit-field-field-sleep-config-target-id--wrapper legend,
+#edit-field-available-value--wrapper legend{
+    position: relative; 
+    margin: 0;
     text-align: center;
     font-size: 1rem;
-    display: block;
+    /* display: block; */
+    overflow: hidden;
+    /* width: 100%; */
+    /* padding: 0;*/
 }
 
-#edit-field-soft-fur-config-target-id--wrapper .fieldset-legend::before,
-#edit-field-soft-fur-config-target-id--wrapper .fieldset-legend::after,
-#edit-field-field-sleep-config-target-id--wrapper .fieldset-legend::before,
-#edit-field-field-sleep-config-target-id--wrapper .fieldset-legend::after,
-#edit-field-available-value--wrapper .fieldset-legend::before,
-#edit-field-available-value--wrapper .fieldset-legend::after{
+#edit-field-soft-fur-config-target-id--wrapper legend::before,
+#edit-field-soft-fur-config-target-id--wrapper legend::after,
+#edit-field-field-sleep-config-target-id--wrapper legend::before,
+#edit-field-field-sleep-config-target-id--wrapper legend::after,
+#edit-field-available-value--wrapper legend::before,
+#edit-field-available-value--wrapper legend::after{
     /* display: none; */
-    /* content: '';
+    content: '';
     display: inline-block;
     vertical-align: middle;
     box-sizing: border-box;
-    width: 15%;
+    /* width: 15%; */
     height: 1px;
-    background: #b1b1b1;
-    border: solid #FFF;
-    border-width: 0 5px; */
+    /* background: #b1b1b1; */
+    border: solid #636161;
+    border-width: 0 10px;;
 }
 
 #edit-field-soft-fur-config-target-id--wrapper ul,

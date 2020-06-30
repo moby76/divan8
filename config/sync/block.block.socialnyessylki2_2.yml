@@ -11,7 +11,7 @@ dependencies:
 id: socialnyessylki2_2
 theme: divan_barrio
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: 'block_content:7e5a798d-9b21-495e-848a-6e6d325fdb46'
 settings:

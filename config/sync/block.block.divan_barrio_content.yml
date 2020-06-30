@@ -11,7 +11,7 @@ _core:
 id: divan_barrio_content
 theme: divan_barrio
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: system_main_block
 settings:

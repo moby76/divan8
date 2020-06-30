@@ -1,6 +1,6 @@
-uuid: 66f21b48-6018-4ed4-94ac-7b6832fc7f95
+uuid: c6045415-cd97-41fe-b64d-5c02e5b74188
 langcode: ru
-status: false
+status: true
 dependencies:
   config:
     - views.view.vsya_myagkaya_mebel
@@ -9,17 +9,17 @@ dependencies:
     - views
   theme:
     - divan_barrio
-id: raskrytayaformavsya_myagkaya_mebelpage_1
+id: raskrytayaformavsya_myagkaya_mebelpage_1_2
 theme: divan_barrio
-region: sidebar_first
-weight: 0
+region: content
+weight: -9
 provider: null
 plugin: 'views_exposed_filter_block:vsya_myagkaya_mebel-page_1'
 settings:
   id: 'views_exposed_filter_block:vsya_myagkaya_mebel-page_1'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
 visibility:
   request_path:
