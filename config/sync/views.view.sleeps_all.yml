@@ -2510,7 +2510,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="col-5 p-0">{{ link_flag }}</div>'
+            text: '<div class="col-5">{{ link_flag }}</div>'
             make_link: false
             path: ''
             absolute: false
@@ -3165,7 +3165,7 @@ display:
           exposed: true
           expose:
             operator_id: field_field_sleep_config_target_id_op
-            label: 'Конфигурация кровати'
+            label: Конфигурация
             description: ''
             use_operator: false
             operator: field_field_sleep_config_target_id_op

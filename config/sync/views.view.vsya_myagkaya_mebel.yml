@@ -453,7 +453,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="col-5 p-0">{{ link_flag }}</div>'
+            text: '<div class="col-5">{{ link_flag }}</div>'
             make_link: false
             path: ''
             absolute: false
