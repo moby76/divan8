@@ -37,6 +37,7 @@ dependencies:
     - taxonomy
     - text
     - user
+    - views_autocomplete_filters
     - views_fieldsets
 id: sleeps_all
 label: 'Кровати (страница/блоки)'
@@ -3100,6 +3101,72 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_sleep_model
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
       sorts:
         weight:
           id: weight
@@ -3126,6 +3193,15 @@ display:
           user_scope: current
           entity_type: node
           plugin_id: flag_relationship
+        field_sleep_model:
+          id: field_sleep_model
+          table: node__field_sleep_model
+          field: field_sleep_model
+          relationship: none
+          group_type: group
+          admin_label: 'field_sleep_model: Taxonomy term'
+          required: false
+          plugin_id: standard
       filters:
         status:
           value: '1'
@@ -3152,6 +3228,7 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+          group: 1
         field_field_sleep_config_target_id:
           id: field_field_sleep_config_target_id
           table: node__field_field_sleep_config
@@ -3241,6 +3318,108 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_sleep_model
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: name_op
+            label: ''
+            description: 'Выберите модель кровати, если она вам известна...'
+            use_operator: false
+            operator: name_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: id-name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              redaktor: '0'
+            placeholder: 'Выберите модель кровати'
+            autocomplete_filter: 1
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_field: name
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 1
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: views_autocomplete_filters_string
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: ''
+            description: 'Введите название, если оно вам известно...'
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              redaktor: '0'
+            placeholder: 'Введите название кровати'
+            autocomplete_filter: 1
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_field: title
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 1
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: views_autocomplete_filters_string
       filter_groups:
         operator: AND
         groups:
