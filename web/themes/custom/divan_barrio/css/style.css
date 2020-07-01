@@ -1009,6 +1009,29 @@ tr.even{
     padding: 0 0 1rem 0;
 }
 
+.js-form-item-id-name,
+.js-form-item-title{
+    /* width: 12rem; */
+    float: left;
+    position: relative;
+}
+.js-form-item-id-name{
+    margin-right: 1rem;
+    /* float: left; */
+}
+.js-form-item-title{
+    margin-left: 1rem;
+    /* float: right; */
+}
+.js-form-item-id-name::after{
+    content: "Или";
+    display: inline-block;
+    position: absolute;
+    bottom: 2rem;
+    right: -2rem;
+}
+
+
 /*------------------------------------------------ better exposed filters ----------------------------------------*/
 
 #edit-field-soft-fur-config-target-id--wrapper,

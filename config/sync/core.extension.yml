@@ -113,6 +113,7 @@ module:
   update: 0
   user: 0
   video: 0
+  views_autocomplete_filters: 0
   views_bootstrap: 0
   views_fieldsets: 0
   views_slideshow: 0
