@@ -1,7 +1,4 @@
 blocks:
   -
-    selector: '#navbar-main'
+    selector: '#CollapsingNavbar'
     padding_top: '0'
-  -
-    selector: '#block-raskrytayaformavsya-myagkaya-mebelpage-1'
-    padding_top: '100'

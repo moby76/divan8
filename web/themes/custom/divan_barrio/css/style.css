@@ -317,8 +317,14 @@ p{
     background-color: inherit;
     padding: 0 0.5rem;
     z-index: 200;
+    /* background: rgb(0,0,0); */
+    /* background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(4,4,4,0.6) 100%, rgba(172,255,1,1) 100%); */
+    /* display: inline-flex; */
 }
 
+.navbar-bottom{
+    background-color: black;
+}
 
 /* ------------------------------------------------------ navbar --------------------------------------------------- */
 
@@ -335,7 +341,7 @@ p{
     /* background: #ed812b; */
     border-radius: 100%;
     box-shadow: 0 1px 4px 0px #1f1f1f;
-    background: radial-gradient(circle at center, rgb(8, 147, 232) 0%, rgb(5, 25, 37) 79%, rgb(8, 46, 70) 100%);   
+    background: radial-gradient(circle at center, #f93636c7 0%, rgb(183, 0, 0) 79%, rgba(8, 46, 70, 0.36) 100%);  
 }
 
 
@@ -344,11 +350,17 @@ p{
 
 #navbar-top{
     padding: 0.5rem 0;
+    background-color: #055a8e;
 }
 
 /* -------------------------------------------------- Меню основное ------------------------------------------------- */
 .navbar-nav{
-    margin-right: 1em ;
+    margin-right: -1rem;
+    display: inline-flex;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(4,4,4,0.6) 100%, rgba(172,255,1,1) 100%);
+    padding: 1rem 1.2rem 1.5rem 1.2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .nav-item{
     /* border: 1px solid #26a0e6; */
@@ -359,13 +371,15 @@ p{
     /* padding: 1em; */
     background-color: #fbfbfb;
     font-size: large;
+    border: solid 2px white;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active{
     /* padding: 1em; */
-    background-color: #40058e;
+    background-color: #c53030;
     color: white;
+    border: solid 2px white;
 }
 
 .container-fluid, 
