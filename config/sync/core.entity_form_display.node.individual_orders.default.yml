@@ -3,16 +3,13 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - entity_browser.browser.test_files
     - field.field.node.individual_orders.body
     - field.field.node.individual_orders.field_features
     - field.field.node.individual_orders.field_foto
-    - field.field.node.individual_orders.field_image
     - field.field.node.individual_orders.field_number
     - field.field.node.individual_orders.field_soft_fur_model
     - node.type.individual_orders
   module:
-    - entity_browser
     - media_library
     - path
     - serial
@@ -42,20 +39,6 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
-    region: content
-  field_image:
-    weight: 10
-    settings:
-      entity_browser: test_files
-      field_widget_remove: true
-      field_widget_replace: true
-      open: true
-      selection_mode: selection_append
-      preview_image_style: thumbnail
-      field_widget_edit: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_browser_file
     region: content
   field_number:
     weight: 13
