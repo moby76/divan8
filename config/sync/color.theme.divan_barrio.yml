@@ -10,9 +10,9 @@ palette:
   titleslogan: '#fffeff'
   text: '#3b3b3b'
   link: '#0071b3'
-logo: 'public://color/divan_barrio-2d67ee2c/logo.svg'
+logo: 'public://color/divan_barrio-cd371351/logo.svg'
 stylesheets:
-  - 'public://color/divan_barrio-2d67ee2c/colors.css'
+  - 'public://color/divan_barrio-cd371351/colors.css'
 files:
-  - 'public://color/divan_barrio-2d67ee2c/logo.svg'
-  - 'public://color/divan_barrio-2d67ee2c/colors.css'
+  - 'public://color/divan_barrio-cd371351/logo.svg'
+  - 'public://color/divan_barrio-cd371351/colors.css'

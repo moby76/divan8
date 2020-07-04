@@ -1,0 +1,24 @@
+uuid: f11aac32-6777-4e08-868e-f72b6f112be5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.vsya_myagkaya_mebel
+  module:
+    - views
+  theme:
+    - divan_barrio
+id: views_block__vsya_myagkaya_mebel_block_1
+theme: divan_barrio
+region: primary_menu
+weight: -11
+provider: null
+plugin: 'views_block:vsya_myagkaya_mebel-block_1'
+settings:
+  id: 'views_block:vsya_myagkaya_mebel-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -355,12 +355,14 @@ p{
 
 /* -------------------------------------------------- Меню основное ------------------------------------------------- */
 .navbar-nav{
-    margin-right: -1rem;
+    margin-right: -2.5rem;
     display: inline-flex;
-    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(4,4,4,0.6) 100%, rgba(172,255,1,1) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.24) 0%, rgba(4,4,4,0.6) 100%, rgba(172,255,1,1) 100%);
     padding: 1rem 1.2rem 1.5rem 1.2rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding-right: 11rem;
+    border-top: solid 1px white;
 }
 .nav-item{
     /* border: 1px solid #26a0e6; */
@@ -951,6 +953,17 @@ tr.even{
 
 .fa-ruble-sign{
     color: #737373;
+}
+
+/* ----------------------------------------------------- список товаров (блок-счётчик) ------------------------------------------- */
+#block-views-block-vsya-myagkaya-mebel-block-1{
+    z-index: 200;
+}
+.view-id-vsya_myagkaya_mebel.view-display-id-block_1{
+    /* top: 100px; */
+    background-color: gray;
+    color: white;
+    /* z-index: 150; */
 }
 
 /* ----------------------------------------------- Фильтры в блоке ---------------------------------------------------- */
