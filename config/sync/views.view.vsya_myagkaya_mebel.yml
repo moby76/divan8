@@ -1546,6 +1546,7 @@ display:
         header: false
         title: false
         css_class: false
+        empty: false
       filters:
         status:
           value: '1'
@@ -1672,11 +1673,25 @@ display:
           group_type: group
           admin_label: ''
           empty: true
-          content: '<div class="items-count-list"><i class="fas fa-tasks"></i><span>@end</span></div>'
+          content: '<a href="/мои-закладки" target="_blank" class="nav-link btn btn-outline-info nav-link-"><i class="fas fa-tasks"></i><span class="items-counter">@end</span>Перейти ксписку</a>'
           plugin_id: result
       enabled: true
       title: 'Мягкая мебель и кровати - счётчик товаров в списке'
       css_class: ''
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: ''
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
