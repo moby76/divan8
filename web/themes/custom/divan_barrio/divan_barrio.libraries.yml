@@ -2,6 +2,7 @@ global-styling:
   version: VERSION
   js:
     js/global.js: {}
+    js/header-bottom-sticky-top: {}
   css:
     component:
       css/style.css: {}
@@ -29,3 +30,5 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+    - core/jquery
+    - core/jquery.once

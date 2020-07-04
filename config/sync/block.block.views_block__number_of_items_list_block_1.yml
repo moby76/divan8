@@ -1,0 +1,24 @@
+uuid: b6ad005b-5aad-4d9b-bc6a-7415a3e9c4cb
+langcode: ru
+status: false
+dependencies:
+  config:
+    - views.view.number_of_items_list
+  module:
+    - views
+  theme:
+    - divan_barrio
+id: views_block__number_of_items_list_block_1
+theme: divan_barrio
+region: primary_menu
+weight: -12
+provider: null
+plugin: 'views_block:number_of_items_list-block_1'
+settings:
+  id: 'views_block:number_of_items_list-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
