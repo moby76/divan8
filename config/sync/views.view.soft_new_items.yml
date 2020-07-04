@@ -87,7 +87,7 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: 'col-12 mb-3'
+          row_class: ''
           default_row_class: false
           type: ul
           wrapper_class: ''
@@ -318,7 +318,10 @@ display:
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_flag_refresh:
+          flags: {  }
+          noscrolltop: 0
       title: 'Наши новинки'
       defaults:
         title: false
@@ -571,7 +574,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'card  mb-3  col-12  shadow'
+          admin_label: 'card  h-100  mb-4  col-12  shadow'
           label: ''
           exclude: false
           alter:
@@ -617,7 +620,7 @@ display:
             - fieldset_1
           wrapper: div
           legend: ''
-          classes: 'card  h-100  mb-3  col-12  shadow'
+          classes: 'card  h-100  mb-4  col-12  shadow'
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -684,7 +687,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: col-md-6
+          admin_label: col-md-7
           label: ''
           exclude: false
           alter:
@@ -730,7 +733,7 @@ display:
             - fieldset_3
           wrapper: div
           legend: ''
-          classes: col-md-6
+          classes: col-md-7
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -900,7 +903,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: col-md-6
+          admin_label: col-md-5
           label: ''
           exclude: false
           alter:
@@ -946,7 +949,7 @@ display:
             - fieldset_5
           wrapper: div
           legend: ''
-          classes: col-md-6
+          classes: col-md-5
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset

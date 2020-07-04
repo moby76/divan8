@@ -249,7 +249,10 @@ display:
     display_title: Block
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_flag_refresh:
+          flags: {  }
+          noscrolltop: 0
       fields:
         view_node:
           id: view_node
@@ -558,8 +561,8 @@ display:
           row_class: 'col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3'
           default_row_class: false
           type: ul
-          wrapper_class: 'container-fluid p-0'
-          class: 'list-unstyled row'
+          wrapper_class: 'container-fluid pr-3 pl-3'
+          class: 'list-unstyled row mb-0'
       row:
         type: fields
         options:
