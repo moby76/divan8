@@ -12,7 +12,7 @@ dependencies:
 id: raskrytayaformavsya_myagkaya_mebelpage_1
 theme: divan_barrio
 region: sidebar_first
-weight: 0
+weight: -11
 provider: null
 plugin: 'views_exposed_filter_block:vsya_myagkaya_mebel-page_1'
 settings:

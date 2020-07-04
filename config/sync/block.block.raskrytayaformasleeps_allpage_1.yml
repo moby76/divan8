@@ -12,7 +12,7 @@ dependencies:
 id: raskrytayaformasleeps_allpage_1
 theme: divan_barrio
 region: sidebar_first
-weight: 0
+weight: -12
 provider: null
 plugin: 'views_exposed_filter_block:sleeps_all-page_1'
 settings:
