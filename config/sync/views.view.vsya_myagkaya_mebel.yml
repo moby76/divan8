@@ -1673,7 +1673,7 @@ display:
           group_type: group
           admin_label: ''
           empty: true
-          content: '<a href="/мои-закладки" target="_blank" class="nav-link btn btn-outline-info nav-link-"><i class="fas fa-tasks"></i><span class="items-counter">@end</span>Перейти ксписку</a>'
+          content: '<a href="/мои-закладки" target="_blank" class="nav-link btn btn-outline-info nav-link-"><i class="fas fa-tasks"></i><span class="items-counter">@end</span>Перейти к списку</a>'
           plugin_id: result
       enabled: true
       title: 'Мягкая мебель и кровати - счётчик товаров в списке'
