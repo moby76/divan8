@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.individual_orders.field_foto
     - field.field.node.individual_orders.field_komissionka
     - field.field.node.individual_orders.field_number
+    - field.field.node.individual_orders.field_price_base
     - field.field.node.individual_orders.field_soft_fur_model
     - node.type.individual_orders
   module:
@@ -132,5 +133,6 @@ hidden:
   body: true
   field_komissionka: true
   field_number: true
+  field_price_base: true
   langcode: true
   links: true
