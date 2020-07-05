@@ -72,7 +72,8 @@ a:active,
 }
 
 .site-footer {
-    background: #292929;
+    /* background: #292929; */
+    background-color: #0a373a;
 }
 
 .region-header,
