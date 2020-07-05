@@ -1,0 +1,23 @@
+uuid: e2be52ef-bad2-4ff5-9551-6e1347ee61af
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_komissionka
+    - node.type.individual_orders
+id: node.individual_orders.field_komissionka
+field_name: field_komissionka
+entity_type: node
+bundle: individual_orders
+label: Комиссионка
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean

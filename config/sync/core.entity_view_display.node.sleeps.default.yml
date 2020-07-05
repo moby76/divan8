@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.sleeps.field_features
     - field.field.node.sleeps.field_field_sleep_config
     - field.field.node.sleeps.field_foto
+    - field.field.node.sleeps.field_komissionka
     - field.field.node.sleeps.field_laundry_box
     - field.field.node.sleeps.field_new_item
     - field.field.node.sleeps.field_price_base
@@ -121,6 +122,16 @@ content:
             lb-col: false
             classes: {  }
     type: media_thumbnail
+    region: content
+  field_komissionka:
+    weight: 27
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_laundry_box:
     weight: 13

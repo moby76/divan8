@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
     - field.field.node.soft_fur.field_height
+    - field.field.node.soft_fur.field_komissionka
     - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
@@ -282,6 +283,7 @@ hidden:
   field_depth_full: true
   field_features: true
   field_height: true
+  field_komissionka: true
   field_mekhanizm: true
   field_new_item: true
   field_number: true
