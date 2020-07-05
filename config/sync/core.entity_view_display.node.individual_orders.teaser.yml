@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.individual_orders.field_number
     - field.field.node.individual_orders.field_price_base
     - field.field.node.individual_orders.field_soft_fur_model
+    - field.field.node.individual_orders.field_tip_mebeli
     - image.style.scale_330_330
     - node.type.individual_orders
   module:
@@ -165,5 +166,6 @@ hidden:
   field_komissionka: true
   field_number: true
   field_price_base: true
+  field_tip_mebeli: true
   langcode: true
   links: true

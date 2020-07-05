@@ -1,0 +1,21 @@
+uuid: 1a6f9444-177c-482f-9f18-64b80a78dc5f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - node.type.secondhand
+  module:
+    - text
+id: node.secondhand.field_note
+field_name: field_note
+entity_type: node
+bundle: secondhand
+label: Примечание
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

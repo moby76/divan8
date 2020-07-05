@@ -1,0 +1,43 @@
+uuid: 3ff39ffb-550a-4d59-a7c4-e45cd255260f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.secondhand.body
+    - field.field.node.secondhand.field_additional_photos
+    - field.field.node.secondhand.field_foto
+    - field.field.node.secondhand.field_note
+    - field.field.node.secondhand.field_number
+    - field.field.node.secondhand.field_price_base
+    - field.field.node.secondhand.field_tip_mebeli
+    - node.type.secondhand
+  module:
+    - text
+    - user
+id: node.secondhand.teaser
+targetEntityType: node
+bundle: secondhand
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_additional_photos: true
+  field_foto: true
+  field_note: true
+  field_number: true
+  field_price_base: true
+  field_tip_mebeli: true
+  langcode: true

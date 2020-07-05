@@ -1,0 +1,29 @@
+uuid: ecc03d5a-e90b-4e33-bc1b-b232ded780c2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tip_mebeli
+    - node.type.secondhand
+    - taxonomy.vocabulary.fur_type
+id: node.secondhand.field_tip_mebeli
+field_name: field_tip_mebeli
+entity_type: node
+bundle: secondhand
+label: 'Тип мебели'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      fur_type: fur_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

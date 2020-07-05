@@ -1,0 +1,23 @@
+uuid: 71210246-0119-42b9-bab7-63626d9dd0d2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.secondhand
+  module:
+    - serial
+id: node.secondhand.field_number
+field_name: field_number
+entity_type: node
+bundle: secondhand
+label: 'Номер материала'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: serial

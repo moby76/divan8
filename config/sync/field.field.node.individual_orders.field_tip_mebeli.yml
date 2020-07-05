@@ -1,0 +1,29 @@
+uuid: f463dcd6-3354-4a50-a48e-a7d63c6d27bd
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tip_mebeli
+    - node.type.individual_orders
+    - taxonomy.vocabulary.fur_type
+id: node.individual_orders.field_tip_mebeli
+field_name: field_tip_mebeli
+entity_type: node
+bundle: individual_orders
+label: 'Тип мебели'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      fur_type: fur_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

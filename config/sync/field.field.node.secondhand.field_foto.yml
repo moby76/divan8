@@ -1,0 +1,28 @@
+uuid: 3cd4e092-7ad7-48a2-9002-2372a07ad160
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto
+    - media.type.image
+    - node.type.secondhand
+id: node.secondhand.field_foto
+field_name: field_foto
+entity_type: node
+bundle: secondhand
+label: Фото
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
