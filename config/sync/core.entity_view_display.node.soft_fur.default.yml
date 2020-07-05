@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.soft_fur.field_features
     - field.field.node.soft_fur.field_foto
     - field.field.node.soft_fur.field_height
+    - field.field.node.soft_fur.field_komissionka
     - field.field.node.soft_fur.field_mekhanizm
     - field.field.node.soft_fur.field_new_item
     - field.field.node.soft_fur.field_number
@@ -112,6 +113,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_komissionka:
+    weight: 24
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_mekhanizm:
     weight: 19

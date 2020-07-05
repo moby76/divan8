@@ -115,6 +115,8 @@ module:
   video: 0
   views_autocomplete_filters: 0
   views_bootstrap: 0
+  views_bulk_edit: 0
+  views_bulk_operations: 0
   views_fieldsets: 0
   views_flag_refresh: 0
   views_infinite_scroll: 0

@@ -1,0 +1,23 @@
+uuid: e0cc2d05-89fc-4a89-9da3-aa2fcbe6003d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_komissionka
+    - node.type.sleeps
+id: node.sleeps.field_komissionka
+field_name: field_komissionka
+entity_type: node
+bundle: sleeps
+label: Комиссионка
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean
