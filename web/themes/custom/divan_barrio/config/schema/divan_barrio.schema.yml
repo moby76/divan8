@@ -295,3 +295,4 @@ bootstrap_barrio_table_hover:
 bootstrap_barrio_table_head:
   type: text
   label: 'Table header color scheme'
+  
