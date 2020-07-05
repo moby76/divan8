@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.individual_orders.body
     - field.field.node.individual_orders.field_features
     - field.field.node.individual_orders.field_foto
+    - field.field.node.individual_orders.field_komissionka
     - field.field.node.individual_orders.field_number
     - field.field.node.individual_orders.field_soft_fur_model
     - image.style.scale_330_330
@@ -160,6 +161,7 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_komissionka: true
   field_number: true
   langcode: true
   links: true
