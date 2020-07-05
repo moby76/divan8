@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_features
     - field.storage.node.field_foto
+    - field.storage.node.field_komissionka
+    - field.storage.node.field_price_base
     - field.storage.node.field_soft_fur_model
     - image.style.large
     - node.type.individual_orders
@@ -92,6 +94,133 @@ display:
           separator: ''
           hide_empty: false
       fields:
+        field_soft_fur_model:
+          id: field_soft_fur_model
+          table: node__field_soft_fur_model
+          field: field_soft_fur_model
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: "{% if field_soft_fur_model == 1 %}\r\n    <div class =\"card-text text-info\">Изготовлено на базе модели {{ field_soft_fur_model }}</div>\r\n{% elseif field_soft_fur_model == 0 %}\r\n    <div class =\"card-text text-info\">Создано \"с нуля\"</div>\r\n{% endif %}\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_price_base:
+          id: field_price_base
+          table: node__field_price_base
+          field: field_price_base
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -151,7 +280,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'card  mb-4  shadow'
           label: ''
           exclude: false
           alter:
@@ -195,9 +324,10 @@ display:
           hide_alter_empty: true
           fields:
             - fieldset_3
+            - fieldset_7
           wrapper: div
           legend: ''
-          classes: 'card  mb-4  col-12  shadow'
+          classes: 'card  mb-4  shadow'
           collapsible: 0
           collapsed: 0
           plugin_id: fieldset
@@ -207,7 +337,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: row
           label: ''
           exclude: false
           alter:
@@ -320,7 +450,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'card-img  p-3'
           label: ''
           exclude: false
           alter:
@@ -480,7 +610,7 @@ display:
           field: fieldset
           relationship: none
           group_type: group
-          admin_label: 'col-md-4  bg-success'
+          admin_label: col-md-4
           label: ''
           exclude: false
           alter:
@@ -526,7 +656,7 @@ display:
             - fieldset_4
           wrapper: div
           legend: ''
-          classes: 'col-md-4  bg-success'
+          classes: col-md-4
           collapsible: 1
           collapsed: 0
           plugin_id: fieldset
@@ -581,7 +711,6 @@ display:
           fields:
             - title
             - field_features
-            - field_soft_fur_model
           wrapper: div
           legend: ''
           classes: card-body
@@ -599,7 +728,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card-title text-white\">{{ title }} </div>\r\n<hr class=\"my-4\">"
+            text: "<div class=\"card-title text-info\">{{ title }} </div>\r\n<hr class=\"my-4\">"
             make_link: false
             path: ''
             absolute: false
@@ -663,6 +792,68 @@ display:
           label: ''
           exclude: false
           alter:
+            alter_text: true
+            text: '<div class ="card-text text-info">{{ field_features }}</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        fieldset_7:
+          id: fieldset_7
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: 'd-flex justify-content-between'
+          label: ''
+          exclude: false
+          alter:
             alter_text: false
             text: ''
             make_link: false
@@ -689,11 +880,11 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: 'card-text text-white'
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -701,32 +892,27 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_soft_fur_model:
-          id: field_soft_fur_model
-          table: node__field_soft_fur_model
-          field: field_soft_fur_model
+          fields:
+            - fieldset_6
+            - fieldset_8
+          wrapper: div
+          legend: ''
+          classes: 'd-flex  justify-content-between'
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_6:
+          id: fieldset_6
+          table: views
+          field: fieldset
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: col-8
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: 'Изготовлено на базе модели {{ field_soft_fur_model }} '
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -751,8 +937,64 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: card-text
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - field_komissionka
+          wrapper: div
+          legend: ''
+          classes: col-8
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        field_komissionka:
+          id: field_komissionka
+          table: node__field_komissionka
+          field: field_komissionka
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if field_komissionka__value == 1 %}\r\n    <p class=\"alert alert-primary\" role=\"alert\"><i class=\"fas fa-exclamation\"></i>Кстати - этот товар есть в продаже по цене {{ field_price_base }}</p>\r\n{% elseif field_available__value == 0 %}\r\n    <p class=\"alert alert-dark\" role=\"alert\"></i>Вы можете заказать точно такой-же или подобный</p>\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -763,11 +1005,13 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
+          click_sort_column: value
+          type: boolean
           settings:
-            link: true
-          group_column: target_id
+            format: boolean
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -778,6 +1022,111 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        fieldset_8:
+          id: fieldset_8
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: col-4
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - nothing
+          wrapper: div
+          legend: ''
+          classes: col-4
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Создано на базе/с нуля'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if field_soft_fur_model %}\r\n    <div class =\"card-text text-info\"><i class=\"fas fa-project-diagram\"></i>На базе модели <i class=\"fas fa-link\"></i>{{ field_soft_fur_model }}</div>\r\n{% else %}\r\n    <div class =\"card-text text-info\"><i class=\"fas fa-pencil-ruler\"></i>Создано \"с нуля\"</div>\r\n{% endif %}\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
       filters:
         status:
           id: status
@@ -861,44 +1210,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_komissionka_value:
-          id: field_komissionka_value
-          table: node__field_komissionka
-          field: field_komissionka_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
       sorts:
         created:
           id: created
@@ -952,6 +1263,8 @@ display:
       tags:
         - 'config:field.storage.node.field_features'
         - 'config:field.storage.node.field_foto'
+        - 'config:field.storage.node.field_komissionka'
+        - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_soft_fur_model'
   page_1:
     display_plugin: page
@@ -984,4 +1297,6 @@ display:
       tags:
         - 'config:field.storage.node.field_features'
         - 'config:field.storage.node.field_foto'
+        - 'config:field.storage.node.field_komissionka'
+        - 'config:field.storage.node.field_price_base'
         - 'config:field.storage.node.field_soft_fur_model'

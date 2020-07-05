@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.individual_orders.field_foto
     - field.field.node.individual_orders.field_komissionka
     - field.field.node.individual_orders.field_number
+    - field.field.node.individual_orders.field_price_base
     - field.field.node.individual_orders.field_soft_fur_model
     - node.type.individual_orders
   module:
@@ -57,6 +58,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: serial_default_formatter
+    region: content
+  field_price_base:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_soft_fur_model:
     weight: 104

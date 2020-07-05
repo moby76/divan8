@@ -1,0 +1,23 @@
+uuid: f56dbdde-2a46-4290-a1bd-6aeedc5db9c4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price_base
+    - node.type.individual_orders
+id: node.individual_orders.field_price_base
+field_name: field_price_base
+entity_type: node
+bundle: individual_orders
+label: Цена
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' руб.'
+field_type: integer
