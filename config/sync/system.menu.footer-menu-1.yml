@@ -1,0 +1,8 @@
+uuid: 61081fd4-0a43-4bba-a4e5-58a80234648d
+langcode: ru
+status: true
+dependencies: {  }
+id: footer-menu-1
+label: 'Меню в футере 1'
+description: ''
+locked: false

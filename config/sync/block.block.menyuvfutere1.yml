@@ -1,0 +1,25 @@
+uuid: 61fe43a2-bc81-4d2b-8978-2832124cb9cb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-1
+  module:
+    - system
+  theme:
+    - divan_barrio
+id: menyuvfutere1
+theme: divan_barrio
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-1'
+settings:
+  id: 'system_menu_block:footer-menu-1'
+  label: 'Меню в футере 1'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

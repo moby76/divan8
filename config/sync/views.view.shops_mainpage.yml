@@ -62,11 +62,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3'
           default_row_class: false
           type: ul
-          wrapper_class: 'container-fluid p-0'
-          class: 'list-unstyled mx-auto'
+          wrapper_class: 'container-fluid pr-3 pl-3'
+          class: 'list-unstyled row mb-0'
       row:
         type: fields
         options:
@@ -641,7 +641,10 @@ display:
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_flag_refresh:
+          flags: {  }
+          noscrolltop: 0
     cache_metadata:
       max-age: -1
       contexts:
