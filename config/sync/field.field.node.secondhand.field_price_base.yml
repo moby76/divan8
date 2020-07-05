@@ -1,0 +1,23 @@
+uuid: f9e40822-cdfe-4806-8bc0-148350c2fef5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price_base
+    - node.type.secondhand
+id: node.secondhand.field_price_base
+field_name: field_price_base
+entity_type: node
+bundle: secondhand
+label: Цена
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' руб.'
+field_type: integer

@@ -1,0 +1,25 @@
+uuid: 54c6c5cd-5a04-40e8-8108-ecbb0e87e2c7
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:61e079a6-496c-403d-ad7a-a57d0c6837dc'
+  module:
+    - block_content
+  theme:
+    - divan_barrio
+id: tochka
+theme: divan_barrio
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:61e079a6-496c-403d-ad7a-a57d0c6837dc'
+settings:
+  id: 'block_content:61e079a6-496c-403d-ad7a-a57d0c6837dc'
+  label: Точка
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

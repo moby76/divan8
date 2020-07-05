@@ -1,0 +1,23 @@
+uuid: 6d476579-8641-41f8-a1ef-28e5c2d5c2ff
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.secondhand
+  module:
+    - text
+id: node.secondhand.body
+field_name: body
+entity_type: node
+bundle: secondhand
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

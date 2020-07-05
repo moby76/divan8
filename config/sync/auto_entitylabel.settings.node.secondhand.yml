@@ -1,0 +1,6 @@
+status: 1
+pattern: 'Лот № [node:field_number]'
+escape: false
+dependencies:
+  config:
+    - node.type.secondhand

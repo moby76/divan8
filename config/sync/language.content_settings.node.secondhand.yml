@@ -1,0 +1,11 @@
+uuid: 1a5cdbdc-411e-44ce-85c0-50539e9e6270
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.secondhand
+id: node.secondhand
+target_entity_type_id: node
+target_bundle: secondhand
+default_langcode: site_default
+language_alterable: false
