@@ -1089,7 +1089,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if field_soft_fur_model %}\r\n    <div class =\"card-text text-info\"><i class=\"fas fa-project-diagram\"></i>На базе модели <i class=\"fas fa-link\"></i>{{ field_soft_fur_model }}</div>\r\n{% else %}\r\n    <div class =\"card-text text-info\"><i class=\"fas fa-pencil-ruler\"></i>Создано \"с нуля\"</div>\r\n{% endif %}\r\n"
+            text: "{% if field_soft_fur_model %}\r\n    <div class =\"card-text text-info\"><i class=\"fas fa-project-diagram\"></i>На базе модели {{ field_soft_fur_model }}<i class=\"fas fa-link\"></i></div>\r\n{% else %}\r\n    <div class =\"card-text text-info\"><i class=\"fas fa-pencil-ruler\"></i>Создано \"с нуля\"</div>\r\n{% endif %}\r\n"
             make_link: false
             path: ''
             absolute: false

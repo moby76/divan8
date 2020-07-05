@@ -473,7 +473,7 @@ ul.dropdown-menu li a:hover{
 .nav-link .fa-cogs,
 .nav-link .fa-shopping-cart,
 .nav-link .fa-tasks,
-.dropdown-item .fa-project-diagram,
+.dropdown-item .fa-tools,
 .dropdown-item .fa-couch,
 .dropdown-item .fa-bed,
 .dropdown-item .fa-layer-group,
@@ -1323,11 +1323,11 @@ ul li a.button{
 .fa-project-diagram,
 .fa-pencil-ruler{
     font-size: 1.25rem;
-    margin: 0 1rem 0 0;
+    margin: 0 0.5rem 0 0;
     color: white;
     width: 3rem;
     height: 3rem;
-    border-radius: 50%;;
+    /* border-radius: 50%; */
 }
 .fa-pencil-ruler{
     background: #088c94;
@@ -1340,8 +1340,9 @@ ul li a.button{
 
 .fa-link{
     color: #9a9a9a;
-    margin: 0 0.1rem 0 0.25rem;
+    margin: 0 0 0 0.1rem;
     font-size: 0.75rem;
+    vertical-align: text-top;
 }
 
 .fa-exclamation{
