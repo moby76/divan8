@@ -56,12 +56,17 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
-          items_per_page: 10
+          items_per_page: 5
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -70,9 +75,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: views_bootstrap_table
         options:
@@ -680,7 +683,7 @@ display:
           plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
-      use_ajax: false
+      use_ajax: true
       title: 'Мой список'
     cache_metadata:
       max-age: -1
@@ -702,7 +705,10 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_flag_refresh:
+          flags: {  }
+          noscrolltop: 0
       path: мои-закладки
     cache_metadata:
       max-age: -1
