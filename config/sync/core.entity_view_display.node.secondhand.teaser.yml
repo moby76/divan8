@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.secondhand.body
     - field.field.node.secondhand.field_additional_photos
+    - field.field.node.secondhand.field_features
     - field.field.node.secondhand.field_foto
     - field.field.node.secondhand.field_note
     - field.field.node.secondhand.field_number
@@ -35,6 +36,7 @@ content:
     region: content
 hidden:
   field_additional_photos: true
+  field_features: true
   field_foto: true
   field_note: true
   field_number: true

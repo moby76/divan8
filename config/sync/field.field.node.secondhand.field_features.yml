@@ -1,0 +1,21 @@
+uuid: 561cb771-8b58-4ec6-8c81-33bec65c6fc6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.secondhand
+  module:
+    - text
+id: node.secondhand.field_features
+field_name: field_features
+entity_type: node
+bundle: secondhand
+label: Особенности
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
