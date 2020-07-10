@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1b81f550ebbc1cf2ffa0d6dfbbc3782",
+    "content-hash": "25856148bdd986f7b8631c1501a620d2",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6025,6 +6025,54 @@
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
                 "source": "https://git.drupalcode.org/project/pathauto"
+            }
+        },
+        {
+            "name": "drupal/perfmon",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/perfmon.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/perfmon-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "07386914738eae7d0ae0b569a02efc74e4c938c8"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1589341846",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "armrus",
+                    "homepage": "https://www.drupal.org/user/1957854"
+                },
+                {
+                    "name": "dr.admin",
+                    "homepage": "https://www.drupal.org/user/1942648"
+                }
+            ],
+            "description": "Tests, verifies and recommends system environment settings to speed up performance of your site.",
+            "homepage": "https://www.drupal.org/project/perfmon",
+            "support": {
+                "source": "https://git.drupalcode.org/project/perfmon"
             }
         },
         {
