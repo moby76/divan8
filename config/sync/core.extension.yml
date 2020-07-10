@@ -88,6 +88,7 @@ module:
   panels_ipe: 0
   path: 0
   path_alias: 0
+  perfmon: 0
   quickedit: 0
   quicktabs: 0
   rdf: 0
