@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "870861f174eba9c806391cd8777f1909",
+    "content-hash": "cd8dbe9988e323ad31c311791eccd6b1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5808,6 +5808,50 @@
                 "source": "http://cgit.drupalcode.org/office_hours",
                 "issues": "http://drupal.org/project/office_hours",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/optimizedb",
+            "version": "1.0.0-rc3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/optimizedb.git",
+                "reference": "8.x-1.0-rc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/optimizedb-8.x-1.0-rc3.zip",
+                "reference": "8.x-1.0-rc3",
+                "shasum": "678c529ccc3a1af8af8eb8f36b108ea513355053"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-rc3",
+                    "datestamp": "1593908091",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "sergeypavlenko",
+                    "homepage": "https://www.drupal.org/user/1343804"
+                }
+            ],
+            "description": "Optimizing the site database.",
+            "homepage": "https://www.drupal.org/project/optimizedb",
+            "support": {
+                "source": "https://git.drupalcode.org/project/optimizedb"
             }
         },
         {
@@ -14735,6 +14779,7 @@
         "drupal/floating_block": 20,
         "drupal/libraries": 15,
         "drupal/maillog": 20,
+        "drupal/optimizedb": 5,
         "drupal/owlcarousel": 15,
         "drupal/page_manager": 10,
         "drupal/quicktabs": 15,

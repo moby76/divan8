@@ -80,6 +80,7 @@ module:
   ng_lightbox: 0
   node: 0
   office_hours: 0
+  optimizedb: 0
   options: 0
   owlcarousel: 0
   page_cache: 0
