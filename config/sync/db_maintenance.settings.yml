@@ -1,0 +1,15 @@
+cron_last_run: 0
+cron_frequency: 86400
+use_time_interval: true
+time_interval_start: '01:30'
+time_interval_end: '02:30'
+all_tables: 0
+write_log: 0
+_core:
+  default_config_hash: T_ds3REH4r3NJRKBQ8cLc-RVnb4uooa-F_oEyWxdB8w
+langcode: ru
+table_list_divan8_dev: {  }
+actions: null
+form_build_id: form-zGqfJDEf2fDDsDnYMlh7fBR8ORzrpSuOU_Xgbgqib-0
+form_token: J_LGXK7GlYe64dhOznJQIKqatXBfH_12Eagy9TSdJdQ
+form_id: db_maintenance_admin_settings
