@@ -465,7 +465,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "    <div class=\"row d-flex justify-content-start ml-1\">\r\n  <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-danger\">{{ field_price_base }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   "
+            text: '<div class="d-inline-flex price-base badge pr-2 pl-2 mr-2 badge-success"><h3 class="text-white">{{ field_price_base }}</h3><h5 class="ruble text-white">₽</h5></div>'
             make_link: false
             path: ''
             absolute: false
@@ -498,7 +498,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "    <div class=\"row d-flex justify-content-start ml-1\">\r\n  <h3><span class=\"price-base badge pr-2 pl-2 pt-2 pb-2 mr-2 badge-warning\">от&nbsp; {{ field_price_from }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n"
+          empty: '<div class="d-inline-flex price-base badge pr-2 pl-2 mr-2 badge-warning"><h3 class="text-white">от&nbsp;{{ field_price_from }}</h3><h5 class="ruble text-white">₽</h5></div>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
