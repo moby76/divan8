@@ -50,6 +50,19 @@ p{
     /* margin-right: 0px;
     margin-left: 0px; */
 }
+
+h1, h2, h3, h4, h5{
+    margin: 0;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #4e7d19;
+}
+.badge-warning {
+    color: #fff;
+    background-color: #b94d00;
+}
  /* ----------------------------------------------------------------------- Кнопки (btn) ------------------------------------------------ */
 .btn{
     /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.48); */
@@ -576,9 +589,7 @@ ul.dropdown-menu li a:hover{
     display: none;
 }
 
-.price-base{
-    opacity: 0.9;
-}
+
 
 .card-model-desc{
     /* background: #3c3c3c;
@@ -1349,4 +1360,14 @@ ul li a.button{
     margin: 0 0.75rem 0 0;
     font-size: 1.025rem;
     color: #2c5a73;
+}
+
+/*------------------------------------------------------ цены -------------------------------------------------*/
+
+.price-base{
+    /* opacity: 0.9; */
+}
+
+.ruble{
+    margin: 0 0 0 0.5rem;
 }
