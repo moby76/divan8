@@ -87,7 +87,7 @@ display:
           row_class: 'responsive-card-scale col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3'
           default_row_class: false
           type: ul
-          wrapper_class: 'container col-12'
+          wrapper_class: container
           class: 'list-unstyled row'
       row:
         type: fields
@@ -968,7 +968,10 @@ display:
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_flag_refresh:
+          flags: {  }
+          noscrolltop: 0
       enabled: true
       arguments:
         tid:
@@ -1299,7 +1302,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-7\">  \r\n        <h4><span class=\"badge badge-info pr-3 pl-3 pt-3 pb-3\">{{ title }} </span></h4>\r\n</div>"
+            text: "<div class=\"col-7 pl-0\">  \r\n        <h4><span class=\"badge badge-info pr-2 pl-2 pt-2 pb-2\">{{ title }} </span></h4>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

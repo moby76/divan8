@@ -65,8 +65,8 @@ content:
       ratio: ''
       box_caption: ''
       box_caption_custom: ''
-      grid: 2
-      grid_medium: 2
+      grid: 1
+      grid_medium: 1
       grid_small: 1
       current_view_mode: vyvod_gabaritov_v_opisanii_tovara
       background: false

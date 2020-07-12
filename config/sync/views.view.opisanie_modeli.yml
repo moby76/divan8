@@ -1247,7 +1247,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'Для данного комплекта нет схемы габаритов'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1521,7 +1521,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-6\">  \r\n        <h1><span class=\"badge pr-4 pl-4 pt-3 pb-3 badge-secondary\">{{ title }} </span></h1>\r\n</div>\r\n"
+            text: "<div class=\"col-sm-6 d-flex justify-content-start mb-3 pl-0\">  \r\n        <div class=\"badge p-2 badge-dark\"><h3 class=\"text-white\">{{ title }}</h3></div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1586,7 +1586,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-6\">\r\n    <div class=\"row float-right mr-3\">\r\n  <h1><span class=\"price-base badge pr-4 pl-4 pt-3 pb-3 mr-3 badge-danger\">{{ field_price_base }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n</div>"
+            text: "<div class=\"col-6 d-flex justify-content-end mb-3\">\r\n    <div class=\"d-inline-flex price-base badge p-2 mr-2 badge-success\"><h3 class=\"text-white\">{{ field_price_base }}</h3><h5 class=\"ruble text-white\">₽</h5></div>\r\n</div>   "
             make_link: false
             path: ''
             absolute: false
@@ -1619,7 +1619,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"col-sm-6\">\r\n    <div class=\"row float-right mr-3\">\r\n  <h1><span class=\"price-base badge pr-4 pl-4 pt-3 pb-3 mr-3 badge-warning\">от&nbsp; {{ field_price_from }}</span></h1><i class=\"fas fa-ruble-sign\"></i>\r\n     </div>   \r\n</div>"
+          empty: "<div class=\"col-6 d-flex justify-content-end mb-3\">\r\n    <div class=\"d-inline-flex price-base badge p-2 mr-2 badge-warning\"><h3 class=\"text-white\">от&nbsp;{{ field_price_from }}</h3><h5 class=\"ruble text-white\">₽</h5></div>\r\n</div> "
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1650,7 +1650,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"row\">\r\n    <ul class=\"nav nav-pills\">\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link active\" data-toggle=\"tab\" href=\"#description\"><i class=\"fas fa-list-ul\"></i>Характеристики</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link\" data-toggle=\"tab\" href=\"#scheme\"><i class=\"fas fa-grip-horizontal\"></i>Схема</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link\" data-toggle=\"tab\" href=\"#where\"><i class=\"fas fa-warehouse\"></i>Наличие</a>\r\n        </li>\r\n    </ul>\r\n</div>   "
+            text: "<div class=\"row\">\r\n    <ul class=\"nav nav-pills\">\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link active\" data-toggle=\"tab\" href=\"#description\"><i class=\"fas fa-list-ul\"></i>Характеристики</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link\" data-toggle=\"tab\" href=\"#scheme\"><i class=\"fas fa-grip-horizontal\"></i>Схема/габариты</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link\" data-toggle=\"tab\" href=\"#where\"><i class=\"fas fa-warehouse\"></i>Наличие</a>\r\n        </li>\r\n    </ul>\r\n</div>   "
             make_link: false
             path: ''
             absolute: false
@@ -1757,7 +1757,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"tab-pane fade show active\" id=\"description\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-6 description-right\">                \r\n            <h5 class=\"card-title\">Особенности товара</h5>\r\n            <div class=\"row\">\r\n                <div class=\"col-3\"> \r\n                    <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\r\n                        <a class=\"nav-link \" id=\"v-pills-features-tab\" data-toggle=\"pill\" href=\"#v-pills-features\" role=\"tab\" aria-controls=\"v-pills-features\" aria-selected=\"false\">Особенности</a>\r\n                        <a class=\"nav-link active\" id=\"v-pills-dims-tab\" data-toggle=\"pill\" href=\"#v-pills-dims\" role=\"tab\" aria-controls=\"v-pills-dims\" aria-selected=\"false\">Размеры</a>\r\n                        <a class=\"nav-link\" id=\"v-pills-basis-tab\" data-toggle=\"pill\" href=\"#v-pills-basis\" role=\"tab\" aria-controls=\"v-pills-basis\" aria-selected=\"false\">Основание</a>\r\n                        <a class=\"nav-link\" id=\"v-pills-mech-tab\" data-toggle=\"pill\" href=\"#v-pills-mech\" role=\"tab\" aria-controls=\"v-pills-mech\" aria-selected=\"false\">Механизм</a>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-9\">\r\n                    <div class=\"tab-content\" id=\"v-pills-tabContent\">\r\n                        <div class=\"tab-pane fade \" id=\"v-pills-features\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">{{ field_features }}</div>\r\n                        <div class=\"tab-pane fade show active\" id=\"v-pills-dims\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\r\n                            <ul class=\"list-group\">\r\n                                <li class=\"list-group-item\">Ширина - {{ field_width }}</li>\r\n                                <li class=\"list-group-item\">Высота - {{ field_height }}</li>\r\n                                <li class=\"list-group-item\">Глубина(слож.) - {{ field_depth }}</li>\r\n                                <li class=\"list-group-item\">Глубина(разлож.) - {{ field_depth_full }}</li>\r\n                                <li class=\"list-group-item\">Спальное место - {{ field_sleep_dim }} </li>\r\n                            </ul>\r\n                            <hr class=\"my-3\">\r\n                            <ul class=\"list-group\">\r\n                                <li class=\"list-group-item\">{{ field_soft_fur_gabarits }}</li>\r\n                            </ul>\r\n                        </div>\r\n                        <div class=\"tab-pane fade\" id=\"v-pills-basis\" role=\"tabpanel\" aria-labelledby=\"v-pills-basis-tab\">{{ field_basis_type }}</div>\r\n                        <div class=\"tab-pane fade\" id=\"v-pills-mech\" role=\"tabpanel\" aria-labelledby=\"v-pills-mech-tab\">{{ field_mekhanizm }}</div>\r\n                    </div>\r\n                </div>\r\n            </div>                    \r\n    </div>\r\n        <div class=\"col-sm-6\">\r\n            <div class=\"card-model-desc card card-body\">\r\n                <h5 class=\"card-title\">Описание модели {{ field_soft_fur_model }} :</h5>\r\n                    <div id=\"summary\">\r\n                        <div class=\"collapse\" id=\"collapseSummary\">\r\n                            {{ field_model_desc }}\r\n                        </div>\r\n                        <a class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseSummary\" aria-expanded=\"false\" aria-controls=\"collapseSummary\"></a>\r\n                    </div>                        \r\n            </div>\r\n        </div>\r\n                    \r\n    </div>    \r\n</div>"
+            text: "<div class=\"tab-pane fade show active\" id=\"description\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-6 description-right\">                \r\n            <h5 class=\"card-title\">Особенности товара</h5>\r\n            <div class=\"row\">\r\n                <div class=\"col-3\"> \r\n                    <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">\r\n                        <a class=\"nav-link \" id=\"v-pills-features-tab\" data-toggle=\"pill\" href=\"#v-pills-features\" role=\"tab\" aria-controls=\"v-pills-features\" aria-selected=\"false\">Особенности</a>\r\n                        <a class=\"nav-link active\" id=\"v-pills-dims-tab\" data-toggle=\"pill\" href=\"#v-pills-dims\" role=\"tab\" aria-controls=\"v-pills-dims\" aria-selected=\"false\">Размеры</a>\r\n                        <a class=\"nav-link\" id=\"v-pills-basis-tab\" data-toggle=\"pill\" href=\"#v-pills-basis\" role=\"tab\" aria-controls=\"v-pills-basis\" aria-selected=\"false\">Основание</a>\r\n                        <a class=\"nav-link\" id=\"v-pills-mech-tab\" data-toggle=\"pill\" href=\"#v-pills-mech\" role=\"tab\" aria-controls=\"v-pills-mech\" aria-selected=\"false\">Механизм</a>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-9\">\r\n                    <div class=\"tab-content\" id=\"v-pills-tabContent\">\r\n                        <div class=\"tab-pane fade \" id=\"v-pills-features\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">{{ field_features }}</div>\r\n                        <div class=\"tab-pane fade show active\" id=\"v-pills-dims\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">\r\n                            <ul class=\"list-group\">\r\n                                <li class=\"list-group-item\">Ширина - {{ field_width }}</li>\r\n                                <li class=\"list-group-item\">Высота - {{ field_height }}</li>\r\n                                <li class=\"list-group-item\">Глубина(слож.) - {{ field_depth }}</li>\r\n                                <li class=\"list-group-item\">Глубина(разлож.) - {{ field_depth_full }}</li>\r\n                                <li class=\"list-group-item\">Спальное место - {{ field_sleep_dim }} </li>\r\n                            </ul>\r\n                        </div>\r\n                        <div class=\"tab-pane fade\" id=\"v-pills-basis\" role=\"tabpanel\" aria-labelledby=\"v-pills-basis-tab\">{{ field_basis_type }}</div>\r\n                        <div class=\"tab-pane fade\" id=\"v-pills-mech\" role=\"tabpanel\" aria-labelledby=\"v-pills-mech-tab\">{{ field_mekhanizm }}</div>\r\n                    </div>\r\n                </div>\r\n            </div>                    \r\n    </div>\r\n        <div class=\"col-sm-6\">\r\n            <div class=\"card-model-desc card card-body\">\r\n                <h5 class=\"card-title\">Описание модели {{ field_soft_fur_model }} :</h5>\r\n                    <div id=\"summary\">\r\n                        <div class=\"collapse\" id=\"collapseSummary\">\r\n                            {{ field_model_desc }}\r\n                        </div>\r\n                        <a class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapseSummary\" aria-expanded=\"false\" aria-controls=\"collapseSummary\"></a>\r\n                    </div>                        \r\n            </div>\r\n        </div>\r\n                    \r\n    </div>    \r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1806,7 +1806,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"tab-pane fade\" id=\"scheme\">\r\n       {{ field_scheme }}\r\n</div>"
+            text: "<div class=\"tab-pane fade\" id=\"scheme\">\r\n    <div class=\"row\">\r\n        <div class=\"col-8\">{{ field_scheme }}</div>\r\n        <div class=\"col-4\">{{ field_soft_fur_gabarits }}</div>\r\n    </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

@@ -355,6 +355,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: 'd-sm-none d-none'
     cache_metadata:
       max-age: -1
       contexts:
@@ -586,7 +587,10 @@ display:
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_flag_refresh:
+          flags: {  }
+          noscrolltop: 0
       style:
         type: views_bootstrap_carousel
         options:
@@ -608,6 +612,7 @@ display:
         row: false
         fields: false
         header: false
+        css_class: false
       row:
         type: fields
         options:
@@ -985,6 +990,7 @@ display:
           hide_alter_empty: false
           plugin_id: custom
       header: {  }
+      css_class: 'd-none d-lg-block p-2 bg-secondary mb-4'
     cache_metadata:
       max-age: -1
       contexts:
