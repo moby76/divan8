@@ -498,7 +498,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card mb-3 col-12 shadow\" >\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 pb-3 pt-3 d-sm-none d-md-block\">\r\n          {{ field_location }}\r\n      </div>         \r\n      <div class=\"col-md-6\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title text-warning\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ field_phone }}</p>\r\n          <p class=\"card-text\">{{ field_hours }} </p>\r\n          <p class=\"card-text\">{{ field_podrobno }}</p>\r\n          <a href=\"{{ view_node }} \" class=\"btn btn-primary\">Посетить магазин...</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n"
+            text: "<div class=\"card mb-3 col-12 shadow\" >\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 pb-3 pt-3 d-none d-md-block\">\r\n          {{ field_location }}\r\n      </div>         \r\n      <div class=\"col-md-6\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title text-warning\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ field_phone }}</p>\r\n          <p class=\"card-text\">{{ field_hours }} </p>\r\n          <p class=\"card-text\">{{ field_podrobno }}</p>\r\n          <a href=\"{{ view_node }} \" class=\"btn btn-primary\">Посетить магазин...</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n"
             make_link: false
             path: ''
             absolute: false
