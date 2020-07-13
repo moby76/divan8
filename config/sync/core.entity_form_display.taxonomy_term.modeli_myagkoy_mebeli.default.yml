@@ -9,9 +9,16 @@ dependencies:
     - image.style.thumbnail
     - taxonomy.vocabulary.modeli_myagkoy_mebeli
   module:
+    - field_layout
     - image
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: taxonomy_term.modeli_myagkoy_mebeli.default
 targetEntityType: taxonomy_term
 bundle: modeli_myagkoy_mebeli

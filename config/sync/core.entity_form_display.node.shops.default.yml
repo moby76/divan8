@@ -11,10 +11,17 @@ dependencies:
     - field.field.node.shops.field_podrobno
     - node.type.shops
   module:
+    - field_layout
     - geolocation
+    - layout_discovery
     - office_hours
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.shops.default
 targetEntityType: node
 bundle: shops

@@ -33,7 +33,9 @@ dependencies:
     - node.type.sleeps
   module:
     - field_group
+    - field_layout
     - image
+    - layout_discovery
     - media_library
     - path
     - text
@@ -314,6 +316,10 @@ third_party_settings:
         classes: ''
         direction: horizontal
       label: Торговля
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.sleeps.default
 targetEntityType: node
 bundle: sleeps

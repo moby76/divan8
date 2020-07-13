@@ -14,11 +14,18 @@ dependencies:
     - image.style.thumbnail
     - node.type.secondhand
   module:
+    - field_layout
     - image
+    - layout_discovery
     - media_library
     - path
     - serial
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.secondhand.default
 targetEntityType: node
 bundle: secondhand

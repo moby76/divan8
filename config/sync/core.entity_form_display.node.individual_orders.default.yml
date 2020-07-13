@@ -14,6 +14,8 @@ dependencies:
     - node.type.individual_orders
   module:
     - field_group
+    - field_layout
+    - layout_discovery
     - media_library
     - path
     - serial
@@ -34,6 +36,10 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Комиссионка
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.individual_orders.default
 targetEntityType: node
 bundle: individual_orders
