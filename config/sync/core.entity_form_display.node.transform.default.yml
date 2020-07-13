@@ -7,9 +7,16 @@ dependencies:
     - field.field.node.transform.field_video
     - node.type.transform
   module:
+    - field_layout
+    - layout_discovery
     - path
     - text
     - video
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.transform.default
 targetEntityType: node
 bundle: transform
