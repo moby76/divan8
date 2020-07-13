@@ -1052,8 +1052,8 @@ tr.even{
 }
 
 .form-row{
-    display: inline-block;
-    width: 100%;
+    /* display: inline-block;
+    width: 100%; */
 }
 #edit-field-soft-fur-config-target-id,
 #edit-field-sleep-config-value{
