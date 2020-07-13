@@ -17,8 +17,15 @@ dependencies:
       - entity_browser_example
   module:
     - entity_browser
+    - field_layout
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: Oq6aFeQZ6Jqh4ddei6-yd1c-evb7oiauRNwsH3j4bis
 id: node.entity_browser_test.default
@@ -155,6 +162,11 @@ content:
       size: 60
       placeholder: ''
       match_limit: 10
+    third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
+    settings: {  }
     third_party_settings: {  }
     region: content
 hidden: {  }

@@ -37,7 +37,9 @@ dependencies:
   module:
     - entity_browser
     - field_group
+    - field_layout
     - image
+    - layout_discovery
     - media_library
     - path
     - serial
@@ -305,6 +307,10 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Test tab'
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.soft_fur.default
 targetEntityType: node
 bundle: soft_fur

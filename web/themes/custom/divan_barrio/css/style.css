@@ -1033,15 +1033,16 @@ tr.even{
 .block.block-views-exposed-filter-blocksleeps-all-page-1{
     /* height: 470px; */
     position: relative;
-    border-style: solid;
-    border-width: 3px;
-    padding: 0 1rem 2rem 1rem;
-    margin: 0 0.5rem 1rem;
-    border-color: #386b9ea3;
-    border-radius: 5px;
+    /* border-style: solid; */
+    /* border-width: 3px; */
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin: 0 0 2.5rem;
+    /* border-color: #386b9ea3; */
+    /* border-radius: 5px; */
     /* color: white; */
-    background: #fbfbfb;
+    background: #f3f3f3;
     z-index: 100;
+    width: 100%;
 }
 
 .block-filters{
@@ -1060,15 +1061,25 @@ tr.even{
     display: flex;
 }
 
-#edit-submit-vsya-myagkaya-mebel,
-#edit-submit-sleeps-all,
+#edit-submit-vsya-myagkaya-mebel--2,
+#edit-submit-sleeps-all--2,
 #edit-reset{
-    padding: 0.25rem;
-    background: #386b9e;
+    padding: 0.5rem;
+    /* background: #c53030; */
     position: absolute;
-    margin: 1rem 0 0 0;
-    bottom: 0.5rem;
-    left: 0.75rem;
+    bottom: -11px;
+    left: 46%;
+    width: 10%;
+    font-size: large;
+    box-shadow: 0px 3px 8px 1px grey;
+    text-indent: -9999px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e53939+0,c53030+100 */
+background: #e53939; /* Old browsers */
+background: -moz-linear-gradient(top,  #e53939 0%, #c53030 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e53939 0%,#c53030 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e53939 0%,#c53030 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e53939', endColorstr='#c53030',GradientType=0 ); /* IE6-9 */
+
 }
 
 #edit-submit-vsya-myagkaya-mebel,
@@ -1104,19 +1115,19 @@ tr.even{
     position: relative;
 }
 .js-form-item-id-name{
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     /* float: left; */
 }
 .js-form-item-title{
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     /* float: right; */
 }
 .js-form-item-id-name::after{
-    content: "Или";
+    /* content: "Или";
     display: inline-block;
     position: absolute;
     bottom: 2rem;
-    right: -2rem;
+    right: -3.5rem; */
 }
 
 
@@ -1205,7 +1216,7 @@ tr.even{
 }
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: #e41717;
+    background-color: #dd3636;
     -webkit-transform: translateX(1.25rem);
     transform: translateX(1.25rem);
 }
@@ -1239,7 +1250,7 @@ tr.even{
     left: calc(-1.5rem + 2px);
     width: calc(1.5rem - 4px);
     height: calc(1.5rem - 4px); */
-    background-color: #e41717;
+    background-color: #dd3636;
     /* border: solid 2px #276f6f; */
     border-radius: 1rem;
     background-image: none;

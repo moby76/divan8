@@ -4,6 +4,14 @@ status: true
 dependencies:
   config:
     - flag.flag.add_bookmarks
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: flagging.add_bookmarks.default
 targetEntityType: flagging
 bundle: add_bookmarks

@@ -9,9 +9,16 @@ dependencies:
     - image.style.thumbnail
     - taxonomy.vocabulary.sleep_models
   module:
+    - field_layout
     - image
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: taxonomy_term.sleep_models.default
 targetEntityType: taxonomy_term
 bundle: sleep_models

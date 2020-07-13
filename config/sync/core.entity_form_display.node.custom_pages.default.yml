@@ -6,8 +6,15 @@ dependencies:
     - field.field.node.custom_pages.body
     - node.type.custom_pages
   module:
+    - field_layout
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.custom_pages.default
 targetEntityType: node
 bundle: custom_pages
@@ -81,4 +88,9 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

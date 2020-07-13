@@ -21,6 +21,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - vefl_bef
     - views_autocomplete_filters
     - views_fieldsets
 id: vsya_myagkaya_mebel
@@ -1734,6 +1735,7 @@ display:
         filter_groups: false
         cache: false
         fields: false
+        exposed_form: false
       filters:
         status:
           value: '1'
@@ -2969,6 +2971,88 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
+      exposed_form:
+        type: vefl_bef
+        options:
+          submit_button: Применить
+          reset_button: false
+          reset_button_label: Сбросить
+          exposed_sorts_label: Сортировать
+          expose_sort_order: true
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 2000
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Дополнительные настройки'
+              secondary_open: false
+            filter:
+              field_soft_fur_config_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: 0
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: 0
+                  is_secondary: 0
+                select_all_none: 0
+                select_all_none_nested: 0
+                display_inline: 0
+                options_show_only_used: 0
+                options_show_only_used_filtered: 0
+              field_available_value:
+                plugin_id: bef
+                advanced:
+                  sort_options: 0
+                  rewrite:
+                    filter_rewrite_values: "True|В наличии\r\nЛожь|Под заказ\r\n- Любой -|Мне всё равно"
+                  collapsible: 0
+                  is_secondary: 0
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: 0
+                options_show_only_used: false
+                options_show_only_used_filtered: false
+              name:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: 0
+                  is_secondary: 0
+                options_show_only_used: false
+                options_show_only_used_filtered: false
+              title:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: 0
+                  is_secondary: 0
+                options_show_only_used: false
+                options_show_only_used_filtered: false
+          layout:
+            layout_id: layout_fourcol_section
+            regions: {  }
+            widget_region:
+              field_soft_fur_config_target_id: first
+              field_available_value: second
+              id-name: third
+              title: third
+              sort_by: first
+              sort_order: first
+              items_per_page: first
+              offset: first
+              submit: fourth
+              reset: fourth
+              secondary: first
+              sort_bef_combine: first
+            change: Изменить
     cache_metadata:
       max-age: -1
       contexts:

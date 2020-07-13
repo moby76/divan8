@@ -5,8 +5,15 @@ dependencies:
   config:
     - taxonomy.vocabulary.sleep_config
   module:
+    - field_layout
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: taxonomy_term.sleep_config.default
 targetEntityType: taxonomy_term
 bundle: sleep_config

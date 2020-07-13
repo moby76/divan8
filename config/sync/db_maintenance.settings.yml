@@ -1,4 +1,4 @@
-cron_last_run: 0
+cron_last_run: 1594665458
 cron_frequency: 86400
 use_time_interval: true
 time_interval_start: '01:30'
