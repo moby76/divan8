@@ -206,7 +206,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Created on'
+          label: Создано
           exclude: false
           alter:
             alter_text: false
