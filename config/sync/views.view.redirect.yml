@@ -433,7 +433,7 @@ display:
           exposed: true
           expose:
             operator_id: status_code_op
-            label: 'Status code'
+            label: 'Код состояния'
             description: ''
             use_operator: false
             operator: status_code_op
@@ -449,7 +449,7 @@ display:
             operator_list: {  }
           is_grouped: true
           group_info:
-            label: 'Status code'
+            label: 'Код состояния'
             description: ''
             identifier: status_code
             optional: true
@@ -568,7 +568,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'There is no redirect yet.'
+          content: 'Перенаправлений пока нет.'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
